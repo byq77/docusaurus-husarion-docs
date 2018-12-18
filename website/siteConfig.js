@@ -92,9 +92,11 @@ const siteConfig = {
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
+    'https://code.jquery.com/jquery-3.3.1.slim.min.js',
+    'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js',
     'https://buttons.github.io/buttons.js',
-    '/js/scrollspy.js',
-    '/js/sidebarScroll.js',
+    'https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js',
+    'https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js',
   ],
   scrollToTop: true,
   scrollToTopOptions: {
