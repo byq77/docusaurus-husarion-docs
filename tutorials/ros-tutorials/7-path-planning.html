@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&#x27;7 Path planning&#x27; · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;path-planning&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#path-planning&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Path planning&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="&#x27;7 Path planning&#x27; · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;path-planning&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#path-planning&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Path planning&lt;/h1&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/atom.xml" title="Husarion Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/feed.xml" title="Husarion Docs Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="js/scrollspy.js"></script><script type="text/javascript" src="js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/prism.css"/><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/doc4" target="_self">Software</a></li><li class=""><a href="/docusaurus-husarion-docs/help" target="_self">Help</a></li><li class=""><a href="/docusaurus-husarion-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">&#x27;7 Path planning&#x27;</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="path-planning"></a><a href="#path-planning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path planning</h1>
+<h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>Task of path planning for mobile robot is to determine sequence of
+manoeuvrers to be taken by robot in order to move from starting point to
+destination avoiding collision with obstacles.</p>
+<p>Sample algorithms for path planning are:</p>
+<ul>
+<li><p>Dijkstra’s algorithm</p></li>
+<li><p>A*</p></li>
+<li><p>D*</p></li>
+<li><p>Artificial potential field method</p></li>
+<li><p>Visibility graph method</p></li>
+</ul>
+<p>Path planning algorithms may be based on graph or occupancy grid.</p>
+<h3><a class="anchor" aria-hidden="true" id="graph-methods"></a><a href="#graph-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Graph methods</h3>
+<p>Method that is using graphs, defines places where robot can be and
+possibilities to traverse between these places. In this representation
+graph vertices define places e.g. rooms in building while edges define
+paths between them e.g. doors connecting rooms. Moreover each edge can
+have assigned weights representing difficulty of traversing path e.g.
+door width or energy required to open it. Finding the trajectory is
+based on finding the shortest path between two vertices while one of
+them is robot current position and second is destination.</p>
+<h3><a class="anchor" aria-hidden="true" id="occupancy-grid-methods"></a><a href="#occupancy-grid-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Occupancy grid methods</h3>
+<p>Method that is using occupancy grid divides area into cells (e.g. map
+pixels) and assign them as occupied or free. One of cells is marked as
+robot position and another as a destination. Finding the trajectory is
+based on finding shortest line that do not cross any of occupied cells.</p>
+<h2><a class="anchor" aria-hidden="true" id="occupancy-grid-path-planning-in-ros"></a><a href="#occupancy-grid-path-planning-in-ros" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Occupancy grid path planning in ROS</h2>
+<p>In ROS it is possible to plan a path based on occupancy grid, e.g. the
+one obtained from <code>slam_gmapping</code>. Path planner is <code>move_base</code> node from
+<code>move_base</code> package.</p>
+<h3><a class="anchor" aria-hidden="true" id="requirements-regarding-robot"></a><a href="#requirements-regarding-robot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requirements regarding robot</h3>
+<p>Before continuing with <code>move_base</code> node certain requirements must be
+met, robot should:</p>
+<ul>
+<li><p>subscribe <code>cmd_vel</code> topic with message type <code>geometry_msgs/Twist</code> in
+which robot desired velocities are included.</p></li>
+<li><p>Publish to <code>/tf</code> topic transformations between robot relative to
+starting point and laser scanner relative to robot.</p></li>
+<li><p>Publish map to <code>/map</code> topic with message type
+<code>nav_msgs/OccupancyGrid</code></p></li>
+</ul>
+<p>Above configuration is met by the robot created in previous manual.</p>
+<h2><a class="anchor" aria-hidden="true" id="configuration-of-move-base-node"></a><a href="#configuration-of-move-base-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration of <code>move_base</code> node</h2>
+<p><code>Move_base</code> node creates cost map basing on occupancy grid. , Cost map
+is a grid in which every cell gets assigned value (cost) determining
+distance to obstacle, where higher value means closer distance. With
+this map, trajectory passing cells with lowest cost is generated.
+<code>Move_base</code> node uses two cost maps, local for determining current
+motion and global for trajectory with longer range.</p>
+<p>For <code>move_base</code> node some parameters for cost map and trajectory planner
+need to be defined, they are stored in <code>.yaml</code> files.</p>
+<h3><a class="anchor" aria-hidden="true" id="common-parameters-for-cost-map"></a><a href="#common-parameters-for-cost-map" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common parameters for cost map</h3>
+<p>Common parameters are used both by local and global cost map. We will
+define following parameters:</p>
+<pre><code class="hljs">obstacle_range: 6.0
+</code></pre>
+<p>In this range obstacles will be considered during path planning.</p>
+<pre><code class="hljs">raytrace_range: 8.5
+</code></pre>
+<p>This parameter defines range in which area could be considered as free.</p>
+<pre><code class="hljs">footprint: [[0.12, 0.14], [0.12, -0.14], [-0.12, -0.14], [-0.12, 0.14]]
+</code></pre>
+<p>This parameter defines coordinates of robot outline, this will
+considered during collision detecting.</p>
+<pre><code class="hljs">map_topic: /map
+</code></pre>
+<p>This parameter defines topic where occupancy grid is published.</p>
+<pre><code class="hljs">subscribe_to_updates: true
+</code></pre>
+<p>This parameter defines if <code>move_base</code> should periodically check if map
+was updated.</p>
+<pre><code class="hljs">observation_sources: laser_scan_sensor
+</code></pre>
+<p>This parameter defines type of sensor used to provide data.</p>
+<pre><code class="hljs">laser_scan_sensor: {sensor_frame: laser_frame, data_type: LaserScan, 
+    topic: scan, marking: true, clearing: true}
+</code></pre>
+<p>This parameter define properties of used sensor, these are:</p>
+<ul>
+<li><p><code>sensor_frame</code> - coordinate frame tied to sensor</p></li>
+<li><p><code>data_type</code> - type of message published by sensor</p></li>
+<li><p><code>topic</code> - name of topic where sensor data is published</p></li>
+<li><p><code>marking</code> - true if sensor can be used to mark area as occupied</p></li>
+<li><p><code>clearing</code> - true if sensor can be used to mark area as clear</p></li>
+</ul>
+<!-- -->
+<pre><code class="hljs">global_frame: map
+</code></pre>
+<p>This parameter defines coordinate frame tied to occupancy grid map.</p>
+<pre><code class="hljs">robot_base_frame: base_link
+</code></pre>
+<p>This parameter defines coordinate frame tied to robot.</p>
+<pre><code class="hljs"><span class="hljs-attr">always_send_full_costmap:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<p>This parameter define if costmap should be always published with complete data.</p>
+<p>Your final file should look like below:</p>
+<pre><code class="hljs"><span class="hljs-attr">obstacle_range:</span> <span class="hljs-number">6.0</span>
+<span class="hljs-attr">raytrace_range:</span> <span class="hljs-number">8.5</span>
+<span class="hljs-attr">footprint:</span> <span class="hljs-string">[[0.12,</span> <span class="hljs-number">0.14</span><span class="hljs-string">],</span> <span class="hljs-string">[0.12,</span> <span class="hljs-bullet">-0.14</span><span class="hljs-string">],</span> <span class="hljs-string">[-0.12,</span> <span class="hljs-bullet">-0.14</span><span class="hljs-string">],</span> <span class="hljs-string">[-0.12,</span> <span class="hljs-number">0.14</span><span class="hljs-string">]]</span>
+<span class="hljs-attr">map_topic:</span> <span class="hljs-string">/map</span>
+<span class="hljs-attr">subscribe_to_updates:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">observation_sources:</span> <span class="hljs-string">laser_scan_sensor</span>
+<span class="hljs-attr">laser_scan_sensor:</span> <span class="hljs-string">{sensor_frame:</span> <span class="hljs-string">laser_frame,</span> <span class="hljs-attr">data_type:</span> <span class="hljs-string">LaserScan,</span> <span class="hljs-attr">topic:</span> <span class="hljs-string">scan,</span> <span class="hljs-attr">marking:</span> <span class="hljs-literal">true</span><span class="hljs-string">,</span> <span class="hljs-attr">clearing:</span> <span class="hljs-literal">true</span><span class="hljs-string">}</span>
+<span class="hljs-attr">global_frame:</span> <span class="hljs-string">map</span>
+<span class="hljs-attr">robot_base_frame:</span> <span class="hljs-string">base_link</span>
+<span class="hljs-attr">always_send_full_costmap:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<p>Save it as <code>costmap_common_params.yaml</code> in <code>tutorial_pkg/config</code> directory.</p>
+<h3><a class="anchor" aria-hidden="true" id="parameters-for-local-cost-map"></a><a href="#parameters-for-local-cost-map" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters for local cost map</h3>
+<p>These parameters are used only by local cost map. We will define
+following parameters:</p>
+<pre><code class="hljs">local_costmap:
+</code></pre>
+<p>This parameter groups following parameters to be considered only by
+local planner.</p>
+<pre><code class="hljs">update_frequency: 5
+</code></pre>
+<p>This parameter defines how often cost should be recalculated.</p>
+<pre><code class="hljs">publish_frequency: 5
+</code></pre>
+<p>This parameter defines how often cost map should be published to topic.</p>
+<pre><code class="hljs">transform_tolerance: 0.25
+</code></pre>
+<p>This parameter define latency in published transforms (in seconds), if
+transforms are older than this, planner will stop.</p>
+<pre><code class="hljs">static_map: false
+</code></pre>
+<p>This parameter defines if map can change in time, true if map will not
+change.</p>
+<pre><code class="hljs">rolling_window: true
+</code></pre>
+<p>This parameter defines if map should follow position of robot.</p>
+<pre><code class="hljs">width: 3
+height: 3
+</code></pre>
+<p>These parameters define size of map (in meters).</p>
+<pre><code class="hljs">origin_x: -1.5
+origin_y: -1.5
+</code></pre>
+<p>These parameters define position of left bottom map corner (in meters).
+If these values are half of map size, and <code>rolling_window</code> is set to
+<code>true</code>, then robot will always be in cost map centre.</p>
+<pre><code class="hljs">resolution: 0.1
+</code></pre>
+<p>This parameter define size of single map cell (in meters).</p>
+<pre><code class="hljs">inflation_radius: 1.0
+</code></pre>
+<p>This parameter defines distance to obstacle where cost should be
+considered, any further from obstacle than this value will be treated as
+no cost.</p>
+<p>Your final file should look like below:</p>
+<pre><code class="hljs"><span class="hljs-attr">local_costmap:</span>
+<span class="hljs-attr">  update_frequency:</span> <span class="hljs-number">5</span>
+<span class="hljs-attr">  publish_frequency:</span> <span class="hljs-number">5</span>
+<span class="hljs-attr">  transform_tolerance:</span> <span class="hljs-number">0.25</span>
+<span class="hljs-attr">  static_map:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">  rolling_window:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  width:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">  height:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">  origin_x:</span> <span class="hljs-bullet">-1.5</span>
+<span class="hljs-attr">  origin_y:</span> <span class="hljs-bullet">-1.5</span>
+<span class="hljs-attr">  resolution:</span> <span class="hljs-number">0.1</span>
+<span class="hljs-attr">  inflation_radius:</span> <span class="hljs-number">0.6</span>
+</code></pre>
+<p>Save it as <code>local_costmap_params.yaml</code> in <code>tutorial_pkg/config</code> directory.</p>
+<h3><a class="anchor" aria-hidden="true" id="parameters-for-global-cost-map"></a><a href="#parameters-for-global-cost-map" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters for global cost map</h3>
+<p>These parameters are used only by global cost map. Parameter meaning is
+the same as for local cost map, but values may be different.</p>
+<p>Your file for global cost map should look like below:</p>
+<pre><code class="hljs"><span class="hljs-attr">global_costmap:</span>
+<span class="hljs-attr">  update_frequency:</span> <span class="hljs-number">2.5</span>
+<span class="hljs-attr">  publish_frequency:</span> <span class="hljs-number">2.5</span>
+<span class="hljs-attr">  transform_tolerance:</span> <span class="hljs-number">0.5</span>
+<span class="hljs-attr">  width:</span> <span class="hljs-number">15</span>
+<span class="hljs-attr">  height:</span> <span class="hljs-number">15</span>
+<span class="hljs-attr">  origin_x:</span> <span class="hljs-bullet">-7.5</span>
+<span class="hljs-attr">  origin_y:</span> <span class="hljs-bullet">-7.5</span>
+<span class="hljs-attr">  static_map:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  rolling_window:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  inflation_radius:</span> <span class="hljs-number">2.5</span>
+<span class="hljs-attr">  resolution:</span> <span class="hljs-number">0.1</span>
+</code></pre>
+<p>Save it as <code>global_costmap_params.yaml</code> in <code>tutorial_pkg/config</code> directory.</p>
+<h3><a class="anchor" aria-hidden="true" id="parameters-for-trajectory-planner"></a><a href="#parameters-for-trajectory-planner" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters for trajectory planner</h3>
+<p>These parameters are used by trajectory planner. We will define
+following parameters:</p>
+<pre><code class="hljs">TrajectoryPlannerROS:
+</code></pre>
+<p>This parameter groups following parameters to be considered only by
+trajectory planner.</p>
+<pre><code class="hljs">max_vel_x: 0.2
+</code></pre>
+<p>This parameter defines maximum linear velocity that will be set by
+trajectory planner.</p>
+<pre><code class="hljs">min_vel_x: 0.1
+</code></pre>
+<p>This parameter defines minimum linear velocity that will be set by
+trajectory planner. This should be adjusted to overcome rolling
+resistance and other forces that may suppress robot from moving.</p>
+<pre><code class="hljs">max_vel_theta: 0.35
+min_vel_theta: -0.35
+</code></pre>
+<p>This parameter defines maximum angular velocity that will be set by
+trajectory planner.</p>
+<pre><code class="hljs">min_in_place_vel_theta: 0.25
+</code></pre>
+<p>This parameter defines minimum angular velocity that will be set by
+trajectory planner. This should be adjusted to overcome rolling
+resistance and other forces that may suppress robot from moving.</p>
+<pre><code class="hljs">acc_lim_theta: 0.25
+acc_lim_x: 2.5
+acc_lim_Y: 2.5
+</code></pre>
+<p>These parameters define maximum values of accelerations used by
+trajectory planner.</p>
+<pre><code class="hljs">holonomic_robot: false
+</code></pre>
+<p>This parameter defines if robot is holonomic.</p>
+<pre><code class="hljs">meter_scoring: true
+</code></pre>
+<p>This parameter defines if cost function arguments are expressed in map
+cells or meters (if true, meters are considered).</p>
+<pre><code class="hljs">xy_goal_tolerance: 0.15
+yaw_goal_tolerance: 0.25
+</code></pre>
+<p>These parameters define how far from destination it can be considered as
+reached. Linear tolerance is in meters, angular tolerance is in radians.</p>
+<p>Your final file should look like below:</p>
+<pre><code class="hljs"><span class="hljs-attr">TrajectoryPlannerROS:</span>
+<span class="hljs-attr">  max_vel_x:</span> <span class="hljs-number">0.2</span>
+<span class="hljs-attr">  min_vel_x:</span> <span class="hljs-number">0.1</span>
+<span class="hljs-attr">  max_vel_theta:</span> <span class="hljs-number">0.35</span>
+<span class="hljs-attr">  min_vel_theta:</span> <span class="hljs-bullet">-0.35</span>
+<span class="hljs-attr">  min_in_place_vel_theta:</span> <span class="hljs-number">0.25</span>
+
+<span class="hljs-attr">  acc_lim_theta:</span> <span class="hljs-number">0.25</span>
+<span class="hljs-attr">  acc_lim_x:</span> <span class="hljs-number">2.5</span>
+<span class="hljs-attr">  acc_lim_Y:</span> <span class="hljs-number">2.5</span>
+
+<span class="hljs-attr">  holonomic_robot:</span> <span class="hljs-literal">false</span>
+
+<span class="hljs-attr">  meter_scoring:</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-attr">  xy_goal_tolerance:</span> <span class="hljs-number">0.15</span>
+<span class="hljs-attr">  yaw_goal_tolerance:</span> <span class="hljs-number">0.25</span>
+</code></pre>
+<p>Save it as <code>trajectory_planner.yaml</code> in <code>tutorial_pkg/config</code> directory.</p>
+<p>Remember that you may need to adjust cost map and trajectory planner
+parameters to your robot and area that you want to explore.</p>
+<h3><a class="anchor" aria-hidden="true" id="launching-path-planning-node"></a><a href="#launching-path-planning-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Launching path planning node</h3>
+<p>To test above configuration you will need to run <code>move_base</code> node with
+nodes from SLAM configuration, you will not need only
+<code>teleop_twist_keyboard</code> as commands now will be isuued by trajectory
+planner.</p>
+<p>To sum up, you will need to run following nodes:</p>
+<ul>
+<li><p><code>CORE2</code> bridge node -
+<code>/opt/husarion/tools/rpi-linux/ros-core2-client /dev/ttyCORE2</code></p></li>
+<li><p><code>drive_controller_node</code> - <code>tf</code> publisher for transformation of robot
+relative to starting point</p></li>
+<li><p><code>rplidarNode</code> - driver for rpLidar laser scanner</p></li>
+</ul>
+<p>Or instead ot these three, <code>Gazebo</code>:</p>
+<ul>
+<li><code>roslaunch rosbot_gazebo maze_world.launch</code></li>
+</ul>
+<p>And:</p>
+<ul>
+<li><p><code>static_transform_publisher</code> - <code>tf</code> publisher for transformation of
+laser scanner relative to robot</p></li>
+<li><p><code>slam_gmapping</code> - map building node</p></li>
+<li><p><code>move_base</code> - trajectory planner</p></li>
+<li><p><code>rviz</code> - visualization tool</p></li>
+</ul>
+<p>For the <code>move_base</code> node you will need to specify paths for <code>.yaml</code>
+configuration files.</p>
+<p>Set frequency for trajectory generation:</p>
+<pre><code class="hljs">&lt;param name=&quot;controller_frequency&quot; value=&quot;10.0&quot;/&gt;
+</code></pre>
+<p>Load common parameters for global cost map:</p>
+<pre><code class="hljs">&lt;rosparam file=&quot;$(find tutorial_pkg)/config/costmap_common_params.yaml&quot; command=&quot;load&quot; ns=&quot;global_costmap&quot; /&gt;
+</code></pre>
+<p>Load common parameters for local cost map:</p>
+<pre><code class="hljs">&lt;rosparam file=&quot;$(find tutorial_pkg)/config/costmap_common_params.yaml&quot; command=&quot;load&quot; ns=&quot;local_costmap&quot; /&gt;
+</code></pre>
+<p>Load only local cost map parameters:</p>
+<pre><code class="hljs">&lt;rosparam file=&quot;$(find tutorial_pkg)/config/local_costmap_params.yaml&quot; command=&quot;load&quot; /&gt;
+</code></pre>
+<p>Load only global cost map parameters:</p>
+<pre><code class="hljs">&lt;rosparam file=&quot;$(find tutorial_pkg)/config/global_costmap_params.yaml&quot; command=&quot;load&quot; /&gt;
+</code></pre>
+<p>Load trajectory planner parameters:</p>
+<pre><code class="hljs">&lt;rosparam file=&quot;$(find tutorial_pkg)/config/trajectory_planner.yaml&quot; command=&quot;load&quot; /&gt;
+</code></pre>
+<p>You can use below <code>launch</code> file:</p>
+<pre><code class="hljs css language-launch">&lt;launch&gt;
+
+    &lt;arg <span class="hljs-type">name</span>="use_rosbot" default="true"/&gt;
+    &lt;arg <span class="hljs-type">name</span>="use_gazebo" default="false"/&gt;
+
+    &lt;<span class="hljs-keyword">include</span> <span class="hljs-keyword">if</span>="$(arg use_gazebo)" file="$(find rosbot_gazebo)/launch/maze_world.launch"/&gt;
+    &lt;<span class="hljs-keyword">include</span> <span class="hljs-keyword">if</span>="$(arg use_gazebo)" file="$(find rosbot_gazebo)/launch/rosbot.launch"/&gt;
+    
+    &lt;param <span class="hljs-keyword">if</span>="$(arg use_gazebo)" <span class="hljs-type">name</span>="use_sim_time" <span class="hljs-keyword">value</span>="true"/&gt;
+
+    &lt;node <span class="hljs-keyword">if</span>="$(arg use_rosbot)" pkg="rplidar_ros" <span class="hljs-keyword">type</span>="rplidarNode" <span class="hljs-type">name</span>="rplidar"&gt;
+        &lt;param <span class="hljs-type">name</span>="angle_compensate" <span class="hljs-keyword">type</span>="bool" <span class="hljs-keyword">value</span>="true"/&gt;
+    &lt;/node&gt;
+
+    &lt;node <span class="hljs-keyword">if</span>="$(arg use_rosbot)" pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="drive_controller_node" <span class="hljs-type">name</span>="drive_controller"/&gt;
+
+    &lt;node <span class="hljs-keyword">if</span>="$(arg use_rosbot)" pkg="tf" <span class="hljs-keyword">type</span>="static_transform_publisher" <span class="hljs-type">name</span>="laser_broadcaster" args="0 0 0 3.14 0 0 base_link laser_frame 100" /&gt;
+
+    &lt;node pkg="teleop_twist_keyboard" <span class="hljs-keyword">type</span>="teleop_twist_keyboard.py" <span class="hljs-type">name</span>="teleop_twist_keyboard" output="screen"/&gt;
+
+    &lt;node pkg="rviz" <span class="hljs-keyword">type</span>="rviz" <span class="hljs-type">name</span>="rviz"/&gt;
+
+    &lt;node pkg="gmapping" <span class="hljs-keyword">type</span>="slam_gmapping" <span class="hljs-type">name</span>="gmapping"&gt;
+        &lt;param <span class="hljs-type">name</span>="base_frame" <span class="hljs-keyword">value</span>="base_link"/&gt;
+        &lt;param <span class="hljs-type">name</span>="odom_frame" <span class="hljs-keyword">value</span>="odom" /&gt;
+        &lt;param <span class="hljs-type">name</span>="delta" <span class="hljs-keyword">value</span>="0.1" /&gt;
+    &lt;/node&gt;
+    
+    &lt;node pkg="move_base" <span class="hljs-keyword">type</span>="move_base" <span class="hljs-type">name</span>="move_base" output="screen"&gt;
+        &lt;param <span class="hljs-type">name</span>="controller_frequency" <span class="hljs-keyword">value</span>="10.0"/&gt;
+        &lt;rosparam file="$(find tutorial_pkg)/config/costmap_common_params.yaml" command="load" ns="global_costmap" /&gt;
+        &lt;rosparam file="$(find tutorial_pkg)/config/costmap_common_params.yaml" command="load" ns="local_costmap" /&gt;
+        &lt;rosparam file="$(find tutorial_pkg)/config/local_costmap_params.yaml" command="load" /&gt;
+        &lt;rosparam file="$(find tutorial_pkg)/config/global_costmap_params.yaml" command="load" /&gt;
+        &lt;rosparam file="$(find tutorial_pkg)/config/trajectory_planner.yaml" command="load" /&gt;
+    &lt;/node&gt;
+
+&lt;/launch&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="setting-goal-for-trajectory-planner"></a><a href="#setting-goal-for-trajectory-planner" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting goal for trajectory planner</h3>
+<p>After you launched trajectory planner with all accompanying nodes, your
+robot still will not be moving anywhere. You have to specify target
+position first.</p>
+<p>We will begin with visualization of robot surrounding, cost maps and
+planned trajectory. Go to <code>rviz</code>, add <code>Tf</code>, <code>/scan</code> and <code>/map</code>, again
+open object adding window, go to tab <strong><code>By topic</code></strong> and from the list
+select</p>
+<ul>
+<li><p><code>move_base/TrajectoryPlannerROS/local_plan/Path</code></p></li>
+<li><p><code>move_base/TrajectoryPlannerROS/global_plan/Path</code></p></li>
+<li><p><code>move_base/global_costmap/footprint/Polygon</code></p></li>
+</ul>
+<p>Then for global plan path change its colour to red (values 255; 0; 0):</p>
+<p><img src="/assets/img/ros/man_7_1.png" alt="image"></p>
+<p>Now you can aadd one more element, open object adding window, go to tab
+<strong><code>By topic</code></strong> and from the list select <code>/move_base_simple/goal/Pose</code>,
+this will visualize destination point for your robot, it will not appear
+until you set destination.</p>
+<p>If you want to observe obstacles that are considered in path planning
+you may add two more objects, these will be local and global costmaps,
+open object adding window, go to tab <strong><code>By topic</code></strong> and from the list
+select <code>move_base/global_costmap/costmap</code> and
+<code>move_base/local_costmap/costmap</code>. Now change parameter <code>Color Scheme</code>
+of both costmaps to <code>costmap</code>, this will allow to distinguish costmaps
+from occupancy grid map.</p>
+<p><img src="/assets/img/ros/man_7_2.png" alt="image"></p>
+<p>Having all the elements visualized, you can set goal for robot, from
+<strong><code>Toolbar</code></strong> click button <strong><code>2D nav goal</code></strong>, then click a place in
+<strong><code>Visualization window</code></strong>, that will be destination for your robot.
+Observe as path is generated (you should see a line from your robot
+pointing to direction) and robot is moving to its destination.</p>
+<p><img src="/assets/img/ros/man_7_3.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>After completing this tutorial you should be able to configure
+<code>move_base</code> node to plan trajectory for your robot, visualize cost maps
+and planned trajectory in rviz and finally set destination point using
+rviz.</p>
+<hr>
+<p><em>by Łukasz Mitka, Husarion</em></p>
+<p><em>Do you need any support with completing this tutorial or have any difficulties with software or hardware? Feel free to describe your thoughts on our community forum: <a href="https://community.husarion.com/">https://community.husarion.com/</a> or to contact with our support: <a href="mailto:support@husarion.com">support@husarion.com</a></em></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a><ul class="toc-headings"><li><a href="#graph-methods">Graph methods</a></li><li><a href="#occupancy-grid-methods">Occupancy grid methods</a></li></ul></li><li><a href="#occupancy-grid-path-planning-in-ros">Occupancy grid path planning in ROS</a><ul class="toc-headings"><li><a href="#requirements-regarding-robot">Requirements regarding robot</a></li></ul></li><li><a href="#configuration-of-move-base-node">Configuration of <code>move_base</code> node</a><ul class="toc-headings"><li><a href="#common-parameters-for-cost-map">Common parameters for cost map</a></li><li><a href="#parameters-for-local-cost-map">Parameters for local cost map</a></li><li><a href="#parameters-for-global-cost-map">Parameters for global cost map</a></li><li><a href="#parameters-for-trajectory-planner">Parameters for trajectory planner</a></li><li><a href="#launching-path-planning-node">Launching path planning node</a></li><li><a href="#setting-goal-for-trajectory-planner">Setting goal for trajectory planner</a></li></ul></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-husarion-docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

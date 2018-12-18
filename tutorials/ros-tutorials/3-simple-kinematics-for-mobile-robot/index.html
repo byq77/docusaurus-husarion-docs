@@ -1,0 +1,555 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&#x27;3 Simple kinematics for mobile robot&#x27; · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;simple-kinematics-for-mobile-robot&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#simple-kinematics-for-mobile-robot&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Simple kinematics for mobile robot&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="&#x27;3 Simple kinematics for mobile robot&#x27; · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;simple-kinematics-for-mobile-robot&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#simple-kinematics-for-mobile-robot&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Simple kinematics for mobile robot&lt;/h1&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/atom.xml" title="Husarion Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/feed.xml" title="Husarion Docs Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="js/scrollspy.js"></script><script type="text/javascript" src="js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/prism.css"/><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/doc4" target="_self">Software</a></li><li class=""><a href="/docusaurus-husarion-docs/help" target="_self">Help</a></li><li class=""><a href="/docusaurus-husarion-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">&#x27;3 Simple kinematics for mobile robot&#x27;</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="simple-kinematics-for-mobile-robot"></a><a href="#simple-kinematics-for-mobile-robot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple kinematics for mobile robot</h1>
+<h2><a class="anchor" aria-hidden="true" id="a-little-bit-of-theory"></a><a href="#a-little-bit-of-theory" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A little bit of theory</h2>
+<h3><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h3>
+<p>The purpose of forward kinematics in mobile robotics is to determine robot
+position and orientation based on wheels rotation measurements. To achieve that we'll create robot kinematic model. ROSbot is four wheeled mobile robot with separate drive for each wheel, but in order to simplify kinematic calculation we will treat it as two wheeled. Two virtual wheels (marked as W<sub>L</sub> and W<sub>R</sub> on the schematic) will have axis going through robot geometric center. This way we can use simpler kinematic model of differential wheeled robot. The name &quot;differential&quot; comes from the fact that robot can change its direction by varying the relative rate of rotation of its wheels and does not require additional steering motion. Robot schematic is presented below:</p>
+<div><center><img src="./../../../assets/img/ros/robot_scheme.png" width="50%" height="50%"/></center></div>
+<p>Description:</p>
+<ul>
+<li><div>R<sub>c</sub> - robot geometric centre</div></li>
+<li><div>x<sub>c</sub> - robot geometric centre x position</div></li>
+<li><div>y<sub>c</sub> - robot geometric centre y position</div></li>
+<li><div>x<sub>r</sub> - robot local x axis that determines front of the robot</div></li>
+<li>α - robot angular position</li>
+<li><div>W<sub>FL</sub> - front left wheel</div></li>
+<li><div>W<sub>FR</sub> - front right wheel</div></li>
+<li><div>W<sub>RL</sub> - rear left wheel</div></li>
+<li><div>W<sub>RR</sub> - rear right wheel</div></li>
+<li><div>W<sub>L</sub> - virtual left wheel</div></li>
+<li><div>W<sub>R</sub> - virtual right wheel</div></li>
+<li><div>l<sub>1</sub> - distance between robot centre and front/rear wheels</div></li>
+<li><div>l<sub>2</sub> - distance between robot left and right wheels</div></li>
+</ul>
+<p>Our mobile robot has constraints. It can only move in <code>x-y</code> plane and it has 3 DOF (degrees of freedom). However not all of DOFs are controllable which means robot cannot move in every direction of its local axes (e.g. it cannot move sideways). Such drive system is called <strong>non-holonomic</strong>. When amount of controllable DOFs is equal to total DOFs then a robot can be called <strong>holonomic</strong>. To achieve that some mobile robots are built using Omni or Mecanum wheels and thanks to vectoring movement they can change position without changing their heading (orientation).</p>
+<h3><a class="anchor" aria-hidden="true" id="forward-kinematics-task"></a><a href="#forward-kinematics-task" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forward Kinematics task</h3>
+<p>The robot position is determined by a tuple (x<sub>c</sub>, y<sub>c</sub>, α). The forward kinematic task is to find new robot position (x<sub>c</sub>, y<sub>c</sub>, α)'
+after time <em>δt</em> for given control parameters:</p>
+<ul>
+<li>* <div>v<sub>R</sub> - linear speed of right virtual wheel
+* <div>v<sub>L</sub> - linear speed of left virtual wheel
+</li>
+</ul>
+<p>In our case the angular speed ω and the angular position Φ of each virtual wheel will be an average of its real counterparts:</p>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_1_1.png" title="\large \phi_{W_L}=\frac{\phi_{W_{FL}}+\phi_{W_{RL}}}{2}" /></center></div>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_1_2.png" title="\large \phi_{W_R}=\frac{\phi_{W_{FR}}+\phi_{W_{RR}}}{2}" /></center></div>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_1_3.png" title="\large \omega_{W_L}=\frac{\omega_{W_{FL}}+\omega_{W_{RL}}}{2}" /></center></div>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_1_4.png" title="\large \omega_{W_R}=\frac{\omega_{W_{FR}}+\omega_{W_{RR}}}{2}" /></center></div>
+<p>Linear speed of each virtual wheel:</p>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_2_1.png" title="\huge \huge v_{R} = \omega_{W_R} \times r" /></div></center>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_2_2.png" title="\huge \huge v_{L} = \omega_{W_L} \times r" /></div></center>
+<p>where <em>r</em> - the wheel radius.</p>
+<p>We can determine robot angular position and speed with:</p>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_3_1.png" title="\huge \alpha = (\phi_{W_R} - \phi_{W_L})\frac{r}{l_2}" /></div></center>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_3_2.png" title="\huge \dot{\alpha}=\frac{d\alpha}{dt}" /></center></div>
+<p>Then robot speed x and y component:</p>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_4_1.png" title="\huge \dot{x_c}=(v_L + \dot{\alpha}\tfrac{l_2}{2})cos(\alpha)" /></center></div>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_4_2.png" title="\huge \dot{y_c}=(v_L + \dot{\alpha}\tfrac{l_2}{2})sin(\alpha)" /></center></div>
+<p>To get position:</p>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_5_1.png" title="\huge x_c = \int_{0}^{t}\dot{x_c}\ dt" /></center></div>
+<div><center><img src="./../../../assets/img/ros/man_3_formula_5_2.png" title="\huge y_c = \int_{0}^{t}\dot{y_c}\ dt" /></center></div>
+<p>We assume starting position as (0,0).</p>
+<p>In order for code to work correctly wheels should be connected to ports in following manner:</p>
+<ul>
+<li><div>front left wheel (W<sub>FL</sub>) - hMot4</div></li>
+<li><div>front right wheel (W<sub>FR</sub>) - hMot1</div></li>
+<li><div>rear left wheel (W<sub>RL</sub>) - hMot3</div></li>
+<li><div>rear right wheel (W<sub>RR</sub>) - hMot2</div></li>
+</ul>
+<p>The implementation of the equations above in hFramework can be found <a href="https://github.com/husarion/hFramework/blob/master/src/rosbot/ROSbot.cpp#L126">here</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="controlling-the-motor"></a><a href="#controlling-the-motor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Controlling the motor</h2>
+<p>Most common way to send movement commands to the robot is with use of
+<code>geometry_msgs/Twist</code> message type. Then motor driver node should use
+data stored in them to control the motor.</p>
+<p>The <code>geometry_msgs/Twist</code> message express velocity in free space and consists of two fields:</p>
+<ul>
+<li><code>Vector3 linear</code> - represents linear part of velocity [m/s]</li>
+<li><code>Vector3 angular</code> - represents angular part of velocity [rad/s]</li>
+</ul>
+<p>You will control ROSbot in the <code>x-y</code> plane by manipulating the <code>x</code> component of linear speed vector and the <code>z</code> component of angular speed vector.</p>
+<h3><a class="anchor" aria-hidden="true" id="publishing-the-motion-command-for-robot"></a><a href="#publishing-the-motion-command-for-robot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Publishing the motion command for robot</h3>
+<p>You will use keyboard to control the movement of your robot. For getting the
+key events and converting them to <code>geometry_msgs/Twist</code> messages you can
+use <code>teleop_twist_keyboard.py</code> node from package
+<code>teleop_twist_keyboard</code>.</p>
+<p>Alternatively you can use joystick to control your robot, then you will
+need <code>universal_teleop</code> node from <code>universal_teleop</code> package and
+<code>keyboard</code> node from <code>keyboard</code> package</p>
+<h3><a class="anchor" aria-hidden="true" id="converting-motion-command-to-motor-drive-signal"></a><a href="#converting-motion-command-to-motor-drive-signal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Converting motion command to motor drive signal</h3>
+<p>In this section you will create a node for interfacing motors. Your node
+will subscribe to topic with <code>geometry_msgs/Twist</code> messages, drive the
+motors, read encoders and publish their state to appropriate topic. To
+create this node you will use Husarion Cloud. Create new project and
+paste following:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"hFramework.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"hCloudClient.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ros.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"geometry_msgs/Twist.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"sensor_msgs/BatteryState.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"std_msgs/Bool.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ROSbot.h"</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> hFramework;
+
+<span class="hljs-comment">// Uncomment one of these lines, accordingly to range sensor type of your ROSbot</span>
+<span class="hljs-comment">// If you have version with infared sensor:</span>
+<span class="hljs-comment">// static const SensorType sensor_type = SENSOR_INFRARED;</span>
+<span class="hljs-comment">// If you have version with laser sensor:</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> SensorType sensor_type = SENSOR_LASER;
+<span class="hljs-comment">// If you want to use your own sensor:</span>
+<span class="hljs-comment">// static const SensorType sensor_type = NO_DISTANCE_SENSOR;</span>
+
+<span class="hljs-comment">// Uncomment one of these lines, accordingly to IMU sensor type of your device</span>
+<span class="hljs-comment">// If you have version with MPU9250:</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> ImuType imu_type = MPU9250;
+<span class="hljs-comment">// If you want to use your own sensor:</span>
+<span class="hljs-comment">// static const ImuType imu_type = NO_IMU;</span>
+
+ros::NodeHandle nh;
+sensor_msgs::BatteryState battery;
+ros::Publisher *battery_pub;
+
+<span class="hljs-keyword">int</span> publish_counter = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">twistCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> geometry_msgs::Twist &amp;twist)</span>
+</span>{
+    rosbot.setSpeed(twist.linear.x, twist.angular.z);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initCmdVelSubscriber</span><span class="hljs-params">()</span>
+</span>{
+    ros::Subscriber&lt;geometry_msgs::Twist&gt; *cmd_sub = <span class="hljs-keyword">new</span> ros::Subscriber&lt;geometry_msgs::Twist&gt;(<span class="hljs-string">"/cmd_vel"</span>, &amp;twistCallback);
+    nh.subscribe(*cmd_sub);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resetCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::Bool &amp;msg)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (msg.data == <span class="hljs-literal">true</span>)
+    {
+        rosbot.reset_odometry();
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initResetOdomSubscriber</span><span class="hljs-params">()</span>
+</span>{
+    ros::Subscriber&lt;std_msgs::Bool&gt; *odom_reset_sub = <span class="hljs-keyword">new</span> ros::Subscriber&lt;std_msgs::Bool&gt;(<span class="hljs-string">"/reset_odom"</span>, &amp;resetCallback);
+    nh.subscribe(*odom_reset_sub);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initBatteryPublisher</span><span class="hljs-params">()</span>
+</span>{
+    battery_pub = <span class="hljs-keyword">new</span> ros::Publisher(<span class="hljs-string">"/battery"</span>, &amp;battery);
+    nh.advertise(*battery_pub);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">hMain</span><span class="hljs-params">()</span>
+</span>{
+    rosbot.initROSbot(sensor_type, imu_type);
+    platform.begin(&amp;RPi);
+    nh.getHardware()-&gt;initWithDevice(&amp;platform.LocalSerial);
+    nh.initNode();
+
+    initBatteryPublisher();
+    initCmdVelSubscriber();
+    initResetOdomSubscriber();
+
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>)
+    {
+        nh.spinOnce();
+        publish_counter++;
+        <span class="hljs-keyword">if</span> (publish_counter &gt; <span class="hljs-number">10</span>)
+        {
+            <span class="hljs-comment">// get battery voltage</span>
+            battery.voltage = rosbot.getBatteryLevel();
+            <span class="hljs-comment">// publish battery voltage</span>
+            battery_pub-&gt;publish(&amp;battery);
+            publish_counter = <span class="hljs-number">0</span>;
+        }
+        sys.delay(<span class="hljs-number">10</span>);
+    }
+}
+</code></pre>
+<p>Below is explanation for code line by line.</p>
+<p>Include required headers:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"hFramework.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"hCloudClient.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ros.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"geometry_msgs/Twist.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"sensor_msgs/BatteryState.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"std_msgs/Bool.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ROSbot.h"</span></span>
+</code></pre>
+<p>Load namespace for Husarion functions:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> hFramework;
+</code></pre>
+<p>Define which type of distance sensor you are using in your robot:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-comment">// Uncomment one of these lines, accordingly to range sensor type of your ROSbot</span>
+<span class="hljs-comment">// If you have version with infared sensor:</span>
+<span class="hljs-comment">// static const SensorType sensor_type = SENSOR_INFRARED;</span>
+<span class="hljs-comment">// If you have version with laser sensor:</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> SensorType sensor_type = SENSOR_LASER;
+<span class="hljs-comment">// If you want to use your own sensor:</span>
+<span class="hljs-comment">// static const SensorType sensor_type = NO_DISTANCE_SENSOR;</span>
+</code></pre>
+<p>Define which type of IMU you are using in your robot:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-comment">// Uncomment one of these lines, accordingly to IMU sensor type of your device</span>
+<span class="hljs-comment">// If you have version with MPU9250:</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> ImuType imu_type = MPU9250;
+<span class="hljs-comment">// If you want to use your own sensor:</span>
+<span class="hljs-comment">// static const ImuType imu_type = NO_IMU;</span>
+</code></pre>
+<p>Create handle for node:</p>
+<pre><code class="hljs css language-cpp">    ros::NodeHandle nh;
+</code></pre>
+<p>Define type of message and publisher for a battery:</p>
+<pre><code class="hljs css language-cpp">    sensor_msgs::BatteryState battery;
+    ros::Publisher *battery_pub;
+</code></pre>
+<p>Function for handling incoming messages:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">twistCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> geometry_msgs::Twist &amp;twist)</span>
+    </span>{
+        rosbot.setSpeed(twist.linear.x, twist.angular.z);
+    }
+</code></pre>
+<p>Function for initialization of velocity command subscriber:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initCmdVelSubscriber</span><span class="hljs-params">()</span>
+    </span>{
+        ros::Subscriber&lt;geometry_msgs::Twist&gt; *cmd_sub = <span class="hljs-keyword">new</span> ros::Subscriber&lt;geometry_msgs::Twist&gt;(<span class="hljs-string">"/cmd_vel"</span>, &amp;twistCallback);
+        nh.subscribe(*cmd_sub);
+    }
+</code></pre>
+<p>Function for initialization of battery state publisher:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initBatteryPublisher</span><span class="hljs-params">()</span>
+    </span>{
+        battery_pub = <span class="hljs-keyword">new</span> ros::Publisher(<span class="hljs-string">"/battery"</span>, &amp;battery);
+        nh.advertise(*battery_pub);
+    }
+</code></pre>
+<p>Function for handling incoming requests of robot odometry reset:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resetCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::Bool &amp;msg)</span>
+    </span>{
+        <span class="hljs-keyword">if</span> (msg.data == <span class="hljs-literal">true</span>)
+        {
+            rosbot.reset_odometry();
+        }
+    }
+</code></pre>
+<p>Function for initialization of odometry reset requests subscriber:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initResetOdomSubscriber</span><span class="hljs-params">()</span>
+</span>{
+    ros::Subscriber&lt;std_msgs::Bool&gt; *odom_reset_sub = <span class="hljs-keyword">new</span> ros::Subscriber&lt;std_msgs::Bool&gt;(<span class="hljs-string">"/reset_odom"</span>, &amp;resetCallback);
+    nh.subscribe(*odom_reset_sub);
+}
+</code></pre>
+<p>Main function, device and messages initialization:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">hMain</span><span class="hljs-params">()</span> </span>{
+    rosbot.initROSbot(sensor_type, imu_type);
+    platform.begin(&amp;RPi);
+    nh.getHardware()-&gt;initWithDevice(&amp;platform.LocalSerial);
+    nh.initNode();
+
+    initBatteryPublisher();
+    initCmdVelSubscriber();
+    initResetOdomSubscriber();
+</code></pre>
+<p>Infinite loop, waiting for incoming messages:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>)
+    {
+        nh.spinOnce();
+        publish_counter++;
+        <span class="hljs-keyword">if</span> (publish_counter &gt; <span class="hljs-number">10</span>)
+        {
+            <span class="hljs-comment">// get battery voltage</span>
+            battery.voltage = rosbot.getBatteryLevel();
+            <span class="hljs-comment">// publish battery voltage</span>
+            battery_pub-&gt;publish(&amp;battery);
+            publish_counter = <span class="hljs-number">0</span>;
+        }
+        sys.delay(<span class="hljs-number">10</span>);
+    }
+</code></pre>
+<p>Build your project and upload it to device.</p>
+<h3><a class="anchor" aria-hidden="true" id="running-motor-controller"></a><a href="#running-motor-controller" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running motor controller</h3>
+<p>In this section you will learn how to control your robot movement with
+keyboard. You will need <code>teleop_twist_keyboard</code> node from
+<code>teleop_twist_keyboard</code> package.</p>
+<p>Log in to your CORE2 device through remote desktop and run terminal. In
+first terminal window run <code>$ roscore</code>, in second run:</p>
+<pre><code class="hljs">    $ <span class="hljs-meta-keyword">/opt/</span>husarion<span class="hljs-meta-keyword">/tools/</span>rpi-linux/ros-core2-client <span class="hljs-meta-keyword">/dev/</span>ttyCORE2
+</code></pre>
+<p>This program is responsible for bridging your CORE2 to ROS network. When you are working with simulator, then above bridge is not necessary. Gazebo will subscribe appropriate topics automatically.
+In third terminal window run:</p>
+<pre><code class="hljs">    $ rosrun teleop_twist_keyboard teleop_twist_keyboard<span class="hljs-selector-class">.py</span>
+</code></pre>
+<p>Now you can control your robot with keyboard with following functions
+for buttons:</p>
+<ul>
+<li><p><code>’i’</code> - move forward</p></li>
+<li><p><code>’,’</code> - move backward</p></li>
+<li><p><code>’j’</code> - turn left</p></li>
+<li><p><code>’l’</code> - turn right</p></li>
+<li><p><code>’k’</code> - stop</p></li>
+<li><p><code>’q’</code> - increase speed</p></li>
+<li><p><code>’z’</code> - decrease speed</p></li>
+</ul>
+<p>You should get similar view in <code>rqt_graph</code>:</p>
+<p><img src="/assets/img/ros/man_3_1.png" alt="image"></p>
+<h3><a class="anchor" aria-hidden="true" id="determining-robot-position"></a><a href="#determining-robot-position" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Determining robot position</h3>
+<p>This section is required only for ROSbot. Gazebo has already implemented it's own plugin to publish robot position.
+Now we will perform forward kinematics task- we will use encoders that
+are attached to every motor and process their measurements with
+equations shown in section <strong>Forward kinematics task</strong>.</p>
+<p>Open Husarion WebIDE and open project that you created in section <strong>Converting motion command to motor drive signal</strong>.</p>
+<p>Add header file:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"geometry_msgs/PoseStamped.h"</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"tf/tf.h"</span></span>
+</code></pre>
+<p>Define message type and publisher for robot position:</p>
+<pre><code class="hljs css language-cpp">    geometry_msgs::PoseStamped pose;
+    ros::Publisher *pose_pub;
+</code></pre>
+<p>Create a data structure:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">float</span>&gt; rosbot_pose;
+</code></pre>
+<p>Function for publishing robot position:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initPosePublisher</span><span class="hljs-params">()</span>
+</span>{
+    pose.header.frame_id = <span class="hljs-string">"odom"</span>;
+    pose.pose.orientation = tf::createQuaternionFromYaw(<span class="hljs-number">0</span>);
+    pose_pub = <span class="hljs-keyword">new</span> ros::Publisher(<span class="hljs-string">"/pose"</span>, &amp;pose);
+    nh.advertise(*pose_pub);
+}
+</code></pre>
+<p>In main function for initialization of PosePublisher:</p>
+<pre><code class="hljs">initPosePublisher();
+</code></pre>
+<p>Put values to message and publish them:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-comment">// get ROSbot pose</span>
+    rosbot_pose = rosbot.getPose();
+    pose.pose.position.x = rosbot_pose[<span class="hljs-number">0</span>];
+    pose.pose.position.y = rosbot_pose[<span class="hljs-number">1</span>];
+    pose.pose.orientation = tf::createQuaternionFromYaw(rosbot_pose[<span class="hljs-number">2</span>]);
+    <span class="hljs-comment">// publish pose</span>
+    pose_pub-&gt;publish(&amp;pose);
+</code></pre>
+<p>Your final code should look like this:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"hFramework.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"hCloudClient.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ros.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"geometry_msgs/Twist.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"sensor_msgs/BatteryState.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"std_msgs/Bool.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"geometry_msgs/PoseStamped.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"tf/tf.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ROSbot.h"</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> hFramework;
+
+<span class="hljs-comment">// Uncomment one of these lines, accordingly to range sensor type of your ROSbot</span>
+<span class="hljs-comment">// If you have version with infared sensor:</span>
+<span class="hljs-comment">// static const SensorType sensor_type = SENSOR_INFRARED;</span>
+<span class="hljs-comment">// If you have version with laser sensor:</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> SensorType sensor_type = SENSOR_LASER;
+<span class="hljs-comment">// If you want to use your own sensor:</span>
+<span class="hljs-comment">// static const SensorType sensor_type = NO_DISTANCE_SENSOR;</span>
+
+<span class="hljs-comment">// Uncomment one of these lines, accordingly to IMU sensor type of your device</span>
+<span class="hljs-comment">// If you have version with MPU9250:</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> ImuType imu_type = MPU9250;
+<span class="hljs-comment">// If you want to use your own sensor:</span>
+<span class="hljs-comment">// static const ImuType imu_type = NO_IMU;</span>
+
+ros::NodeHandle nh;
+sensor_msgs::BatteryState battery;
+ros::Publisher *battery_pub;
+geometry_msgs::PoseStamped pose;
+ros::Publisher *pose_pub;
+
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">float</span>&gt; rosbot_pose;
+
+<span class="hljs-keyword">int</span> publish_counter = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">twistCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> geometry_msgs::Twist &amp;twist)</span>
+</span>{
+    rosbot.setSpeed(twist.linear.x, twist.angular.z);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initCmdVelSubscriber</span><span class="hljs-params">()</span>
+</span>{
+    ros::Subscriber&lt;geometry_msgs::Twist&gt; *cmd_sub = <span class="hljs-keyword">new</span> ros::Subscriber&lt;geometry_msgs::Twist&gt;(<span class="hljs-string">"/cmd_vel"</span>, &amp;twistCallback);
+    nh.subscribe(*cmd_sub);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resetCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::Bool &amp;msg)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (msg.data == <span class="hljs-literal">true</span>)
+    {
+        rosbot.reset_odometry();
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initResetOdomSubscriber</span><span class="hljs-params">()</span>
+</span>{
+    ros::Subscriber&lt;std_msgs::Bool&gt; *odom_reset_sub = <span class="hljs-keyword">new</span> ros::Subscriber&lt;std_msgs::Bool&gt;(<span class="hljs-string">"/reset_odom"</span>, &amp;resetCallback);
+    nh.subscribe(*odom_reset_sub);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initBatteryPublisher</span><span class="hljs-params">()</span>
+</span>{
+    battery_pub = <span class="hljs-keyword">new</span> ros::Publisher(<span class="hljs-string">"/battery"</span>, &amp;battery);
+    nh.advertise(*battery_pub);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">initPosePublisher</span><span class="hljs-params">()</span>
+</span>{
+    pose.header.frame_id = <span class="hljs-string">"odom"</span>;
+    pose.pose.orientation = tf::createQuaternionFromYaw(<span class="hljs-number">0</span>);
+    pose_pub = <span class="hljs-keyword">new</span> ros::Publisher(<span class="hljs-string">"/pose"</span>, &amp;pose);
+    nh.advertise(*pose_pub);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">hMain</span><span class="hljs-params">()</span>
+</span>{
+    rosbot.initROSbot(sensor_type);
+    platform.begin(&amp;RPi);
+    nh.getHardware()-&gt;initWithDevice(&amp;platform.LocalSerial);
+    nh.initNode();
+
+    initBatteryPublisher();
+    initCmdVelSubscriber();
+    initResetOdomSubscriber();
+    initPosePublisher();
+
+    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>)
+    {
+        nh.spinOnce();
+        publish_counter++;
+        <span class="hljs-keyword">if</span> (publish_counter &gt; <span class="hljs-number">10</span>)
+        {   
+            <span class="hljs-comment">// get ROSbot pose</span>
+            rosbot_pose = rosbot.getPose();
+            pose.pose.position.x = rosbot_pose[<span class="hljs-number">0</span>];
+            pose.pose.position.y = rosbot_pose[<span class="hljs-number">1</span>];
+            pose.pose.orientation = tf::createQuaternionFromYaw(rosbot_pose[<span class="hljs-number">2</span>]);
+            <span class="hljs-comment">// publish pose</span>
+            pose_pub-&gt;publish(&amp;pose);   
+            
+            <span class="hljs-comment">// get battery voltage</span>
+            battery.voltage = rosbot.getBatteryLevel();
+            <span class="hljs-comment">// publish battery voltage</span>
+            battery_pub-&gt;publish(&amp;battery);
+            publish_counter = <span class="hljs-number">0</span>;
+        }
+        sys.delay(<span class="hljs-number">10</span>);
+    }
+}
+</code></pre>
+<p>Build your project and upload it to the device.</p>
+<h3><a class="anchor" aria-hidden="true" id="running-motor-controller-with-forward-kinematics-task"></a><a href="#running-motor-controller-with-forward-kinematics-task" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running motor controller with forward kinematics task</h3>
+<p>In this section you will control your robot with keyboard and observe as it publishes its own position.</p>
+<p>If you are working with ROSbot:
+Log in to your CORE2 device through remote desktop, run terminal and start your robot as previously. In another terminal window run:</p>
+<pre><code class="hljs css language-bash">    $ rostopic <span class="hljs-built_in">echo</span> /pose
+</code></pre>
+<p>If you are working with Gazebo:
+Start Gazebo as prevoiusly. In another terminal window run:</p>
+<pre><code class="hljs css language-bash">    $ rostopic <span class="hljs-built_in">echo</span> /odom
+</code></pre>
+<p>Above difference comes from the fact, that Gazebo and ROSbot are publishing its position in different ways.</p>
+<p>Remember, that you need to have active window with <code>teleop_twist_keyboard</code> to control robot movement.</p>
+<p>You should get something like this on your screen:</p>
+<p><img src="/assets/img/ros/man_3_2.png" alt="image"></p>
+<h3><a class="anchor" aria-hidden="true" id="data-visualization-with-plotjuggler"></a><a href="#data-visualization-with-plotjuggler" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data visualization with PlotJuggler</h3>
+<p>In this section you will learn how to visualize data from ros topics using PlotJuggler. It is a simple tool that allows you to plot logged data, in particular timeseries. You can learn more about the tool on its <a href="https://github.com/facontidavide/PlotJuggler">official webpage</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="how-to-use"></a><a href="#how-to-use" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to use</h4>
+<p>Start PlotJuggler:</p>
+<pre><code class="hljs css language-bash">    $ rosrun plotjuggler PlotJuggler
+</code></pre>
+<p>In case your image lacks this tool you can install it by typing:</p>
+<pre><code class="hljs css language-bash">   $ sudo apt-get update
+   $ sudo apt-get install ros-kinetic-plotjuggler 
+</code></pre>
+<p>From menu bar select <strong>Streaming &gt; Start: ROS_Topic_Streamer</strong>. In pop-up menu that will appear choose <strong>/pose</strong> from available topic names and press ok.</p>
+<p><img src="/assets/img/ros/man_3_6.png" alt="image"></p>
+<p>Pressing <strong>CTRL</strong> and <strong>SHIFT</strong> select positions:</p>
+<ul>
+<li><em>/pose/pose/position/x</em></li>
+<li><em>/pose/pose/position/y</em></li>
+<li><em>/pose/pose/position/z</em></li>
+</ul>
+<p>and then drag and drop them to the window area. This way you can comfortably observe changes in the odometry data during robot motion:</p>
+<p><img src="/assets/img/ros/man_3_7.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="robot-visualization-with-rviz"></a><a href="#robot-visualization-with-rviz" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Robot visualization with Rviz</h2>
+<p>Rviz is tool which allows visualization of robot position, travelled path,
+planned trajectory, sensor state or obstacles surrounding robot.</p>
+<p>To run it type in terminal:</p>
+<pre><code class="hljs css language-bash">    $ rviz
+</code></pre>
+<p>New window will appear:</p>
+<p><img src="/assets/img/ros/man_3_3.png" alt="image"></p>
+<p>Application main view consists of:</p>
+<ol>
+<li><p>Toolbar</p></li>
+<li><p>Visualized items list</p></li>
+<li><p>Visualization window</p></li>
+<li><p>Object manipulation buttons</p></li>
+</ol>
+<p>By default you will see only base frame, to add any other object push
+<strong>Add</strong> from object manipulation buttons. In new window, there are two
+tabs <strong>By display type</strong> and <strong>By topic</strong>. First one is for manual
+selection from all possible objects, second one contains only currently
+published topics.</p>
+<p>After you choose object to display, click <strong>OK</strong> button and it will
+appear in visualization window.</p>
+<p>Now we will visualize position published by your robot, run <code>rviz</code>,
+click <strong>Add</strong> and choose tab <strong>By topic</strong>.</p>
+<div><center><img src="./../../../assets/img/ros/man_3_4.png" /></center></div>
+<p>If you are working with ROSbot:
+Find topic <code>/pose</code> and choose <code>Pose</code> and click <strong>OK</strong>.</p>
+<p>If you are working with Gazebo:
+Find topic <code>/odom</code> and choose <code>Odometry</code> and click <strong>OK</strong>.</p>
+<p>Then in visualized items list find position <code>Fixed Frame</code> and change it
+to <code>odom</code>. At this stage, you will need to type it. Later it will be possible to choose frame names from dropdown list, this will be covered in tutorial 6.</p>
+<p>After this is done, you should see an arrow representing position and orientation
+of your robot. Move your robot and observe as arrow changes its
+position.</p>
+<p><img src="/assets/img/ros/man_3_5.png" alt="image"></p>
+<p>Visualization of any other item is performed in the same way. In further
+lessons, as you will produce more objects to visualize, you will add them
+to the same view.</p>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>After completing this tutorial you should be able to control motor
+attached to your CORE2 device, set desired velocity for robot with
+<code>geometry_msgs/Twist</code> message, determine position of your robot using
+odometry, publish it as a <code>PoseStamped</code> message and visualize position
+of your robot using <code>rviz</code>.</p>
+<hr>
+<p><em>by Łukasz Mitka, Husarion</em></p>
+<p><em>Do you need any support with completing this tutorial or have any difficulties with software or hardware? Feel free to describe your thoughts on our community forum: <a href="https://community.husarion.com/">https://community.husarion.com/</a> or to contact with our support: <a href="mailto:support@husarion.com">support@husarion.com</a></em></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#a-little-bit-of-theory">A little bit of theory</a><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#forward-kinematics-task">Forward Kinematics task</a></li></ul></li><li><a href="#controlling-the-motor">Controlling the motor</a><ul class="toc-headings"><li><a href="#publishing-the-motion-command-for-robot">Publishing the motion command for robot</a></li><li><a href="#converting-motion-command-to-motor-drive-signal">Converting motion command to motor drive signal</a></li><li><a href="#running-motor-controller">Running motor controller</a></li><li><a href="#determining-robot-position">Determining robot position</a></li><li><a href="#running-motor-controller-with-forward-kinematics-task">Running motor controller with forward kinematics task</a></li><li><a href="#data-visualization-with-plotjuggler">Data visualization with PlotJuggler</a></li></ul></li><li><a href="#robot-visualization-with-rviz">Robot visualization with Rviz</a></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-husarion-docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

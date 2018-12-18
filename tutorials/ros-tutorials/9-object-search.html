@@ -1,0 +1,1413 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&#x27;9 Object search&#x27; · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;object-search&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#object-search&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Object search&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="&#x27;9 Object search&#x27; · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;object-search&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#object-search&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Object search&lt;/h1&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/atom.xml" title="Husarion Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/feed.xml" title="Husarion Docs Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="js/scrollspy.js"></script><script type="text/javascript" src="js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/prism.css"/><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/doc4" target="_self">Software</a></li><li class=""><a href="/docusaurus-husarion-docs/help" target="_self">Help</a></li><li class=""><a href="/docusaurus-husarion-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">&#x27;9 Object search&#x27;</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="object-search"></a><a href="#object-search" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object search</h1>
+<h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>Object search task defines a mission in which robot has to explore environment while observing if given object exists in explored area. For this purpose it is necessary to use two different approaches, one for exploration and second for object recognition. In prevoius tutorial we already discussed object environment exploration and object recognition as separate tasks. Beside launching them together, it is necessary to keep track of which obstacles were checked by the object recognition process. Task is considered as finished when object is succesfully recognized or all obstacles were checked with no object detection.</p>
+<p><img src="/assets/img/ros/man_9_find_object_2d.png" alt="image"></p>
+<p>We have prepared ready to go virtual environment with end effect of following this tutorial. It is available on ROSDS:</p>
+<div><center>
+<a href="https://rds.theconstructsim.com/tc_projects/use_project_share_link/1a7c4b62-12d5-4f7c-8f2f-f2a2b8ecdb23">
+<img alt="run-on-ROSDS" src="./../../../assets/img/ros/Run-on-ROSDS-button.png" width="250px"/></a>
+</center></div>
+<h2><a class="anchor" aria-hidden="true" id="object-search-in-ros"></a><a href="#object-search-in-ros" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object search in ROS</h2>
+<p>It is possible to use configurations from prevoius tutorials for area exloration and object detection. We will use:</p>
+<ul>
+<li><p><code>explore_server</code>node from <code>frontier_exploration</code> package</p></li>
+<li><p><code>move_base</code> node from <code>move_base</code> package</p></li>
+<li><p><code>find_object_2d</code> node from <code>find_object_2d</code> package</p></li>
+</ul>
+<p>Furthermore we will need our own node to keep track of checked obstacles.</p>
+<h3><a class="anchor" aria-hidden="true" id="requirements-regarding-robot"></a><a href="#requirements-regarding-robot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requirements regarding robot</h3>
+<p>Before continuing with object detection task certain requirements must be met, robot should:</p>
+<ul>
+<li><p>subscribe <code>/move_base/goal</code> topic with message type <code>geometry_msgs/PoseStamped</code> in which robot desired positions are included.</p></li>
+<li><p>Publish map to <code>/map</code> topic with message type <code>nav_msgs/OccupancyGrid</code>.</p></li>
+<li><p>Publish to <code>/tf</code> topic transformations between robot starting point relative to map, robot relative to its starting point, laser scanner relative to robot and camera realative to robot.</p></li>
+<li><p>Be equipped with RGB-D camera (Orbbec Astra is used in tutorial)</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="system-architecture"></a><a href="#system-architecture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>System architecture</h3>
+<p>Our search system will consist of many cooperating ROS nodes, before we start configuring them, we need to specify overall data flow and principle of operation. For performing the search task we will use two main sensors, this will be laser scanner and RGB-D camera. Laser scanner will be used for robot localization and mapping, RDB-D camera will be used for object detection. The key role of the system will be played by our own node, we will name it <code>search_manager</code>, this node will be controlling state of other tasks like exploration or path planning. Furhtermore, <code>search_manager</code> will keep track of found obstacles and which of them were checked, for this, it will need to subscribe <code>/map</code> from <code>gmapping</code>, <code>/objects</code> from <code>find_object_2d</code> and <code>proj_scan</code> containing <code>sensor_msgs/LaserScan</code> projected from depth image.</p>
+<p><img src="/assets/img/ros/man_9_rqt_graph.png" alt="image"></p>
+<p>Due to the fact that all computations would be exccesive load for SBC in the robot, some of the tasks will be moved to other computer.</p>
+<h3><a class="anchor" aria-hidden="true" id="configuration-of-explore-server-and-move-base-nodes"></a><a href="#configuration-of-explore-server-and-move-base-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration of <code>explore_server</code> and <code>move_base</code> nodes</h3>
+<p><code>Explore server</code> and <code>move_base</code> nodes can be used with the same configuration as in prevoius tutorials, make sure you have <code>costmap_common_params.yaml</code>, <code>local_costmap_params.yaml</code>, <code>global_costmap_params.yaml</code>, <code>trajectory_planner.yaml</code> and <code>exploration.yaml</code> file in <code>tutorial_pkg/config</code> directory.</p>
+<h3><a class="anchor" aria-hidden="true" id="configuration-of-find-object-2d-node"></a><a href="#configuration-of-find-object-2d-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration of <code>find_object_2d</code> node</h3>
+<p><code>Find_object_2d</code> node will be used to detect the searched object, beside the anaysis of RGB image it can utilise depth image to measure detected object position and publish it to <code>/tf</code> topic.</p>
+<p>You can use the same images that you scanned in tutorial 4. Searching node will be running until any object is recognized.</p>
+<p>For the node we will define below parameters:</p>
+<ul>
+<li><p><code>objects_path</code> with value <code>$(find tutorial_pkg)/image_rec/</code></p></li>
+<li><p><code>object_prefix</code> with value <code>object</code></p></li>
+<li><p><code>gui</code> with value <code>true</code></p></li>
+<li><p><code>subscribe_depth</code> with value <code>true</code></p></li>
+</ul>
+<p>We will also need to remap topics:</p>
+<ul>
+<li><p>from <code>rgb/image_rect_color</code> to <code>/rgb_raw</code></p></li>
+<li><p>from <code>depth_registered/image_raw</code> to <code>/depth_raw</code></p></li>
+<li><p>from <code>depth_registered/camera_info</code> to <code>/camera/depth/camera_info</code></p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="configuration-of-depthimage-to-laserscan-node"></a><a href="#configuration-of-depthimage-to-laserscan-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration of <code>depthimage_to_laserscan</code> node</h3>
+<p>Node <code>depthimage_to_laserscan</code> from package <code>depthimage_to_laserscan</code> makes projection of depth images from RGB-D camera to planar <code>sensor_msgs/LaserScan</code>. These projections will be used to mark obstacles that were checked by the camera.</p>
+<p>For the node we will define below parameters:</p>
+<ul>
+<li><p><code>scan_height</code> with value <code>1</code></p></li>
+<li><p><code>range_min</code> with value <code>0.45</code></p></li>
+<li><p><code>range_max</code> with value <code>1.5</code></p></li>
+</ul>
+<p>We will also need to remap topics:</p>
+<ul>
+<li><p>from= <code>/image</code> to <code>/camera/depth/image</code></p></li>
+<li><p>from= <code>/scan</code> to <code>/proj_scan</code></p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="configuration-of-video-streaming-to-external-computer"></a><a href="#configuration-of-video-streaming-to-external-computer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration of video streaming to external computer</h3>
+<p>We will be performing image analysis on external computer, this could be PC connected through LAN or remote server connected through husarnet. Though it is possible to stream uncompressed images to other device, it is not adviced due to the huge bandwidth usage. Much better way is to use <code>image_transport</code> package to stream compressed images. For this we will need to start few aditional nodes. Two of them will be running on robot, they will subscribe respectively raw RGB and depth image and publish compressed images. Another two nodes will be running on another machine, their task will be to decompress images and publish them for further usage. All mentioned nodes are from <code>image_transport</code> package and are of type <code>republish</code>.</p>
+<p>First node on robot will be defined with argument:<code>raw in:=/camera/rgb/image_raw compressed out:=/rgb_republish</code> and no parameters.</p>
+<p>Second node on robot will be defined with argument: <code>raw in:=/camera/depth/image_raw compressed out:=/depth_republish</code> and below parameters:</p>
+<ul>
+<li><p><code>compressed/format</code> with value <code>png</code></p></li>
+<li><p><code>compressed/png_level</code> with value <code>1</code></p></li>
+</ul>
+<p>First node on external computer will be defined with argument:<code>compressed in:=/rgb_republish raw out:=/rgb_raw</code> and below parameter:</p>
+<ul>
+<li><code>compressed/mode</code> with value <code>color</code></li>
+</ul>
+<p>Second node on external computer will be defined with argument: <code>compressed in:=/depth_republish raw out:=/depth_raw</code> and below parameter:</p>
+<ul>
+<li><code>compressed/mode</code> with value <code>unchanged</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="key-methods-in-search-manager-node"></a><a href="#key-methods-in-search-manager-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Key methods in <code>search_manager</code> node</h3>
+<p>The <code>search_manager</code> node that we will use in this tutorial is responsible for managing exploration and trajectory planning tasks. It also takes care of marking checked obstacles.</p>
+<p>For controlling exploration and path planning tasks, we will use <code>actionlib</code> library.</p>
+<p>We need to include appropriate headers in <code>search_manager_node.h</code>:</p>
+<pre><code class="hljs"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;actionlib/client/simple_action_client.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;actionlib_msgs/GoalID.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;actionlib_msgs/GoalStatusArray.h&gt;</span></span>
+</code></pre>
+<p>Define function for triggering exploration task:</p>
+<pre><code class="hljs">void start<span class="hljs-constructor">_frontier_exploration()</span>
+{
+    exploration_in_progress = <span class="hljs-literal">true</span>;
+    actionlib::SimpleActionClient&lt;frontier_exploration::ExploreTaskAction&gt; explore<span class="hljs-constructor">Client(<span class="hljs-string">"explore_server"</span>, <span class="hljs-params">true</span>)</span>;
+    exploreClient.wait<span class="hljs-constructor">ForServer()</span>;
+    <span class="hljs-constructor">ROS_INFO(<span class="hljs-string">"Sending goal"</span>)</span>;
+    exploreClient.send<span class="hljs-constructor">Goal(<span class="hljs-params">sm</span>-&gt;<span class="hljs-params">createExplorationGoal</span>()</span>);
+}
+</code></pre>
+<p>Method <code>createExplorationGoal()</code> of class <code>SearchManager</code> creates data structure containing parameters of exploration task.</p>
+<p>To stop the exploration task we will define function:</p>
+<pre><code class="hljs"><span class="hljs-literal">void</span> cancel_exploration_action()
+{
+    actionlib_msgs<span class="hljs-type">::GoalID</span> cancel_exploration;
+    cancel_exploration.id = <span class="hljs-string">""</span>;
+    cancel_exploration.stamp = ros<span class="hljs-type">::Time</span><span class="hljs-type">::now</span>();
+    explore_canceller.publish(cancel_exploration);
+}
+</code></pre>
+<p>If empty goal ID is published, this causes all exploration tasks to be cancelled.</p>
+<p>Similarly we define function for cancelling path planning task:</p>
+<pre><code class="hljs">void cancel_move_base_action()
+{
+<span class="hljs-symbol">    actionlib_msgs:</span>:GoalID <span class="hljs-keyword">move_base_goal;
+</span>    <span class="hljs-keyword">move_base_goal.id </span>= <span class="hljs-string">""</span><span class="hljs-comment">;</span>
+    <span class="hljs-keyword">move_base_goal.stamp </span>= ros::Time::now()<span class="hljs-comment">;</span>
+    goal_pub.publish(<span class="hljs-keyword">move_base_goal);
+</span>}
+</code></pre>
+<p>We do not need to specify any function for initializaion of path planning, this is done by the exploration server or when destination point is published.</p>
+<p>We also need to monitor statuses of other tasks. Define callback for path planning:</p>
+<pre><code class="hljs"><span class="hljs-built_in">void</span> status_callback(<span class="hljs-keyword">const</span> actionlib_msgs::GoalStatusArrayConstPtr &amp;status)
+{
+    <span class="hljs-built_in">int</span> size = status-&gt;status_list.size();
+    <span class="hljs-keyword">if</span> (size &gt; <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-built_in">int</span> status_value = status-&gt;status_list[size - <span class="hljs-number">1</span>].status;
+        <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">1</span>)
+        {
+            goal_accessible = <span class="hljs-literal">true</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">4</span>)
+        {
+            goal_accessible = <span class="hljs-literal">false</span>;
+        }
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        goal_accessible = <span class="hljs-literal">true</span>;
+    }
+}
+</code></pre>
+<p>Define callback for exploration:</p>
+<pre><code class="hljs"><span class="hljs-built_in">void</span> explore_status_callback(<span class="hljs-keyword">const</span> actionlib_msgs::GoalStatusArrayConstPtr &amp;status)
+{
+    <span class="hljs-built_in">int</span> size = status-&gt;status_list.size();
+    <span class="hljs-keyword">if</span> (size &gt; <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-built_in">int</span> status_value = status-&gt;status_list[size - <span class="hljs-number">1</span>].status;
+        <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">1</span>) <span class="hljs-comment">// ACTIVE</span>
+        {
+            exploration_in_progress = <span class="hljs-literal">true</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">3</span>) <span class="hljs-comment">// SUCCEEDED</span>
+        {
+            exploration_in_progress = <span class="hljs-literal">false</span>;
+            exploration_failed = <span class="hljs-literal">false</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">4</span>) <span class="hljs-comment">// ABORTED</span>
+        {
+            exploration_in_progress = <span class="hljs-literal">false</span>;
+            exploration_failed = <span class="hljs-literal">true</span>;
+            ROS_ERROR(<span class="hljs-string">"Exploration failed, will not search for object."</span>);
+        }
+    }
+}
+</code></pre>
+<p>Both callbacks are checking status of currently executed task and update appropriate global variable. These variables will be used in node main loop.</p>
+<p>Now we will proceed to <code>main()</code> function of the node. In the body of the function we begin  with node initialization:</p>
+<pre><code class="hljs">    ros::init(argc, argv, <span class="hljs-string">"search_manager_node"</span>);
+    ros::<span class="hljs-function">NodeHandle <span class="hljs-title">node</span><span class="hljs-params">(<span class="hljs-string">"~"</span>)</span></span>;
+</code></pre>
+<p>Then we create instance of <code>SearchManager</code>, this class contains methods for processing data during object search task.</p>
+<pre><code class="hljs"><span class="hljs-attribute">    sm</span> = new SearchManager();
+</code></pre>
+<p>Init values for search status variables:</p>
+<pre><code class="hljs">    <span class="hljs-attribute">exploration_failed</span> = <span class="hljs-literal">false</span>;
+    <span class="hljs-attribute">object_search_in_progress</span> = <span class="hljs-literal">false</span>;
+    <span class="hljs-attribute">object_found</span> = <span class="hljs-literal">false</span>;
+</code></pre>
+<p>Init subscribers and publishers:</p>
+<pre><code class="hljs">    ros::Subscriber objects_found_sub = <span class="hljs-keyword">node</span>.<span class="hljs-title">subscribe</span>(<span class="hljs-string">"/objects"</span>, <span class="hljs-number">5</span>, objects_found_callback);
+    ros::Subscriber sub = <span class="hljs-keyword">node</span>.<span class="hljs-title">subscribe</span>(<span class="hljs-string">"/proj_scan"</span>, <span class="hljs-number">1</span>, scanCallback);
+    ros::Subscriber gridMapSub = <span class="hljs-keyword">node</span>.<span class="hljs-title">subscribe</span>(<span class="hljs-string">"/map"</span>, <span class="hljs-number">1</span>, gridMapCallback);
+    ros::Subscriber move_base_status_sub = <span class="hljs-keyword">node</span>.<span class="hljs-title">subscribe</span>(<span class="hljs-string">"/move_base/status"</span>, <span class="hljs-number">1</span>, status_callback);
+    ros::Subscriber exploration_status_sub = <span class="hljs-keyword">node</span>.<span class="hljs-title">subscribe</span>(<span class="hljs-string">"/explore_server/status"</span>, <span class="hljs-number">1</span>, explore_status_callback);
+
+    publisher_obstacles_found = <span class="hljs-keyword">node</span>.<span class="hljs-title">advertise</span><span class="hljs-tag">&lt;nav_msgs::OccupancyGrid&gt;</span>(<span class="hljs-string">"/obstacles/found"</span>, <span class="hljs-number">1</span>);
+    publisher_checked_obstacles = <span class="hljs-keyword">node</span>.<span class="hljs-title">advertise</span><span class="hljs-tag">&lt;nav_msgs::OccupancyGrid&gt;</span>(<span class="hljs-string">"/obstacles/checked"</span>, <span class="hljs-number">1</span>);
+    publisher_pending_obstacles = <span class="hljs-keyword">node</span>.<span class="hljs-title">advertise</span><span class="hljs-tag">&lt;nav_msgs::OccupancyGrid&gt;</span>(<span class="hljs-string">"/obstacles/pending"</span>, <span class="hljs-number">1</span>);
+    publisher_exploration_goal = <span class="hljs-keyword">node</span>.<span class="hljs-title">advertise</span><span class="hljs-tag">&lt;geometry_msgs::PoseStamped&gt;</span>(<span class="hljs-string">"/move_base_simple/goal"</span>, <span class="hljs-number">1</span>);
+    goal_pub = <span class="hljs-keyword">node</span>.<span class="hljs-title">advertise</span><span class="hljs-tag">&lt;actionlib_msgs::GoalID&gt;</span>(<span class="hljs-string">"/move_base/cancel"</span>, <span class="hljs-number">1</span>);
+    explore_canceller = <span class="hljs-keyword">node</span>.<span class="hljs-title">advertise</span><span class="hljs-tag">&lt;actionlib_msgs::GoalID&gt;</span>(<span class="hljs-string">"/explore_server/cancel"</span>, <span class="hljs-number">1</span>);
+    listener = new tf::TransformListener();
+
+</code></pre>
+<p>For keeping track of which obstacles were checked or still need to be inspected we will use <code>grid_map</code> <a href="http://wiki.ros.org/grid_map">library</a>.</p>
+<p>To use this library, it is necessary to include some headers in <code>search_manager_node.h</code>:</p>
+<pre><code class="hljs"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;grid_map_core/grid_map_core.hpp&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;grid_map_msgs/GridMap.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;grid_map_ros/GridMapRosConverter.hpp&gt;</span></span>
+</code></pre>
+<p>Initialize <code>map</code> and <code>obstacles</code> instances of <code>GridMap</code> class to store map layers:</p>
+<pre><code class="hljs">    map = new grid_map::GridMap({<span class="hljs-string">"input_og"</span>});
+
+    <span class="hljs-function"><span class="hljs-title">map</span>-&gt;</span>setFrameId(<span class="hljs-string">"map"</span>);
+    <span class="hljs-function"><span class="hljs-title">map</span>-&gt;</span>setGeometry(grid_map::Length(<span class="hljs-number">2.0</span>, <span class="hljs-number">2.0</span>), <span class="hljs-number">0.01</span>);
+    ROS_INFO(<span class="hljs-string">"Created map with size %f x %f m (%i x %i cells)."</span>,
+             <span class="hljs-function"><span class="hljs-title">map</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">getLength</span>().x(), map-&gt;</span>getLength().y(),
+             <span class="hljs-function"><span class="hljs-title">map</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">getSize</span>()(0), map-&gt;</span>getSize()(<span class="hljs-number">1</span>));
+
+    std::vector&lt;std::string&gt; map_layers;
+    map_layers.push_back(<span class="hljs-string">"rgbd_scan"</span>);
+    map_layers.push_back(<span class="hljs-string">"obstacles_found"</span>);
+    map_layers.push_back(<span class="hljs-string">"pending_obstacles"</span>);
+    obstacles = new grid_map::GridMap(map_layers);
+    <span class="hljs-function"><span class="hljs-title">obstacles</span>-&gt;</span>setFrameId(<span class="hljs-string">"map"</span>);
+    <span class="hljs-function"><span class="hljs-title">obstacles</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">setGeometry</span>(map-&gt;</span><span class="hljs-function"><span class="hljs-title">getLength</span>(), map-&gt;</span>getResolution());
+    <span class="hljs-function"><span class="hljs-title">obstacles</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">setPosition</span>(map-&gt;</span>getPosition());
+</code></pre>
+<p>Set the main loop frequency:</p>
+<pre><code class="hljs">    ros::<span class="hljs-function">Rate <span class="hljs-title">rate</span><span class="hljs-params">(<span class="hljs-number">50.0</span>)</span></span>;
+</code></pre>
+<p>Trigger the explortion task:</p>
+<pre><code class="hljs">    start_frontier_exploration()<span class="hljs-comment">;</span>
+</code></pre>
+<p>Wait until <code>explore_server</code> finishes its work or <code>find_object_2d</code> detects object:</p>
+<pre><code class="hljs">    while (exploration_in_progress &amp;&amp; <span class="hljs-keyword">node</span>.<span class="hljs-title">ok</span>() &amp;&amp; !object_found)
+    {
+        ros::spinOnce();
+        update_robot_pos();
+        rate.sleep();
+    }
+</code></pre>
+<p>Status of exploration task and object detection are checked in callbacks.</p>
+<p>Check if the object was already found, if so, the mission is finished, we can stop all other task and shutdown the node:</p>
+<pre><code class="hljs">    if (object_found)
+    {
+        ROS_INFO(<span class="hljs-string">"Object detected during exploration, stop exploration task"</span>)<span class="hljs-comment">;</span>
+        cancel_exploration_action()<span class="hljs-comment">;</span>
+        cancel_move_base_action()<span class="hljs-comment">;</span>
+        node.shutdown()<span class="hljs-comment">;</span>
+        return <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+    }
+    else
+    {
+        ROS_INFO(<span class="hljs-string">"Detected exploration finsh"</span>)<span class="hljs-comment">;</span>
+    }
+</code></pre>
+<p>We need to make sure, that <code>explore_server</code> finished with success. If there were any errors, flag <code>exploration_failed</code> will be set to true. In such case we stop operation.</p>
+<pre><code class="hljs">    if (exploration_failed)
+    {
+        ROS_ERROR(<span class="hljs-string">"Shutting down node due to exploration error"</span>);
+        <span class="hljs-keyword">node</span>.<span class="hljs-title">shutdown</span>();
+        return <span class="hljs-number">0</span>;
+    }
+</code></pre>
+<p>At this moment we should have complete map of environment and marked all the obstacle which should be checked. Now we begin to set robot goals to inspect all pending obstacles:</p>
+<pre><code class="hljs">    <span class="hljs-constructor">ROS_INFO(<span class="hljs-string">"Begin searching for object"</span>)</span>;
+    object_search_in_progress = <span class="hljs-literal">true</span>;
+    set<span class="hljs-constructor">_new_goal()</span>;
+
+    <span class="hljs-keyword">while</span> (node.ok<span class="hljs-literal">()</span><span class="hljs-operator"> &amp;&amp; </span>object_search_in_progress<span class="hljs-operator"> &amp;&amp; </span>!object_found)
+    {
+        update<span class="hljs-constructor">_robot_pos()</span>;
+        goal_reached = sm-&gt;is<span class="hljs-constructor">_goal_reached(<span class="hljs-params">exploration_goal</span>, ROSbot2_base_to_map_transform, 0.3, 0.5)</span>;
+        <span class="hljs-keyword">if</span> (goal_reached)
+        {
+            <span class="hljs-constructor">ROS_INFO(<span class="hljs-string">"Goal is reached, can set new destination"</span>)</span>;
+            set<span class="hljs-constructor">_new_goal()</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (goal_accessible)
+        {
+            <span class="hljs-comment">// wait until goal is reached</span>
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            set<span class="hljs-constructor">_new_goal()</span>;
+        }
+
+        ros::spin<span class="hljs-constructor">Once()</span>;
+        rate.sleep<span class="hljs-literal">()</span>;
+    }
+</code></pre>
+<p>When the above loop is stopped, the object was found or all obstacles were checked with no detection, report to the user and shutdown the node:</p>
+<pre><code class="hljs">    if (<span class="hljs-keyword">node</span>.<span class="hljs-title">ok</span>())
+    {
+        if (object_found)
+        {
+            ROS_<span class="hljs-literal">INF</span>O(<span class="hljs-string">"Object search succeeded"</span>);
+        }
+        else
+        {
+            ROS_<span class="hljs-literal">INF</span>O(<span class="hljs-string">"Object search stopped, all area checked, nothing found"</span>);
+        }
+        cancel_move_base_action();
+        <span class="hljs-keyword">node</span>.<span class="hljs-title">shutdown</span>();
+    }
+    else
+    {
+        ROS_WARN(<span class="hljs-string">"Object search cancelled with external signal"</span>);
+    }
+    return <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>Above functions are only the most important for node operation. Node is using some more functions that should be self explanatory.</p>
+<h3><a class="anchor" aria-hidden="true" id="search-manager-node-complete-code"></a><a href="#search-manager-node-complete-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>search_manager</code> node complete code</h3>
+<p>Create file <code>search_manager_node.cpp</code> inside the <code>src</code> folder under <code>tutorial_pkg</code> and paste below code:</p>
+<pre><code class="hljs"><span class="hljs-comment">#include &lt;search_manager_node.h&gt;</span>
+
+<span class="hljs-comment">/**
+ * brief Computes the bearing in degrees from the point A(a1,a2) to the point B(b1,b2).
+ * param a1 x coordiante of point A
+ * param a2 y coordinate of point A
+ * param b1 x coordiante of point B
+ * param b2 y coordinate of point B
+ */</span>
+<span class="hljs-keyword">double</span> bearing(<span class="hljs-keyword">double</span> a1, <span class="hljs-keyword">double</span> a2, <span class="hljs-keyword">double</span> b1, <span class="hljs-keyword">double</span> b2)
+{
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> TWOPI = <span class="hljs-number">6.2831853071795865</span>;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> RAD2DEG = <span class="hljs-number">57.2957795130823209</span>;
+    <span class="hljs-keyword">double</span> theta = atan2(b1 - a1, b2 - a2);
+    <span class="hljs-keyword">if</span> (theta &lt; <span class="hljs-number">0.0</span>)
+        theta += TWOPI;
+    <span class="hljs-keyword">return</span> theta;
+}
+
+<span class="hljs-keyword">bool</span> is_area_free(grid_map::Position point, <span class="hljs-keyword">float</span> radius)
+{
+    <span class="hljs-keyword">bool</span> area_free = <span class="hljs-keyword">true</span>;
+    <span class="hljs-keyword">for</span> (grid_map::CircleIterator it(*obstacles, point, radius); !it.isPastEnd(); ++it)
+    {
+        <span class="hljs-keyword">if</span> (obstacles-&gt;at(<span class="hljs-string">"obstacles_found"</span>, *it) == <span class="hljs-number">1</span>)
+        {
+            area_free = <span class="hljs-keyword">false</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> area_free;
+}
+
+void clear_area(grid_map::Position point, <span class="hljs-keyword">float</span> radius)
+{
+    <span class="hljs-keyword">for</span> (grid_map::CircleIterator it(*obstacles, point, radius); !it.isPastEnd(); ++it)
+    {
+        obstacles-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) = <span class="hljs-number">0</span>;
+    }
+}
+
+<span class="hljs-keyword">bool</span> is_point_single(grid_map::Position point)
+{
+    <span class="hljs-keyword">float</span> res = obstacles-&gt;getResolution();
+    <span class="hljs-keyword">bool</span> single = <span class="hljs-keyword">true</span>;
+    grid_map::CircleIterator point_it(*obstacles, point, <span class="hljs-number">0.01</span>);
+    grid_map::Position point_it_position;
+    obstacles-&gt;getPosition(*point_it, point_it_position);
+
+    grid_map::Position circle_it_position;
+
+    <span class="hljs-keyword">for</span> (grid_map::CircleIterator it(*obstacles, point, <span class="hljs-number">10</span> * res); !it.isPastEnd(); ++it)
+    {
+        obstacles-&gt;getPosition(*it, circle_it_position);
+        <span class="hljs-keyword">if</span> (obstacles-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) == <span class="hljs-number">1</span>)
+        {
+            <span class="hljs-keyword">float</span> x_dist = point_it_position.x() - circle_it_position.x();
+            <span class="hljs-keyword">float</span> y_dist = point_it_position.y() - circle_it_position.y();
+            <span class="hljs-keyword">float</span> x_abs = std::abs(x_dist);
+            <span class="hljs-keyword">float</span> y_abs = std::abs(y_dist);
+            <span class="hljs-keyword">if</span> (x_abs &gt; res &amp;&amp; y_abs &gt; res)
+            {
+                single = <span class="hljs-keyword">false</span>;
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> single;
+}
+
+<span class="hljs-keyword">bool</span> find_nearest_obstacle(grid_map::Position *new_pos)
+{
+    grid_map::Position current_robot_position(robot_position[<span class="hljs-number">0</span>], robot_position[<span class="hljs-number">1</span>]);
+    <span class="hljs-keyword">return</span> find_nearest_obstacle(new_pos, current_robot_position);
+}
+
+<span class="hljs-keyword">bool</span> find_nearest_obstacle(grid_map::Position *new_pos, grid_map::Position current_pos)
+{
+    grid_map::Position new_obstacle;
+    <span class="hljs-keyword">bool</span> new_iteration = <span class="hljs-keyword">true</span>;
+    <span class="hljs-keyword">bool</span> obstacle_found = <span class="hljs-keyword">false</span>;
+    <span class="hljs-keyword">double</span> distance_to_nearest_obstacle;
+    <span class="hljs-keyword">double</span> distance_to_current_obstacle;
+    <span class="hljs-keyword">double</span> x_dist, y_dist;
+    grid_map::Position element_position;
+
+    <span class="hljs-keyword">for</span> (grid_map::GridMapIterator it(*obstacles); !it.isPastEnd(); ++it)
+    {
+        <span class="hljs-keyword">if</span> (obstacles-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) &gt; <span class="hljs-number">0.5</span>)
+        {
+            obstacle_found = <span class="hljs-keyword">true</span>;
+            obstacles-&gt;getPosition(*it, element_position);
+            x_dist = current_pos[<span class="hljs-number">0</span>] - element_position[<span class="hljs-number">0</span>];
+            y_dist = current_pos[<span class="hljs-number">1</span>] - element_position[<span class="hljs-number">1</span>];
+            distance_to_current_obstacle = sqrt((x_dist * x_dist) + (y_dist * y_dist));
+            <span class="hljs-keyword">if</span> (new_iteration)
+            {
+                distance_to_nearest_obstacle = distance_to_current_obstacle;
+                new_obstacle = element_position;
+                new_iteration = <span class="hljs-keyword">false</span>;
+            }
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (distance_to_current_obstacle &lt; distance_to_nearest_obstacle)
+            {
+                distance_to_nearest_obstacle = distance_to_current_obstacle;
+                new_obstacle = element_position;
+            }
+        }
+    }
+    *new_pos = new_obstacle;
+    <span class="hljs-keyword">return</span> obstacle_found;
+}
+
+<span class="hljs-keyword">bool</span> check_pending_obstacles()
+{
+    <span class="hljs-keyword">for</span> (grid_map::GridMapIterator it(*obstacles); !it.isPastEnd(); ++it)
+    {
+        <span class="hljs-keyword">if</span> (obstacles-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) &gt; <span class="hljs-number">0.5</span>)
+        {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+    }
+    ROS_INFO(<span class="hljs-string">"No pending obstacles found"</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+
+<span class="hljs-keyword">bool</span> was_obstacle_checked(grid_map::Position obstacle_position)
+{
+    <span class="hljs-keyword">float</span> radius = <span class="hljs-number">0.1</span>;
+    <span class="hljs-keyword">bool</span> obstacle_already_checked = <span class="hljs-keyword">false</span>;
+    <span class="hljs-keyword">for</span> (grid_map::CircleIterator it(*obstacles, obstacle_position, radius); !it.isPastEnd(); ++it)
+    {
+        <span class="hljs-keyword">if</span> (obstacles-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) &gt; <span class="hljs-number">0.1</span>)
+        {
+            obstacle_already_checked = <span class="hljs-keyword">true</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> obstacle_already_checked;
+}
+
+void publish_exploration_goal(grid_map::Position goal_pos, <span class="hljs-keyword">float</span> goal_angle)
+{
+    dest_orientation.setRPY(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, goal_angle);
+    dest_orientation.getRotation(tf_dest_quaternion);
+    exploration_goal.header.frame_id = <span class="hljs-string">"map"</span>;
+    exploration_goal.pose.position.x = goal_pos[<span class="hljs-number">0</span>];
+    exploration_goal.pose.position.y = goal_pos[<span class="hljs-number">1</span>];
+    exploration_goal.pose.position.z = <span class="hljs-number">0</span>;
+    exploration_goal.pose.orientation.x = tf_dest_quaternion.x();
+    exploration_goal.pose.orientation.y = tf_dest_quaternion.y();
+    exploration_goal.pose.orientation.z = tf_dest_quaternion.z();
+    exploration_goal.pose.orientation.w = tf_dest_quaternion.w();
+    publisher_exploration_goal.publish(exploration_goal);
+}
+
+void status_callback(<span class="hljs-keyword">const</span> actionlib_msgs::GoalStatusArrayConstPtr &amp;status)
+{
+    <span class="hljs-keyword">int</span> size = status-&gt;status_list.size();
+    <span class="hljs-keyword">if</span> (size &gt; <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-keyword">int</span> status_value = status-&gt;status_list[size - <span class="hljs-number">1</span>].status;
+        <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">1</span>)
+        {
+            goal_accessible = <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">4</span>)
+        {
+            goal_accessible = <span class="hljs-keyword">false</span>;
+        }
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        goal_accessible = <span class="hljs-keyword">true</span>;
+    }
+}
+
+void explore_status_callback(<span class="hljs-keyword">const</span> actionlib_msgs::GoalStatusArrayConstPtr &amp;status)
+{
+    <span class="hljs-keyword">int</span> size = status-&gt;status_list.size();
+    <span class="hljs-keyword">if</span> (size &gt; <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-keyword">int</span> status_value = status-&gt;status_list[size - <span class="hljs-number">1</span>].status;
+        <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">1</span>) <span class="hljs-comment">// ACTIVE</span>
+        {
+            exploration_in_progress = <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">3</span>) <span class="hljs-comment">// SUCCEEDED</span>
+        {
+            exploration_in_progress = <span class="hljs-keyword">false</span>;
+            exploration_failed = <span class="hljs-keyword">false</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (status_value == <span class="hljs-number">4</span>) <span class="hljs-comment">// ABORTED</span>
+        {
+            exploration_in_progress = <span class="hljs-keyword">false</span>;
+            exploration_failed = <span class="hljs-keyword">true</span>;
+            ROS_ERROR(<span class="hljs-string">"Exploration failed, will not search for object."</span>);
+        }
+    }
+}
+
+void scanCallback(<span class="hljs-keyword">const</span> sensor_msgs::LaserScanConstPtr &amp;msg)
+{
+    angle_min = msg-&gt;angle_min;
+    angle_max = msg-&gt;angle_max;
+    angle_increment = msg-&gt;angle_increment;
+    range_min = msg-&gt;range_min;
+    range_max = msg-&gt;range_max;
+    ranges_size = msg-&gt;ranges.size();
+    uint32_t s = msg-&gt;header.stamp.sec;
+    uint32_t ns = msg-&gt;header.stamp.nsec;
+    ROS_INFO(<span class="hljs-string">"Scan time: %d,%d"</span>, s, ns);
+
+    <span class="hljs-keyword">double</span> camera_x;
+    <span class="hljs-keyword">double</span> camera_y;
+    <span class="hljs-keyword">double</span> camera_yaw;
+
+    <span class="hljs-keyword">if</span> (sm-&gt;lookup_camera_transform(&amp;camera_x, &amp;camera_y, &amp;camera_yaw, ros::Time(s, ns), listener))
+    {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; ranges_size; i++)
+        {
+            <span class="hljs-keyword">if</span> (msg-&gt;ranges[i] &gt; (camera_view_dist - camera_view_depth) &amp;&amp; msg-&gt;ranges[i] &lt; (camera_view_dist + camera_view_depth))
+            {
+                point_x = msg-&gt;ranges[i] * cos((angle_min + i * angle_increment) + camera_yaw);
+                point_y = msg-&gt;ranges[i] * sin((angle_min + i * angle_increment) + camera_yaw);
+                <span class="hljs-keyword">if</span> (sm-&gt;set_point_checked(point_x + camera_x, point_y + camera_y, obstacles, nearest_obstacle))
+                {
+                    set_new_goal();
+                }
+            }
+        }
+        grid_map::GridMapRosConverter::toOccupancyGrid(*obstacles, <span class="hljs-string">"rgbd_scan"</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>, occupancyGridResult);
+        publisher_checked_obstacles.publish(occupancyGridResult);
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        ROS_WARN(<span class="hljs-string">"Transform lookup failed, drop this scan"</span>);
+    }
+}
+
+void gridMapCallback(<span class="hljs-keyword">const</span> nav_msgs::OccupancyGridConstPtr &amp;msg)
+{
+    occupancyGridInput = <span class="hljs-keyword">new</span> nav_msgs::OccupancyGrid();
+    occupancyGridInput-&gt;header = msg-&gt;header;
+    occupancyGridInput-&gt;info = msg-&gt;info;
+    occupancyGridInput-&gt;data = msg-&gt;data;
+
+    map = <span class="hljs-keyword">new</span> grid_map::GridMap({<span class="hljs-string">"input_og"</span>});
+    grid_map::GridMapRosConverter::fromOccupancyGrid(*occupancyGridInput, <span class="hljs-string">"input_og"</span>, *map);
+    map-&gt;setFrameId(<span class="hljs-string">"map"</span>);
+    obstacles-&gt;addDataFrom(*map, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">true</span>);
+
+    <span class="hljs-keyword">for</span> (grid_map::GridMapIterator it(*obstacles); !it.isPastEnd(); ++it)
+    {
+        <span class="hljs-keyword">if</span> (obstacles-&gt;at(<span class="hljs-string">"input_og"</span>, *it) &gt; <span class="hljs-number">0</span>)
+        {
+            obstacles-&gt;at(<span class="hljs-string">"obstacles_found"</span>, *it) = <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">if</span> (obstacles-&gt;at(<span class="hljs-string">"rgbd_scan"</span>, *it) &gt; <span class="hljs-number">0</span>)
+            {
+                obstacles-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) = <span class="hljs-number">0</span>;
+            }
+            <span class="hljs-keyword">else</span>
+            {
+                obstacles-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) = <span class="hljs-number">1</span>;
+            }
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            obstacles-&gt;at(<span class="hljs-string">"obstacles_found"</span>, *it) = <span class="hljs-number">0</span>;
+            obstacles-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) = <span class="hljs-number">0</span>;
+        }
+    }
+
+    grid_map::GridMapRosConverter::toOccupancyGrid(*obstacles, <span class="hljs-string">"obstacles_found"</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>, occupancyGridResult);
+    publisher_obstacles_found.publish(occupancyGridResult);
+    grid_map::GridMapRosConverter::toOccupancyGrid(*obstacles, <span class="hljs-string">"pending_obstacles"</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>, occupancyGridResult);
+    publisher_pending_obstacles.publish(occupancyGridResult);
+    <span class="hljs-keyword">if</span> (is_area_free(nearest_obstacle, <span class="hljs-number">0.1</span>))
+    {
+        set_new_goal();
+    }
+    <span class="hljs-keyword">if</span> (!sm-&gt;check_obstacle_surrounding(&amp;current_robot_position, &amp;obstacle_bearing, camera_view_dist, min_dist, current_obstacle, obstacles, map))
+    {
+        set_new_goal();
+    }
+}
+
+void objects_found_callback(<span class="hljs-keyword">const</span> std_msgs::Float32MultiArrayConstPtr &amp;msg)
+{
+    <span class="hljs-keyword">if</span> (msg-&gt;data.size() &gt; <span class="hljs-number">0</span>)
+    {
+        ROS_INFO(<span class="hljs-string">"Object detected"</span>);
+        object_found = <span class="hljs-keyword">true</span>;
+    }
+}
+
+void update_robot_pos()
+{
+    <span class="hljs-keyword">try</span>
+    {
+        listener-&gt;lookupTransform(<span class="hljs-string">"/map"</span>, <span class="hljs-string">"/base_link"</span>, ros::Time(<span class="hljs-number">0</span>), ROSbot2_base_to_map_transform);
+        robot_position[<span class="hljs-number">0</span>] = ROSbot2_base_to_map_transform.getOrigin().x();
+        robot_position[<span class="hljs-number">1</span>] = ROSbot2_base_to_map_transform.getOrigin().y();
+    }
+    <span class="hljs-keyword">catch</span> (tf::TransformException ex)
+    {
+        ROS_ERROR(<span class="hljs-string">"%s"</span>, ex.what());
+    }
+}
+
+void cancel_move_base_action()
+{
+    actionlib_msgs::GoalID move_base_goal;
+    move_base_goal.id = <span class="hljs-string">""</span>;
+    move_base_goal.stamp = ros::Time::now();
+    goal_pub.publish(move_base_goal);
+}
+
+void cancel_exploration_action()
+{
+    actionlib_msgs::GoalID cancel_exploration;
+    cancel_exploration.id = <span class="hljs-string">""</span>;
+    cancel_exploration.stamp = ros::Time::now();
+    explore_canceller.publish(cancel_exploration);
+}
+
+void start_frontier_exploration()
+{
+    exploration_in_progress = <span class="hljs-keyword">true</span>;
+    actionlib::SimpleActionClient&lt;frontier_exploration::ExploreTaskAction&gt; exploreClient(<span class="hljs-string">"explore_server"</span>, <span class="hljs-keyword">true</span>);
+    exploreClient.waitForServer();
+    ROS_INFO(<span class="hljs-string">"Sending goal"</span>);
+    exploreClient.sendGoal(sm-&gt;createExplorationGoal());
+}
+
+void set_new_goal()
+{
+    <span class="hljs-keyword">if</span> (object_search_in_progress)
+    {
+        ROS_INFO(<span class="hljs-string">"Set new point for object recognition."</span>);
+        <span class="hljs-keyword">if</span> (find_nearest_obstacle(&amp;nearest_obstacle, nearest_obstacle))
+        {
+            <span class="hljs-keyword">if</span> (is_point_single(nearest_obstacle))
+            {
+                ROS_INFO(<span class="hljs-string">"Point %f, %f has no surrounding obstacles, consider it as noise."</span>, nearest_obstacle[<span class="hljs-number">0</span>], nearest_obstacle[<span class="hljs-number">1</span>]);
+                clear_area(nearest_obstacle, <span class="hljs-number">0.1</span>);
+                find_nearest_obstacle(&amp;nearest_obstacle, nearest_obstacle);
+            }
+            ROS_INFO(<span class="hljs-string">"New dest point %f, %f."</span>, nearest_obstacle[<span class="hljs-number">0</span>], nearest_obstacle[<span class="hljs-number">1</span>]);
+
+            robot_destination = get_optimal_pose(nearest_obstacle);
+            <span class="hljs-keyword">double</span> angle = bearing(robot_destination[<span class="hljs-number">1</span>], robot_destination[<span class="hljs-number">0</span>], nearest_obstacle[<span class="hljs-number">1</span>], nearest_obstacle[<span class="hljs-number">0</span>]);
+            publish_exploration_goal(robot_destination, angle);
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-keyword">if</span> (!check_pending_obstacles())
+            {
+                ROS_INFO(<span class="hljs-string">"Object search finished, object not found"</span>);
+                object_search_in_progress = <span class="hljs-keyword">false</span>;
+            }
+        }
+    }
+}
+
+grid_map::Position get_optimal_pose(grid_map::Position obstacle)
+{
+    obstacle_bearing = <span class="hljs-number">180</span> * bearing(obstacle[<span class="hljs-number">0</span>], obstacle[<span class="hljs-number">1</span>], robot_position[<span class="hljs-number">0</span>], robot_position[<span class="hljs-number">1</span>]) / M_PI;
+    ROS_INFO(<span class="hljs-string">"Obstacle bearing: %f"</span>, obstacle_bearing);
+    current_obstacle = obstacle;
+    <span class="hljs-keyword">if</span> (!sm-&gt;check_obstacle_surrounding(&amp;current_robot_position, &amp;obstacle_bearing, camera_view_dist, min_dist, current_obstacle, obstacles, map))
+    {
+        set_new_goal();
+    }
+    <span class="hljs-keyword">return</span> current_robot_position;
+}
+
+<span class="hljs-keyword">int</span> main(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)
+{
+    ros::init(argc, argv, <span class="hljs-string">"search_manager"</span>);
+    ros::NodeHandle node(<span class="hljs-string">"~"</span>);
+
+    sm = <span class="hljs-keyword">new</span> SearchManager();
+
+    exploration_failed = <span class="hljs-keyword">false</span>;
+    object_search_in_progress = <span class="hljs-keyword">false</span>;
+    object_found = <span class="hljs-keyword">false</span>;
+
+    ros::Subscriber objects_found_sub = node.subscribe(<span class="hljs-string">"/objects"</span>, <span class="hljs-number">5</span>, objects_found_callback);
+    ros::Subscriber sub = node.subscribe(<span class="hljs-string">"/proj_scan"</span>, <span class="hljs-number">1</span>, scanCallback);
+    ros::Subscriber gridMapSub = node.subscribe(<span class="hljs-string">"/map"</span>, <span class="hljs-number">1</span>, gridMapCallback);
+    ros::Subscriber move_base_status_sub = node.subscribe(<span class="hljs-string">"/move_base/status"</span>, <span class="hljs-number">1</span>, status_callback);
+    ros::Subscriber exploration_status_sub = node.subscribe(<span class="hljs-string">"/explore_server/status"</span>, <span class="hljs-number">1</span>, explore_status_callback);
+
+    publisher_obstacles_found = node.advertise&lt;nav_msgs::OccupancyGrid&gt;(<span class="hljs-string">"/obstacles/found"</span>, <span class="hljs-number">1</span>);
+    publisher_checked_obstacles = node.advertise&lt;nav_msgs::OccupancyGrid&gt;(<span class="hljs-string">"/obstacles/checked"</span>, <span class="hljs-number">1</span>);
+    publisher_pending_obstacles = node.advertise&lt;nav_msgs::OccupancyGrid&gt;(<span class="hljs-string">"/obstacles/pending"</span>, <span class="hljs-number">1</span>);
+    publisher_exploration_goal = node.advertise&lt;geometry_msgs::PoseStamped&gt;(<span class="hljs-string">"/move_base_simple/goal"</span>, <span class="hljs-number">1</span>);
+    goal_pub = node.advertise&lt;actionlib_msgs::GoalID&gt;(<span class="hljs-string">"/move_base/cancel"</span>, <span class="hljs-number">1</span>);
+    explore_canceller = node.advertise&lt;actionlib_msgs::GoalID&gt;(<span class="hljs-string">"/explore_server/cancel"</span>, <span class="hljs-number">1</span>);
+    listener = <span class="hljs-keyword">new</span> tf::TransformListener();
+
+    map = <span class="hljs-keyword">new</span> grid_map::GridMap({<span class="hljs-string">"input_og"</span>});
+
+    map-&gt;setFrameId(<span class="hljs-string">"map"</span>);
+    map-&gt;setGeometry(grid_map::Length(<span class="hljs-number">2.0</span>, <span class="hljs-number">2.0</span>), <span class="hljs-number">0.01</span>);
+    ROS_INFO(<span class="hljs-string">"Created map with size %f x %f m (%i x %i cells)."</span>,
+             map-&gt;getLength().x(), map-&gt;getLength().y(),
+             map-&gt;getSize()(<span class="hljs-number">0</span>), map-&gt;getSize()(<span class="hljs-number">1</span>));
+
+    std::vector&lt;std::string&gt; map_layers;
+    map_layers.push_back(<span class="hljs-string">"rgbd_scan"</span>);
+    map_layers.push_back(<span class="hljs-string">"obstacles_found"</span>);
+    map_layers.push_back(<span class="hljs-string">"pending_obstacles"</span>);
+    obstacles = <span class="hljs-keyword">new</span> grid_map::GridMap(map_layers);
+    obstacles-&gt;setFrameId(<span class="hljs-string">"map"</span>);
+    obstacles-&gt;setGeometry(map-&gt;getLength(), map-&gt;getResolution());
+    obstacles-&gt;setPosition(map-&gt;getPosition());
+
+    ros::Rate rate(<span class="hljs-number">50.0</span>);
+
+    start_frontier_exploration();
+
+    <span class="hljs-keyword">while</span> (exploration_in_progress &amp;&amp; node.ok() &amp;&amp; !object_found)
+    {
+        ros::spinOnce();
+        update_robot_pos();
+        rate.sleep();
+    }
+
+    <span class="hljs-keyword">if</span> (object_found)
+    {
+        ROS_INFO(<span class="hljs-string">"Object detected during exploration, stop exploration task"</span>);
+        cancel_exploration_action();
+        cancel_move_base_action();
+        node.shutdown();
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        ROS_INFO(<span class="hljs-string">"Detected exploration finsh"</span>);
+    }
+
+    <span class="hljs-keyword">if</span> (exploration_failed)
+    {
+        ROS_ERROR(<span class="hljs-string">"Shutting down node due to exploration error"</span>);
+        node.shutdown();
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+
+    ROS_INFO(<span class="hljs-string">"Begin searching for object"</span>);
+    object_search_in_progress = <span class="hljs-keyword">true</span>;
+    set_new_goal();
+
+    <span class="hljs-keyword">while</span> (node.ok() &amp;&amp; object_search_in_progress &amp;&amp; !object_found)
+    {
+        update_robot_pos();
+        goal_reached = sm-&gt;is_goal_reached(exploration_goal, ROSbot2_base_to_map_transform, <span class="hljs-number">0.3</span>, <span class="hljs-number">0.5</span>);
+        <span class="hljs-keyword">if</span> (goal_reached)
+        {
+            ROS_INFO(<span class="hljs-string">"Goal is reached, can set new destination"</span>);
+            set_new_goal();
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (goal_accessible)
+        {
+            <span class="hljs-comment">// wait until goal is reached</span>
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            set_new_goal();
+        }
+
+        ros::spinOnce();
+        rate.sleep();
+    }
+    <span class="hljs-keyword">if</span> (node.ok())
+    {
+        <span class="hljs-keyword">if</span> (object_found)
+        {
+            ROS_INFO(<span class="hljs-string">"Object search succeeded"</span>);
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            ROS_INFO(<span class="hljs-string">"Object search stopped, all area checked, nothing found"</span>);
+        }
+        cancel_move_base_action();
+        node.shutdown();
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        ROS_WARN(<span class="hljs-string">"Object search cancelled with external signal"</span>);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>Then file <code>SearchManager.cpp</code> inside the <code>src</code> folder under <code>tutorial_pkg</code> and paste below code:</p>
+<pre><code class="hljs">#<span class="hljs-keyword">include</span> &lt;<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">SearchManager</span>.</span></span>h&gt;
+
+SearchManager::<span class="hljs-constructor">SearchManager()</span>
+{
+}
+
+<span class="hljs-built_in">bool</span> SearchManager::lookup<span class="hljs-constructor">_camera_transform(<span class="hljs-params">double</span> <span class="hljs-operator">*</span><span class="hljs-params">cam_x</span>, <span class="hljs-params">double</span> <span class="hljs-operator">*</span><span class="hljs-params">cam_y</span>, <span class="hljs-params">double</span> <span class="hljs-operator">*</span><span class="hljs-params">cam_yaw</span>, <span class="hljs-params">ros</span>::Time <span class="hljs-params">scan_time</span>, <span class="hljs-params">tf</span>::TransformListener <span class="hljs-operator">*</span><span class="hljs-params">listener</span>)</span>
+{
+    <span class="hljs-keyword">try</span>
+    {
+        tf::StampedTransform rgbd_scan_to_map_transform;
+        listener-&gt;lookup<span class="hljs-constructor">Transform(<span class="hljs-string">"/map"</span>, <span class="hljs-string">"/camera_link"</span>, <span class="hljs-params">scan_time</span>, <span class="hljs-params">rgbd_scan_to_map_transform</span>)</span>;
+        std::cout &lt;&lt; <span class="hljs-string">"LookupTime: "</span> &lt;&lt; scan_time.sec &lt;&lt; <span class="hljs-string">", "</span> &lt;&lt; scan_time.nsec &lt;&lt; std::endl;
+        *cam_x = rgbd_scan_to_map_transform.get<span class="hljs-constructor">Origin()</span>.x<span class="hljs-literal">()</span>;
+        *cam_y = rgbd_scan_to_map_transform.get<span class="hljs-constructor">Origin()</span>.y<span class="hljs-literal">()</span>;
+        tf::Quaternion quat = rgbd_scan_to_map_transform.get<span class="hljs-constructor">Rotation()</span>;
+        tf::Matrix3x3 rotation_matrix;
+        double roll;
+        double pitch;
+        double yaw;
+        rotation_matrix.set<span class="hljs-constructor">Rotation(<span class="hljs-params">quat</span>)</span>;
+        rotation_matrix.get<span class="hljs-constructor">RPY(<span class="hljs-params">roll</span>, <span class="hljs-params">pitch</span>, <span class="hljs-params">yaw</span>)</span>;
+        *cam_yaw = yaw;
+        return <span class="hljs-literal">true</span>;
+    }
+    catch (tf::TransformException ex)
+    {
+        return <span class="hljs-literal">false</span>;
+    }
+}
+
+<span class="hljs-built_in">bool</span> SearchManager::check<span class="hljs-constructor">_obstacle_surrounding(<span class="hljs-params">grid_map</span>::Position <span class="hljs-operator">*</span><span class="hljs-params">robot_dest</span>, <span class="hljs-params">double</span> <span class="hljs-operator">*</span><span class="hljs-params">obstacle_bearing</span>, <span class="hljs-params">float</span> <span class="hljs-params">dist_from_obstacle</span>, <span class="hljs-params">float</span> <span class="hljs-params">min_dist</span>, <span class="hljs-params">grid_map</span>::Position <span class="hljs-params">current_obstacle</span>, <span class="hljs-params">grid_map</span>::GridMap <span class="hljs-operator">*</span><span class="hljs-params">obstacles</span>, <span class="hljs-params">grid_map</span>::GridMap <span class="hljs-operator">*</span><span class="hljs-params">map</span>)</span>
+{
+    double current_bearing;
+    for (<span class="hljs-built_in">int</span> deg = <span class="hljs-number">0</span>; deg &lt; <span class="hljs-number">36</span>; deg++)
+    {
+        current_bearing = *obstacle_bearing + (deg<span class="hljs-operator"> * </span><span class="hljs-number">10</span>);
+
+        <span class="hljs-keyword">if</span> (check<span class="hljs-constructor">_space_occupation(<span class="hljs-params">robot_dest</span>, <span class="hljs-params">current_bearing</span>, <span class="hljs-params">dist_from_obstacle</span>, <span class="hljs-params">min_dist</span>, <span class="hljs-params">current_obstacle</span>, <span class="hljs-params">obstacles</span>, <span class="hljs-params">map</span>)</span>)
+        {
+            *obstacle_bearing = current_bearing;
+            return <span class="hljs-literal">true</span>;
+        }
+    }
+    return <span class="hljs-literal">false</span>;
+}
+
+<span class="hljs-built_in">bool</span> SearchManager::check<span class="hljs-constructor">_space_occupation(<span class="hljs-params">grid_map</span>::Position <span class="hljs-operator">*</span><span class="hljs-params">robot_dest</span>, <span class="hljs-params">double</span> <span class="hljs-params">bearing</span>, <span class="hljs-params">float</span> <span class="hljs-params">dist_from_obstacle</span>, <span class="hljs-params">float</span> <span class="hljs-params">min_dist</span>, <span class="hljs-params">grid_map</span>::Position <span class="hljs-params">current_obstacle</span>, <span class="hljs-params">grid_map</span>::GridMap <span class="hljs-operator">*</span><span class="hljs-params">obstacles</span>, <span class="hljs-params">grid_map</span>::GridMap <span class="hljs-operator">*</span><span class="hljs-params">map</span>)</span>
+{
+    <span class="hljs-built_in">bool</span> polygon_free = <span class="hljs-literal">true</span>;
+    grid_map::Position current_robot_destination;
+    grid_map::Position middle_corner;
+    grid_map::Position left_corner;
+    grid_map::Position right_corner;
+    std::vector&lt;grid_map::Position&gt; vertices;
+    grid_map::Polygon polygon;
+
+    <span class="hljs-comment">// calculate possible position</span>
+    current_robot_destination<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> = current_obstacle<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> + dist_from_obstacle<span class="hljs-operator"> * </span>(sin((bearing)*M_PI<span class="hljs-operator"> / </span><span class="hljs-number">180</span>));
+    current_robot_destination<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> = current_obstacle<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> + dist_from_obstacle<span class="hljs-operator"> * </span>(cos((bearing)*M_PI<span class="hljs-operator"> / </span><span class="hljs-number">180</span>));
+    middle_corner<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> = current_obstacle<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> + min_dist<span class="hljs-operator"> * </span>(sin((bearing)*M_PI<span class="hljs-operator"> / </span><span class="hljs-number">180</span>));
+    middle_corner<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> = current_obstacle<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> + min_dist<span class="hljs-operator"> * </span>(cos((bearing)*M_PI<span class="hljs-operator"> / </span><span class="hljs-number">180</span>));
+    left_corner<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> = middle_corner<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> + min_dist<span class="hljs-operator"> * </span>(sin((bearing + <span class="hljs-number">90</span>)<span class="hljs-operator"> * </span>M_PI<span class="hljs-operator"> / </span><span class="hljs-number">180</span>));
+    left_corner<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> = middle_corner<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> + min_dist<span class="hljs-operator"> * </span>(cos((bearing + <span class="hljs-number">90</span>)<span class="hljs-operator"> * </span>M_PI<span class="hljs-operator"> / </span><span class="hljs-number">180</span>));
+    right_corner<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> = middle_corner<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> + min_dist<span class="hljs-operator"> * </span>(sin((bearing - <span class="hljs-number">90</span>)<span class="hljs-operator"> * </span>M_PI<span class="hljs-operator"> / </span><span class="hljs-number">180</span>));
+    right_corner<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> = middle_corner<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> + min_dist<span class="hljs-operator"> * </span>(cos((bearing - <span class="hljs-number">90</span>)<span class="hljs-operator"> * </span>M_PI<span class="hljs-operator"> / </span><span class="hljs-number">180</span>));
+    vertices.push<span class="hljs-constructor">_back(<span class="hljs-params">current_robot_destination</span>)</span>;
+    vertices.push<span class="hljs-constructor">_back(<span class="hljs-params">middle_corner</span>)</span>;
+    vertices.push<span class="hljs-constructor">_back(<span class="hljs-params">left_corner</span>)</span>;
+    vertices.push<span class="hljs-constructor">_back(<span class="hljs-params">right_corner</span>)</span>;
+    polygon = grid_map::<span class="hljs-constructor">Polygon(<span class="hljs-params">vertices</span>)</span>;
+
+    <span class="hljs-built_in">int</span> checked_points = <span class="hljs-number">0</span>;
+    for (grid_map::PolygonIterator it(*obstacles, polygon); !it.is<span class="hljs-constructor">PastEnd()</span>; ++it)
+    {
+        checked_points++;
+        <span class="hljs-keyword">if</span> (obstacles-&gt;at(<span class="hljs-string">"obstacles_found"</span>, *it) &gt; <span class="hljs-number">0.5</span>)
+        {
+            polygon_free = <span class="hljs-literal">false</span>;
+        }
+    }
+
+    for (grid_map::CircleIterator it(*map, current_robot_destination, <span class="hljs-number">0.1</span>); !it.is<span class="hljs-constructor">PastEnd()</span>; ++it)
+    {
+        <span class="hljs-built_in">float</span> map_val = map-&gt;at(<span class="hljs-string">"input_og"</span>, *it);
+        <span class="hljs-keyword">if</span> (map_val &gt;= <span class="hljs-number">0</span>)
+        {
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            polygon_free = <span class="hljs-literal">false</span>;
+            grid_map::Position known_pos;
+            map-&gt;get<span class="hljs-constructor">Position(<span class="hljs-operator">*</span><span class="hljs-params">it</span>, <span class="hljs-params">known_pos</span>)</span>;
+        }
+    }
+
+    <span class="hljs-keyword">if</span> (polygon_free)
+    {
+        *robot_dest = current_robot_destination;
+        return <span class="hljs-literal">true</span>;
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        return <span class="hljs-literal">false</span>;
+    }
+}
+
+<span class="hljs-built_in">bool</span> SearchManager::set<span class="hljs-constructor">_point_checked(<span class="hljs-params">float</span> <span class="hljs-params">x</span>, <span class="hljs-params">float</span> <span class="hljs-params">y</span>, <span class="hljs-params">grid_map</span>::GridMap <span class="hljs-operator">*</span><span class="hljs-params">gm</span>, <span class="hljs-params">grid_map</span>::Position <span class="hljs-params">obstacle</span>)</span>
+{
+    <span class="hljs-built_in">float</span> radius = <span class="hljs-number">3</span><span class="hljs-operator"> * </span>gm-&gt;get<span class="hljs-constructor">Resolution()</span>;
+    return set<span class="hljs-constructor">_point_checked(<span class="hljs-params">x</span>, <span class="hljs-params">y</span>, <span class="hljs-params">gm</span>, <span class="hljs-params">obstacle</span>, <span class="hljs-params">radius</span>)</span>;
+}
+
+<span class="hljs-built_in">bool</span> SearchManager::set<span class="hljs-constructor">_point_checked(<span class="hljs-params">float</span> <span class="hljs-params">x</span>, <span class="hljs-params">float</span> <span class="hljs-params">y</span>, <span class="hljs-params">grid_map</span>::GridMap <span class="hljs-operator">*</span><span class="hljs-params">gm</span>, <span class="hljs-params">grid_map</span>::Position <span class="hljs-params">obstacle</span>, <span class="hljs-params">float</span> <span class="hljs-params">radius</span>)</span>
+{
+    for (grid_map::CircleIterator it(*gm, grid_map::<span class="hljs-constructor">Position(<span class="hljs-params">x</span>, <span class="hljs-params">y</span>)</span>, radius); !it.is<span class="hljs-constructor">PastEnd()</span>; ++it)
+    {
+        gm-&gt;at(<span class="hljs-string">"rgbd_scan"</span>, *it) = <span class="hljs-number">1</span>;
+        gm-&gt;at(<span class="hljs-string">"pending_obstacles"</span>, *it) = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-built_in">float</span> x_dist = obstacle.x<span class="hljs-literal">()</span> - x;
+    <span class="hljs-built_in">float</span> y_dist = obstacle.y<span class="hljs-literal">()</span> - y;
+    <span class="hljs-built_in">float</span> dist = sqrt(x_dist<span class="hljs-operator"> * </span>x_dist + y_dist<span class="hljs-operator"> * </span>y_dist);
+    <span class="hljs-keyword">if</span> (dist &lt; radius)
+    {
+        <span class="hljs-comment">// set_new_goal();</span>
+        return <span class="hljs-literal">true</span>;
+    }
+    return <span class="hljs-literal">false</span>;
+}
+
+frontier_exploration::ExploreTaskGoal SearchManager::create<span class="hljs-constructor">ExplorationGoal()</span>
+{
+    frontier_exploration::ExploreTaskGoal goal;
+    geometry_msgs::PointStamped center;
+    center.header.frame_id = <span class="hljs-string">"map"</span>;
+    center.point.x = <span class="hljs-number">1.0</span>;
+    center.point.y = <span class="hljs-number">0</span>;
+    center.point.z = <span class="hljs-number">0</span>;
+    goal.explore_center = center;
+    geometry_msgs::PolygonStamped square;
+    square.header.frame_id = <span class="hljs-string">"map"</span>;
+    std::vector&lt;geometry_msgs::Point32&gt; square_points;
+    geometry_msgs::Point32 point_a;
+    point_a.x = <span class="hljs-number">30</span>;
+    point_a.y = <span class="hljs-number">30</span>;
+    point_a.z = <span class="hljs-number">0</span>;
+    geometry_msgs::Point32 point_b;
+    point_b.x = -<span class="hljs-number">30</span>;
+    point_b.y = <span class="hljs-number">30</span>;
+    point_b.z = <span class="hljs-number">0</span>;
+    geometry_msgs::Point32 point_c;
+    point_c.x = -<span class="hljs-number">30</span>;
+    point_c.y = -<span class="hljs-number">30</span>;
+    point_c.z = <span class="hljs-number">0</span>;
+    geometry_msgs::Point32 point_d;
+    point_d.x = <span class="hljs-number">30</span>;
+    point_d.y = -<span class="hljs-number">30</span>;
+    point_d.z = <span class="hljs-number">0</span>;
+    square_points.push<span class="hljs-constructor">_back(<span class="hljs-params">point_a</span>)</span>;
+    square_points.push<span class="hljs-constructor">_back(<span class="hljs-params">point_b</span>)</span>;
+    square_points.push<span class="hljs-constructor">_back(<span class="hljs-params">point_c</span>)</span>;
+    square_points.push<span class="hljs-constructor">_back(<span class="hljs-params">point_d</span>)</span>;
+    square.polygon.points = square_points;
+    goal.explore_boundary = square;
+    return goal;
+}
+
+<span class="hljs-built_in">bool</span> SearchManager::is<span class="hljs-constructor">_goal_reached(<span class="hljs-params">geometry_msgs</span>::PoseStamped <span class="hljs-params">goal</span>, <span class="hljs-params">tf</span>::StampedTransform <span class="hljs-params">current_tf</span>, <span class="hljs-params">double</span> <span class="hljs-params">linear_threshold</span>, <span class="hljs-params">double</span> <span class="hljs-params">angular_threshold</span>)</span>
+{
+    tf::Matrix3x3 goal_m, current_m;
+    tf::Quaternion goal_q;
+    double current_roll, current_pitch, current_yaw;
+    double goal_roll, goal_pitch, goal_yaw;
+
+    goal_q.set<span class="hljs-constructor">X(<span class="hljs-params">goal</span>.<span class="hljs-params">pose</span>.<span class="hljs-params">orientation</span>.<span class="hljs-params">x</span>)</span>;
+    goal_q.set<span class="hljs-constructor">Y(<span class="hljs-params">goal</span>.<span class="hljs-params">pose</span>.<span class="hljs-params">orientation</span>.<span class="hljs-params">y</span>)</span>;
+    goal_q.set<span class="hljs-constructor">Z(<span class="hljs-params">goal</span>.<span class="hljs-params">pose</span>.<span class="hljs-params">orientation</span>.<span class="hljs-params">z</span>)</span>;
+    goal_q.set<span class="hljs-constructor">W(<span class="hljs-params">goal</span>.<span class="hljs-params">pose</span>.<span class="hljs-params">orientation</span>.<span class="hljs-params">w</span>)</span>;
+    current_m.set<span class="hljs-constructor">Rotation(<span class="hljs-params">current_tf</span>.<span class="hljs-params">getRotation</span>()</span>);
+    current_m.get<span class="hljs-constructor">RPY(<span class="hljs-params">current_roll</span>, <span class="hljs-params">current_pitch</span>, <span class="hljs-params">current_yaw</span>)</span>;
+    goal_m.set<span class="hljs-constructor">Rotation(<span class="hljs-params">goal_q</span>)</span>;
+    goal_m.get<span class="hljs-constructor">RPY(<span class="hljs-params">goal_roll</span>, <span class="hljs-params">goal_pitch</span>, <span class="hljs-params">goal_yaw</span>)</span>;
+
+    double x_distance = current_tf.get<span class="hljs-constructor">Origin()</span>.x<span class="hljs-literal">()</span> - goal.pose.position.x;
+    double y_distance = current_tf.get<span class="hljs-constructor">Origin()</span>.y<span class="hljs-literal">()</span> - goal.pose.position.y;
+    double yaw_distance = current_yaw - goal_yaw;
+
+    <span class="hljs-keyword">if</span> (x_distance &lt; linear_threshold<span class="hljs-operator"> &amp;&amp; </span>x_distance &gt; -linear_threshold)
+    {
+        <span class="hljs-keyword">if</span> (y_distance &lt; linear_threshold<span class="hljs-operator"> &amp;&amp; </span>y_distance &gt; -linear_threshold)
+        {
+            <span class="hljs-keyword">if</span> (yaw_distance &lt; angular_threshold<span class="hljs-operator"> &amp;&amp; </span>yaw_distance &gt; -linear_threshold)
+            {
+                return <span class="hljs-literal">true</span>;
+            }
+        }
+    }
+    return <span class="hljs-literal">false</span>;
+}
+</code></pre>
+<p>Now we will create required header files. In <code>tutorial_pkg</code> create <code>include</code> directory. Inside the <code>include</code> directory create <code>search_manager_node.h</code> and paste:</p>
+<pre><code class="hljs"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;math.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cmath&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ros/ros.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;grid_map_core/grid_map_core.hpp&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;grid_map_msgs/GridMap.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;grid_map_ros/GridMapRosConverter.hpp&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_msgs/Float32MultiArray.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;nav_msgs/OccupancyGrid.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;nav_msgs/Path.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sensor_msgs/LaserScan.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;tf/transform_listener.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;geometry_msgs/PoseStamped.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;visualization_msgs/Marker.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;frontier_exploration/ExploreTaskAction.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;actionlib/client/simple_action_client.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;actionlib_msgs/GoalID.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;actionlib_msgs/GoalStatusArray.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SearchManager.h&gt;</span></span>
+
+SearchManager *sm;
+grid_map::GridMap *obstacles;
+grid_map::GridMap *<span class="hljs-built_in">map</span>;
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>&gt; layers_to_import;
+nav_msgs::OccupancyGrid *occupancyGridInput;
+nav_msgs::OccupancyGrid occupancyGridResult;
+nav_msgs::OccupancyGrid occupancyGridScanned;
+nav_msgs::OccupancyGrid occupancyGridObstaclesFound;
+nav_msgs::OccupancyGrid occupancyGridPendingObstacles;
+geometry_msgs::PoseStamped exploration_goal;
+frontier_exploration::ExploreTaskAction exploreTaskAction;
+
+ros::Publisher publisher_obstacles_found;
+ros::Publisher publisher_pending_obstacles;
+ros::Publisher publisher_checked_obstacles;
+ros::Publisher publisher_exploration_goal;
+ros::Publisher vis_pub;
+ros::Publisher goal_pub;
+ros::Publisher explore_canceller;
+
+<span class="hljs-keyword">double</span> angle_min;
+<span class="hljs-keyword">double</span> angle_max;       <span class="hljs-comment">//        # end angle of the scan [rad]</span>
+<span class="hljs-keyword">double</span> angle_increment; <span class="hljs-comment">//  # angular distance between measurements [rad]</span>
+<span class="hljs-keyword">double</span> range_min;       <span class="hljs-comment">//        # minimum range value [m]</span>
+<span class="hljs-keyword">double</span> range_max;       <span class="hljs-comment">//        # maximum range value [m]</span>
+<span class="hljs-built_in">std</span>::<span class="hljs-keyword">uint16_t</span> ranges_size;
+<span class="hljs-keyword">double</span> point_x;
+<span class="hljs-keyword">double</span> point_y;
+tf::Quaternion tf_q, tf_dest_quaternion;
+tf::TransformListener *listener;
+tf::StampedTransform ROSbot2_base_to_map_transform;
+geometry_msgs::Pose circle_element;
+grid_map::Position robot_position;
+grid_map::Position nearest_obstacle;
+grid_map::Position robot_destination;
+grid_map::Position current_obstacle;
+tf::Matrix3x3 m, dest_orientation;
+<span class="hljs-keyword">double</span> x_dest_pos, y_dest_pos;
+<span class="hljs-keyword">bool</span> goal_accessible;
+<span class="hljs-keyword">bool</span> goal_reached;
+<span class="hljs-keyword">bool</span> destination_free_to_go;
+<span class="hljs-keyword">bool</span> exploration_in_progress;
+<span class="hljs-keyword">bool</span> exploration_failed;
+<span class="hljs-keyword">bool</span> object_search_in_progress;
+<span class="hljs-keyword">bool</span> object_found;
+<span class="hljs-keyword">double</span> camera_view_dist = <span class="hljs-number">0.7</span>;  <span class="hljs-comment">// [meters]</span>
+<span class="hljs-keyword">double</span> camera_view_depth = <span class="hljs-number">0.2</span>; <span class="hljs-comment">// [meters]</span>
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;geometry_msgs::PoseStamped&gt; poses(<span class="hljs-number">36</span>);
+
+<span class="hljs-keyword">double</span> obstacle_bearing;
+<span class="hljs-keyword">float</span> min_dist = <span class="hljs-number">0.15</span>;
+grid_map::Position current_robot_position;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_new_goal</span><span class="hljs-params">()</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">find_nearest_obstacle</span><span class="hljs-params">(grid_map::Position *new_pos)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">find_nearest_obstacle</span><span class="hljs-params">(grid_map::Position *new_pos, grid_map::Position current_pos)</span></span>;
+grid_map::<span class="hljs-function">Position <span class="hljs-title">get_optimal_pose</span><span class="hljs-params">(grid_map::Position obstacle)</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cancel_move_base_action</span><span class="hljs-params">()</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cancel_exploration_action</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>Then create <code>SearchManager.h</code> and paste:</p>
+<pre><code class="hljs"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ros/ros.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;tf/transform_listener.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;grid_map_core/grid_map_core.hpp&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;frontier_exploration/ExploreTaskAction.h&gt;</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SearchManager</span>
+{</span>
+  <span class="hljs-keyword">public</span>:
+    SearchManager();
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">check_space_occupation</span><span class="hljs-params">(
+        grid_map::Position *robot_dest,
+        <span class="hljs-keyword">double</span> bearing,
+        <span class="hljs-keyword">float</span> dist_from_obstacle,
+        <span class="hljs-keyword">float</span> min_dist,
+        grid_map::Position current_obstacle,
+        grid_map::GridMap *obstacles,
+        grid_map::GridMap *<span class="hljs-built_in">map</span>)</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">check_obstacle_surrounding</span><span class="hljs-params">(
+        grid_map::Position *robot_dest,
+        <span class="hljs-keyword">double</span> *obstacle_bearing,
+        <span class="hljs-keyword">float</span> dist_from_obstacle,
+        <span class="hljs-keyword">float</span> min_dist,
+        grid_map::Position current_obstacle,
+        grid_map::GridMap *obstacles,
+        grid_map::GridMap *<span class="hljs-built_in">map</span>)</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">lookup_camera_transform</span><span class="hljs-params">(
+        <span class="hljs-keyword">double</span> *cam_x,
+        <span class="hljs-keyword">double</span> *cam_y,
+        <span class="hljs-keyword">double</span> *cam_yaw,
+        ros::Time scan_time,
+        tf::TransformListener *listener)</span></span>;
+
+    <span class="hljs-comment">/**
+     * brief Mark given point as checked
+     * param x X position of point to be marked
+     * param y Y position of point to be marked
+     * param gm GridMap at which point is to be marked
+     * param obstacle Obstacle which is currently set as destination
+     * return true if obstacle was inside the checked area
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">set_point_checked</span><span class="hljs-params">(<span class="hljs-keyword">float</span> x, <span class="hljs-keyword">float</span> y, grid_map::GridMap *gm, grid_map::Position obstacle)</span></span>;
+
+    <span class="hljs-comment">/**
+     * brief Mark given point as checked
+     * param x X position of point to be marked
+     * param y Y position of point to be marked
+     * param gm GridMap at which point is to be marked
+     * param obstacle Obstacle which is currently set as destination
+     * param radius Radius of the circle to be marked
+     * return true if obstacle was inside the checked area
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">set_point_checked</span><span class="hljs-params">(<span class="hljs-keyword">float</span> x, <span class="hljs-keyword">float</span> y, grid_map::GridMap *gm, grid_map::Position obstacle, <span class="hljs-keyword">float</span> radius)</span></span>;
+
+    frontier_exploration::<span class="hljs-function">ExploreTaskGoal <span class="hljs-title">createExplorationGoal</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">is_goal_reached</span><span class="hljs-params">(geometry_msgs::PoseStamped goal, tf::StampedTransform current_tf, <span class="hljs-keyword">double</span> linear_threshold, <span class="hljs-keyword">double</span> angular_threshold)</span></span>;
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="building-the-node"></a><a href="#building-the-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building the node</h3>
+<p>Open <code>CmakeLists.txt</code> file and find:</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">find_package</span>(<span class="hljs-variable">catkin</span> <span class="hljs-variable">REQUIRED</span> <span class="hljs-variable">COMPONENTS</span>
+  <span class="hljs-variable">roscpp</span> <span class="hljs-variable">tf</span>
+)</span>
+</code></pre>
+<p>And add below components to the list:</p>
+<pre><code class="hljs">  <span class="hljs-attribute">grid_map_core</span>
+  grid_map_msgs
+  grid_map_ros
+  nav_msgs
+  roscpp
+  sensor_msgs
+  frontier_exploration
+</code></pre>
+<p>Find section <code>include_directories</code> and, at the front of the list add line:</p>
+<pre><code class="hljs"><span class="hljs-meta"><span class="hljs-meta-keyword">include</span>
+</span></code></pre>
+<p>After edit it should look like below:</p>
+<pre><code class="hljs"><span class="hljs-keyword">include_directories</span>(
+  <span class="hljs-keyword">include</span>
+  <span class="hljs-variable">${catkin_INCLUDE_DIRS}</span>
+  <span class="hljs-variable">${OpenCV_INCLUDE_DIRS}</span>
+)
+</code></pre>
+<p>At the end of <code>add_executable()</code> directives list add line:</p>
+<pre><code class="hljs">add<span class="hljs-constructor">_executable(<span class="hljs-params">search_manager</span> <span class="hljs-params">src</span><span class="hljs-operator">/</span><span class="hljs-params">search_manager_node</span>.<span class="hljs-params">cpp</span> <span class="hljs-params">src</span><span class="hljs-operator">/</span>SearchManager.<span class="hljs-params">cpp</span>)</span>
+</code></pre>
+<p>At the end of <code>target_link_libraries()</code> directives list add:</p>
+<pre><code class="hljs"><span class="hljs-keyword">target_link_libraries</span>(search_manager
+  <span class="hljs-variable">${catkin_LIBRARIES}</span>
+)
+</code></pre>
+<p>Now you can build your workspace with <code>catkin_make</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="launching-search-task"></a><a href="#launching-search-task" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Launching search task</h3>
+<p>To remind, you will need to run following nodes:</p>
+<ul>
+<li><p><code>CORE2</code> bridge node -
+<code>/opt/husarion/tools/rpi-linux/ros-core2-client /dev/ttyCORE2</code></p></li>
+<li><p><code>rplidarNode</code> - driver for rpLidar laser scanner</p></li>
+<li><p><code>astra_camera</code> - driver for Orbbec Astra RGB-D camera</p></li>
+<li><p><code>drive_controller_node</code> - <code>tf</code> publisher for transformation of robot
+relative to starting point</p></li>
+<li><p><code>republish</code> nodes for managing image streaming</p></li>
+</ul>
+<p>Or instead ot these nodes, <code>Gazebo</code>:</p>
+<ul>
+<li><code>roslaunch rosbot_gazebo maze_world.launch</code></li>
+</ul>
+<p>And:</p>
+<ul>
+<li><p><code>static_transform_publisher</code> - <code>tf</code> publisher for transformation of
+laser scanner relative to robot and camera relative to robot</p></li>
+<li><p><code>slam_gmapping</code> - map building node</p></li>
+<li><p><code>move_base</code> - trajectory planner</p></li>
+<li><p><code>explore_server</code> - exploration task</p></li>
+<li><p><code>rviz</code> - visualization tool</p></li>
+<li><p><code>find_object_2d</code> - image recognition tool</p></li>
+<li><p><code>search_manager</code> - executive node for search task that you just build</p></li>
+</ul>
+<p>It is necessary to distnguish launching search task on ROSbot and in Gazebo. Essential difference is that some processes will be moved from ROSbot to separate device to improve performance.
+When using Gazebo all processes can be executed on single device, we assume that worksatation is capable enough to run all of them. If you want, there are no restrictions to use Gazebo with similar setup as for ROSbot.</p>
+<h4><a class="anchor" aria-hidden="true" id="gazebo-version"></a><a href="#gazebo-version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gazebo version</h4>
+<p>For Gazebo you can use below <code>launch</code> file:</p>
+<pre><code class="hljs css language-launch">&lt;launch&gt;
+
+    &lt;param <span class="hljs-type">name</span>="use_sim_time" <span class="hljs-keyword">value</span>="true"/&gt;
+    &lt;arg <span class="hljs-type">name</span>="world" default="empty"/&gt;
+    &lt;arg <span class="hljs-type">name</span>="paused" default="false"/&gt;
+    &lt;arg <span class="hljs-type">name</span>="use_sim_time" default="true"/&gt;
+    &lt;arg <span class="hljs-type">name</span>="gui" default="true"/&gt;
+    &lt;arg <span class="hljs-type">name</span>="headless" default="false"/&gt;
+    &lt;arg <span class="hljs-type">name</span>="debug" default="false"/&gt;
+
+    &lt;<span class="hljs-keyword">include</span> file="$(find rosbot_gazebo)/launch/search_world.launch"/&gt;
+    &lt;<span class="hljs-keyword">include</span> file="$(find rosbot_gazebo)/launch/rosbot.launch"/&gt;
+
+    &lt;node pkg="tf" <span class="hljs-keyword">type</span>="static_transform_publisher" <span class="hljs-type">name</span>="laser_broadcaster" args="0.019 0 0 3.14 0 0 base_link laser 100" /&gt;
+
+    &lt;node pkg="depthimage_to_laserscan" <span class="hljs-keyword">type</span>="depthimage_to_laserscan" <span class="hljs-type">name</span>="depthimage_to_laserscan" required="true"&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="/image" <span class="hljs-keyword">to</span>="/camera/depth/image_raw"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="scan" <span class="hljs-keyword">to</span>="proj_scan"/&gt;
+        &lt;param <span class="hljs-type">name</span>="scan_height" <span class="hljs-keyword">value</span>="1"/&gt;
+        &lt;param <span class="hljs-type">name</span>="range_min" <span class="hljs-keyword">value</span>="0.45"/&gt;
+        &lt;param <span class="hljs-type">name</span>="range_max" <span class="hljs-keyword">value</span>="1.5"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="gmapping" <span class="hljs-keyword">type</span>="slam_gmapping" <span class="hljs-type">name</span>=<span class="hljs-string">'gmapping_node'</span> output=<span class="hljs-string">'log'</span>&gt;
+        &lt;param <span class="hljs-type">name</span>="base_frame" <span class="hljs-keyword">value</span>="base_link"/&gt;
+        &lt;param <span class="hljs-type">name</span>="odom_frame" <span class="hljs-keyword">value</span>="odom"/&gt;
+        &lt;param <span class="hljs-type">name</span>="delta" <span class="hljs-keyword">value</span>="0.01"/&gt;
+        &lt;param <span class="hljs-type">name</span>="xmin" <span class="hljs-keyword">value</span>="-5"/&gt;
+        &lt;param <span class="hljs-type">name</span>="ymin" <span class="hljs-keyword">value</span>="-5"/&gt;
+        &lt;param <span class="hljs-type">name</span>="xmax" <span class="hljs-keyword">value</span>="5"/&gt;
+        &lt;param <span class="hljs-type">name</span>="ymax" <span class="hljs-keyword">value</span>="5"/&gt;
+        &lt;param <span class="hljs-type">name</span>="maxUrange" <span class="hljs-keyword">value</span>="8"/&gt;
+        &lt;param <span class="hljs-type">name</span>="maxRange" <span class="hljs-keyword">value</span>="8"/&gt;
+        &lt;param <span class="hljs-type">name</span>="map_update_interval" <span class="hljs-keyword">value</span>="1"/&gt;
+        &lt;param <span class="hljs-type">name</span>="linearUpdate" <span class="hljs-keyword">value</span>="0.05"/&gt;
+        &lt;param <span class="hljs-type">name</span>="angularUpdate" <span class="hljs-keyword">value</span>="0.05"/&gt;
+        &lt;param <span class="hljs-type">name</span>="temporalUpdate" <span class="hljs-keyword">value</span>="0.1"/&gt;
+        &lt;param <span class="hljs-type">name</span>="particles" <span class="hljs-keyword">value</span>="100"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="move_base" <span class="hljs-keyword">type</span>="move_base" <span class="hljs-type">name</span>="move_base" output="screen"&gt;
+        &lt;param <span class="hljs-type">name</span>="controller_frequency" <span class="hljs-keyword">value</span>="10.0"/&gt;
+        &lt;rosparam file="$(find rosbot_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" /&gt;
+        &lt;rosparam file="$(find rosbot_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" /&gt;
+        &lt;rosparam file="$(find rosbot_navigation)/config/local_costmap_params.yaml" command="load" /&gt;
+        &lt;rosparam file="$(find rosbot_navigation)/config/global_costmap_params.yaml" command="load" /&gt;
+        &lt;rosparam file="$(find rosbot_navigation)/config/trajectory_planner.yaml" command="load" /&gt;
+    &lt;/node&gt;
+
+    &lt;node <span class="hljs-type">name</span>="rviz" pkg="rviz" <span class="hljs-keyword">type</span>="rviz"/&gt;
+
+    &lt;node <span class="hljs-type">name</span>="find_object_3d" pkg="find_object_2d" <span class="hljs-keyword">type</span>="find_object_2d" output="log" required="true"&gt;
+        &lt;param <span class="hljs-type">name</span>="gui" <span class="hljs-keyword">value</span>="true" <span class="hljs-keyword">type</span>="bool"/&gt;
+        &lt;param <span class="hljs-type">name</span>="subscribe_depth" <span class="hljs-keyword">value</span>="true" <span class="hljs-keyword">type</span>="bool"/&gt;
+        &lt;param <span class="hljs-type">name</span>="objects_path" <span class="hljs-keyword">value</span>="$(find tutorial_pkg)/image_rec/" <span class="hljs-keyword">type</span>="str"/&gt;
+        &lt;param <span class="hljs-type">name</span>="object_prefix" <span class="hljs-keyword">value</span>="object" <span class="hljs-keyword">type</span>="str"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="rgb/image_rect_color" <span class="hljs-keyword">to</span>="/camera/rgb/image_raw"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="depth_registered/image_raw" <span class="hljs-keyword">to</span>="/camera/depth/image_raw"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="depth_registered/camera_info" <span class="hljs-keyword">to</span>="/camera/depth/camera_info"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="frontier_exploration" <span class="hljs-keyword">type</span>="explore_client" <span class="hljs-type">name</span>="explore_client" output="screen"/&gt;
+
+    &lt;node pkg="frontier_exploration" <span class="hljs-keyword">type</span>="explore_server" <span class="hljs-type">name</span>="explore_server" output="screen"&gt;
+        &lt;param <span class="hljs-type">name</span>="frequency" <span class="hljs-keyword">type</span>="double" <span class="hljs-keyword">value</span>="1.0"/&gt;
+        &lt;param <span class="hljs-type">name</span>="goal_aliasing" <span class="hljs-keyword">type</span>="double" <span class="hljs-keyword">value</span>="0.1"/&gt;
+        &lt;rosparam ns="explore_costmap" subst_value="true" file="$(find rosbot_navigation)/config/exploration.yaml" command="load" /&gt;
+        &lt;param <span class="hljs-type">name</span>="explore_clear_space" <span class="hljs-keyword">type</span>="boolean" <span class="hljs-keyword">value</span>="true"/&gt;
+        &lt;param <span class="hljs-type">name</span>="frontier_travel_point" <span class="hljs-keyword">type</span>="string" <span class="hljs-keyword">value</span>="middle"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="search_manager" <span class="hljs-type">name</span>="search_manager" output="screen"/&gt;
+
+&lt;/launch&gt;
+</code></pre>
+<p><img src="/assets/img/ros/man_9_gazebo.png" alt="image"></p>
+<h4><a class="anchor" aria-hidden="true" id="rosbot-version"></a><a href="#rosbot-version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ROSbot version</h4>
+<p>When running search task on ROSbot, you will need two <code>launch</code> files, first to be run on ROSbot:</p>
+<pre><code class="hljs css language-launch">&lt;launch&gt;
+
+    &lt;<span class="hljs-built_in">include</span> <span class="hljs-built_in">file</span>=<span class="hljs-string">"$(find astra_launch)/launch/astra.launch"</span>&gt;&lt;/<span class="hljs-built_in">include</span>&gt;
+
+    &lt;<span class="hljs-built_in">include</span> <span class="hljs-built_in">file</span>=<span class="hljs-string">"$(find rplidar_ros)/launch/rplidar.launch"</span>&gt;&lt;/<span class="hljs-built_in">include</span>&gt;
+
+    &lt;node pkg=<span class="hljs-string">"depthimage_to_laserscan"</span> type=<span class="hljs-string">"depthimage_to_laserscan"</span> name=<span class="hljs-string">"depthimage_to_laserscan"</span> required=<span class="hljs-string">"true"</span>&gt;
+        &lt;remap <span class="hljs-built_in">from</span>=<span class="hljs-string">"/image"</span> <span class="hljs-built_in">to</span>=<span class="hljs-string">"/camera/depth/image_raw"</span>/&gt;
+        &lt;remap <span class="hljs-built_in">from</span>=<span class="hljs-string">"scan"</span> <span class="hljs-built_in">to</span>=<span class="hljs-string">"proj_scan"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"scan_height"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"1"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"range_min"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"0.45"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"range_max"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"1.5"</span>/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg=<span class="hljs-string">"image_transport"</span> type=<span class="hljs-string">"republish"</span> name=<span class="hljs-string">"rgb_compress"</span> args=<span class="hljs-string">" raw in:=/camera/rgb/image_raw compressed out:=/rgb_republish"</span>/&gt;
+
+    &lt;node pkg=<span class="hljs-string">"image_transport"</span> type=<span class="hljs-string">"republish"</span> name=<span class="hljs-string">"depth_compress"</span> args=<span class="hljs-string">" raw in:=/camera/depth/image_raw compressed out:=/depth_republish"</span>&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"compressed/format"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"png"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"compressed/png_level"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"1"</span>/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg=<span class="hljs-string">"tutorial_pkg"</span> type=<span class="hljs-string">"drive_controller_node"</span> name=<span class="hljs-string">"drive_controller"</span>/&gt;
+
+    &lt;node pkg=<span class="hljs-string">"tf"</span> type=<span class="hljs-string">"static_transform_publisher"</span> name=<span class="hljs-string">"ROSbot2_laser"</span> args=<span class="hljs-string">"0.019 0 0 3.14 0 0 base_link laser 100"</span> /&gt;
+
+    &lt;node pkg=<span class="hljs-string">"tf"</span> type=<span class="hljs-string">"static_transform_publisher"</span> name=<span class="hljs-string">"ROSbot2_camera"</span> args=<span class="hljs-string">"0.0 0 0.15 0 0 0 base_link camera_link 100"</span> /&gt;
+
+    &lt;node pkg=<span class="hljs-string">"gmapping"</span> type=<span class="hljs-string">"slam_gmapping"</span> name=<span class="hljs-string">'gmapping_node'</span> output=<span class="hljs-string">'log'</span>&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"base_frame"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"base_link"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"odom_frame"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"odom"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"delta"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"0.01"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"xmin"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"-5"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"ymin"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"-5"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"xmax"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"5"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"ymax"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"5"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"maxUrange"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"5"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"map_update_interval"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"1"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"linearUpdate"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"0.05"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"angularUpdate"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"0.05"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"temporalUpdate"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"0.1"</span>/&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"particles"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"100"</span>/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg=<span class="hljs-string">"move_base"</span> type=<span class="hljs-string">"move_base"</span> name=<span class="hljs-string">"move_base"</span> output=<span class="hljs-string">"screen"</span>&gt;
+        &lt;<span class="hljs-built_in">param</span> name=<span class="hljs-string">"controller_frequency"</span> <span class="hljs-built_in">value</span>=<span class="hljs-string">"10.0"</span>/&gt;
+        &lt;rosparam <span class="hljs-built_in">file</span>=<span class="hljs-string">"$(find rosbot_navigation)/config/costmap_common_params.yaml"</span> <span class="hljs-keyword">command</span>=<span class="hljs-string">"load"</span> <span class="hljs-title">ns</span>=<span class="hljs-string">"global_costmap"</span> /&gt;
+        &lt;rosparam <span class="hljs-built_in">file</span>=<span class="hljs-string">"$(find rosbot_navigation)/config/costmap_common_params.yaml"</span> <span class="hljs-keyword">command</span>=<span class="hljs-string">"load"</span> <span class="hljs-title">ns</span>=<span class="hljs-string">"local_costmap"</span> /&gt;
+        &lt;rosparam <span class="hljs-built_in">file</span>=<span class="hljs-string">"$(find rosbot_navigation)/config/local_costmap_params.yaml"</span> <span class="hljs-keyword">command</span>=<span class="hljs-string">"load"</span> /&gt;
+        &lt;rosparam <span class="hljs-built_in">file</span>=<span class="hljs-string">"$(find rosbot_navigation)/config/global_costmap_params.yaml"</span> <span class="hljs-keyword">command</span>=<span class="hljs-string">"load"</span> /&gt;
+        &lt;rosparam <span class="hljs-built_in">file</span>=<span class="hljs-string">"$(find rosbot_navigation)/config/trajectory_planner.yaml"</span> <span class="hljs-keyword">command</span>=<span class="hljs-string">"load"</span> /&gt;
+    &lt;/node&gt;
+
+&lt;/launch&gt;
+</code></pre>
+<p>And second to be run on another device:</p>
+<pre><code class="hljs css language-launch">&lt;launch&gt;
+    &lt;node <span class="hljs-type">name</span>="rviz" pkg="rviz" <span class="hljs-keyword">type</span>="rviz"/&gt;
+
+    &lt;node pkg="image_transport" <span class="hljs-keyword">type</span>="republish" <span class="hljs-type">name</span>="rgb_decompress" args=" compressed in:=/rgb_republish raw out:=/rgb_raw"&gt;
+        &lt;param <span class="hljs-type">name</span>="compressed/mode" <span class="hljs-keyword">value</span>="color"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="image_transport" <span class="hljs-keyword">type</span>="republish" <span class="hljs-type">name</span>="depth_decompress" args=" compressed in:=/depth_republish raw out:=/depth_raw "&gt;
+        &lt;param <span class="hljs-type">name</span>="compressed/mode" <span class="hljs-keyword">value</span>="unchanged"/&gt;
+    &lt;/node&gt;
+
+    &lt;node <span class="hljs-type">name</span>="find_object_3d" pkg="find_object_2d" <span class="hljs-keyword">type</span>="find_object_2d" output="log" required="true"&gt;
+        &lt;param <span class="hljs-type">name</span>="gui" <span class="hljs-keyword">value</span>="true" <span class="hljs-keyword">type</span>="bool"/&gt;
+        &lt;param <span class="hljs-type">name</span>="subscribe_depth" <span class="hljs-keyword">value</span>="true" <span class="hljs-keyword">type</span>="bool"/&gt;
+        &lt;param <span class="hljs-type">name</span>="objects_path" <span class="hljs-keyword">value</span>="$(find tutorial_pkg)/image_rec/" <span class="hljs-keyword">type</span>="str"/&gt;
+        &lt;param <span class="hljs-type">name</span>="object_prefix" <span class="hljs-keyword">value</span>="object" <span class="hljs-keyword">type</span>="str"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="rgb/image_rect_color" <span class="hljs-keyword">to</span>="/rgb_raw"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="depth_registered/image_raw" <span class="hljs-keyword">to</span>="/depth_raw"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="depth_registered/camera_info" <span class="hljs-keyword">to</span>="/camera/depth/camera_info"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="frontier_exploration" <span class="hljs-keyword">type</span>="explore_server" <span class="hljs-type">name</span>="explore_server" output="screen"&gt;
+        &lt;param <span class="hljs-type">name</span>="frequency" <span class="hljs-keyword">type</span>="double" <span class="hljs-keyword">value</span>="1.0"/&gt;
+        &lt;param <span class="hljs-type">name</span>="goal_aliasing" <span class="hljs-keyword">type</span>="double" <span class="hljs-keyword">value</span>="0.1"/&gt;
+        &lt;rosparam ns="explore_costmap" subst_value="true" file="$(find rosbot_navigation)/config/exploration.yaml" command="load" /&gt;
+        &lt;param <span class="hljs-type">name</span>="explore_clear_space" <span class="hljs-keyword">type</span>="boolean" <span class="hljs-keyword">value</span>="true"/&gt;
+        &lt;param <span class="hljs-type">name</span>="frontier_travel_point" <span class="hljs-keyword">type</span>="string" <span class="hljs-keyword">value</span>="middle"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="search_manager" <span class="hljs-type">name</span>="search_manager" output="screen"/&gt;
+
+&lt;/launch&gt;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="observing-the-progresses"></a><a href="#observing-the-progresses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observing the progresses</h3>
+<p>Object search progresses are published as <code>nav_msgs/OccupancyGrid</code>, obstacles that are detected by mapping node and waiting to be checked are published on <code>/obstacles/pending</code> topic and obstacles that were already inspected are published on <code>/obstacles/checked</code>.</p>
+<p>To view them in Rviz add objects:</p>
+<ul>
+<li><p><code>/obstacles/pending/Map</code></p></li>
+<li><p><code>/obstacles/checked/Map</code> - for this one chenge <code>Color Scheme</code> to <code>costmap</code>, it will be easier to distinguish maps</p></li>
+<li><p><code>/proj_scan/LaserScan</code> - these are obstacles observed by the camera</p></li>
+<li><p>From menu &quot;Add&quot; -&gt; &quot;By display type&quot; choose &quot;Robot model&quot; - this will let you see where robot travelled</p></li>
+</ul>
+<p><img src="/assets/img/ros/man_9_rviz.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>After completing this tutorial you should be familiar with controlling tasks using <code>actionlib</code> library. You will also know basic usage of <code>grid_map</code> library to load, edit, create from scratch and publish <code>nav_msgs/OccupancyGrid</code> maps. Finally you will be able to configure your robot to search for an object in selected area.</p>
+<hr>
+<p><em>by Łukasz Mitka, Husarion</em></p>
+<p><em>Do you need any support with completing this tutorial or have any difficulties with software or hardware? Feel free to describe your thoughts on our community forum: <a href="https://community.husarion.com/">https://community.husarion.com/</a> or to contact with our support: <a href="mailto:support@husarion.com">support@husarion.com</a></em></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#object-search-in-ros">Object search in ROS</a><ul class="toc-headings"><li><a href="#requirements-regarding-robot">Requirements regarding robot</a></li><li><a href="#system-architecture">System architecture</a></li><li><a href="#configuration-of-explore-server-and-move-base-nodes">Configuration of <code>explore_server</code> and <code>move_base</code> nodes</a></li><li><a href="#configuration-of-find-object-2d-node">Configuration of <code>find_object_2d</code> node</a></li><li><a href="#configuration-of-depthimage-to-laserscan-node">Configuration of <code>depthimage_to_laserscan</code> node</a></li><li><a href="#configuration-of-video-streaming-to-external-computer">Configuration of video streaming to external computer</a></li><li><a href="#key-methods-in-search-manager-node">Key methods in <code>search_manager</code> node</a></li><li><a href="#search-manager-node-complete-code"><code>search_manager</code> node complete code</a></li><li><a href="#building-the-node">Building the node</a></li><li><a href="#launching-search-task">Launching search task</a></li><li><a href="#observing-the-progresses">Observing the progresses</a></li></ul></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-husarion-docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

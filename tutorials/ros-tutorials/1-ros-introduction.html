@@ -1,0 +1,418 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&#x27;1 ROS introduction&#x27; · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;ros-introduction&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#ros-introduction&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ROS introduction&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="&#x27;1 ROS introduction&#x27; · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;ros-introduction&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#ros-introduction&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ROS introduction&lt;/h1&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/atom.xml" title="Husarion Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/feed.xml" title="Husarion Docs Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="js/scrollspy.js"></script><script type="text/javascript" src="js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/prism.css"/><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/doc4" target="_self">Software</a></li><li class=""><a href="/docusaurus-husarion-docs/help" target="_self">Help</a></li><li class=""><a href="/docusaurus-husarion-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">&#x27;1 ROS introduction&#x27;</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="ros-introduction"></a><a href="#ros-introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ROS introduction</h1>
+<p>&quot;The Robot Operating System (ROS) is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms.&quot; - according to the official <a href="http://www.ros.org/about-ros/">ROS webpage</a>.</p>
+<div>
+<center><img src="./../../../assets/img/ros/ros_logo.jpeg" width="70%" height="70%" /></center>
+</div>
+<p>We prepared a set of tutorials to help you start building advanced robots. They are prepared to work with Husarion CORE2-ROS controller but they are also a valuable portion of knowledge for anybody interested in ROS.</p>
+<h2><a class="anchor" aria-hidden="true" id="system-structure"></a><a href="#system-structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>System structure</h2>
+<p>ROS is a software suite which allows for quick and easy building of
+autonomous robotic systems. ROS should be considered as a set of tools for
+creating new solutions or adjusting already existing ones. A major
+advantage of this system is a great set of drivers and implemented
+algorithms widely used in robotics.</p>
+<h3><a class="anchor" aria-hidden="true" id="nodes"></a><a href="#nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nodes</h3>
+<p>Base unit in ROS is called a node. Nodes are in charge of handling devices or
+computing algorithms- each node for separate task. Nodes can communicate
+with each other using topics or services. ROS software is
+distributed in packages. Single package is usually developed for
+performing one type of task and can contain one or multiple nodes.</p>
+<h3><a class="anchor" aria-hidden="true" id="topics"></a><a href="#topics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Topics</h3>
+<p>In ROS, topic is a data stream used to exchange information between
+nodes. They are used to send frequent messages of one type. This could
+be a sensor readout or motor goal speed. Each topic is registered under
+the unique name and with defined message type. Nodes can connect with it
+to publish messages or subscribe to them. For a given topic, one node can
+not publish and subscribe to it at the same time, but there is no
+restrictions in the number of different nodes publishing or subscribing.</p>
+<h3><a class="anchor" aria-hidden="true" id="services"></a><a href="#services" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Services</h3>
+<p>Communication by services resemble client-server model. In this mode one
+node (the server) registers service in the system. Later any other node can
+ask that service and get response. In contrast to topics, services allow
+for two-way communication, as a request can also contain some data.</p>
+<h2><a class="anchor" aria-hidden="true" id="basic-tools"></a><a href="#basic-tools" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic tools</h2>
+<p>While working with ROS there are some tools that are most useful. They are
+intended to examine nodes and topics.</p>
+<h3><a class="anchor" aria-hidden="true" id="rosnode"></a><a href="#rosnode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>rosnode</h3>
+<p>Rosnode is a command line application for examining which nodes are
+registered in the system and also checking their statuses.</p>
+<p>Using the application looks as follows:</p>
+<pre><code class="hljs css language-bash">     $ rosnode <span class="hljs-built_in">command</span> [node_name]
+</code></pre>
+<p>Command could be:</p>
+<ul>
+<li><p><code>list</code> - display list of running nodes</p></li>
+<li><p><code>info</code> - display info regarding selected node</p></li>
+<li><p><code>kill</code> - stop selected node</p></li>
+</ul>
+<p>Detailed info could be found in
+<a href="http://wiki.ros.org/rosnode">ROS documentation</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="rostopic"></a><a href="#rostopic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>rostopic</h3>
+<p>Rostopic is a command line application for examining which topics are
+already being published and subscribed, checking details of the selected topic
+or reading messages being sent in it.</p>
+<p>Using the application looks as follows:</p>
+<pre><code class="hljs css language-bash">     $ rostopic <span class="hljs-built_in">command</span> [topic_name]
+</code></pre>
+<p>Command could be:</p>
+<ul>
+<li><p><code>list</code> - display list of topics</p></li>
+<li><p><code>info</code> - display info regarding selected topic</p></li>
+<li><p><code>echo</code> - display messages published in the topic</p></li>
+</ul>
+<p>Detailed info could be found in
+<a href="http://wiki.ros.org/rostopic">ROS documentation</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="rqt-graph"></a><a href="#rqt-graph" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>rqt_graph</h3>
+<p><code>rqt_graph</code> is graphical tool for visualization of data flow across different nodes
+in the system.</p>
+<p>Using the application looks as follows:</p>
+<pre><code class="hljs css language-bash">     $ rqt_graph
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="robot-platform"></a><a href="#robot-platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Robot platform</h2>
+<p>This tutorial is created for ROSbot, open-source robot platform. You can read more about it here: <a href="https://husarion.com/manuals/rosbot-manual/">ROSbot manual</a>.</p>
+<p>The platform contains:</p>
+<ul>
+<li>1 × Husarion CORE2-ROS version with ASUS Tinker Board</li>
+<li>1 × RPLIDAR A2 360°</li>
+<li>1 x RGBD camera Orbbec Astra</li>
+<li>1 × MPU9250</li>
+<li>4 × VL53L0X Time-of-Flight Distance Sensor</li>
+</ul>
+<p>And this is how it looks like:</p>
+<div>
+<center><img src="./../../../assets/img/ROSbot_manual/colour_perspective.jpg" width="50%" height="45%" /></center>
+</div>
+<div>
+<center><img src="./../../../assets/img/ROSbot_manual/colour_back.jpg" width="50%" height="50%" /></center>
+</div>
+<p>You can also test the performance of ROSbot using our simulation model in Gazebo environment. It is available here, at our <a href="https://github.com/husarion/rosbot_description">GitHub page</a>.</p>
+<p>You can use simulation model on a ready to go virtual machine, which you can download from <a href="https://files.husarion.com/husarion-vm.vmdk.xz">our file server</a>. Virtual machine is already configured with all required packages and you can use it with minimal setup effort.</p>
+<p>Another option is to use ROS native installation, this requires Ubuntu 16.04 operating system and you will have to install ROS with Gazebo according to this <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">guide</a>. Native installation requires a bit of experience with linux and command line, but will offer much better performance camparing to virtual machine.</p>
+<p>You can also try online simulator at <a href="http://www.theconstructsim.com/">www.theconstructsim.com</a>, it comes with all required packages installed and offer great computing power for a reasonable price.</p>
+<p>We also created package with all nodes and launch files from our ROS tutorials. You can download ready to use pkg from <a href="https://github.com/husarion/tutorial_pkg">GitHub page</a>.</p>
+<p><img src="/assets/img/ROSbot_manual/rosbot_gazebo.png" alt="image"></p>
+<h2><a class="anchor" aria-hidden="true" id="ros-and-core2-work-flow"></a><a href="#ros-and-core2-work-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ROS and CORE2 Work flow</h2>
+<p>According to the method of your choice, proceed to section <strong>Connecting to ROSbot</strong> or <strong>Starting Gazebo</strong>.</p>
+<h4><a class="anchor" aria-hidden="true" id="connecting-to-rosbot"></a><a href="#connecting-to-rosbot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connecting to ROSbot</h4>
+<p>Before you start working with ROS on CORE2 platform, you need to connect
+your device first. You can establish connection in two ways: using <code>ssh</code> or via
+remote desktop. For both methods you need an IP address of your CORE2-
+it could be found on cloud.husarion.com after clicking “more” button
+next to robot name.</p>
+<p>To connect by ssh type in terminal:</p>
+<pre><code class="hljs css language-bash">    $ ssh husarion@xxx.xxx.xxx.xxx
+</code></pre>
+<p>password is:  <code>husarion</code></p>
+<p>To connect via remote desktop you need a remote desktop client
+application. Depending on your system, you may have various clients.</p>
+<p>Parameters for connection are the following:</p>
+<table>
+    <tr>
+        <td>protocol</td><td>`rdp`</td>
+    </tr>
+    <tr>
+        <td>server</td><td>`xxx.xxx.xxx.xxx`</td>
+    </tr>
+    <tr>
+        <td>username</td><td>`husarion`</td>
+    </tr>
+    <tr>
+        <td>password</td><td>`husarion`</td>
+    </tr>
+</table>
+<p>If you are working on Windows, press <code>WinKey + r</code> then type <code>mstsc</code>.</p>
+<p>You will see a window appear:</p>
+<div><center><img src="./../../../assets/img/ros/man_1_1a.png" /></center></div>
+<p>Type in your device IP address and click <code>connect</code>. If you are working on
+Mac, you can use <strong>Microsoft Remote Desktop</strong> available at <strong>AppStore</strong>.
+If you are working on Ubuntu, you can use <strong>Remmina</strong>.</p>
+<p><img src="/assets/img/ros/man_1_0.png" alt="image"></p>
+<p>The first step in working with ROS is to run master process called roscore.
+This node handles registration of other nodes, topics and services. After
+this step is complete you can run your nodes.</p>
+<p>To start the master process you can use command:</p>
+<pre><code class="hljs css language-bash">    $ roscore
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="starting-gazebo"></a><a href="#starting-gazebo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting Gazebo</h4>
+<p>To start using Gazebo with ROSbot model you need to download our package with model and configuration files to ROS workspace directory. Meaning and structure of workspace will be discussed later, now you will just create it with:</p>
+<pre><code class="hljs css language-bash">    $ mkdir -p ~/ros_workspace/src
+    $ <span class="hljs-built_in">cd</span> ~/ros_workspace/src
+    $ catkin_init_workspace
+    $ sudo apt update
+    $ git <span class="hljs-built_in">clone</span> https://github.com/husarion/rosbot_description.git
+    $ <span class="hljs-built_in">cd</span> ~/ros_workspace 
+    $ catkin_make
+    $ <span class="hljs-built_in">source</span> devel/setup.sh
+</code></pre>
+<p>From now your system is ready to run Gazebo with ROSbot. To start simulator use command:</p>
+<pre><code class="hljs css language-bash">    $ roslaunch rosbot_gazebo rosbot_world.launch
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="starting-system-step-by-step"></a><a href="#starting-system-step-by-step" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting system step by step</h3>
+<p>You can start ROS nodes by typing name of each node manually.</p>
+<p>To do it you can use the following command:</p>
+<pre><code class="hljs css language-bash">    $ rosrun package_name node_type [options]
+</code></pre>
+<p>Package_name and node_type are names of package and node that you want
+to run. <code>rosrun</code> executes node in the terminal and outputs text logs to the screen. To start multiple nodes simultaneously use <code>roslaunch</code>. You will learn about this tool soon.</p>
+<h4><a class="anchor" aria-hidden="true" id="defining-node-name"></a><a href="#defining-node-name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining node name</h4>
+<p>If you want to bind specific identifier to a node, at the end of the
+command, add:</p>
+<pre><code class="hljs css language-bash">    __name:=new_node_name
+</code></pre>
+<p>Note that there are two underscores before the name. If you want to learn more about naming convention used by ROS see <a href="http://wiki.ros.org/ROS/Concepts#Names.Names">this</a> docs.</p>
+<h4><a class="anchor" aria-hidden="true" id="setting-parameter"></a><a href="#setting-parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting parameter</h4>
+<p>You can also set parameter value by adding:</p>
+<pre><code class="hljs css language-bash">    _param:=value
+</code></pre>
+<p>Note that there is an underscore before the parameter name.</p>
+<p>To find what kind of parameters you can set, and what type of data is
+accepted, check documentation for exact node.</p>
+<h4><a class="anchor" aria-hidden="true" id="remapping-topic-name"></a><a href="#remapping-topic-name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Remapping topic name</h4>
+<p>If you want to change the name of the topic subscribed or published by a node, you
+can use remapping option. In order to do it, at the end of the command, add:</p>
+<pre><code class="hljs css language-bash">    old_topic_name:=new_topic_name
+</code></pre>
+<p>Note that there is no underscore before the old name.</p>
+<h3><a class="anchor" aria-hidden="true" id="starting-system-step-by-step-example"></a><a href="#starting-system-step-by-step-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting system step by step - Example</h3>
+<p>In this section, we will set up ROS system that is equipped with a Orbbec Astra
+camera and show image from camera on display. Use remote desktop client of your choice to connect to your ROSbot or Core2ROS. In case of latter remember to plug in Orbbec Astra camera to your SBC. You can also follow the tutorial in simulation mode using Gazebo and Husarion VM.</p>
+<h4><a class="anchor" aria-hidden="true" id="starting-master"></a><a href="#starting-master" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting master</h4>
+<p>We will begin with master by typing in the following code in the ecommand line:</p>
+<pre><code class="hljs css language-bash">    $ roscore
+</code></pre>
+<p>You should see something like this:</p>
+<p><img src="/assets/img/ros/man_1_1.png" alt="image"></p>
+<p>Now you can use tools from chapter 2 in order to examine your system,
+don’t worry that you didn’t start any node yet.</p>
+<h4><a class="anchor" aria-hidden="true" id="examining-nodes"></a><a href="#examining-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examining nodes</h4>
+<p>Let’s begin by checking the list of existing nodes.
+In the new terminal type in:</p>
+<pre><code class="hljs css language-bash">    $ rosnode list
+</code></pre>
+<p>As the output you should get:</p>
+<pre><code class="hljs css language-bash">    husarion@core2-ros:~$ rosnode list 
+    /rosout
+</code></pre>
+<p>This means, that you have now one node running which name is <code>/rosout</code>
+and it is responsible for handling console log mechanism.</p>
+<p>Next you can check some info about this node:</p>
+<pre><code class="hljs css language-bash">    $ rosnode info /rosout
+</code></pre>
+<p>And as the output you should get:</p>
+<pre><code class="hljs css language-bash">    husarion@core2-ros:~$ rosnode info /rosout 
+    -------------------------------------
+    Node [/rosout]
+    Publications: 
+     * /rosout_agg [rosgraph_msgs/Log]
+     
+    Subscriptions: 
+     * /rosout [unknown <span class="hljs-built_in">type</span>]
+     
+    Services: 
+     * /rosout/set_logger_level
+     * /rosout/get_loggers
+     
+    contacting node http://core2-ros:48067/ ...
+    Pid: 4594
+</code></pre>
+<p>You can see here that node <code>/rosout</code> is publishing to topic
+<code>/rosout_agg</code>, subscribing topic <code>/rosout</code> and offering two services:
+<code>/rosout/set_logger_level</code> and <code>/rosout/get_loggers</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="examining-topics"></a><a href="#examining-topics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examining topics</h4>
+<p>Now we will check what topics are registered in the system and receivee some
+info about them. In new console type in:</p>
+<pre><code class="hljs">$ rostopic list
+</code></pre>
+<p>You should get in the output:</p>
+<pre><code class="hljs">husarion@core2-ros:~$ rostopic list 
+/rosout
+/rosout_agg
+</code></pre>
+<p>This means that you have two topics registered in the system. Let’s get
+some info about first of them:</p>
+<pre><code class="hljs">$ rostopic info /rosout
+</code></pre>
+<p>As the output you should get:</p>
+<pre><code class="hljs">husarion@core2-ros:~$ rostopic info /rosout
+Type: rosgraph_msgs/Log
+
+Publishers: None
+
+Subscribers: 
+ * /rosout (http://core2-ros:33119/)
+</code></pre>
+<p>From that you can read, that via topic <code>/rosout</code> only messages of type <code>rosgraph_msgs/Log</code> can be transmitted, there is no node that publishes to this topic and node <code>/rosout</code> subscribes it.</p>
+<p>Now, leet's try to get similar info about the second topic:</p>
+<pre><code class="hljs">$ rostopic info /rosout_agg
+</code></pre>
+<p>As the output you should get:</p>
+<pre><code class="hljs">husarion@core2-ros:~$ rostopic info /rosout_agg 
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /rosout (http://core2-ros:33119/)
+ 
+Subscribers: None
+</code></pre>
+<p>From that you can read, that via topic <code>/rosout_agg</code> only messages of type <code>rosgraph_msgs/Log</code> can be transmitted, node <code>/rosout</code> publishes to this topic and there is no node that subscribes it.</p>
+<h4><a class="anchor" aria-hidden="true" id="starting-camera-node"></a><a href="#starting-camera-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting camera node</h4>
+<p>If you are using simulator, you can skip this section, as the driver for camera will not be necessary.</p>
+<p>Now you will run few nodes for handling Astra camera device. For this task you should use <code>astra.launch</code> from package <code>astra_launch</code> because this is the default camera installed in ROSbot.
+We will explain how <code>launch</code> file works later.</p>
+<p>You can start camera nodes by typing in the terminal:</p>
+<pre><code class="hljs">$ roslaunch astra_launch astra<span class="hljs-selector-class">.launch</span>
+</code></pre>
+<p>As output you should get something like below:</p>
+<p><img src="/assets/img/ros/man_1_2.png" alt="image"></p>
+<p><strong>Task 1</strong></p>
+<p>Use <code>rosnode</code> and <code>rostopic</code> tools to check if new nodes or
+topic appeared in the system. Next find some info regarding new node and
+topics.</p>
+<h4><a class="anchor" aria-hidden="true" id="starting-image-view-node"></a><a href="#starting-image-view-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting image view node</h4>
+<p>Now you have camera node running, but can not see image from it yet. You will use node <code>image_view</code> from <code>image_view</code> package. This node by default subscribes to topic <code>image</code>. You need to remap this name to topic published by the camera node. If you performed task 1, you should know that astra nodes are publishing to many topics. To run image view node with remapping topic name type in the terminal:</p>
+<pre><code class="hljs">    $ rosrun image_view image_view <span class="hljs-string">image:</span>=<span class="hljs-regexp">/camera/</span>rgb/image_raw
+</code></pre>
+<p>As the output you should get:</p>
+<p><img src="/assets/img/ros/man_1_3.png" alt="image"></p>
+<p><strong>Note for simulator</strong>: Simulated environment consist of simple objects (plains, boxes etc.), due to this, image from camera will consist of simple shapes like triangles or rectangles.</p>
+<p><strong>Task 2</strong></p>
+<p>Use <code>rosnode</code> and <code>rostopic</code> tools to check what changed in
+the system after running another node. Notice what changed in properties
+of <code>/camera/rgb/image_raw</code> topic.</p>
+<h4><a class="anchor" aria-hidden="true" id="examining-system-with-rqt-graph"></a><a href="#examining-system-with-rqt-graph" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examining system with rqt_graph</h4>
+<p>Now you will use <code>rqt_graph</code> tool in order to get graph of data flow in
+the system. In new terminal type in:</p>
+<pre><code class="hljs">$ rqt_graph
+</code></pre>
+<p>There will be no response in the terminal, but new window will appear. In upper left corner change &quot;Nodes only&quot; option to &quot;Nodes/Topics (active)&quot;. You will see:</p>
+<p><img src="/assets/img/ros/man_1_4.png" alt="image"></p>
+<p>Interpretation of the graph is as follows:</p>
+<ul>
+<li><p>Ovals represent nodes</p></li>
+<li><p>Rectangles represent topics</p></li>
+<li><p>Big rectangles containing other elements represent namespace (shared part of the name)</p></li>
+<li><p>Arrows pointing from node to topic represent publication to this
+topic</p></li>
+<li><p>Arrows pointing from topic to node represent subscription to this
+topic</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="starting-system-with-roslaunch"></a><a href="#starting-system-with-roslaunch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting system with <code>roslaunch</code></h3>
+<p><code>Roslaunch</code> is a tool that simplifies running of multiple nodes at the samee
+time. This tool uses <code>.launch</code> files which contain configuration of all
+nodes to be run. Usage of <code>roslaunch</code> is simple. In the new terminal type in:</p>
+<pre><code class="hljs">roslaunch package file.launch
+</code></pre>
+<p>or</p>
+<pre><code class="hljs">roslaunch file.launch
+</code></pre>
+<p>The first one is for the case when you use launch file provided with
+the package- you can run it from any folder. The second option is when you
+use standalone launch file- you must run it in the folder where the launch
+file is located or point the path to it.</p>
+<h4><a class="anchor" aria-hidden="true" id="structure-of-launch-file-"></a><a href="#structure-of-launch-file-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Structure of .launch file</h4>
+<p>Structure of <code>.launch</code> file is defined in a markup language derived from XML and similar to
+HTML. Content of the <code>.launch</code> file is inserted between the start and end tags: <code>&lt;launch&gt;...&lt;/launch&gt;</code> (root element). Other elements including those that define nodes should be placed between them.
+You can define node using <code>node</code> element:</p>
+<pre><code class="hljs css language-launch">    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">"package_name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"node"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"id"</span> <span class="hljs-attr">required</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">output</span>=<span class="hljs-string">"screen"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+</code></pre>
+<p>Where fields <code>pkg</code>, <code>type</code> and <code>name</code> are required, rest are optional.</p>
+<p>Meaning of each field:</p>
+<ul>
+<li><p><code>pkg</code> - name of the epackage</p></li>
+<li><p><code>type</code> - node to be run</p></li>
+<li><p><code>name</code> - id which will be binded to the node</p></li>
+<li><p><code>required</code> - if true, all nodes in the <code>.launch</code> file will be
+stopped if this node stops or fails, default value is false.</p></li>
+<li><p><code>output</code> - if value is <code>screen</code> node output will be directed to
+screen, if value is <code>log</code> output will be directed to log file,
+default is log.</p></li>
+</ul>
+<p>For each node parameters can be set or topics can be remapped.</p>
+<p>For setting parameters use element <code>param</code>:</p>
+<pre><code class="hljs css language-launch">    &lt;param <span class="hljs-attribute">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attribute">value</span>=<span class="hljs-string">"value"</span>/&gt;
+</code></pre>
+<p>Meaning of the fields:</p>
+<ul>
+<li><p><code>name</code> - name of the parameter</p></li>
+<li><p><code>value</code> - desired value of the parameter</p></li>
+</ul>
+<p>For remapping the topic names use element <code>remap</code>:</p>
+<pre><code class="hljs css language-launch">    &lt;remap <span class="hljs-attribute">from</span>=<span class="hljs-string">"/old"</span> <span class="hljs-attribute">to</span>=<span class="hljs-string">"/new"</span>/&gt;
+</code></pre>
+<p>Meaning of the fields:</p>
+<ul>
+<li><p><code>from</code> - old topic's name</p></li>
+<li><p><code>to</code> - desired topic's name</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="starting-system-with-roslaunch-example"></a><a href="#starting-system-with-roslaunch-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting system with <code>roslaunch</code> - Example</h3>
+<p>In this section we will start the same nodes as in previous example, but
+this time with use of <code>roslaunch</code> tool.</p>
+<p>At first you will need a <code>.launch</code> file.</p>
+<pre><code class="hljs css language-launch">&lt;launch&gt;
+    &lt;arg <span class="hljs-type">name</span>="use_rosbot" default="true"/&gt;
+    &lt;arg <span class="hljs-type">name</span>="use_gazebo" default="false"/&gt;
+
+    &lt;<span class="hljs-keyword">include</span> <span class="hljs-keyword">if</span>="$(arg use_rosbot)" file="$(find astra_launch)/launch/astra.launch"/&gt;
+    &lt;<span class="hljs-keyword">include</span> <span class="hljs-keyword">if</span>="$(arg use_gazebo)" file="$(find rosbot_gazebo)/launch/rosbot_world.launch"/&gt;
+    &lt;<span class="hljs-keyword">include</span> <span class="hljs-keyword">if</span>="$(arg use_gazebo)" file="$(find rosbot_gazebo)/launch/rosbot.launch"/&gt;
+
+    &lt;node pkg="image_view" <span class="hljs-keyword">type</span>="image_view" <span class="hljs-type">name</span>="image_view"&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="/image" <span class="hljs-keyword">to</span>="/camera/rgb/image_raw"/&gt;
+    &lt;/node&gt;
+
+&lt;/launch&gt;  
+</code></pre>
+<p>Copy the above code to text editor (and other parameters if needed) and save it to file <code>tutorial_1.launch</code> in your home directory.</p>
+<p>Next, close all consoles and nodes that are already running, go to new
+terminal and, if working on ROSbot, type in:</p>
+<pre><code class="hljs css language-bash">    $ roslaunch tutorial_1.launch
+</code></pre>
+<p>In case of working with Gazebo:</p>
+<pre><code class="hljs css language-bash">    $ roslaunch tutorial_1.launch use_rosbot:=<span class="hljs-literal">false</span> use_gazebo:=<span class="hljs-literal">true</span>
+</code></pre>
+<p>You should get output like this:</p>
+<p><img src="/assets/img/ros/man_1_5.png" alt="image"></p>
+<p>Notice that you do not need to run <code>roscore</code> before using <code>roslaunch</code>,
+if <code>roscore</code> is not running already, <code>roslaunch</code> will run it before
+starting nodes.</p>
+<p><strong>Task 3</strong></p>
+<p>Use <code>rosnode</code>, <code>rostopic</code> and <code>rqt_graph</code>
+tools to examine system started with use of <code>roslaunch</code>, there should be
+no difference in comparison to the esystem started step by step.</p>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>After completing this tutorial you should know what are the basic
+components and tools of ROS. You should know two methods for starting a
+node, setting parameters and remapping topic names. You should be able
+to check what nodes are running in system and to which topics they are
+publishing and subscribing.</p>
+<hr>
+<p><em>by Łukasz Mitka, Husarion</em></p>
+<p><em>Do you need any support with completing this tutorial or have any difficulties with software or hardware? Feel free to describe your thoughts on our community forum: <a href="https://community.husarion.com/">https://community.husarion.com/</a> or to contact with our support: <a href="mailto:support@husarion.com">support@husarion.com</a></em></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#system-structure">System structure</a><ul class="toc-headings"><li><a href="#nodes">Nodes</a></li><li><a href="#topics">Topics</a></li><li><a href="#services">Services</a></li></ul></li><li><a href="#basic-tools">Basic tools</a><ul class="toc-headings"><li><a href="#rosnode">rosnode</a></li><li><a href="#rostopic">rostopic</a></li><li><a href="#rqt-graph">rqt_graph</a></li></ul></li><li><a href="#robot-platform">Robot platform</a></li><li><a href="#ros-and-core2-work-flow">ROS and CORE2 Work flow</a><ul class="toc-headings"><li><a href="#starting-system-step-by-step">Starting system step by step</a></li><li><a href="#starting-system-step-by-step-example">Starting system step by step - Example</a></li><li><a href="#starting-system-with-roslaunch">Starting system with <code>roslaunch</code></a></li><li><a href="#starting-system-with-roslaunch-example">Starting system with <code>roslaunch</code> - Example</a></li></ul></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-husarion-docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
