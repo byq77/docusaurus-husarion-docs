@@ -1,13 +1,7 @@
 ---
-title: 'Getting started with Husarion + LEGO Mindstorms'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 3
+title: Getting started with Husarion + LEGO Mindstorms
+id: getting-started-with-husarion--lego-mindstorms
 ---
-
-# Getting started with Husarion + LEGO Mindstorms #
 
 In this tutorial we will help you build autonomic, mechatronic 3-wheels robots. Robot have to be equipped with two motors, two ultrasonic distance meter sensors, a power supply and the CORE2 each one. You can drive your robot via <a href="https://cloud.husarion.com/">Husarion Cloud</a> Husarion Cloud using W, S, A, D keys, changing speed with Q, Z keys and turn on automatic mode with E key or hBtn1. The task of the wallBOT is to drive by a wall on the right, bypassing obstacles left side. And the task of the shadowBOT is to follow the tracked object.
 
@@ -69,18 +63,18 @@ One of sensors will detect the wall on the right side of the robot. It should be
 Your robot need another sensor facing ahead to detect any obstacles and evade them. Connect it to hSens2 port.
 Left motor should be connected to A motor port and the right one to D motor port.
 
-<div style="text-align: center">![image](/assets/img/howToStart/wallBOT_1.jpg)</div>
-<div style="text-align: right"><i>Assembled robot with CORE2 controller and CORE2brick adapter</i></div>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/wallBOT_1.jpg"/></div>
+<div style="text-align: center"><i>Assembled robot with CORE2 controller and CORE2brick adapter</i></div>
 
 <p></p>
 
-<div style="text-align: center">![image](/assets/img/howToStart/wallBOT_2.jpg)</div>
-<div style="text-align: right"><i>Assembled robot with RoboCORE controller</i></div>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/wallBOT_2.jpg"/></div>
+<div style="text-align: center"><i>Assembled robot with RoboCORE controller</i></div>
 
 <p></p>
 
-<div style="text-align: center">![image](/assets/img/howToStart/wallBOT_3.jpg)</div>
-<div style="text-align: right"><i>Assembled robot with CORE2 controller and CORE2brick adapter - side view</i></p></div>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/wallBOT_3.jpg"/></div>
+<div style="text-align: center"><i>Assembled robot with CORE2 controller and CORE2brick adapter - side view</i></p></div>
 
 <p></p>
 
@@ -91,18 +85,18 @@ Sensors will detect object in front of the robot therefore you need to place bot
 Connect right sensor to hSens1 port and left one to hSens2 port.
 Left motor should be connected to A motor port and the right one to D motor port.
 
-<div style="text-align: center">![image](/assets/img/howToStart/shadowBOT_1.png)</div>
-<div style="text-align: right"><i>Assembled robot with CORE2 controller and CORE2brick adapter</i></div>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/shadowBOT_1.jpg"/></div>
+<div style="text-align: center"><i>Assembled robot with CORE2 controller and CORE2brick adapter</i></div>
 
 <p></p>
 
-<div style="text-align: center">![image](/assets/img/howToStart/shadowBOT_2.png)</div>
-<div style="text-align: right"><i>Assembled robot with RoboCORE controller</i></div>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/shadowBOT_2.jpg"/></div>
+<div style="text-align: center"><i>Assembled robot with RoboCORE controller</i></div>
 
 <p></p>
 
-<div style="text-align: center">![image](/assets/img/howToStart/shadowBOT_3.png)</div>
-<div style="text-align: right"><i>Assembled robot with CORE2 controller and CORE2brick adapter - side view</i></p></div>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/shadowBOT_3.jpg"/></div>
+<div style="text-align: center"><i>Assembled robot with CORE2 controller and CORE2brick adapter - side view</i></p></div>
 
 <p></p>
 

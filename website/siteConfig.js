@@ -13,8 +13,8 @@ const users = [
   {
     caption: 'User1',
     // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
+    // if it is not '/', like: '/test-site/img/logo_husarion_sd'.
+    image: '/img/logo_husarion_sd',
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },
@@ -31,7 +31,7 @@ const siteConfig = {
 
   // Used for publishing and more
   projectName: 'husarion-documentation',
-  organizationName: 'husarion',
+  organizationName: 'byq77',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -43,14 +43,15 @@ const siteConfig = {
     {doc: 'doc4', label: 'Software'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {search: true}
   ],
 
   // If you have users set above, you add it here:
   users,
-
+  usePrism: ['jsx'],
   /* path to images for header/footer */
   headerIcon: 'img/husarion_logo_white.svg',
-  footerIcon: 'img/logo_big.png',
+  footerIcon: 'img/husarion_logo_white.svg',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
@@ -73,6 +74,12 @@ const siteConfig = {
   },
   */
 
+  algolia: {
+    apiKey: 'my-api-key',
+    indexName: 'my-index-name',
+    algoliaOptions: {} // Optional, if provided by Algolia
+  },
+
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Husarion`,
 
@@ -82,7 +89,22 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    {
+      src:
+        'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+      async: true,
+    },
+  ],
+  scrollToTop: true,
+  scrollToTopOptions: {
+    diameter: 56, // px
+    cornerOffset: 20, // px
+    backgroundColor: '#d0112b',
+    textColor: '#fff',
+    zIndex: 100,
+  },
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
@@ -90,8 +112,10 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  ogImage: 'img/favicon.ico',
+  twitterImage: 'img/favicon.ico',
+
+
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
