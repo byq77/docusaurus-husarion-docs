@@ -23,14 +23,16 @@ const users = [
 const siteConfig = {
   title: 'Husarion Docs', // Title for your website.
   tagline: 'A website for testing',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
+  // url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
-
+  url: 'https://byq77.github.io',
+  baseUrl: '/docusaurus-husarion-docs/',
+  disableHeaderTitle: true,
+  disableTitleTagline: true,
+  docsUrl: '', // remove /docs/ from URL
   // Used for publishing and more
-  projectName: 'husarion-documentation',
+  projectName: 'docusaurus-husarion-docs',
   organizationName: 'byq77',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -91,11 +93,8 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
     'https://buttons.github.io/buttons.js',
-    {
-      src:
-        'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
-      async: true,
-    },
+    '/js/scrollspy.js',
+    '/js/sidebarScroll.js',
   ],
   scrollToTop: true,
   scrollToTopOptions: {
@@ -105,17 +104,13 @@ const siteConfig = {
     textColor: '#fff',
     zIndex: 100,
   },
-
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.
   cleanUrl: true,
-
   // Open Graph and Twitter card images.
   ogImage: 'img/favicon.ico',
   twitterImage: 'img/favicon.ico',
-
-
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,

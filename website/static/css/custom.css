@@ -14,3 +14,17 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+ul.toc-headings > li {
+    padding-bottom: 0px;   /* moved to li > a */
+}
+
+.toc-headings > li > a {
+    display: block;
+    padding: 4px;
+}
+
+.toc-headings > li > a.active {
+    background-color: rgba(27, 31, 35, 0.05);
+    font-weight: bold;
+}

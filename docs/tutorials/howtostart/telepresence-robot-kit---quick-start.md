@@ -1,10 +1,6 @@
 ---
 title: 'Telepresence robot kit - quick start'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 4
+id: 
 ---
 # Telepresence robot kit - quick start #
 
