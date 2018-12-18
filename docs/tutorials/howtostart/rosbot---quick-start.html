@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&#x27;ROSbot - quick start&#x27; · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;rosbot-quick-start&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#rosbot-quick-start&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ROSbot - quick start&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="&#x27;ROSbot - quick start&#x27; · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;rosbot-quick-start&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#rosbot-quick-start&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ROSbot - quick start&lt;/h1&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/atom.xml" title="Husarion Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/feed.xml" title="Husarion Docs Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js" async=""></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/prism.css"/><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs"/><h2 class="headerTitleWithLogo">Husarion Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Software</a></li><li class=""><a href="/docusaurus-husarion-docs/help" target="_self">Help</a></li><li class=""><a href="/docusaurus-husarion-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">&#x27;ROSbot - quick start&#x27;</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="rosbot-quick-start"></a><a href="#rosbot-quick-start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ROSbot - quick start</h1>
+<p>ROSbot is an autonomous, open source robot platform running on CORE2-ROS controller. It can be used as a learning platform for Robot Operating System as well as a base for a variety of robotic applications like inspection robots, custom service robots etc.</p>
+<p>If you don't have one, you can purchase it <a href="https://store.husarion.com/">here</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="unboxing"></a><a href="#unboxing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unboxing</h2>
+<p>What's in the box:</p>
+<ul>
+<li>carrying case</li>
+<li>ROSbot 2.0 (with optional 3D camera and LiDAR already assembled)</li>
+<li>Wi-Fi 2.4GHz antenna</li>
+<li>3x 18650 Li-Ion reachargeable batteries</li>
+<li>universal charger with power adapter</li>
+<li>charging cable</li>
+<li>microSD card with the software for ROSbot</li>
+<li>USB to Ethernet adapter</li>
+</ul>
+<div><center><img src="https://raw.githubusercontent.com/husarion/static_docs/master/src/assets/img/howToStart/ROSbot_unboxing.jpg"/></center></div>
+<h2><a class="anchor" aria-hidden="true" id="assembly"></a><a href="#assembly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assembly</h2>
+<p>Your ROSbot is assembled, but to get it ready to work, you need to provide a power supply and attach the antenna.</p>
+<p>To mount batteries:</p>
+<ul>
+<li>turn ROSbot upside down</li>
+<li>unscrew battery cover mounted with two screws</li>
+<li>remove the battery cover</li>
+<li>place batteries accordingly to the symbols, keeping the black strip under the batteries</li>
+<li>place batery cover and mount it with screws</li>
+</ul>
+<p>To charge the batteries, follow this <a href="https://files.husarion.com/docs2/Charging%20manual%20for%20ROSbot.pdf">guide</a>.</p>
+<p>To attach the antenna, screw it to the antenna connector on the ROSbot rear panel.</p>
+<h2><a class="anchor" aria-hidden="true" id="connecting-to-the-cloud"></a><a href="#connecting-to-the-cloud" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connecting to the cloud</h2>
+<ul>
+<li>Press and hold the hCfg button on ROSbot rear panel.</li>
+<li>Turn on a power switch.</li>
+<li>When blue and yellow LEDs start blinking, release the hCfg button.</li>
+<li>Connect your mobile device to Husarion Wi-Fi and open hConfig app (<a href="https://itunes.apple.com/us/app/hconfig/id1283536270?mt=8">hConfig in AppStore</a> or <a href="https://play.google.com/store/apps/details?id=com.husarion.configtool2">hConfig in Google Play</a>) to connect ROSbot to the Wi-Fi network and your user account at <a href="https://cloud.husarion.com">cloud.husarion.com</a> (<a href="https://husarion.com/core2/tutorials/howtostart/run-your-first-program/#run-your-first-program-connecting-to-the-cloud">how to do this</a>).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="programming"></a><a href="#programming" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Programming</h2>
+<p>First you will program the Core2 part:</p>
+<ul>
+<li>Turn on your ROSbot.</li>
+<li>Click &quot;edit&quot; next to your device name and sellect &quot;IDE&quot;.</li>
+<li>Create a new project using Core2 as your board and 'ROSbot default firmwre' as a template.</li>
+<li>Build and upload program to the deivce.</li>
+<li>Go back to cloud panel</li>
+</ul>
+<p>Next you will proceed to ROS part of software:</p>
+<ul>
+<li>Click &quot;edit&quot; next to your device name and sellect &quot;More&quot;.</li>
+<li>Choose &quot;SSH terminal&quot;</li>
+<li>In terminal issue following commands:</li>
+</ul>
+<p>Updates the package lists for upgrades for packages:</p>
+<p><code>sudo apt update</code></p>
+<p>Install the required packages:</p>
+<p><code>sudo apt install python-tornado python-pip ros-kinetic-rosbridge-suite ros-kinetic-web-video-server nginx</code></p>
+<p>Create new work space and change directory:</p>
+<p><code>mkdir ~/ros_workspace</code></p>
+<p><code>mkdir ~/ros_workspace/src</code></p>
+<p><code>cd ~/ros_workspace/src</code></p>
+<p>Clone repository containing rosbot webui:</p>
+<p><code>git clone https://github.com/husarion/rosbot_webui.git</code></p>
+<p>Clone <code>husarion_ros</code> repository:</p>
+<p><code>git clone https://github.com/lukaszmitka/husarion_ros.git</code></p>
+<p>Change directory and build code using catkin_make:</p>
+<p><code>cd ~/ros_workspace</code></p>
+<p><code>catkin_make</code></p>
+<p>Add environmental variables from the following file:</p>
+<p><code>source devel/setup.sh</code></p>
+<pre><code class="hljs">Note <span class="hljs-keyword">that</span> you have <span class="hljs-keyword">to</span> do <span class="hljs-keyword">it</span> <span class="hljs-keyword">every</span> <span class="hljs-built_in">time</span> you want <span class="hljs-keyword">to</span> use ROSbot webui. You can also <span class="hljs-keyword">set</span> <span class="hljs-keyword">it</span> up permanently. Open .bashrc <span class="hljs-built_in">file</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">text</span> editor:
+
+nano ~/.bashrc
+
+Go <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">end</span> <span class="hljs-keyword">of</span> <span class="hljs-built_in">file</span> <span class="hljs-keyword">and</span> add line:
+
+. /home/husarion/ros_workspace/devel/setup.sh 
+</code></pre>
+<ul>
+<li>Staying in terminal issue command:</li>
+</ul>
+<p><code>sudo nano /etc/nginx/sites-enabled/default</code></p>
+<p>This will open text editor with configuration file, find line:</p>
+<p><code>root /var/www/html;</code></p>
+<p>and change it to:</p>
+<p><code>root /home/husarion/ros_workspace/src/rosbot_webui/edit;</code></p>
+<ul>
+<li>To exit text editor press: &quot;Ctrl + x&quot;, &quot;y&quot;, &quot;Enter&quot;</li>
+<li>Again in terminal issue command:</li>
+</ul>
+<p><code>sudo systemctl restart nginx</code></p>
+<h2><a class="anchor" aria-hidden="true" id="usage"></a><a href="#usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<p>Programming procedure needs to be done only once, on further uses, you can start from this point:</p>
+<ul>
+<li>Turn on your ROSbot.</li>
+<li>Click &quot;edit&quot; next to your device name and sellect &quot;More&quot;.</li>
+<li>Choose &quot;SSH terminal&quot;</li>
+<li>Note the address next to &quot;Local IP&quot;, you will need it in a while.</li>
+<li>In terminal issue following command:</li>
+</ul>
+<p><code>roslaunch rosbot_webui demo.launch</code></p>
+<ul>
+<li>Connect your laptop or mobile device to the same network as ROSbot.</li>
+<li>Launch web browser and type the local IP of your ROSbot (the one you noted before)</li>
+<li>You should see interface as below, use it to test and control your ROSbot.</li>
+</ul>
+<div><center><img src="https://raw.githubusercontent.com/husarion/static_docs/master/src/assets/img/howToStart/ROSbot_UI.png"
+/></center></div></span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#unboxing">Unboxing</a></li><li><a href="#assembly">Assembly</a></li><li><a href="#connecting-to-the-cloud">Connecting to the cloud</a></li><li><a href="#programming">Programming</a></li><li><a href="#usage">Usage</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-husarion-docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
