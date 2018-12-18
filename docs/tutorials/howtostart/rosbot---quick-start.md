@@ -1,12 +1,8 @@
 ---
-title: 'ROSbot - quick start'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 6
+title: ROSbot - quick start
+sidebar_label: 6. ROSbot - quick start
+id: rosbot---quick-start
 ---
-# ROSbot - quick start #
 
 ROSbot is an autonomous, open source robot platform running on CORE2-ROS controller. It can be used as a learning platform for Robot Operating System as well as a base for a variety of robotic applications like inspection robots, custom service robots etc.
 
@@ -25,7 +21,7 @@ What's in the box:
 * microSD card with the software for ROSbot
 * USB to Ethernet adapter
 
-<div><center><img src="https://raw.githubusercontent.com/husarion/static_docs/master/src/assets/img/howToStart/ROSbot_unboxing.jpg"/></center></div>
+<div><center><img src="../../assets/img/howToStart/ROSbot_unboxing.jpg"/></center></div>
 
 ## Assembly ##
 
@@ -146,5 +142,5 @@ Programming procedure needs to be done only once, on further uses, you can start
 * Launch web browser and type the local IP of your ROSbot (the one you noted before)
 * You should see interface as below, use it to test and control your ROSbot.
 
-<div><center><img src="https://raw.githubusercontent.com/husarion/static_docs/master/src/assets/img/howToStart/ROSbot_UI.png"
+<div><center><img src="../../assets/img/howToStart/ROSbot_UI.png"
 /></center></div>

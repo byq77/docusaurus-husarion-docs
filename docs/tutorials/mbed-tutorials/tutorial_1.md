@@ -15,9 +15,10 @@ Besides support for variety of boards from different manufacturers the framework
 * *Hardware Enforced Security* and *Communications Security*,
 * easy and portable API.
 
-<p>
-<img src="./../../assets/img/mbed-tutorials/logo.png" width="400px" alt="Mbed OS logo"/>
-</p>
+<div>
+<center>
+<img src="../../assets/img/mbed-tutorials/logo.png" width="400px" alt="Mbed OS logo"/>
+</center></div>
 
 * [Official Webpage](https://www.mbed.com/en/platform/mbed-os/)
 * [Mbed OS documentation](https://os.mbed.com/docs/v5.10/)
@@ -89,7 +90,7 @@ Windows example:
 
 You can check current configuration by running:
 
-```
+```bash
     $ mbed config --list
 ```
 
@@ -102,7 +103,7 @@ Create a new folder `core2-mbed-workspace`. It will serve as workspace for your 
 ```
 Next step is to import `mbed-os` library. It will be used by all your projects. In your workspace folder run:
 
-```
+```bash
     $ mbed import mbed-os
     [mbed] Working path "E:\mbed_projects\core2-mbed-workspace" (directory)
     [mbed] Program path "E:\mbed_projects\core2-mbed-workspace"
@@ -111,13 +112,13 @@ Next step is to import `mbed-os` library. It will be used by all your projects. 
 
 Mbed CLI needs to know the path to `mbed-os` directory. This way all your projects can use one instance of library (default configuration is to have separate instance of library for each project). Run:
 
-```
+```bash
     $ mbed config -G MBED_OS_DIR <path to mbed-os>
 ```
 
 Example:
 
-```
+```bash
     $ mbed config -G MBED_OS_DIR "E:\mbed_projects\core2-mbed-workspace\mbed-os"
     [mbed] Working path "E:\mbed_projects\core2-mbed-workspace" (directory)
     [mbed] Program path "E:\mbed_projects\core2-mbed-workspace"
@@ -172,7 +173,7 @@ You can also clone the repository using GIT:
 Open the directory in Visual Studio Code. In file `setting.json` from directory `.vscode` change the value of `C_cpp.default.compilerPath` to match location of `arm-none-eabi-gcc` on your system:
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img2.png" width="800px" alt=""/></center>
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img2.png" width="800px" alt=""/></center>
 </div> 
 
 This setting enables more accurate IntelliSense feature in editor.
@@ -182,7 +183,7 @@ This setting enables more accurate IntelliSense feature in editor.
 Open the template directory and select `src/main.cpp`. You should see:
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img1.png" width="800px" alt=""/></center>
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img1.png" width="800px" alt=""/></center>
 </div> 
 
 As you no doubt have guessed this simple code just lights up three on-board LEDs in particular sequence. We instantiate `BusOut` object that allows to control multiple digital pins at the same time regardless of ports they're assigned to. On-board LEDs blink in order described by `leds_mask` array at the interval introduced by function `ThisThread::sleep_for(1000)`.    
@@ -190,7 +191,7 @@ As you no doubt have guessed this simple code just lights up three on-board LEDs
 In directory's root folder find `custom_targets.json` file:
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img3.png" width="800px" alt=""/></center>
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img3.png" width="800px" alt=""/></center>
 </div> 
 
 Mbed OS Configuration system uses this file to add user's custom targets making it possible to run system on boards that aren't officially supported. We use `custom_targets.json` and files from `TARGET_CORE2` to define CORE2 target. You can learn more about configuration system [here](https://os.mbed.com/docs/v5.10/reference/configuration.html).
@@ -200,7 +201,7 @@ In folder `TARGET_CORE2` you can find files `PinNames.h` and `PeripheralPins.c`.
 Another file that is used by Mbed OS configuration system is `mbed_app.json`. Open it.
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img4.png" width="800px" alt=""/></center>
+<center><img src="../../../docs/assets/img/mbed-tutorials/mbed-tutorial-img4.png" width="800px" alt=""/></center>
 </div> 
 
 In this file you can override default settings for application, define new configuration entries and create custom macros. In presented configuration :
@@ -213,7 +214,7 @@ You can learn details of each settings from documentation.
 The last file we will check is `task.json` from `.vscode` directory. It defines tasks that are recognized by Visual Studio Code IDE. They can be accessed by pressing `CTRL + SHIFT + P` and typing `Task: Run Task` in Command Pallete.
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img5.png" width="800px" alt=""/></center>
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img5.png" width="800px" alt=""/></center>
 </div> 
 
 #### Building and flashing firmware
@@ -221,19 +222,19 @@ The last file we will check is `task.json` from `.vscode` directory. It defines 
 Press `CTRL + SHIFT + B`. It will run `CLEAN BUILD (RELEASE)` task. Wait until compilation finishes.
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img6.png" width="800px" alt=""/></center>
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img6.png" width="800px" alt=""/></center>
 </div> 
 
 Connect your ST-LINK programmer to debug pins of CORE2 and make sure it's connected to your computer. Press `CTRL + SHIFT + P` and in Command Pallete type `Task: Run Task`. Select `FLASH FIRMWARE (RELEASE)`. The firmware flashing procedure should start:
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img7.png" width="800px" alt=""/></center>
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img7.png" width="800px" alt=""/></center>
 </div> 
 
 If LEDs start blinking like on the animation below then congratulations! You've just successfully built and flashed your first Mbed application for CORE2!
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-animation.gif" alt="result"/></center>
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-animation.gif" alt="result"/></center>
 </div> 
 
 #### Tasks
@@ -247,7 +248,7 @@ If LEDs start blinking like on the animation below then congratulations! You've 
 If you made it this far you must be really into this stuff! Let's do something more interesting and learn how to communicate with devices running ROS using mbed. For this purpose we will use [rosserial for mbed platforms](http://wiki.ros.org/rosserial_mbed). 
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/ros_logo.png" width="400px" alt="result"/></center>
+<center><img src="../../assets/img/mbed-tutorials/ros_logo.png" width="400px" alt="result"/></center>
 </div> 
 
 ### Example publisher
@@ -286,7 +287,7 @@ This will add `rosserial-mbed` library to your project and download all library'
 * `mbed remove <library-name>` - removes library from project.
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img8.png" width="800px" alt=""/></center>
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img8.png" width="800px" alt=""/></center>
 </div> 
 
 #### The code
@@ -428,7 +429,7 @@ To view communication on "mbed_device" topic open new termina and run:
 ```
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img11.png" width="800px" alt=""/></center> 
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img11.png" width="800px" alt=""/></center> 
 </div> 
  
 ### Example subscriber
@@ -569,7 +570,7 @@ To publish new message to "input_raw" topic open a new tab and run:
 ```
 
 <div>
-<center><img src="./../../assets/img/mbed-tutorials/mbed-tutorial-img12.png" width="800px" alt=""/></center> 
+<center><img src="../../assets/img/mbed-tutorials/mbed-tutorial-img12.png" width="800px" alt=""/></center> 
 </div>
 
 If you want to learn more - check official [rosserial mbed tutorials](http://wiki.ros.org/rosserial_mbed/Tutorials) from **ros.org**. 

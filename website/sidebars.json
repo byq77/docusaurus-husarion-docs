@@ -8,7 +8,11 @@
         "ids": [
           "tutorials/howtostart/run-your-first-program",
           "tutorials/howtostart/video-streaming-from-a-camera",
-          "tutorials/howtostart/getting-started-with-husarion--lego-mindstorms"
+          "tutorials/howtostart/getting-started-with-husarion--lego-mindstorms",
+          "tutorials/howtostart/telepresence-robot-kit---quick-start",
+          "tutorials/howtostart/using-third-party-modules",
+          "tutorials/howtostart/rosbot---quick-start"
+          
         ]
       },
       {

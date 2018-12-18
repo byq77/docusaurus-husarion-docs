@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Husarion Docs', // Title for your website.
-  tagline: 'A website for testing',
+  tagline: "Official Husarion's product docummentation",
   // url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -30,7 +30,7 @@ const siteConfig = {
   baseUrl: '/docusaurus-husarion-docs/',
   disableHeaderTitle: true,
   disableTitleTagline: true,
-  docsUrl: '', // remove /docs/ from URL
+  // docsUrl: '', // remove /docs/ from URL'
   // Used for publishing and more
   projectName: 'docusaurus-husarion-docs',
   organizationName: 'byq77',
@@ -50,7 +50,6 @@ const siteConfig = {
 
   // If you have users set above, you add it here:
   users,
-  usePrism: ['jsx'],
   /* path to images for header/footer */
   headerIcon: 'img/husarion_logo_white.svg',
   footerIcon: 'img/husarion_logo_white.svg',

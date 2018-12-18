@@ -1,5 +1,6 @@
 ---
 title: Run your first program
+sidebar_label: 1. Run your first program
 id: run-your-first-program
 ---
 

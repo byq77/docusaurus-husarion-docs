@@ -1,5 +1,6 @@
 ---
 title: Getting started with Husarion + LEGO Mindstorms
+sidebar_label: 3. Getting started with Husarion + LEGO Mindstorms
 id: getting-started-with-husarion--lego-mindstorms
 ---
 

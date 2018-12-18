@@ -1,5 +1,6 @@
 ---
 title: Video streaming from a camera
+sidebar_label: 2. Video streaming
 id: video-streaming-from-a-camera
 ---
 
