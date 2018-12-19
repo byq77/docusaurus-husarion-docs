@@ -1,13 +1,39 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&#x27;6 SLAM navigation&#x27; · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;slam-navigation&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#slam-navigation&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SLAM navigation&lt;/h1&gt;
-"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="&#x27;6 SLAM navigation&#x27; · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;slam-navigation&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#slam-navigation&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SLAM navigation&lt;/h1&gt;
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SLAM navigation · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;introduction&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#introduction&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Introduction&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SLAM navigation · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;introduction&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#introduction&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Introduction&lt;/h2&gt;
 "/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
           )
         });
-        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Software</a></li><li class=""><a href="https://husarion.com/downloads/" target="_self">Downloads</a></li><li class=""><a href="https://community.husarion.com/" target="_self">Community</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">&#x27;6 SLAM navigation&#x27;</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="slam-navigation"></a><a href="#slam-navigation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SLAM navigation</h1>
-<h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Documentation"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Software</a></li><li class=""><a href="https://husarion.com/downloads/" target="_self">Downloads</a></li><li class=""><a href="https://community.husarion.com/" target="_self">Community</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Tutorials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/">About tutorials</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">How to start</h4><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/run-your-first-program">1. Run your first program</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/video-streaming-from-a-camera">2. Video streaming</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/getting-started-with-husarion--lego-mindstorms">3. Getting started with Husarion + LEGO Mindstorms</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/telepresence-robot-kit---quick-start">4. Telepresence robot kit - quick start</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/using-third-party-modules">5. Using third-party modules</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/rosbot---quick-start">6. ROSbot - quick start</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ROS tutorials</h4><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/1-ros-introduction">1. ROS introduction</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/2-creating-nodes">2. Creating nodes</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/3-simple-kinematics-for-mobile-robot">3. Simple kinematics for mobile robot</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/4-visual-object-recognition">4. Visual object recognition</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/5-running-ros-on-multiple-machines">5. Running ROS on multiple machines</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/6-slam-navigation">6. SLAM navigation</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/7-path-planning">7. Path planning</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/8-unknown-environment-exploration">8. Unknown environment exploration</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/9-object-search">9. Object search</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Mbed tutorials</h4><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/mbed-tutorials/using-core2-with-mbed-os">1. Using CORE2 with Mbed OS</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Other tutorials</h4><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/other-tutorials/hframework-library-development">1. hFramework library development</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/other-tutorials/offline-development-tools">2. Offline development tools</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/other-tutorials/how-to-use-core2-ros-local-serial-offline">3. How to use CORE2-ROS local serial offline</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/other-tutorials/run-ros-tutorials-using-aws-robomaker">4. Run ROS tutorials using AWS RoboMaker</a></li></ul></div></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">SLAM navigation</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
 <p>SLAM (simultaneous localization and mapping) is a technique for creating
 a map of environment and determining robot position at the same time. It
 is widely used in robotics.</p>
@@ -17,7 +43,7 @@ positions.</p>
 <p>For definition of SLAM problem we use given values (1,2) and expected values (3,4):</p>
 <div>
 <p>1.  Robot control </p>
-    <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <table style="border: solid 0px black;" width="100%" cellspacing="0" cellpadding="0">
         <tr>
         <td><center><i>u<sub>{1:t}</sub> = { u<sub>1</sub>, u<sub>2</sub>, u<sub>3</sub>, ..., u<sub>t</sub>}</i></center></td>
         <td width="60">(1)</td>
@@ -26,7 +52,7 @@ positions.</p>
 </div>
 <div>
 2.  Observations
-    <table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <table style="border: 0px;" width="100%" cellspacing="0" cellpadding="0">
         <tr>
         <td><center><i>z<sub>{1:t}</sub> = { z<sub>1</sub>, z<sub>2</sub>, z<sub>3</sub>, ..., z<sub>t</sub>}</i></center></td>
         <td width="60">(2)</td>
@@ -34,7 +60,7 @@ positions.</p>
     </table>
 </div>
 <div>
-3.  Environment map
+1.  Environment map
     <table border="0" width="100%" cellspacing="0" cellpadding="0">
         <tr>
         <td><center><i>m</i></center></td>
@@ -52,14 +78,13 @@ positions.</p>
     </table>
 </div>
 <div>
-    Robot trajectory estimates are determined with:
-<pre><code class="hljs">&lt;table border=&quot;0&quot; width=&quot;100%&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
-    &lt;tr&gt;
-    &lt;td&gt;&lt;center&gt;&lt;i&gt;p(x&lt;sub&gt;0:t&lt;/sub&gt;,m|z&lt;sub&gt;1:t&lt;/sub&gt;, u&lt;sub&gt;1:t&lt;/sub&gt;)&lt;/i&gt;&lt;/center&gt;&lt;/td&gt;
-    &lt;td width=&quot;60&quot;&gt;(5)&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-</code></pre>
+5. Robot trajectory estimates are determined with:
+    <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+        <td><center><i>p(x<sub>0:t</sub>,m|z<sub>1:t</sub>, u<sub>1:t</sub>)</i></center></td>
+        <td width="60">(5)</td>
+        </tr>
+    </table>
 </div>
 <h2><a class="anchor" aria-hidden="true" id="coordinate-frames-tracking"></a><a href="#coordinate-frames-tracking" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Coordinate frames tracking</h2>
 <p>ROS can help you with keeping track of coordinate frames over time.
@@ -231,7 +256,7 @@ To test it run:</p>
 <strong><code>By display type</code></strong> and from the list select <code>Tf</code>. You can also add
 <code>Pose</code> visualization. You can observe as <code>robot_base</code> frame moves
 accordingly to robot movement.</p>
-<p><img src="/assets/img/ros/man_6_1.png" alt="image"></p>
+<p><img src="../../assets/img/ros/man_6_1.png" alt="image"></p>
 <h2><a class="anchor" aria-hidden="true" id="slam-implementation-in-ros"></a><a href="#slam-implementation-in-ros" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SLAM implementation in ROS</h2>
 <p>To perform accurate and precise SLAM, the best is to use laser scanner
 and odometry system with high resolution encoders.</p>
@@ -258,7 +283,7 @@ list select <code>/scan</code>. In visualized items list find position
 scanned shape, you may need to adjust one of visualized object options,
 set value of <code>Style</code> to <code>Points</code>. You should see many points which
 resemble shape of obstacles surrounding your robot.</p>
-<p><img src="/assets/img/ros/man_6_2.png" alt="image"></p>
+<p><img src="../../assets/img/ros/man_6_2.png" alt="image"></p>
 <p>Shut down <code>rplidarNode</code> and run it again, but with some other nodes:</p>
 <ul>
 <li><p><code>CORE2</code> bridge node -
@@ -280,7 +305,7 @@ laser scanner relative to robot</p></li>
 <li><code>rviz</code> - visualization tool</li>
 </ul>
 <p>You can use below <code>launch</code> file:</p>
-<pre><code class="hljs css language-launch">&lt;launch&gt;
+<pre><code class="hljs">&lt;launch&gt;
 
     &lt;arg <span class="hljs-type">name</span>="use_rosbot" default="true"/&gt;
     &lt;arg <span class="hljs-type">name</span>="use_gazebo" default="false"/&gt;
@@ -305,7 +330,7 @@ laser scanner relative to robot</p></li>
 <p>In <code>rviz</code> add <code>Tf</code> and <code>/scan</code>. This time set <code>Fixed Frame</code> to <code>odom</code>.</p>
 <p>Try to move around your robot, you should see as laser scans change its
 shape accordingly to obstacles passed by robot.</p>
-<p><img src="/assets/img/ros/man_6_3.png" alt="image"></p>
+<p><img src="../../assets/img/ros/man_6_3.png" alt="image"></p>
 <h3><a class="anchor" aria-hidden="true" id="navigation-and-map-building"></a><a href="#navigation-and-map-building" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Navigation and map building</h3>
 <p>For building a map and localizing robot relative to it, we will use
 <code>slam_gmapping</code> node from <code>gmapping</code> package.</p>
@@ -323,7 +348,7 @@ case it will be <code>odom</code></p></li>
 <li><p><code>delta</code> - map resolution expressed as size of every pixel in meters</p></li>
 </ul>
 <p>You can use below <code>launch</code> file:</p>
-<pre><code class="hljs css language-launch">&lt;launch&gt;
+<pre><code class="hljs">&lt;launch&gt;
 
     &lt;arg <span class="hljs-type">name</span>="use_rosbot" default="true"/&gt;
     &lt;arg <span class="hljs-type">name</span>="use_gazebo" default="false"/&gt;
@@ -356,11 +381,11 @@ case it will be <code>odom</code></p></li>
 <p>At the beginning there could be no map, you may need to wait few second
 until it is generated. Starting state should be similar to the one on
 picture:</p>
-<p><img src="/assets/img/ros/man_6_4.png" alt="image"></p>
+<p><img src="../../assets/img/ros/man_6_4.png" alt="image"></p>
 <p>Now drive your robot around and observe as new parts of map are added,
 continue until all places are explored. Final map should look like
 below:</p>
-<p><img src="/assets/img/ros/man_6_5.png" alt="image"></p>
+<p><img src="../../assets/img/ros/man_6_5.png" alt="image"></p>
 <h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
 <p>After completing this tutorial you should be able to publish
 transformations between various frames, connect laser scanner to the
@@ -369,7 +394,7 @@ map, robot position and all related frames.</p>
 <hr>
 <p><em>by Łukasz Mitka, Husarion</em></p>
 <p><em>Do you need any support with completing this tutorial or have any difficulties with software or hardware? Feel free to describe your thoughts on our community forum: <a href="https://community.husarion.com/">https://community.husarion.com/</a> or to contact with our support: <a href="mailto:support@husarion.com">support@husarion.com</a></em></p>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#coordinate-frames-tracking">Coordinate frames tracking</a><ul class="toc-headings"><li><a href="#publishing-transformation">Publishing transformation</a></li><li><a href="#publisher-for-static-transformations">Publisher for static transformations</a></li><li><a href="#visualizing-transformation-with-rviz">Visualizing transformation with rviz</a></li></ul></li><li><a href="#slam-implementation-in-ros">SLAM implementation in ROS</a><ul class="toc-headings"><li><a href="#running-the-laser-scanner">Running the laser scanner</a></li><li><a href="#navigation-and-map-building">Navigation and map building</a></li></ul></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Documentation" width="66" height="58"/></a><div><h5>Tutorials</h5><a href="/docusaurus-husarion-docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/5-running-ros-on-multiple-machines"><span class="arrow-prev">← </span><span>5. Running ROS on multiple machines</span></a><a class="docs-next button" href="/docusaurus-husarion-docs/docs/tutorials/ros-tutorials/7-path-planning"><span>7. Path planning</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#coordinate-frames-tracking">Coordinate frames tracking</a><ul class="toc-headings"><li><a href="#publishing-transformation">Publishing transformation</a></li><li><a href="#publisher-for-static-transformations">Publisher for static transformations</a></li><li><a href="#visualizing-transformation-with-rviz">Visualizing transformation with rviz</a></li></ul></li><li><a href="#slam-implementation-in-ros">SLAM implementation in ROS</a><ul class="toc-headings"><li><a href="#running-the-laser-scanner">Running the laser scanner</a></li><li><a href="#navigation-and-map-building">Navigation and map building</a></li></ul></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Documentation" width="66" height="58"/></a><div><h5>Documentation</h5><a href="/docusaurus-husarion-docs/docs/en/tutorials">Tutorials</a><a href="/docusaurus-husarion-docs/docs/en/doc2.html">Manuals</a><a href="https://husarion.com/core2/api_reference/classes.html">hFramework API Reference</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
