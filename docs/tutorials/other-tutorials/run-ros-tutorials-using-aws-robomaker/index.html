@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&#x27;Run ROS tutorials using AWS RoboMaker&#x27; · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;run-ros-tutorials-using-aws-robomaker&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#run-ros-tutorials-using-aws-robomaker&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Run ROS tutorials using AWS RoboMaker&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="&#x27;Run ROS tutorials using AWS RoboMaker&#x27; · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;run-ros-tutorials-using-aws-robomaker&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#run-ros-tutorials-using-aws-robomaker&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Run ROS tutorials using AWS RoboMaker&lt;/h1&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/atom.xml" title="Husarion Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/feed.xml" title="Husarion Docs Blog RSS Feed"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Software</a></li><li class=""><a href="/docusaurus-husarion-docs/help" target="_self">Help</a></li><li class=""><a href="/docusaurus-husarion-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">&#x27;Run ROS tutorials using AWS RoboMaker&#x27;</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="run-ros-tutorials-using-aws-robomaker"></a><a href="#run-ros-tutorials-using-aws-robomaker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run ROS tutorials using AWS RoboMaker</h1>
+<h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p><strong>AWS RoboMaker</strong> is the newest service by <em>Amazon</em> for robot developers community. It’s ROS based and provides web tools for robot development, simulation and deployment - <a href="https://aws.amazon.com/robomaker/">https://aws.amazon.com/robomaker/</a> .</p>
+<p>In this tutorial we will show you how to setup environment at AWS RoboMaker to learn ROS with our ROS tutorials:</p>
+<ol>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/1-ros-introduction/">ROS introduction</a></li>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/2-creating-nodes/">Creating nodes</a></li>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/3-simple-kinematics-for-mobile-robot/">Simple kinematics for mobile robot</a></li>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/4-visual-object-recognition/">Visual object recognition</a></li>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/5-running-ros-on-multiple-machines/">Running ROS on multiple machines</a></li>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/6-slam-navigation/">SLAM navigation</a></li>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/7-path-planning/">Path planning</a></li>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/8-unknown-environment-exploration/">Unknown environment exploration</a></li>
+<li><a href="https://husarion.com/tutorials/ros-tutorials/9-object-search/">Object search</a></li>
+</ol>
+<p><em>IMPORTANT: AWS RoboMaker is a paid service and you may be charged based on the usage of some of its functionalities. For pricing info visit <a href="https://aws.amazon.com/robomaker/pricing/">https://aws.amazon.com/robomaker/pricing/</a></em> .</p>
+<h2><a class="anchor" aria-hidden="true" id="setting-up-husarion-ros-tutorial-on-aws"></a><a href="#setting-up-husarion-ros-tutorial-on-aws" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up Husarion ROS tutorial on AWS</h2>
+<p>To begin, you need to have an active AWS account.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img1.png" width="900px" />
+</center></div>
+<p>1. Go to “AWS management console” at <a href="https://aws.amazon.com/">https://aws.amazon.com/</a> .</p>
+<p>2. In search field start typing “IAM”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img2.png" width="900px"/>
+</center></div>
+<p>3. Open IAM module.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img3.png" width="900px"/>
+</center></div>
+<p>4. Go to “Roles”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img4.png" width="900px"/>
+</center></div>
+<p>5. Click “Create role”.</p>
+<p>6. In dialog choose “EC2”.</p>
+<p>7. Click “Next: Permissions”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img5.png" width="900px"/>
+</center></div>
+<p>8. In “Attach permissions policies” dialog, add (You can use filter to search for them):</p>
+<ul>
+<li><code>CloudWatchFullAccess</code></li>
+<li><code>AWSRoboMakerFullAccess</code></li>
+<li><code>AmazonS3FullAccess</code></li>
+</ul>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img6.png" width="900px"/>
+</center></div>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img7.png" width="900px"/>
+</center></div>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img8.png" width="900px"/>
+</center></div>
+<p>9. Click “Next: Tags”, we do not need any tags, thus we proceed to Reviev.</p>
+<p>10. Click “Next: Review”. In field “Role name” type “robomaker_role” and make sure that in “Policies” section you have three entries.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img9.png" width="900px"/>
+</center></div>
+<p>11. Click “Create role” button, you will be redirected to “Roles” view.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img10.png" width="900px"/>
+</center></div>
+<p>12. Open role setting by clicking its name and choose tab “Trust relationships”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img11.png" width="900px"/>
+</center></div>
+<p>13. Click button “Edit trust relationships” and edit policy document, find entry “ec2.amazonaws.com” and change it to “robomaker.amazonaws.com”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img12.png" width="900px"/>
+</center></div>
+<p>14. Click “Update trust policy” button. Note the “Role ARN” entry, this will be required later.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img14.png" width="900px"/>
+</center></div>
+<p>15. Open “AWS Console”, in filter type “S3”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img15.png" width="900px"/>
+</center></div>
+<p>16. Open “S3” module.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img16.png" width="900px"/>
+</center></div>
+<p>17.  Click “Create bucket” button, in field “Bucket name” type DNS style name like "yourusername-bucket-robomaker" (it must be unique accross all names in Amazon S3, do not use "_" and "." in the name), from “Region dropdown” menu choose entry appropriate to your localization.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img17.png" width="900px"/>
+</center></div>
+<p>18. Proceed through creator, do not modify default values.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img18.png" width="900px"/>
+</center></div>
+<p>19. When you create bucket, open it, by clicking its name, it should be empty now. Note the bucket name, you will need it later.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img19.png" width="900px"/>
+</center></div>
+<p>20. Open “AWS Console”, in filter type “RoboMaker” and open “AWSRoboMaker” module.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img20.png" width="900px"/>
+</center></div>
+<p>21. Open “Development environments” tab.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img21.png" width="900px"/>
+</center></div>
+<p>22. Click “Create environment”, in field “Name” type “robomaker_env” and as “instance type” choose “c3.2xlarge”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img22.png" width="900px"/>
+</center></div>
+<p>23. Click "Create".</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img23.png" width="900px"/>
+</center></div>
+<p>24. Download [ROSbotTutorial.tar.gz](https://files.husarion.com/ROSbotTutorial.tar.gz) and unpack it.</p>  
+<p>25. Open the environment, from menu “File” choose “Upload local files…” -> “Select folder” and upload the folder “ROSbotTutorial”. Wait until upload is done.</p>
+<p>26. In editor open file “RoboMakerSettings.json” from folder “ROSbotTutorial”. Find all instances of "robomaker-bucket" and replace it with the name of your own bucket you've created in point <em>17</em>.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img23a.png" width="900px"/>
+</center></div>
+<p>27. In the same file find element "iamRole" and change its value to "Role ARN" entry you've saved in pont <em>14.</em> </p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img23b.png" />
+</center></div>
+<p>28.  Choose menu “RoboMakerRun” -> “Add or Edit Configurations”. </p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img24.png" width="900px"/>
+</center></div>
+<p>29. Click button “Switch config”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img25.png" width="900px"/>
+</center></div>
+<p>30. Choose “RoboMakerSettings.json” from folder “ROSbotTutorial” and click “OK” button and then "Save" button.</p>
+<p>31. Choose menu “RoboMakerRun” -> “Workflow” -> “ROSbotTutorial - Build and Bundle All”.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img26.png" width="900px"/>
+</center></div>
+<p>32. Package build process will start, when it is done, choose menu “RoboMakerRun” -> “Launch Simulation” -> “ROSbotTutorial”. Simulation job will be sent to RoboMaker. Wait until "Your simulation job was created." message appears in console.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img27.png" width="900px"/>
+</center></div>
+<p>33. Go to RoboMaker an open “Simulation jobs” menu.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img28.png" width="900px"/>
+</center></div>
+<p>34. Open simulation by clicking its name</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img29.png" width="900px"/>
+</center></div>
+<p>35. When it starts, you can open Gazebo view to watch as simulation proceeds.</p>
+<div><center>
+<img alt="" src="./../../../assets/img/aws-tutorials/aws_tutorial_img30.png" width="900px"/>
+</center></div>
+<p><strong>Congratulations!</strong></p>
+<p>You’ve just run Gazebo version of <a href="https://husarion.com/tutorials/ros-tutorials/9-object-search/">Tutorial 9</a> on AWS RoboMaker cloud computing platform. More tutorials can be launched by editing “RoboMakerSettings.json” and launch files found in:</p>
+<pre><code class="hljs css language-bash">    ./ROSbotTutorial/simulation_ws/install/tutorial_pkg/share/tutorial_pkg/launch
+</code></pre>
+<p>We will provide instruction on how to do it soon.</p>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>After completing this tutorial you should be familiar with AWS RoboMaker Service. You should be able to create your own environment and run various robotics simulations (in this case Husarion ROS Tutorial 9).</p>
+<p>Possibility of outsourcing computation to powerful cloud servers opens doors for even more advanced robotics simulation for users that are not equipped with efficient work stations. We hope that this tutorial will help you understand basics of running ROS simulations in AWS RobotMaker by Amazon.</p>
+<hr>
+<p><em>by Łukasz Mitka, Husarion</em></p>
+<p><em>Do you need any support with completing this tutorial or have any difficulties with software or hardware? Feel free to describe your thoughts on our community forum: <a href="https://community.husarion.com/">https://community.husarion.com/</a> or to contact with our support: <a href="mailto:support@husarion.com">support@husarion.com</a></em></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#setting-up-husarion-ros-tutorial-on-aws">Setting up Husarion ROS tutorial on AWS</a></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-husarion-docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

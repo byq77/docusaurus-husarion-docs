@@ -1,0 +1,634 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>&#x27;5 Running ROS on multiple machines&#x27; · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;running-ros-on-multiple-machines&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#running-ros-on-multiple-machines&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Running ROS on multiple machines&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="&#x27;5 Running ROS on multiple machines&#x27; · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;running-ros-on-multiple-machines&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#running-ros-on-multiple-machines&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Running ROS on multiple machines&lt;/h1&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/atom.xml" title="Husarion Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/feed.xml" title="Husarion Docs Blog RSS Feed"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Software</a></li><li class=""><a href="/docusaurus-husarion-docs/help" target="_self">Help</a></li><li class=""><a href="/docusaurus-husarion-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">&#x27;5 Running ROS on multiple machines&#x27;</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="running-ros-on-multiple-machines"></a><a href="#running-ros-on-multiple-machines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running ROS on multiple machines</h1>
+<h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>In this manual you will learn how to configure ROS to work on multiple
+computers.You will use this configuration to set up system consisting of
+two robots, which perform task of searching an object.</p>
+<p>In this manual you will need two robots based on CORE2 with the same equipment as in the previous manual.</p>
+<p>In case you are working on <strong>Gazebo</strong> simulator, it is not possible to setup system to work on multiple computers, altough you can simulate many ROSbots in simulator running on one machine. Just skip the section <strong>Network setup</strong> and proceed to <strong>Performing a task with multiple machines</strong>.</p>
+<h2><a class="anchor" aria-hidden="true" id="network-setup"></a><a href="#network-setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Network setup</h2>
+<p>To run ROS on multiple machines, all of them must be in the same local
+network- if necessary, use <code>hConfig</code> app to connect all devices to one
+network. You will need IP address of every device.</p>
+<p>While working on multiple machines, you need only one <code>roscore</code> running.
+Choose one device for it- we will call it <code>master</code>.</p>
+<p>On the master device open the <code>.bashrc</code> file:</p>
+<pre><code class="hljs">nano ~/<span class="hljs-selector-class">.bashrc</span>
+</code></pre>
+<p>And add two lines at file ending, replacing <code>X.X.X.X</code> and <code>Y.Y.Y.Y</code> with IP address of master device.</p>
+<pre><code class="hljs"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">ROS_MASTER_URI</span>=http://X.X.X.X:11311
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">ROS_IP</span>=Y.Y.Y.Y
+</code></pre>
+<p>On second robot also open the <code>.bashrc</code> file and add two lines at file ending. This time replace <code>X.X.X.X</code> with IP address of master device and <code>Y.Y.Y.Y</code> with IP address of second robot.</p>
+<p>TIP! Remember that <code>roscore</code> must be running on the device indicated as ROS master!!!</p>
+<p><strong>Task 1</strong></p>
+<p>Set configuration for working on multiple machines on two devices. On
+the first device run only <code>roscore</code>, on the second run <code>astra.launch</code> and
+<code>image_view</code> nodes. Now run <code>rqt_graph</code> on both of them, you should see
+the same graph.</p>
+<p>Next run <code>image_view</code> node on machine with <code>roscore</code>. You should see
+the image from camera mounted on the device with <code>astra.launch</code> running.
+Again use <code>rqt_graph</code> to examine what changed in the system.</p>
+<h2><a class="anchor" aria-hidden="true" id="performing-a-task-with-multiple-machines"></a><a href="#performing-a-task-with-multiple-machines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Performing a task with multiple machines</h2>
+<p>In this section we will program two robots to search objects one
+after another. To do that we will need one node which manages the search
+process- it will run only on one machine. We will also need a node that
+searches for the object- it will run on both devices. For recognizing
+objects we will use <code>find_object_2d</code> node. If you have saved objects
+from previous tutorials you can use them, in other case you will need to
+teach at least four objects. Remember that both robots need to have the
+same image database, you should copy saved images from one device to
+another.</p>
+<h3><a class="anchor" aria-hidden="true" id="mission-controller-node"></a><a href="#mission-controller-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>mission_controller</code> node</h3>
+<p>In <code>tutorial_pkg</code> package in <code>src</code> folder create file
+<code>mission_controller.cpp</code> and open it with a text editor.</p>
+<p>Begin with the headers:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ros/ros.h&gt;</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_msgs/Char.h&gt;</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_srvs/Empty.h&gt;</span></span>
+</code></pre>
+<p>Publisher for current task:</p>
+<pre><code class="hljs css language-cpp">    ros::Publisher task_pub;
+</code></pre>
+<p>Constants with IDs of objects to be found:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OBJECT_1_ID 8</span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OBJECT_2_ID 6</span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> HOME_1_ID 12</span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> HOME_2_ID 11</span>
+</code></pre>
+<p>Vector to store sequence of searched objects:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; objects;
+</code></pre>
+<p>Number of currently searched object:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-keyword">uint8_t</span> current_object = <span class="hljs-number">0</span>;
+</code></pre>
+<p>Message for sending id of currently searched object:</p>
+<pre><code class="hljs css language-cpp">    std_msgs::Char task;
+</code></pre>
+<p>Service callback function for reporting found objects:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">object_found</span><span class="hljs-params">(std_srvs::Empty::Request &amp;req, std_srvs::Empty::Response &amp;res)</span> </span>{
+        current_object++;
+        ROS_INFO(<span class="hljs-string">"Current object: %d"</span>, current_object);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+</code></pre>
+<p>In <code>main</code> function, definining sequence of searched objects:</p>
+<pre><code class="hljs css language-cpp">    objects.push_back(OBJECT_1_ID);
+    objects.push_back(OBJECT_2_ID);
+    objects.push_back(HOME_1_ID);
+    objects.push_back(HOME_2_ID);
+</code></pre>
+<p>Node initialization:</p>
+<pre><code class="hljs css language-cpp">    ros::init(argc, argv, <span class="hljs-string">"mission_controller"</span>);
+    ros::<span class="hljs-function">NodeHandle <span class="hljs-title">n</span><span class="hljs-params">(<span class="hljs-string">"~"</span>)</span></span>;
+    ros::<span class="hljs-function">Rate <span class="hljs-title">loop_rate</span><span class="hljs-params">(<span class="hljs-number">50</span>)</span></span>;
+</code></pre>
+<p>Registering the service- objects that are found will be reported here:</p>
+<pre><code class="hljs css language-cpp">    ros::ServiceServer service = n.advertiseService(<span class="hljs-string">"/object_found"</span>, object_found);
+</code></pre>
+<p>Publishing topic with ID of currently searched object:</p>
+<pre><code class="hljs css language-cpp">    task_pub = n.advertise&lt;std_msgs::Char&gt;(<span class="hljs-string">"/task"</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p>In infinite while loop- triggering incoming messages, checking ID of currently
+searched object and publishing it:</p>
+<pre><code class="hljs css language-cpp">    ros::spinOnce();
+    loop_rate.sleep();
+    <span class="hljs-keyword">if</span> (current_object &lt; objects.size()) {
+       task.data = objects[current_object];
+    } <span class="hljs-keyword">else</span> {
+       <span class="hljs-comment">// mission finished</span>
+       task.data = <span class="hljs-number">0</span>;
+    }
+    task_pub.publish(task);
+</code></pre>
+<p>Your final file should look like this:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ros/ros.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_msgs/Char.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_srvs/Empty.h&gt;</span></span>
+
+ros::Publisher task_pub;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OBJECT_1_ID 8</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OBJECT_2_ID 6</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> HOME_1_ID 12</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> HOME_2_ID 11</span>
+
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; objects;
+
+<span class="hljs-keyword">uint8_t</span> current_object = <span class="hljs-number">0</span>;
+std_msgs::Char task;
+
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">object_found</span><span class="hljs-params">(std_srvs::Empty::Request &amp;req, std_srvs::Empty::Response &amp;res)</span>
+</span>{
+    current_object++;
+    ROS_INFO(<span class="hljs-string">"Current object: %d"</span>, current_object);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span>
+</span>{
+    objects.push_back(OBJECT_1_ID);
+    objects.push_back(OBJECT_2_ID);
+    objects.push_back(HOME_1_ID);
+    objects.push_back(HOME_2_ID);
+    ros::init(argc, argv, <span class="hljs-string">"mission_controller"</span>);
+    ros::<span class="hljs-function">NodeHandle <span class="hljs-title">n</span><span class="hljs-params">(<span class="hljs-string">"~"</span>)</span></span>;
+    ros::<span class="hljs-function">Rate <span class="hljs-title">loop_rate</span><span class="hljs-params">(<span class="hljs-number">50</span>)</span></span>;
+    ros::ServiceServer service = n.advertiseService(<span class="hljs-string">"/object_found"</span>, object_found);
+    task_pub = n.advertise&lt;std_msgs::Char&gt;(<span class="hljs-string">"/task"</span>, <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">while</span> (ros::ok())
+    {
+        ros::spinOnce();
+        loop_rate.sleep();
+        <span class="hljs-keyword">if</span> (current_object &lt; objects.size())
+        {
+            task.data = objects[current_object];
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-comment">// mission finished</span>
+            task.data = <span class="hljs-number">0</span>;
+        }
+        task_pub.publish(task);
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="search-controller-node"></a><a href="#search-controller-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>search_controller</code> node</h3>
+<p>In the same package create another file named <code>search_controller.cpp</code>
+and open it with text editor.</p>
+<p>Begin with the header files:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ros/ros.h&gt;</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_msgs/Float32MultiArray.h&gt;</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;geometry_msgs/Twist.h&gt;</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sensor_msgs/Range.h&gt;</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_msgs/Char.h&gt;</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_srvs/Empty.h&gt;</span></span>
+</code></pre>
+<p>Publisher and message for desired velocity:</p>
+<pre><code class="hljs css language-cpp">    ros::Publisher action_pub;
+    geometry_msgs::Twist set_vel;
+</code></pre>
+<p>Variables for distance measured by sensors:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-keyword">float</span> distL = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">float</span> distR = <span class="hljs-number">0</span>;
+</code></pre>
+<p>Variables for storing maximum sensor range:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-keyword">float</span> sensorL_max = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">float</span> sensorR_max = <span class="hljs-number">0</span>;
+</code></pre>
+<p>Variable for currently searched object ID:</p>
+<pre><code class="hljs css language-cpp">    u_char search_obj;
+</code></pre>
+<p>IDs of objects to be searched by this node:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-keyword">int</span> objectID;
+    <span class="hljs-keyword">int</span> homeID;
+</code></pre>
+<p>Client for found object reporting service:</p>
+<pre><code class="hljs css language-cpp">    ros::ServiceClient client;
+</code></pre>
+<p>Callbacks for updating distances and object ID:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">distL_callback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> sensor_msgs::Range &amp;range)</span> </span>{
+       distL = range.range;
+       sensorL_max = range.max_range;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">distR_callback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> sensor_msgs::Range &amp;range)</span> </span>{
+       distR = range.range;
+       sensorR_max = range.max_range;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">task_callback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::Char &amp;task)</span> </span>{
+       search_obj = task.data;
+    }
+</code></pre>
+<p>Callback for handling recognized objects, if ID is in accordance with
+searched object, reporting it to service:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">objectCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::Float32MultiArrayPtr &amp;object)</span>
+    </span>{
+        <span class="hljs-keyword">if</span> (object-&gt;data.size() &gt; <span class="hljs-number">0</span>)
+        {
+            <span class="hljs-keyword">if</span> (search_obj == object-&gt;data[<span class="hljs-number">0</span>])
+            {
+                ROS_INFO(<span class="hljs-string">"Object found, call service %s"</span>, client.getService().c_str());
+                std_srvs::Empty srv;
+                client.call(srv);
+            }
+        }
+    }
+</code></pre>
+<p>In main function, node initialization:</p>
+<pre><code class="hljs css language-cpp">    ros::init(argc, argv, <span class="hljs-string">"action_controller"</span>);
+    ros::<span class="hljs-function">NodeHandle <span class="hljs-title">n</span><span class="hljs-params">(<span class="hljs-string">"~"</span>)</span></span>;
+</code></pre>
+<p>Subscribing to topics:</p>
+<pre><code class="hljs css language-cpp">    ros::Subscriber sub = n.subscribe(<span class="hljs-string">"objects"</span>, <span class="hljs-number">1</span>, objectCallback);
+    ros::Subscriber distL_sub = n.subscribe(<span class="hljs-string">"range/fl"</span>, <span class="hljs-number">1</span>, distL_callback);
+    ros::Subscriber distR_sub = n.subscribe(<span class="hljs-string">"range/fr"</span>, <span class="hljs-number">1</span>, distR_callback);
+    ros::Subscriber task_sub = n.subscribe(<span class="hljs-string">"/task"</span>, <span class="hljs-number">1</span>, task_callback);
+</code></pre>
+<p>Getting <code>objectID</code> and <code>homeID</code> params, robot will search only for objects
+with these IDs:</p>
+<pre><code class="hljs css language-cpp">    n.param&lt;<span class="hljs-keyword">int</span>&gt;(<span class="hljs-string">"objectID"</span>, objectID, <span class="hljs-number">0</span>);
+    n.param&lt;<span class="hljs-keyword">int</span>&gt;(<span class="hljs-string">"homeID"</span>, homeID, <span class="hljs-number">0</span>);
+</code></pre>
+<p>Initiating client for the service:</p>
+<pre><code class="hljs css language-cpp">    client = n.serviceClient&lt;std_srvs::Empty&gt;(<span class="hljs-string">"/object_found"</span>);
+</code></pre>
+<p>Setting loop rate:</p>
+<pre><code class="hljs css language-cpp">    ros::<span class="hljs-function">Rate <span class="hljs-title">loop_rate</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;
+</code></pre>
+<p>Initiating velocity publisher:</p>
+<pre><code class="hljs css language-cpp">    action_pub = n.advertise&lt;geometry_msgs::Twist&gt;(<span class="hljs-string">"/cmd_vel"</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p>Setting default values for velocity:</p>
+<pre><code class="hljs css language-cpp">    set_vel.linear.x = <span class="hljs-number">0</span>;
+    set_vel.linear.y = <span class="hljs-number">0</span>;
+    set_vel.linear.z = <span class="hljs-number">0</span>;
+    set_vel.angular.x = <span class="hljs-number">0</span>;
+    set_vel.angular.y = <span class="hljs-number">0</span>;
+    set_vel.angular.z = <span class="hljs-number">0</span>;
+</code></pre>
+<p>In infinite while loop, triggering incoming messages:</p>
+<pre><code class="hljs css language-cpp">    ros::spinOnce();
+    loop_rate.sleep();
+</code></pre>
+<p>If searched object ID complies with this node’s ID, setting desired robot
+velocity based on sensor measurements:</p>
+<pre><code class="hljs css language-cpp">    <span class="hljs-keyword">if</span> (search_obj == objectID || search_obj == homeID)
+    {
+        <span class="hljs-keyword">if</span> (distL &gt; <span class="hljs-number">1</span>)
+        {
+            distL = <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">if</span> (distR &gt; <span class="hljs-number">1</span>)
+        {
+            distR = <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">if</span> (distL &gt; <span class="hljs-number">0</span> &amp;&amp; distR &gt; <span class="hljs-number">0</span>)
+        {
+            set_vel.angular.z = (distL - distR) * <span class="hljs-number">2</span>;
+            set_vel.linear.x = ((distL + distR) / <span class="hljs-number">2</span>) - ((sensorL_max +sensorR_max) / <span class="hljs-number">4</span>);
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (distL &gt; <span class="hljs-number">0</span>)
+        {
+            set_vel.angular.z = <span class="hljs-number">-0.25</span>;
+            set_vel.linear.x = <span class="hljs-number">-0.125</span>;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (distR &gt; <span class="hljs-number">0</span>)
+        {
+            set_vel.angular.z = <span class="hljs-number">0.25</span>;
+            set_vel.linear.x = <span class="hljs-number">-0.125</span>;
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            set_vel.linear.x = <span class="hljs-number">0.25</span>;
+            set_vel.angular.z = <span class="hljs-number">0</span>;
+        }
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        set_vel.linear.x = <span class="hljs-number">0</span>;
+        set_vel.angular.z = <span class="hljs-number">0</span>;
+    }
+    action_pub.publish(set_vel);
+</code></pre>
+<p>Your final file should look like this:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ros/ros.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_msgs/Float32MultiArray.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;geometry_msgs/Twist.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sensor_msgs/Range.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_msgs/Char.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;std_srvs/Empty.h&gt;</span></span>
+
+ros::Publisher action_pub;
+geometry_msgs::Twist set_vel;
+
+<span class="hljs-keyword">float</span> distL = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">float</span> distR = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">float</span> sensorL_max = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">float</span> sensorR_max = <span class="hljs-number">0</span>;
+
+u_char search_obj;
+<span class="hljs-keyword">int</span> objectID;
+<span class="hljs-keyword">int</span> homeID;
+
+ros::ServiceClient client;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">distL_callback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> sensor_msgs::Range &amp;range)</span>
+</span>{
+    distL = range.range;
+    sensorL_max = range.max_range;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">distR_callback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> sensor_msgs::Range &amp;range)</span>
+</span>{
+    distR = range.range;
+    sensorR_max = range.max_range;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">task_callback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::Char &amp;task)</span>
+</span>{
+    search_obj = task.data;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">objectCallback</span><span class="hljs-params">(<span class="hljs-keyword">const</span> std_msgs::Float32MultiArrayPtr &amp;object)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (object-&gt;data.size() &gt; <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-keyword">if</span> (search_obj == object-&gt;data[<span class="hljs-number">0</span>])
+        {
+            ROS_INFO(<span class="hljs-string">"Object found, call service %s"</span>, client.getService().c_str());
+            std_srvs::Empty srv;
+            client.call(srv);
+        }
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span>
+</span>{
+
+    ros::init(argc, argv, <span class="hljs-string">"action_controller"</span>);
+    ros::<span class="hljs-function">NodeHandle <span class="hljs-title">n</span><span class="hljs-params">(<span class="hljs-string">"~"</span>)</span></span>;
+    ros::Subscriber sub = n.subscribe(<span class="hljs-string">"objects"</span>, <span class="hljs-number">1</span>, objectCallback);
+    ros::Subscriber distL_sub = n.subscribe(<span class="hljs-string">"range/fl"</span>, <span class="hljs-number">1</span>, distL_callback);
+    ros::Subscriber distR_sub = n.subscribe(<span class="hljs-string">"range/fr"</span>, <span class="hljs-number">1</span>, distR_callback);
+    ros::Subscriber task_sub = n.subscribe(<span class="hljs-string">"/task"</span>, <span class="hljs-number">1</span>, task_callback);
+
+    n.param&lt;<span class="hljs-keyword">int</span>&gt;(<span class="hljs-string">"objectID"</span>, objectID, <span class="hljs-number">0</span>);
+    n.param&lt;<span class="hljs-keyword">int</span>&gt;(<span class="hljs-string">"homeID"</span>, homeID, <span class="hljs-number">0</span>);
+    client = n.serviceClient&lt;std_srvs::Empty&gt;(<span class="hljs-string">"/object_found"</span>);
+
+    ros::<span class="hljs-function">Rate <span class="hljs-title">loop_rate</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;
+    action_pub = n.advertise&lt;geometry_msgs::Twist&gt;(<span class="hljs-string">"cmd_vel"</span>, <span class="hljs-number">1</span>);
+    set_vel.linear.x = <span class="hljs-number">0</span>;
+    set_vel.linear.y = <span class="hljs-number">0</span>;
+    set_vel.linear.z = <span class="hljs-number">0</span>;
+    set_vel.angular.x = <span class="hljs-number">0</span>;
+    set_vel.angular.y = <span class="hljs-number">0</span>;
+    set_vel.angular.z = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (ros::ok())
+    {
+        ros::spinOnce();
+        loop_rate.sleep();
+        <span class="hljs-keyword">if</span> (search_obj == objectID || search_obj == homeID)
+        {
+            <span class="hljs-keyword">if</span> (distL &gt; <span class="hljs-number">1</span>)
+            {
+                distL = <span class="hljs-number">1</span>;
+            }
+            <span class="hljs-keyword">if</span> (distR &gt; <span class="hljs-number">1</span>)
+            {
+                distR = <span class="hljs-number">1</span>;
+            }
+            <span class="hljs-keyword">if</span> (distL &gt; <span class="hljs-number">0</span> &amp;&amp; distR &gt; <span class="hljs-number">0</span>)
+            {
+                set_vel.angular.z = (distL - distR) * <span class="hljs-number">2</span>;
+                set_vel.linear.x = ((distL + distR) / <span class="hljs-number">2</span>) - ((sensorL_max + sensorR_max) / <span class="hljs-number">4</span>);
+            }
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (distL &gt; <span class="hljs-number">0</span>)
+            {
+                set_vel.angular.z = <span class="hljs-number">-0.25</span>;
+                set_vel.linear.x = <span class="hljs-number">-0.125</span>;
+            }
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (distR &gt; <span class="hljs-number">0</span>)
+            {
+                set_vel.angular.z = <span class="hljs-number">0.25</span>;
+                set_vel.linear.x = <span class="hljs-number">-0.125</span>;
+            }
+            <span class="hljs-keyword">else</span>
+            {
+                set_vel.linear.x = <span class="hljs-number">0.25</span>;
+                set_vel.angular.z = <span class="hljs-number">0</span>;
+            }
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            set_vel.linear.x = <span class="hljs-number">0</span>;
+            set_vel.angular.z = <span class="hljs-number">0</span>;
+        }
+        action_pub.publish(set_vel);
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="building-the-nodes"></a><a href="#building-the-nodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building the nodes</h3>
+<p>To build your nodes you need to edit the <code>CMakeLists.txt</code> file. Find
+line:</p>
+<pre><code class="hljs">add_executable(action_controller_node src/action_controller.cpp)
+</code></pre>
+<p>And add two more lines:</p>
+<pre><code class="hljs">add_executable(mission_controller_node src/mission_controller.cpp)
+add_executable(search_controller_node src/search_controller.cpp)
+</code></pre>
+<p>Then after:</p>
+<pre><code class="hljs">target_link_libraries(action_controller_node
+        ${catkin_LIBRARIES}
+        ${OpenCV_LIBRARIES}
+        )
+</code></pre>
+<p>Add:</p>
+<pre><code class="hljs">target_link_libraries(mission_controller_node
+        ${catkin_LIBRARIES}
+        )
+
+target_link_libraries(search_controller_node
+        ${catkin_LIBRARIES}
+        )
+</code></pre>
+<p>Now you can build your nodes, but before you run them, <code>launch</code> file for
+them will be required.</p>
+<h3><a class="anchor" aria-hidden="true" id="running-the-nodes-on-rosbots"></a><a href="#running-the-nodes-on-rosbots" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running the nodes on ROSbots</h3>
+<p>To run your nodes you need two <code>launch</code> files, one for each robot. First
+will be running on one robot:</p>
+<pre><code class="hljs css language-launch">&lt;launch&gt;
+
+    &lt;<span class="hljs-keyword">include</span> file="$(find astra_launch)/launch/astra.launch"/&gt;
+
+    &lt;node pkg="find_object_2d" <span class="hljs-keyword">type</span>="find_object_2d" <span class="hljs-type">name</span>="find_object_2d"&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="image" <span class="hljs-keyword">to</span>="/camera/rgb/image_raw"/&gt;
+        &lt;param <span class="hljs-type">name</span>="gui" <span class="hljs-keyword">value</span>="true"/&gt;
+        &lt;param <span class="hljs-type">name</span>="objects_path" <span class="hljs-keyword">value</span>="/home/pi/ros_workspace/find_obj"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="mission_controller_node" <span class="hljs-type">name</span>="mission_controller"&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="search_controller_node" <span class="hljs-type">name</span>="search_controller"&gt;
+        &lt;param <span class="hljs-type">name</span>="objectID" <span class="hljs-keyword">value</span>="3"/&gt;
+        &lt;param <span class="hljs-type">name</span>="homeID" <span class="hljs-keyword">value</span>="4"/&gt;
+    &lt;/node&gt;
+
+&lt;/launch&gt;
+</code></pre>
+<p>Here you are runing <code>astra.launch</code> and <code>find_object_2d</code> nodes as in previous
+tutorials. You are also adding nodes that you just created,
+<code>mission_controller_node</code> without any parameters and
+<code>search_controller_node</code> with <code>objectID</code> and <code>homeID</code> parameters that
+identify objects which will be searched for by robot.</p>
+<p>Second <code>launch</code> file will be running on another robot:</p>
+<pre><code class="hljs css language-launch">&lt;launch&gt;
+
+    &lt;<span class="hljs-keyword">include</span> file="$(find astra_launch)/launch/astra.launch"&gt;
+        &lt;arg <span class="hljs-type">name</span>="camera" <span class="hljs-keyword">value</span>="camera_2" /&gt;
+    &lt;/<span class="hljs-keyword">include</span>&gt;
+
+    &lt;node pkg="find_object_2d" <span class="hljs-keyword">type</span>="find_object_2d" <span class="hljs-type">name</span>="find_object_2d_2"&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="image" <span class="hljs-keyword">to</span>="/camera/rgb/image_raw_2"/&gt;
+        &lt;param <span class="hljs-type">name</span>="gui" <span class="hljs-keyword">value</span>="true"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="objects" <span class="hljs-keyword">to</span>="objects_2"/&gt;
+        &lt;param <span class="hljs-type">name</span>="objects_path" <span class="hljs-keyword">value</span>="/home/pi/ros_workspace/find_obj"/&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="search_controller_node" <span class="hljs-type">name</span>="search_controller_2"&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="objects" <span class="hljs-keyword">to</span>="objects_2"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="cmd_vel" <span class="hljs-keyword">to</span>="cmd_vel_2"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="rangeL" <span class="hljs-keyword">to</span>="rangeL_2"/&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="rangeR" <span class="hljs-keyword">to</span>="rangeR_2"/&gt;        
+        &lt;param <span class="hljs-type">name</span>="objectID" <span class="hljs-keyword">value</span>="8"/&gt;
+        &lt;param <span class="hljs-type">name</span>="homeID" <span class="hljs-keyword">value</span>="9"/&gt;
+    &lt;/node&gt;
+
+&lt;/launch&gt;
+</code></pre>
+<p>Here you are also running <code>astra.launch</code> and <code>find_object_2d</code> nodes, but all
+names are remapped with suffix <code>_2</code> to distinguish them between both
+robots. For <code>search_controller_node</code> you will also be remapping all names and
+additionally you should change values of <code>objectID</code> and <code>homeID</code>
+parameters to match different objects from image database.</p>
+<p>Remember that for <code>CORE2</code> bridge node on the second robot you also need to
+remap all topic names.</p>
+<p><strong>Task 2</strong> On the device that you have chosen for <code>master</code> run <code>roscore</code>.
+Then on one of the robots run first <code>launch</code> file with <code>CORE2</code> bridge
+node:</p>
+<pre><code class="hljs">$ /opt/husarion/tools/rpi-linux/ros-core2-client /dev/ttyCORE2
+</code></pre>
+<p>On another robot run second <code>launch</code> file with <code>CORE2</code> bridge node:</p>
+<pre><code class="hljs">$ /opt/husarion/tools/rpi-linux/ros-core2-client /dev/ttyCORE2 __name:=serial_node_2 
+cmd_vel:=cmd_vel_2 rangeL:=rangeL_2 rangeR:=rangeR_2 pose:=pose_2
+</code></pre>
+<p>Observe as one of your robots moves avoiding obstacles. When it finds an
+object, second robot starts seearching. They should move sequentially
+until all objects are recognized.</p>
+<h3><a class="anchor" aria-hidden="true" id="running-the-nodes-in-gazebo"></a><a href="#running-the-nodes-in-gazebo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running the nodes in Gazebo</h3>
+<p>Gazego will be running on one machine, thus you will use only one launch file. In this case you will use namespaces to distinguish robots, each robot will publish and subscribe topics with its own prefix. Only the <code>mission_controller_node</code> will be working without any namespace to communicate with both robots. All parameters for nodes must be set with the same values as for ROSbots.</p>
+<p>You can use below launch file:</p>
+<pre><code class="hljs css language-launch">&lt;launch&gt;
+
+    &lt;<span class="hljs-keyword">include</span> file="$(find rosbot_gazebo)/launch/world.launch"/&gt;
+
+    &lt;param <span class="hljs-type">name</span>="robot_description" command="$(find xacro)/xacro.py '$(find rosbot_description)/urdf/rosbot.xacro'"/&gt;
+
+    &lt;node <span class="hljs-type">name</span>="rosbot_spawn_first" pkg="gazebo_ros" <span class="hljs-keyword">type</span>="spawn_model" output="log" args="-urdf -param robot_description -model rosbot_s -y 0 -namespace first/search_controller"&gt;
+    &lt;/node&gt;
+
+    &lt;node <span class="hljs-type">name</span>="rosbot_spawn_second" pkg="gazebo_ros" <span class="hljs-keyword">type</span>="spawn_model" output="log" args="-urdf -param robot_description -model rosbot -y 2.5 -namespace second/search_controller"&gt;
+    &lt;/node&gt;
+
+    &lt;node pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="mission_controller_node" <span class="hljs-type">name</span>="mission_controller" output="screen"&gt;
+    &lt;/node&gt;
+
+    &lt;node ns="first/search_controller" pkg="find_object_2d" <span class="hljs-keyword">type</span>="find_object_2d" <span class="hljs-type">name</span>="find_object_2d"&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="image" <span class="hljs-keyword">to</span>="camera/rgb/image_raw"/&gt;
+        &lt;param <span class="hljs-type">name</span>="gui" <span class="hljs-keyword">value</span>="true"/&gt;
+        &lt;param <span class="hljs-type">name</span>="objects_path" <span class="hljs-keyword">value</span>="$(find tutorial_pkg)/image_rec/"/&gt;
+    &lt;/node&gt;
+
+    &lt;node ns="first" pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="search_controller_node" <span class="hljs-type">name</span>="search_controller" output="screen"&gt;
+        &lt;param <span class="hljs-type">name</span>="objectID" <span class="hljs-keyword">value</span>="8"/&gt;
+        &lt;param <span class="hljs-type">name</span>="homeID" <span class="hljs-keyword">value</span>="12"/&gt;
+    &lt;/node&gt;
+
+    &lt;node ns="second/search_controller" pkg="find_object_2d" <span class="hljs-keyword">type</span>="find_object_2d" <span class="hljs-type">name</span>="find_object_2d"&gt;
+        &lt;remap <span class="hljs-keyword">from</span>="image" <span class="hljs-keyword">to</span>="camera/rgb/image_raw"/&gt;
+        &lt;param <span class="hljs-type">name</span>="gui" <span class="hljs-keyword">value</span>="true"/&gt;
+        &lt;param <span class="hljs-type">name</span>="objects_path" <span class="hljs-keyword">value</span>="$(find tutorial_pkg)/image_rec/"/&gt;
+    &lt;/node&gt;
+
+    &lt;node ns="second" pkg="tutorial_pkg" <span class="hljs-keyword">type</span>="search_controller_node" <span class="hljs-type">name</span>="search_controller"&gt;
+        &lt;param <span class="hljs-type">name</span>="objectID" <span class="hljs-keyword">value</span>="6"/&gt;
+        &lt;param <span class="hljs-type">name</span>="homeID" <span class="hljs-keyword">value</span>="11"/&gt;
+    &lt;/node&gt;
+
+&lt;/launch&gt;
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="connecting-through-husarnet"></a><a href="#connecting-through-husarnet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connecting through Husarnet</h2>
+<p>Above method will be suitable as long as robots are connected in the same local network. Such an requirement can be satisfied in most experimental or small scale use cases.</p>
+<p>In the case when more sophisticated network setup is required, e.g. robots will be connected to internet using LTE modem or different WiFi networks. For easy connecting robots in advanced network configurations, you can use <a href="https://husarnet.com/">Husarnet</a> - the global LAN network for secure P2P connection between robots and IoT devices.</p>
+<h3><a class="anchor" aria-hidden="true" id="connetion-setup"></a><a href="#connetion-setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connetion setup</h3>
+<p>Log in to <a href="https://app.husarnet.com/">Husarnet Dashboard</a> or create an account if you don't have it yet.</p>
+<p>You should see Husarnet Dashboard with no networks nor elements:</p>
+<p><img src="/assets/img/ros/husarnet_empty_dashboard.png" alt="husarnet-dashboard-empty"></p>
+<p>Push button &quot;Create network&quot; and in dialog type desired network name into field <code>Network name</code>:</p>
+<p><img src="/assets/img/ros/husarnet_add_network_dialog.png" alt="husarnet-add-network-dialog"></p>
+<p>After pushing button &quot;Create&quot;, you will be redirected to network view:</p>
+<p><img src="/assets/img/ros/husarnet_empty_network.png" alt="husarnet-empty-network"></p>
+<p>You can use button &quot;Add element&quot; to add to your network cloud elements or mobile app, but now we will use terminal method.</p>
+<h4><a class="anchor" aria-hidden="true" id="adding-ros-device-to-network"></a><a href="#adding-ros-device-to-network" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding ROS device to network</h4>
+<p>Before you add device to network, it is required to setup the environment.</p>
+<p>Open <code>.bashrc</code> file and find lines that ypu added at the beginning of this tutorial:</p>
+<pre><code class="hljs"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">ROS_MASTER_URI</span>=http://X.X.X.X:11311
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">ROS_IP</span>=Y.Y.Y.Y
+</code></pre>
+<p>and replace them with:</p>
+<pre><code class="hljs"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">ROS_MASTER_URI</span>=http://master:11311
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">ROS_IPV6</span>=on
+</code></pre>
+<p>ROS_IPV6 makes ROS enable IPv6 mode - Husarnet is a IPv6 network.
+Setting ROS_MASTER_URI to <a href="http://master:11311">http://master:11311</a> ensures ROS will always connect to host called master - which extactly machine it is depends on the setting on the Husarnet Dashboard.</p>
+<p>Execute command:</p>
+<pre><code class="hljs"><span class="hljs-attribute">sudo husarnet websetup</span>
+</code></pre>
+<p>You will get response similar to:</p>
+<pre><code class="hljs">Go <span class="hljs-built_in">to</span> <span class="hljs-keyword">https</span>://app.husarnet.com/husarnet/fc94cd22622bf708b9bb22d5589275fa8832943ffdb0175bff7e16ce <span class="hljs-built_in">to</span> manage your network <span class="hljs-built_in">from</span> web browser.
+</code></pre>
+<p>Open the provied link in web browser, you will see device configuration dialog:</p>
+<p><img src="/assets/img/ros/husarnet_add_device_dialog.png" alt="husarnet-add-device"></p>
+<p>Type desired name of the devide into field <code>Name for this device</code>, you will use this name to distinguish your devices in dashboard.
+From <code>Add to network</code> dropdown menu choose name of network that you created in previous step.</p>
+<p>Repeat procedure of adding device with second robot.</p>
+<h4><a class="anchor" aria-hidden="true" id="setting-the-master"></a><a href="#setting-the-master" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting the master</h4>
+<p>After adding both robots, your network should look like below:</p>
+<p><img src="/assets/img/ros/husarnet_two_elements.png" alt="husarnet-two-elements"></p>
+<p>You can set device to be master in its settings. Choose device you want to be master and open configuration dialog by clicking its name, status or address:</p>
+<p><img src="/assets/img/ros/husarnet_set_master.png" alt="husarnet-set-master"></p>
+<p>Check <code>ROS master</code> checkbox and push button &quot;Update&quot;.</p>
+<p>When you will start <code>roscore</code> on master, message <code>ROS master (roscore) is not running on robot-2.</code> will be gone.</p>
+<p>Your first Huarnet newtork is configured and ready:</p>
+<p><img src="/assets/img/ros/husarnet_network_ready.png" alt="husarnet-network-ready"></p>
+<h3><a class="anchor" aria-hidden="true" id="running-the-nodes-with-husarnet"></a><a href="#running-the-nodes-with-husarnet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running the nodes with Husarnet</h3>
+<p>Husarnet provide encrypted and direct virtual network for your devices, but it does not modify the ROS workflow. Just go back to section &quot;Running the nodes on ROSbots&quot;, start required nodes and oberve as your robots perform the task.</p>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>After completing this tutorial you should be able to configure your
+CORE2 devices to work together and exchange data with each other. You
+should also know how to program robots for performing tasks in
+cooperation.</p>
+<hr>
+<p><em>by Łukasz Mitka, Husarion</em></p>
+<p><em>Do you need any support with completing this tutorial or have any difficulties with software or hardware? Feel free to describe your thoughts on our community forum: <a href="https://community.husarion.com/">https://community.husarion.com/</a> or to contact with our support: <a href="mailto:support@husarion.com">support@husarion.com</a></em></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#network-setup">Network setup</a></li><li><a href="#performing-a-task-with-multiple-machines">Performing a task with multiple machines</a><ul class="toc-headings"><li><a href="#mission-controller-node"><code>mission_controller</code> node</a></li><li><a href="#search-controller-node"><code>search_controller</code> node</a></li><li><a href="#building-the-nodes">Building the nodes</a></li><li><a href="#running-the-nodes-on-rosbots">Running the nodes on ROSbots</a></li><li><a href="#running-the-nodes-in-gazebo">Running the nodes in Gazebo</a></li></ul></li><li><a href="#connecting-through-husarnet">Connecting through Husarnet</a><ul class="toc-headings"><li><a href="#connetion-setup">Connetion setup</a></li><li><a href="#running-the-nodes-with-husarnet">Running the nodes with Husarnet</a></li></ul></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-husarion-docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

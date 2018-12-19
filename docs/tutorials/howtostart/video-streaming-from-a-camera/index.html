@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Video streaming from a camera · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Husarion Cloud supports streaming a video from a camera attached to your robot to the Web User Interface.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Video streaming from a camera · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;p&gt;Husarion Cloud supports streaming a video from a camera attached to your robot to the Web User Interface.&lt;/p&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/atom.xml" title="Husarion Docs Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://byq77.github.io/docusaurus-husarion-docs/blog/feed.xml" title="Husarion Docs Blog RSS Feed"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><img class="logo" src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/doc4" target="_self">Software</a></li><li class=""><a href="/docusaurus-husarion-docs/help" target="_self">Help</a></li><li class=""><a href="/docusaurus-husarion-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Tutorials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/">About tutorials</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">How to start</h4><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/run-your-first-program">1. Run your first program</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/video-streaming-from-a-camera">2. Video streaming</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/getting-started-with-husarion--lego-mindstorms">3. Getting started with Husarion + LEGO Mindstorms</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/telepresence-robot-kit---quick-start">4. Telepresence robot kit - quick start</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/using-third-party-modules">5. Using third-party modules</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/rosbot---quick-start">6. ROSbot - quick start</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ROS tutorials</h4><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/doc2">document number 2</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Mbed tutorials</h4><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/tutorials/mbed-tutorials/using-core2-with-mbed-os">Using CORE2 with Mbed OS</a></li></ul></div></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Video streaming from a camera</h1></header><article><div><span><p>Husarion Cloud supports streaming a video from a camera attached to your robot to the Web User Interface.</p>
+<h2><a class="anchor" aria-hidden="true" id="setting-up-the-hardware"></a><a href="#setting-up-the-hardware" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up the hardware</h2>
+<p><dev><em>
+<b>Hint:</b> Remember that you can use USB camera <b>OR</b> smartphone camera but not both at the same time.
+</em></dev></p>
+<h3><a class="anchor" aria-hidden="true" id="core2-smartphone-tablet"></a><a href="#core2-smartphone-tablet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CORE2 + smartphone/tablet</h3>
+<p>Your robot with CORE2 can use a camera that is built into a smartphone or a tablet. The video from camera can be viewed in the robot's user interface. Currently this feature is available only for Android devices.</p>
+<p>At first, your CORE2 needs to be connected to your account on <a href="https://cloud.husarion.com/">cloud.husarion.com</a>.</p>
+<p>Install the <a href="https://play.google.com/store/apps/details?id=com.husarion.video2&amp;hl=en">hVideo</a> app on your smartphone or tablet. Enable Wi-Fi or mobile data transmission on the device.</p>
+<p>Login to the Husarion Cloud, find your robot, click <img src="./../../assets/img/howToStart/plus.png" alt="image"> and &quot;Add camera&quot;.</p>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/cloud_add_camera.png"/></div>
+<p>Click &quot;Generate new QR code&quot; in the pop-up window:</p>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/add_camera.png"/></div>
+<p>Launch the hVideo app on your smartphone, choose the &quot;Pair with robot&quot; option in the hVideo menu:</p>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/pair-with-robot.png"/></div>
+<p>and scan the QR code displayed at Husarion Cloud with your smartphone.</p>
+<p>Now the camera in your smarthpone is linked to your Cloud account and the stream should be visible in the Web UI of the robot.</p>
+<h3><a class="anchor" aria-hidden="true" id="core2-ros-usb-camera"></a><a href="#core2-ros-usb-camera" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CORE2-ROS + USB camera</h3>
+<p>CORE2-ROS contains a single board computer with Linux operating system and USB ports. It means that in most cases you only need to connect a USB camera and enable it.</p>
+<p>At first, your CORE2-ROS needs to be connected to your account on <a href="https://cloud.husarion.com/">cloud.husarion.com</a>.</p>
+<p>Login to the Husarion Cloud, find your robot, click <img src="./../../assets/img/howToStart/plus.png" alt="image"> and &quot;Add camera&quot;.</p>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/cloud_add_camera.png"/></div>
+<p>Click &quot;Enable USB camera&quot; in the pop-up window:</p>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/add_camera.png"/></div>
+<p>Now reboot the robot. If you don't have a non-standard camera, it shouldn't need any additional configuration and the video stream should now be available in the Web UI of your robot.</p>
+<h2><a class="anchor" aria-hidden="true" id="displaying-the-stream-in-the-robot-ui"></a><a href="#displaying-the-stream-in-the-robot-ui" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Displaying the stream in the robot UI</h2>
+<p>Once you have configured the video stream, you can display it in the Web UI of your robot now.</p>
+<p>Create a new project and use the &quot;UI example&quot; template to see how it can be done:</p>
+<div style="text-align: center"><img src="./../../assets/img/howToStart/create-project-webui.png"/></div>
+<p>The stream is enabled in cfgHandler() function:</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cfgHandler</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">auto</span> l = platform.ui.label(<span class="hljs-string">"l1"</span>);
+    l.setText(<span class="hljs-string">"label1"</span>);
+    <span class="hljs-keyword">auto</span> b = platform.ui.button(<span class="hljs-string">"btn1"</span>);
+    b.setText(<span class="hljs-string">"button1"</span>);
+    b.setLocation(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+    platform.ui.video.enable();  <span class="hljs-comment">// enable the video stream and display in the default web UI</span>
+}
+</code></pre>
+<p>The video stream will be displayed on default robot user interface.</p>
+<p>In some cases you will need to align the image position or other properties, together with other features like buttons, sliders, images etc. It means that you need to create a custom robot UI in HTML. Choose another template - &quot;4-wheels spy robot&quot; - and explore the more advanced example of user interface. The additional line is added to the cfgHandler():</p>
+<pre><code class="hljs css language-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cfgHandler</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">auto</span> l1 = platform.ui.label(<span class="hljs-string">"l1"</span>);
+    <span class="hljs-keyword">auto</span> g1 = platform.ui.button(<span class="hljs-string">"g1"</span>);
+    <span class="hljs-keyword">auto</span> g2 = platform.ui.button(<span class="hljs-string">"g2"</span>);
+    <span class="hljs-keyword">auto</span> g3 = platform.ui.button(<span class="hljs-string">"g3"</span>);
+    platform.ui.loadHtml({Resource::WEBIDE, <span class="hljs-string">"/web_ui/ui.html"</span>});    <span class="hljs-comment">// overwrite the default web UI with the custom one</span>
+    platform.ui.video.enable();                                     <span class="hljs-comment">// enable the video stream and display in the web UI</span>
+}
+</code></pre>
+<p>Two files: &quot;ui.html&quot; and &quot;ui.css&quot; define the video container, its location and size, together with other page elements. Feel free to modify the template and create your own, great UI for your robot :) See the screenshot from the &quot;4-wheels spy robot&quot; user interface:</p>
+<div style="text-align: center"><img src="./../../assets/img/telepresence_robot_kit/interface2.jpg"/></div>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/run-your-first-program"><span class="arrow-prev">← </span><span>1. Run your first program</span></a><a class="docs-next button" href="/docusaurus-husarion-docs/docs/tutorials/howtostart/getting-started-with-husarion--lego-mindstorms"><span>3. Getting started with Husarion + LEGO Mindstorms</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#setting-up-the-hardware">Setting up the hardware</a><ul class="toc-headings"><li><a href="#core2-smartphone-tablet">CORE2 + smartphone/tablet</a></li><li><a href="#core2-ros-usb-camera">CORE2-ROS + USB camera</a></li></ul></li><li><a href="#displaying-the-stream-in-the-robot-ui">Displaying the stream in the robot UI</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-husarion-docs/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-husarion-docs/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-husarion-docs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-husarion-docs/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
