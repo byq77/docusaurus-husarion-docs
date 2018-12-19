@@ -1,13 +1,8 @@
 ---
-title: 'Offline development tools'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 2
+title: Offline development tools
+sidebar_label: 2. Offline development tools
+id: offline-development-tools
 ---
-
-# Offline development tools #
 
 If you prefer or need offline development tools, Husarion created an extension for Visual Studio Code, that will configure all you need to get started. This extension works both for Windows, Linux and MacOS. Installation process is described in the following sections and in the video below.
 
@@ -98,7 +93,7 @@ To compile project press Ctrl-Shift-B. To flash the project to CORE2 via micro U
 
 ***<font color="green">Info: For advanced users. You don’t need this tool if flashing CORE2 via USB is enough.</font>***
 
-To install the st-flash software, follow the instructions from here: https://github.com/texane/stlink/blob/master/README.md
+To install the st-flash software, follow the instructions from here: [link](https://github.com/texane/stlink/blob/master/README.md)
 
 For Debian/Ubuntu you have to compile this tool from source:
 

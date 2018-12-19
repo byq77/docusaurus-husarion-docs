@@ -1,5 +1,6 @@
 ---
 id: using-core2-with-mbed-os
+sidebar_label: 1. Using CORE2 with Mbed OS 
 title: Using CORE2 with Mbed OS
 ---
 

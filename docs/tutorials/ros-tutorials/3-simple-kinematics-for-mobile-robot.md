@@ -1,14 +1,8 @@
 ---
-title: '3 Simple kinematics for mobile robot'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 3
+title: Simple kinematics for mobile robot
+sidebar_label: 3. Simple kinematics for mobile robot
+id: 3-simple-kinematics-for-mobile-robot
 ---
-
-# Simple kinematics for mobile robot #
-
 
 ## A little bit of theory ##
 
@@ -17,7 +11,7 @@ order: 3
 The purpose of forward kinematics in mobile robotics is to determine robot
 position and orientation based on wheels rotation measurements. To achieve that we'll create robot kinematic model. ROSbot is four wheeled mobile robot with separate drive for each wheel, but in order to simplify kinematic calculation we will treat it as two wheeled. Two virtual wheels (marked as W<sub>L</sub> and W<sub>R</sub> on the schematic) will have axis going through robot geometric center. This way we can use simpler kinematic model of differential wheeled robot. The name "differential" comes from the fact that robot can change its direction by varying the relative rate of rotation of its wheels and does not require additional steering motion. Robot schematic is presented below:
 
-<div><center><img src="./../../../assets/img/ros/robot_scheme.png" width="50%" height="50%"/></center></div>
+<div><center><img src="../../assets/img/ros/robot_scheme.png" width="50%" height="50%"/></center></div>
 
 Description:
 
@@ -46,32 +40,32 @@ after time *δt* for given control parameters:
 
 In our case the angular speed ω and the angular position Φ of each virtual wheel will be an average of its real counterparts:
 
-<div><center><img src="./../../../assets/img/ros/man_3_formula_1_1.png" title="\large \phi_{W_L}=\frac{\phi_{W_{FL}}+\phi_{W_{RL}}}{2}" /></center></div>
-<div><center><img src="./../../../assets/img/ros/man_3_formula_1_2.png" title="\large \phi_{W_R}=\frac{\phi_{W_{FR}}+\phi_{W_{RR}}}{2}" /></center></div>
-<div><center><img src="./../../../assets/img/ros/man_3_formula_1_3.png" title="\large \omega_{W_L}=\frac{\omega_{W_{FL}}+\omega_{W_{RL}}}{2}" /></center></div>
-<div><center><img src="./../../../assets/img/ros/man_3_formula_1_4.png" title="\large \omega_{W_R}=\frac{\omega_{W_{FR}}+\omega_{W_{RR}}}{2}" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_1_1.png" title="\large \phi_{W_L}=\frac{\phi_{W_{FL}}+\phi_{W_{RL}}}{2}" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_1_2.png" title="\large \phi_{W_R}=\frac{\phi_{W_{FR}}+\phi_{W_{RR}}}{2}" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_1_3.png" title="\large \omega_{W_L}=\frac{\omega_{W_{FL}}+\omega_{W_{RL}}}{2}" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_1_4.png" title="\large \omega_{W_R}=\frac{\omega_{W_{FR}}+\omega_{W_{RR}}}{2}" /></center></div>
 
 Linear speed of each virtual wheel:
 
-<div><center><img src="./../../../assets/img/ros/man_3_formula_2_1.png" title="\huge \huge v_{R} = \omega_{W_R} \times r" /></div></center>
-<div><center><img src="./../../../assets/img/ros/man_3_formula_2_2.png" title="\huge \huge v_{L} = \omega_{W_L} \times r" /></div></center>
+<div><center><img src="../../assets/img/ros/man_3_formula_2_1.png" title="\huge \huge v_{R} = \omega_{W_R} \times r" /></div></center>
+<div><center><img src="../../assets/img/ros/man_3_formula_2_2.png" title="\huge \huge v_{L} = \omega_{W_L} \times r" /></div></center>
 
 where *r* - the wheel radius.
 
 We can determine robot angular position and speed with:
 
-<div><center><img src="./../../../assets/img/ros/man_3_formula_3_1.png" title="\huge \alpha = (\phi_{W_R} - \phi_{W_L})\frac{r}{l_2}" /></div></center>
-<div><center><img src="./../../../assets/img/ros/man_3_formula_3_2.png" title="\huge \dot{\alpha}=\frac{d\alpha}{dt}" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_3_1.png" title="\huge \alpha = (\phi_{W_R} - \phi_{W_L})\frac{r}{l_2}" /></div></center>
+<div><center><img src="../../assets/img/ros/man_3_formula_3_2.png" title="\huge \dot{\alpha}=\frac{d\alpha}{dt}" /></center></div>
 
 Then robot speed x and y component:
 
-<div><center><img src="./../../../assets/img/ros/man_3_formula_4_1.png" title="\huge \dot{x_c}=(v_L + \dot{\alpha}\tfrac{l_2}{2})cos(\alpha)" /></center></div>
-<div><center><img src="./../../../assets/img/ros/man_3_formula_4_2.png" title="\huge \dot{y_c}=(v_L + \dot{\alpha}\tfrac{l_2}{2})sin(\alpha)" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_4_1.png" title="\huge \dot{x_c}=(v_L + \dot{\alpha}\tfrac{l_2}{2})cos(\alpha)" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_4_2.png" title="\huge \dot{y_c}=(v_L + \dot{\alpha}\tfrac{l_2}{2})sin(\alpha)" /></center></div>
 
 To get position:
 
-<div><center><img src="./../../../assets/img/ros/man_3_formula_5_1.png" title="\huge x_c = \int_{0}^{t}\dot{x_c}\ dt" /></center></div>
-<div><center><img src="./../../../assets/img/ros/man_3_formula_5_2.png" title="\huge y_c = \int_{0}^{t}\dot{y_c}\ dt" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_5_1.png" title="\huge x_c = \int_{0}^{t}\dot{x_c}\ dt" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_formula_5_2.png" title="\huge y_c = \int_{0}^{t}\dot{y_c}\ dt" /></center></div>
 
 We assume starting position as (0,0).
 
@@ -384,7 +378,7 @@ for buttons:
 
 You should get similar view in `rqt_graph`:
 
-![image](/assets/img/ros/man_3_1.png)
+![image](../../assets/img/ros/man_3_1.png)
 
 ### Determining robot position ###
 
@@ -585,7 +579,7 @@ Remember, that you need to have active window with `teleop_twist_keyboard` to co
 
 You should get something like this on your screen:
 
-![image](/assets/img/ros/man_3_2.png)
+![image](../../assets/img/ros/man_3_2.png)
 ### Data visualization with PlotJuggler ###
 
 In this section you will learn how to visualize data from ros topics using PlotJuggler. It is a simple tool that allows you to plot logged data, in particular timeseries. You can learn more about the tool on its [official webpage](https://github.com/facontidavide/PlotJuggler).
@@ -604,7 +598,7 @@ In case your image lacks this tool you can install it by typing:
  ```
 From menu bar select **Streaming > Start: ROS_Topic_Streamer**. In pop-up menu that will appear choose **/pose** from available topic names and press ok.
 
-![image](/assets/img/ros/man_3_6.png)
+![image](../../assets/img/ros/man_3_6.png)
 
 Pressing **CTRL** and **SHIFT** select positions: 
 * */pose/pose/position/x* 
@@ -613,7 +607,7 @@ Pressing **CTRL** and **SHIFT** select positions:
 
 and then drag and drop them to the window area. This way you can comfortably observe changes in the odometry data during robot motion:
 
-![image](/assets/img/ros/man_3_7.png)
+![image](../../assets/img/ros/man_3_7.png)
 
 ## Robot visualization with Rviz ##
 
@@ -628,7 +622,7 @@ To run it type in terminal:
 
 New window will appear:
 
-![image](/assets/img/ros/man_3_3.png)
+![image](../../assets/img/ros/man_3_3.png)
 
 Application main view consists of:
 
@@ -652,7 +646,7 @@ appear in visualization window.
 Now we will visualize position published by your robot, run `rviz`,
 click **Add** and choose tab **By topic**.
 
-<div><center><img src="./../../../assets/img/ros/man_3_4.png" /></center></div>
+<div><center><img src="../../assets/img/ros/man_3_4.png" /></center></div>
 
 If you are working with ROSbot:
 Find topic `/pose` and choose `Pose` and click **OK**.
@@ -667,7 +661,7 @@ After this is done, you should see an arrow representing position and orientatio
 of your robot. Move your robot and observe as arrow changes its
 position.
 
-![image](/assets/img/ros/man_3_5.png)
+![image](../../assets/img/ros/man_3_5.png)
  
 Visualization of any other item is performed in the same way. In further
 lessons, as you will produce more objects to visualize, you will add them

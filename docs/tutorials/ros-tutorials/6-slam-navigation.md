@@ -1,13 +1,8 @@
 ---
-title: '6 SLAM navigation'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 6
+title: SLAM navigation
+sidebar_label: 6. SLAM navigation
+id: 6-slam-navigation
 ---
-
-# SLAM navigation #
 
 ## Introduction ##
 
@@ -23,7 +18,7 @@ For definition of SLAM problem we use given values (1,2) and expected values (3,
 
 <div>
 <p>1.  Robot control </p>
-	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<table style="border: solid 0px black;" width="100%" cellspacing="0" cellpadding="0">
 	    <tr>
 		<td><center><i>u<sub>{1:t}</sub> = { u<sub>1</sub>, u<sub>2</sub>, u<sub>3</sub>, ..., u<sub>t</sub>}</i></center></td>
 		<td width="60">(1)</td>
@@ -31,10 +26,9 @@ For definition of SLAM problem we use given values (1,2) and expected values (3,
 	</table>
 </div>
 
-
 <div>
 2.  Observations
-	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<table style="border: 0px;" width="100%" cellspacing="0" cellpadding="0">
 	    <tr>
 		<td><center><i>z<sub>{1:t}</sub> = { z<sub>1</sub>, z<sub>2</sub>, z<sub>3</sub>, ..., z<sub>t</sub>}</i></center></td>
 		<td width="60">(2)</td>
@@ -44,7 +38,7 @@ For definition of SLAM problem we use given values (1,2) and expected values (3,
 
 
 <div>
-3.  Environment map
+1.  Environment map
 	<table border="0" width="100%" cellspacing="0" cellpadding="0">
 	    <tr>
 		<td><center><i>m</i></center></td>
@@ -66,8 +60,7 @@ For definition of SLAM problem we use given values (1,2) and expected values (3,
 
 
 <div>
-    Robot trajectory estimates are determined with:
-
+5. Robot trajectory estimates are determined with:
 	<table border="0" width="100%" cellspacing="0" cellpadding="0">
 	    <tr>
 		<td><center><i>p(x<sub>0:t</sub>,m|z<sub>1:t</sub>, u<sub>1:t</sub>)</i></center></td>
@@ -296,7 +289,7 @@ Now click **Add** from object manipulation buttons, in new window select
 `Pose` visualization. You can observe as `robot_base` frame moves
 accordingly to robot movement.
 
-![image](/assets/img/ros/man_6_1.png)
+![image](../../assets/img/ros/man_6_1.png)
 
 ## SLAM implementation in ROS ##
 
@@ -335,7 +328,7 @@ scanned shape, you may need to adjust one of visualized object options,
 set value of `Style` to `Points`. You should see many points which
 resemble shape of obstacles surrounding your robot.
 
-![image](/assets/img/ros/man_6_2.png)
+![image](../../assets/img/ros/man_6_2.png)
 
 Shut down `rplidarNode` and run it again, but with some other nodes:
 
@@ -362,7 +355,7 @@ You will also need:
 
 You can use below `launch` file:
 
-``` launch
+```
 <launch>
 
     <arg name="use_rosbot" default="true"/>
@@ -391,7 +384,7 @@ In `rviz` add `Tf` and `/scan`. This time set `Fixed Frame` to `odom`.
 Try to move around your robot, you should see as laser scans change its
 shape accordingly to obstacles passed by robot.
 
-![image](/assets/img/ros/man_6_3.png)
+![image](../../assets/img/ros/man_6_3.png)
 
 ### Navigation and map building ###
 
@@ -416,7 +409,7 @@ We need to set few parameters:
 
 You can use below `launch` file:
 
-``` launch
+```
 <launch>
 
     <arg name="use_rosbot" default="true"/>
@@ -453,13 +446,13 @@ At the beginning there could be no map, you may need to wait few second
 until it is generated. Starting state should be similar to the one on
 picture:
 
-![image](/assets/img/ros/man_6_4.png)
+![image](../../assets/img/ros/man_6_4.png)
 
 Now drive your robot around and observe as new parts of map are added,
 continue until all places are explored. Final map should look like
 below:
 
-![image](/assets/img/ros/man_6_5.png)
+![image](../../assets/img/ros/man_6_5.png)
 
 ## Summary ##
 

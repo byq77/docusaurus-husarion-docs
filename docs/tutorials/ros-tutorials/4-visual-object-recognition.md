@@ -1,13 +1,8 @@
 ---
-title: '4 Visual object recognition'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 4
+title: Visual object recognition
+sidebar_label: 4. Visual object recognition
+id: 4-visual-object-recognition
 ---
-
-# Visual object recognition #
 
 ## Introduction ##
 
@@ -45,7 +40,7 @@ and it will use less CPU making interface more responsive.
 
 You can use below `launch` file:
 
-``` launch
+```
 <launch>
 
     <arg name="use_rosbot" default="true"/>
@@ -89,7 +84,7 @@ To place objects in front of camera using Gazebo, you can use buttons **Translat
 After launching the `find_object_2d` node with properly adjusted image
 topic, new window should appear:
 
-![image](/assets/img/ros/man_4_1.jpg)
+![image](../../assets/img/ros/man_4_1.jpg)
 
 On the left side of the window there are thumbnails of saved images
 (should be empty at first run). Application main window contains camera
@@ -98,24 +93,24 @@ view. Yellow circles on the image are marking extracted image features.
 To begin teaching process choose from the main toolbar **`Edit`**
 → **`Add object from scene...`.** New window will appear:
 
-![image](/assets/img/ros/man_4_2.jpg)
+![image](../../assets/img/ros/man_4_2.jpg)
 
 Now move the object and camera in order to cover as many features of
 the object as possible. While doing that try not to catch object surroundings. When it’s
 done, click **`Take picture`**.
 
-![image](/assets/img/ros/man_4_3.jpg)
+![image](../../assets/img/ros/man_4_3.jpg)
 
 In next view click **`Select region`** and select only that part of
 taken picture, that covers desired object and click **`Next`**.
 
-![image](/assets/img/ros/man_4_4.jpg)
+![image](../../assets/img/ros/man_4_4.jpg)
 
 You will get confirmation of features extracted from selected image
 area. If presented image is in accordance with what you selected,
 click **`End`**
 
-![image](/assets/img/ros/man_4_5.jpg)
+![image](../../assets/img/ros/man_4_5.jpg)
 
 You should see new thumbnail in the left panel. Notice the number outside of
 parentheses on the left of the image, this is the object ID.
@@ -123,9 +118,9 @@ parentheses on the left of the image, this is the object ID.
 Now you can add some more objects to be recognized. Remember their IDs, you
 will need them later:
 
-![image](/assets/img/ros/man_4_6.jpg)
+![image](../../assets/img/ros/man_4_6.jpg)
 
-![image](/assets/img/ros/man_4_7.jpg)
+![image](../../assets/img/ros/man_4_7.jpg)
 
 When you have enough objects in the database choose from the main toolbar
 **`File`** → **`Save objects...`** and choose a folder to

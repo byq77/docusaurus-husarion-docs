@@ -1,13 +1,8 @@
 ---
-title: '2 Creating nodes'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 2
+title: Creating nodes
+sidebar_label: 2. Creating nodes 
+id: 2-creating-nodes
 ---
-
-# Creating nodes #
 
 ## Workspace setup ##
 
@@ -39,7 +34,7 @@ and compile it:
 
 After this command you should get output like this:
 
-![image](/assets/img/ros/man_2_1.png)
+![image](../../assets/img/ros/man_2_1.png)
 
 And it should end with:
 
@@ -77,12 +72,12 @@ C++.
 
 After typing in this command you should get output like this:
 
-![image](/assets/img/ros/man_2_2.png)
+![image](../../assets/img/ros/man_2_2.png)
 
 This will create folder named `tutorial_pkg` and some files in it. Your
 workspace file structure should now look like like below:
 
-![image](/assets/img/ros/man_2_1a.png)
+![image](../../assets/img/ros/man_2_1a.png)
 
 Created files are:
 
@@ -212,7 +207,7 @@ with command `catkin_make`:
  
 You should get output like this:
 
-![image](/assets/img/ros/man_2_3.png)
+![image](../../assets/img/ros/man_2_3.png)
 
 ### Running your node ###
 
@@ -855,7 +850,7 @@ of `rosservice` is analogical to `rostopic`. To call service type:
 
 As a response you should get something like this:
 
-![image](/assets/img/ros/man_2_7.png)
+![image](../../assets/img/ros/man_2_7.png)
 
 ## Message types ##
 

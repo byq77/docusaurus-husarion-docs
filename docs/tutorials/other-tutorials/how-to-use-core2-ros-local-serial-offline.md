@@ -1,13 +1,8 @@
 ---
-title: 'How to use CORE2-ROS local serial offline'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-page: 'Tutorials'
-order: 3
+title: How to use CORE2-ROS local serial offline
+sidebar_label: 3. How to use CORE2-ROS local serial offline
+id: how-to-use-core2-ros-local-serial-offline
 ---
-
-# How to use CORE2-ROS local serial offline #
 
 Local serial is an UART communication between CORE2 and SBC in CORE2-ROS. By default, this serial interface is used for communication with Husarion Cloud and allows you to use all functionalities of Cloud. If you don't want the connection with cloud, or just need this serial interface for another purposes, you can change its behavior. In this short tutorial we will show you how to disable the communication with Cloud.
 

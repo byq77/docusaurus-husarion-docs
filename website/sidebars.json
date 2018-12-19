@@ -1,5 +1,5 @@
 {
-  "docs": {
+  "docs-tutorials": {
     "Tutorials": [
       "tutorials/index",
       {
@@ -12,14 +12,21 @@
           "tutorials/howtostart/telepresence-robot-kit---quick-start",
           "tutorials/howtostart/using-third-party-modules",
           "tutorials/howtostart/rosbot---quick-start"
-          
         ]
       },
       {
         "type": "subcategory",
         "label": "ROS tutorials",
         "ids": [
-          "doc2"
+          "tutorials/ros-tutorials/1-ros-introduction",
+          "tutorials/ros-tutorials/2-creating-nodes",
+          "tutorials/ros-tutorials/3-simple-kinematics-for-mobile-robot",
+          "tutorials/ros-tutorials/4-visual-object-recognition",
+          "tutorials/ros-tutorials/5-running-ros-on-multiple-machines",
+          "tutorials/ros-tutorials/6-slam-navigation",
+          "tutorials/ros-tutorials/7-path-planning",
+          "tutorials/ros-tutorials/8-unknown-environment-exploration",
+          "tutorials/ros-tutorials/9-object-search"
         ]
       },
       {
@@ -32,11 +39,17 @@
       {
         "type": "subcategory",
         "label": "Other tutorials",
-        "ids": []
+        "ids": [
+          "tutorials/other-tutorials/hframework-library-development",
+          "tutorials/other-tutorials/offline-development-tools",
+          "tutorials/other-tutorials/how-to-use-core2-ros-local-serial-offline",
+          "tutorials/other-tutorials/run-ros-tutorials-using-aws-robomaker"
+
+        ]
       }
     ]
   },
-  "docs-other": {
+  "docs-manuals": {
     "First Category": [
       "doc4",
       "doc5"

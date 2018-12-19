@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Husarion Docs', // Title for your website.
-  tagline: "Official Husarion's product docummentation",
+  title: 'Documentation', // Title for your website.
+  tagline: "The official documentation",
   // url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -43,8 +43,8 @@ const siteConfig = {
     {doc: 'tutorials/index', label: 'Tutorials'},
     {doc: 'doc4', label: 'Manuals'},
     {doc: 'doc4', label: 'Software'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {href: 'https://husarion.com/downloads/', label: 'Downloads'},
+    {href: 'https://community.husarion.com/', label: 'Community'},
     {search: true}
   ],
 

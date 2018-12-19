@@ -37,7 +37,8 @@ class HomeSplash extends React.Component {
 
     const ProjectTitle = () => (
       <h2 className="projectTitle">
-        {siteConfig.title}
+      <img src={`${baseUrl}img/logo_husarion_sd.png`} width="150"/>
+        
         <small>{siteConfig.tagline}</small>
       </h2>
     );
@@ -60,13 +61,12 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/logo_husarion_sd.png`} />
+        {/* <Logo img_src={`${baseUrl}img/logo_husarion_sd.png`} /> */}
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href={docUrl('tutorials/howtostart/run-your-first-program')}>Getting Started</Button>
+            <Button href={docUrl('tutorials/ros-tutorials/1-ros-introduction')}>ROS Tutorials</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -142,19 +142,25 @@ class Index extends React.Component {
     );
 
     const Features = () => (
-      <Block layout="fourColumn">
+      <Block layout="threeColumn">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/logo_husarion_sd.png`,
+            content: 'Take your robotics skills to the next level by learning how to use Robot Operating System in your projects.',
+            image: `${baseUrl}img/feature_ros.png`,
             imageAlign: 'top',
-            title: 'Feature One',
+            title: 'ROS Tutorials',
           },
           {
             content: 'The content of my second feature',
             image: `${baseUrl}img/logo_husarion_sd.png`,
             imageAlign: 'top',
             title: 'Feature Two',
+          },
+          {
+            content: 'This is the content of my feature',
+            image: `${baseUrl}img/logo_husarion_sd.png`,
+            imageAlign: 'top',
+            title: 'Feature Three',
           },
         ]}
       </Block>
@@ -194,8 +200,8 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
-          {/* <LearnHow />
+          {/* <FeatureCallout />
+          <LearnHow />
           <TryOut />
           <Description />
           <Showcase /> */}
