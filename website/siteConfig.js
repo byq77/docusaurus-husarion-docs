@@ -21,14 +21,14 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Documentation', // Title for your website.
+  title: 'Husarion Docs', // Title for your website.
   tagline: "The official documentation",
   // url: 'https://your-docusaurus-test-site.com', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  baseUrl: '/docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   url: 'https://byq77.github.io',
   baseUrl: '/docusaurus-husarion-docs/',
-  disableHeaderTitle: true,
+  // disableHeaderTitle: true,
   disableTitleTagline: true,
   // docsUrl: '', // remove /docs/ from URL'
   // Used for publishing and more
@@ -41,17 +41,18 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'tutorials/index', label: 'Tutorials'},
-    {doc: 'doc4', label: 'Manuals'},
+    {doc: 'manuals/index', label: 'Manuals'},
     {doc: 'doc4', label: 'Software'},
-    {href: 'https://husarion.com/downloads/', label: 'Downloads'},
-    {href: 'https://community.husarion.com/', label: 'Community'},
-    {search: true}
+    {href: 'https://husarion.com/downloads/', label: 'Downloads', external: true},
+    {href: 'https://community.husarion.com/', label: 'Community', external: true},
+  {href: 'https://cloud.husarion.com/', label: 'Log In', external: true}
+    // {search: true}
   ],
 
   // If you have users set above, you add it here:
   users,
   /* path to images for header/footer */
-  headerIcon: 'img/husarion_logo_white.svg',
+  headerIcon: '',
   footerIcon: 'img/husarion_logo_white.svg',
   favicon: 'img/favicon.ico',
 
@@ -75,11 +76,11 @@ const siteConfig = {
   },
   */
 
-  algolia: {
-    apiKey: 'my-api-key',
-    indexName: 'my-index-name',
-    algoliaOptions: {} // Optional, if provided by Algolia
-  },
+  // algolia: {
+  //   apiKey: 'my-api-key',
+  //   indexName: 'my-index-name',
+  //   algoliaOptions: {} // Optional, if provided by Algolia
+  // },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Husarion`,
@@ -92,11 +93,17 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
     'https://code.jquery.com/jquery-3.3.1.slim.min.js',
+    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js',
     'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js',
     'https://buttons.github.io/buttons.js',
     'https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js',
     'https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js',
   ],
+
+  stylesheets: [
+    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css'
+  ],
+
   scrollToTop: true,
   scrollToTopOptions: {
     diameter: 56, // px

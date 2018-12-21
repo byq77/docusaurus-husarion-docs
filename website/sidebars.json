@@ -50,9 +50,9 @@
     ]
   },
   "docs-manuals": {
-    "First Category": [
-      "doc4",
-      "doc5"
+    "Manuals": [
+      "manuals/index",
+      "manuals/core2"
     ]
   }
 }

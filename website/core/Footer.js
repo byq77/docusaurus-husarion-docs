@@ -37,30 +37,29 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Documentation</h5>
-            <a href={this.docUrl('tutorials', this.props.language)}>
+            <a href={this.docUrl('tutorials')}>
               Tutorials
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
+            <a href={this.docUrl('manuals')}>
               Manuals
             </a>
-            <a href="https://husarion.com/core2/api_reference/classes.html">
+            <a 
+            href="https://husarion.com/core2/api_reference/classes.html"
+            target="_blank"
+            rel="noreferrer noopener">
               hFramework API Reference
             </a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
+              href="https://community.husarion.com/"
               target="_blank"
               rel="noreferrer noopener">
-              Stack Overflow
+              Community forum
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/husarion"
               target="_blank"
               rel="noreferrer noopener">
               Twitter
@@ -68,18 +67,24 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count="true"
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
-            </a>
+            <a 
+              href="https://husarion.com/"              
+              target="_blank"
+              rel="noreferrer noopener">
+              Home page
+              </a>
+            <a 
+              href="https://medium.com/husarion-blog"              
+              target="_blank"
+              rel="noreferrer noopener">
+              Blog
+              </a>
+            <a 
+              href="https://github.com/husarion"              
+              target="_blank"
+              rel="noreferrer noopener">
+              GitHub
+              </a>
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>

@@ -16,58 +16,51 @@ positions.
 
 For definition of SLAM problem we use given values (1,2) and expected values (3,4):
 
-<div>
-<p>1.  Robot control </p>
-	<table style="border: solid 0px black;" width="100%" cellspacing="0" cellpadding="0">
-	    <tr>
-		<td><center><i>u<sub>{1:t}</sub> = { u<sub>1</sub>, u<sub>2</sub>, u<sub>3</sub>, ..., u<sub>t</sub>}</i></center></td>
-		<td width="60">(1)</td>
-	    </tr>
-	</table>
-</div>
 
-<div>
-2.  Observations
-	<table style="border: 0px;" width="100%" cellspacing="0" cellpadding="0">
+<p>1.  Robot control </p>
+	<table class="ros-tutorials">
+    <tbody >
 	    <tr>
-		<td><center><i>z<sub>{1:t}</sub> = { z<sub>1</sub>, z<sub>2</sub>, z<sub>3</sub>, ..., z<sub>t</sub>}</i></center></td>
+		<td width="100%"><i>u<sub>{1:t}</sub> = { u<sub>1</sub>, u<sub>2</sub>, u<sub>3</sub>, ..., u<sub>t</sub>}</i></td>
+		<td width="60" >(1)</td>
+	    </tr>
+    <tbody>
+	</table>
+
+<p>2.  Observations </p>
+	<table class="ros-tutorials">
+	    <tr>
+		<td width="100%"><i>z<sub>{1:t}</sub> = { z<sub>1</sub>, z<sub>2</sub>, z<sub>3</sub>, ..., z<sub>t</sub>}</i></td>
 		<td width="60">(2)</td>
 	    </tr>
 	</table>
-</div>
 
 
-<div>
-1.  Environment map
-	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<p>3.  Environment map</p>
+	<table class="ros-tutorials">
 	    <tr>
-		<td><center><i>m</i></center></td>
+		<td width="100%"><i>m</i></td>
 		<td width="60">(3)</td>
 	    </tr>
 	</table>
-</div>
  
 
-<div>
-4.  Robot trajectory
-	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<p>4.  Robot trajectory</p>
+	<table class="ros-tutorials">
 	    <tr>
-		<td><center><i>x<sub>{1:t}</sub> = { x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>t</sub>}</i></center></td>
+		<td width="100%"><i>x<sub>{1:t}</sub> = { x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>t</sub>}</i></td>
 		<td width="60">(4)</td>
 	    </tr>
 	</table>
-</div>
 
 
-<div>
-5. Robot trajectory estimates are determined with:
-	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<p>6. Robot trajectory estimates are determined with:</p>
+	<table class="ros-tutorials">
 	    <tr>
-		<td><center><i>p(x<sub>0:t</sub>,m|z<sub>1:t</sub>, u<sub>1:t</sub>)</i></center></td>
+		<td width="100%"><i>p(x<sub>0:t</sub>,m|z<sub>1:t</sub>, u<sub>1:t</sub>)</i></td>
 		<td width="60">(5)</td>
 	    </tr>
 	</table>
-</div>
  
 ## Coordinate frames tracking ##
 

@@ -29,3 +29,83 @@ ul.toc-headings > li {
     font-weight: bold;
     color: #d0112b
 }
+
+.imageAlignTop .blockImage {
+    margin-bottom: 20px;
+    max-width: 150px;
+}
+
+.ros-tutorials > tbody > tr > td {
+    text-align: center;
+    border: 0;
+}
+
+.ros-tutorials > tbody > tr {
+    text-align: center;
+    border: 0;
+}
+
+.ros-tutorials > tbody > th {
+    text-align: center;
+    border: 0;
+}
+
+.text_table  {
+    display: table;
+    margin: 0 auto;
+    width: auto;   
+}
+
+.text_table > tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.text_table > tbody > tr{
+    background-color: #fff;
+    border-color: rgb(173, 166, 166);
+}
+
+.text_table > tbody > tr > td{
+    border: 0;
+    vertical-align: middle;
+}
+
+.text_table > tbody > tr > th{
+    text-align: center;
+    vertical-align: middle;
+    border-width: 2px 0 2px 0;
+    border-color: rgb(173, 166, 166);
+}
+
+.img-container img{
+    max-height: 300px;
+}
+
+.img-container {
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+
+.img-container span{
+    display: block;
+    padding: 0 5px;
+    text-align: center;
+}
+
+  
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }

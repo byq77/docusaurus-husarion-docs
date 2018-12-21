@@ -37,8 +37,11 @@ class HomeSplash extends React.Component {
 
     const ProjectTitle = () => (
       <h2 className="projectTitle">
+      <a href="https://husarion.com/"             
+         target="_blank"
+         rel="noreferrer noopener">
       <img src={`${baseUrl}img/logo_husarion_sd.png`} width="150"/>
-        
+      </a>
         <small>{siteConfig.tagline}</small>
       </h2>
     );
@@ -64,10 +67,10 @@ class HomeSplash extends React.Component {
         {/* <Logo img_src={`${baseUrl}img/logo_husarion_sd.png`} /> */}
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
+          {/* <PromoSection>
             <Button href={docUrl('tutorials/howtostart/run-your-first-program')}>Getting Started</Button>
             <Button href={docUrl('tutorials/ros-tutorials/1-ros-introduction')}>ROS Tutorials</Button>
-          </PromoSection>
+          </PromoSection> */}
         </div>
       </SplashContainer>
     );
@@ -145,23 +148,26 @@ class Index extends React.Component {
       <Block layout="threeColumn">
         {[
           {
-            content: 'Take your robotics skills to the next level by learning how to use Robot Operating System in your projects.',
+            content: 'Learning how to incorporate Robot Operating System into your projects.',
             image: `${baseUrl}img/feature_ros.png`,
             imageAlign: 'top',
+            imageLink: `${baseUrl}docs/tutorials/ros-tutorials/1-ros-introduction`,
             title: 'ROS Tutorials',
           },
           {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/logo_husarion_sd.png`,
+            content: 'Learn how to use Husarion products like CORE2 and ROSbot.',
+            image: `${baseUrl}img/feature_manuals.png`,
             imageAlign: 'top',
-            title: 'Feature Two',
+            imageLink: `${baseUrl}docs/manuals`,
+            title: 'Hardware Manuals',
           },
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/logo_husarion_sd.png`,
+            content: 'Use Husarion Cloud and IDE to program and control your devices.',
+            image: `${baseUrl}img/feature_cloud.jpg`,
             imageAlign: 'top',
-            title: 'Feature Three',
-          },
+            imageLink: `https://cloud.husarion.com/`,
+            title: 'Husarion Cloud',
+          }
         ]}
       </Block>
     );
@@ -199,12 +205,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
-          {/* <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase /> */}
+        <Features />
         </div>
       </div>
     );
