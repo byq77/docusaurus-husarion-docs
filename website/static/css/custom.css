@@ -72,22 +72,28 @@ ul.toc-headings > li {
     vertical-align: middle;
 }
 
-.text_table > tbody > tr > th{
+.text_table > tbody  tr  th{
     text-align: center;
     vertical-align: middle;
-    border-width: 2px 0 2px 0;
+    border-width: 2pt 0 2pt 0;
     border-color: rgb(173, 166, 166);
-}
-
-.img-container img{
-    max-height: 300px;
 }
 
 .img-container {
     float: left;
     width: 50%;
     padding: 5px;
+    position: relative;
+    bottom: 0px;
   }
+
+.img-container.w3 {
+    width: 33.3%;
+}
+
+  .img-container img{
+      max-height: 300px;
+}
 
 .img-container span{
     display: block;
@@ -95,7 +101,6 @@ ul.toc-headings > li {
     text-align: center;
 }
 
-  
 .clearfix::after {
     content: "";
     clear: both;
@@ -108,4 +113,8 @@ ul.toc-headings > li {
   
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .h300 img {
+    max-height: 300px;
   }

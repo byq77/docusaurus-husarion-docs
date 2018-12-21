@@ -52,7 +52,17 @@
   "docs-manuals": {
     "Manuals": [
       "manuals/index",
-      "manuals/core2"
+      "manuals/core2",
+      "manuals/core2mini",
+      "manuals/telepresence",
+      "manuals/rosbot-manual",
+      "manuals/husarion-add-ons"
     ]
-  }
+    },
+  "docs-software":
+  {
+    "Software":[
+      "software/hframework"
+    ]
+    }
 }

@@ -1,13 +1,9 @@
 ---
-title: 'ROSbot manual'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-order: 3
-page: 'Manuals'
-onepager: true
+title: ROSbot manual
+id: rosbot-manual
 ---
-# Overview #
+
+## Overview ##
 
 ROSbot is an autonomous robot platform based on Husarion CORE2-ROS robot controller available in two version: 2.0 and 2.0 PRO. 
 
@@ -26,24 +22,50 @@ In ROSbot 2.0:
 - CORE2-ROS controller with <a href="https://www.asus.com/pl/Single-Board-Computer/Tinker-Board/">Asus Tinker Board</a>
 - RPLIDAR A2 laser scanner
 
-<div class="gallery h300">
-
-![Front](/assets/img/ROSbot_manual/colour_front.jpg "Front")
-![Back](/assets/img/ROSbot_manual/colour_back.jpg "Back")
-![Perspective](/assets/img/ROSbot_manual/colour_perspective.jpg "Perspective")
-
+<div class="clearfix">
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/colour_front.jpg" data-fancybox="gallery" data-caption="Front">
+    <img src="../assets/img/ROSbot_manual/colour_front_thumb.jpg" alt="CORE2mini board" class="hover-shadow"/>
+    </a>
+    <span>Front</span>
+</div>
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/colour_back.jpg" data-fancybox="gallery" data-caption="Back">
+    <img src="../assets/img/ROSbot_manual/colour_back_thumb.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Back</span>
+</div> 
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/colour_perspective.jpg" data-fancybox="gallery" data-caption="Perspective">
+    <img src="../assets/img/ROSbot_manual/colour_perspective_thumb.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Perspective</span>
+</div> 
 </div>
 
 In ROSbot 2.0 PRO:
 - CORE2-ROS controller with <a href="http://www.up-board.org/up/">UpBoard UP</a> 
 - RPLIDAR A3 laser scanner
 
-<div class="gallery h300">
-
-![Front](/assets/img/ROSbot_manual/pro_colour_front.jpg "Front")
-![Back](/assets/img/ROSbot_manual/pro_colour_back.jpg "Back")
-![Perspective](/assets/img/ROSbot_manual/pro_colour_perspective.jpg "Perspective")
-
+<div class="clearfix">
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/pro_colour_front.jpg" data-fancybox="gallery" data-caption="Front">
+    <img src="../assets/img/ROSbot_manual/pro_colour_front_thumb.jpg" alt="CORE2mini board" class="hover-shadow"/>
+    </a>
+    <span>Front</span>
+</div>
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/pro_colour_back.jpg" data-fancybox="gallery" data-caption="Back">
+    <img src="../assets/img/ROSbot_manual/pro_colour_back_thumb.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Back</span>
+</div> 
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/pro_colour_perspective.jpg" data-fancybox="gallery" data-caption="Perspective">
+    <img src="../assets/img/ROSbot_manual/pro_colour_perspective_thumb.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Perspective</span>
+</div> 
 </div>
 
 You can use your ROSbot offline however we recommend connecting to Husarion Cloud as it gives you access to a lot of additional functionalities like remote management and firmware updates.
@@ -52,7 +74,7 @@ If you do not own ROSbot yet, you can purchase it <a href="https://store.husario
 
 You can also test the performance of ROSbot using our simulation model in Gazebo environment. It is available here, at our <a href="https://github.com/husarion/rosbot_description">GitHub page</a>.
 
-![ROSbot gazebo](/assets/img/ROSbot_manual/rosbot_gazebo.png "ROSbot gazebo")
+![ROSbot gazebo](../assets/img/ROSbot_manual/rosbot_gazebo.png "ROSbot gazebo")
 
 You can find free <b>ROS tutorials</b> dedicated for ROSbot under this <a href="https://husarion.com/tutorials/ros-tutorials/1-ros-introduction/">link</a>. They will guide you through different aspects of programming autonomous vehicles in ROS
 
@@ -60,7 +82,7 @@ You can find free <b>ROS tutorials</b> dedicated for ROSbot under this <a href="
 
 ## Specification ##
 
-<table>
+<table class="text_table">
     <tr>
        <th>Attribute</th>
        <th>Description</th>
@@ -109,13 +131,13 @@ You can find free <b>ROS tutorials</b> dedicated for ROSbot under this <a href="
 
 ## Components ##
 
-![Side scheme](/assets/img/ROSbot_manual/scheme_side.png "Side scheme")
+![Side scheme](../assets/img/ROSbot_manual/scheme_side.png "Side scheme")
 
-![Back](/assets/img/ROSbot_manual/colour_back.jpg "Scheme back")
+![Back](../assets/img/ROSbot_manual/colour_back.jpg "Scheme back")
 
 ### Components description ###
 
-<table>
+<table class="text_table">
     <tr>
        <th>Component</th>
        <th>Quantity</th>
@@ -161,9 +183,13 @@ You can find free <b>ROS tutorials</b> dedicated for ROSbot under this <a href="
     </tr>	
 </table>
 
-In ROSbot 2.0:
 
-<table>
+
+**In ROSbot 2.0:**
+
+
+
+<table class="text_table">
     <tr>
        <th>Component</th>
        <th>Quantity</th>
@@ -172,7 +198,7 @@ In ROSbot 2.0:
     <tr>
         <td>CORE2-ROS</td>
         <td>1</td>
-        <td>Advanced version of CORE2 with an ASUS Tinker board computer. CORE2 real-time controller is based on STM32F407 microcontroller. The SBC runs on Ubuntu-based OS, customized to use ROS, <a href="https://husarion.com/core2/">more details</a>.</td>
+        <td>Advanced version of CORE2 with an ASUS Tinker board computer. CORE2 real-time controller is based on STM32F407 microcontroller. The SBC runs on Ubuntu-based OS, customized to use ROS.</td>
     </tr>
     <tr>
         <td>LIDAR</td>
@@ -181,9 +207,13 @@ In ROSbot 2.0:
     </tr>
 </table>
 
-In ROSbot 2.0 PRO:
 
-<table>
+
+**In ROSbot 2.0 PRO:**
+
+
+
+<table class="text_table">
     <tr>
        <th>Component</th>
        <th>Quantity</th>
@@ -192,7 +222,7 @@ In ROSbot 2.0 PRO:
     <tr>
         <td>CORE2-ROS</td>
         <td>1</td>
-        <td>Advanced version of CORE2 with an Up Board computer. CORE2 real-time controller is based on STM32F407 microcontroller. The SBC runs on Ubuntu-based OS, customized to use ROS, <a href="https://husarion.com/core2/">more details</a>.</td>
+        <td>Advanced version of CORE2 with an Up Board computer. CORE2 real-time controller is based on STM32F407 microcontroller. The SBC runs on Ubuntu-based OS, customized to use ROS.</td>
     </tr>
     <tr>
         <td>LIDAR</td>
@@ -203,9 +233,9 @@ In ROSbot 2.0 PRO:
 
 ## Rear panel description ##
 
-![Rear panel description](/assets/img/ROSbot_manual/ROSbot2_rear_panel_v1.1.png "Rear panel description")
+![Rear panel description](../assets/img/ROSbot_manual/ROSbot2_rear_panel_v1.1.png "Rear panel description")
 
-<table>
+<table class="text_table">
     <tr>
        <th>Component</th>
        <th>Quantity</th>
@@ -234,7 +264,7 @@ In ROSbot 2.0 PRO:
     <tr>
         <td>LEDs</td>
         <td>6</td>
-        <td>LR1(yellow), LR2(blue), L1(red), L2(green), L3(green), PWR(red), more details <a href="https://husarion.com/core2/manuals/core2/#hardware-leds">here</a>.</td>
+        <td>LR1(yellow), LR2(blue), L1(red), L2(green), L3(green), PWR(red), more details <a href="core2#leds-and-buttons">here</a>.</td>
     </tr>
     <tr>
         <td>reset button</td>
@@ -254,7 +284,7 @@ In ROSbot 2.0 PRO:
     <tr>
         <td>Outputs for servo</td>
         <td>6</td>
-        <td>Servo output with PWM, more details <a href="https://husarion.com/core2/manuals/core2/#hardware-hservo">here</a>.</td>
+        <td>Servo output with PWM, more details <a href="core2#hservo">here</a>.</td>
     </tr>
     <tr>
         <td>USB serial</td>
@@ -278,12 +308,12 @@ In ROSbot 2.0 PRO:
     <tr>
         <td>hExt</td>
         <td>1</td>
-        <td>12xGPIO, 7x ADC, SPI, I2C, UART, more details <a href="https://husarion.com/core2/manuals/core2/#hardware-hext">here</a>.     </td>
+        <td>12xGPIO, 7x ADC, SPI, I2C, UART, more details <a href="core2#hext">here</a>.     </td>
     </tr>
     <tr>
         <td>hSens</td>
         <td>1</td>
-        <td>4 xGPIO, ADC, UART, more details <a href="https://husarion.com/core2/manuals/core2/#hardware-hsensor">here</a>.</td>
+        <td>4 xGPIO, ADC, UART, more details <a href="core2#hsensor">here</a>.</td>
     </tr>
 </table>
 
@@ -291,9 +321,7 @@ In ROSbot 2.0 PRO:
 
 ROSbot is powered from an internal, rechargeable Li-Ion battery pack that contains 3 Li-Ion cells, connected in series. This type of connection is called “3S”. The schematic below explains how the cells are wired together and with the charging connector (on ROSbot side).
 
-<div class="image center h300">
-![Battery connections](/assets/img/ROSbot_manual/batt_connection.png "Battery connections")
-</div>
+<img width=50% src="../assets/img/ROSbot_manual/batt_connection.png" alt="Battery connections" />
 
 The BAT+ and BAT- are the power connections and the “bal Bxx” wires are used to monitor the voltage on each cell. It is strongly recommended to keep equal voltages on each cell during the charging process. The charger included with ROSbot can charge batteries in the described way and, thanks to that, the long life of the battery set is possible.
 
@@ -308,10 +336,9 @@ Please make sure that the user firmware always contains the function that monito
 
 ## Charging ROSbot ##
 
-<div class="image center">
-![Charging kit](/assets/img/ROSbot_manual/charger+cables+PSU.jpg "Charging kit")
-</div>
-
+<a href="../assets/img/ROSbot_manual/charger+cables+PSU.jpg" data-fancybox data-caption="Charging kit">
+<img src="../assets/img/ROSbot_manual/charger+cables+PSU.jpg" alt="Charging kit" width="50%" />
+</a>
 The ROSbot kit contains the Redox Beta charger. It is an universal charger, suitable for charging NiCd, NiMH, Li-Po, Li-Fe, Li-Ion and Pb (AGM, VRLA) batteries. ROSbot shall be charged using an included charger and cable.
 
 Charger kit includes:
@@ -328,9 +355,7 @@ Charger kit includes:
 6. Press and hold [Start] for 2 seconds. The charger should now ask for confirmation. Press [Start] again. The charging process should begin now.
 7. When the charging will be finished (after about 3 hours), the charger will generate a loud “beep” sound and will finish charging at the same time.
 
-<div class="image center h100">
-![Charge config](/assets/img/ROSbot_manual/charge-config.png "Charge config")
-</div>
+![Charge config](../assets/img/ROSbot_manual/charge-config.png "Charge config")
 
 If you need more information about charging, please read the [Charging manual for ROSbot](https://files.husarion.com/docs2/Charging%20manual%20for%20ROSbot.pdf) in PDF format.
 
@@ -340,21 +365,19 @@ If you need more information about charging, please read the [Charging manual fo
 - In case you need to replace batteries, use only 18650 Li-Ion batteries, with the capacity in a range of 1800...3500mAh and with a protection circuit! Using unprotected batteries may result in serious injuries or fire.
 - Unplug charging connectors carefully. You shall not unplug the charger connectors holding the wires. The balancer connection on ROSbot side has a latching tab (see photo below) that must be pressed before unplugging. On the charger side there is no latching tab but you should also unplug this connector holding the white plug.
 
-<div class="image center h200">
-![Latched connector](/assets/img/ROSbot_manual/charger-connector.jpg "Latched connector")
-</div>
+![Latched connector](../assets/img/ROSbot_manual/charger-connector.jpg "Latched connector")
 
 ## Software ##
 
 Software for ROSbot can be divided into 2 parts:
- * A firmware that works on the real-time controller (CORE2) and can be developed and uploaded from [Husarion Cloud](https://cloud.husarion.com/) with WebIDE. It can also be developed offline using [Visual Studio Code IDE](https://husarion.com/core2/tutorials/howtostart/offline-development-tools/).
+ * A firmware that works on the real-time controller (CORE2) and can be developed and uploaded from [Husarion Cloud](https://cloud.husarion.com/) with WebIDE. It can also be developed offline using [Visual Studio Code IDE](../tutorials/other-tutorials/offline-development-tools).
  * OS based on Ubuntu 16.04, which runs on the SBC (ASUS Tinker Board) and contains all components needed to start working with ROS immediately. The microSD card with OS is included with each ROSbot. The OS has been modified to make the file system insensitive to sudden power cuts.
  
  In some cases you will need to flash the OS image to the microSD card once again:
  - in case of accidential damage of the system,
  - to update the OS (it can be udpated remotely, but flashing the microSD card can be easier sometimes),
  - to clear all user changes and restore factory settings.
- To do that, you have to disassembly the top cover, unscrew the 4 screws on the CORE2 corners and carefully carry up CORE2 with SBC. Then you can change the microSD card and flash the OS. You can find the image and flash manual [here](https://husarion.com/core2/manuals/core2/#hardware-os-image-for-raspberrypi-tinkerboard). If you want to replace the included card, remember that you need to use at least 16 GB capacity and 10 speed class micro SD card. 
+ To do that, you have to disassembly the top cover, unscrew the 4 screws on the CORE2 corners and carefully carry up CORE2 with SBC. Then you can change the microSD card and flash the OS. You can find the image and flash manual [here](core2#os-image-for-raspberrypi-tinkerboard). If you want to replace the included card, remember that you need to use at least 16 GB capacity and 10 speed class micro SD card. 
 
 # First steps #
 
@@ -370,7 +393,7 @@ Note: The app will ask you to hold hCfg button on CORE2 and to watch LR1, LR2 LE
 ## ROS tutorials ##
 
 ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more. It's very powerful and 
-functional tool dedicated to design robots. We created the set of [ROS tutorials dedicated for this platform](https://husarion.com/core2/tutorials/ros-tutorials/1-ros-introduction/ "ROS tutorials dedicated for this platform") to make it easier to familiarize yourself with these frameworks. 
+functional tool dedicated to design robots. We created the set of [ROS tutorials dedicated for this platform](../tutorials/ros-tutorials/1-ros-introduction/ "ROS tutorials dedicated for this platform") to make it easier to familiarize yourself with these frameworks. 
 
 ## Configuring ROSbot to work with 5GHz WiFi. ##
 
@@ -425,7 +448,7 @@ All helpful documents and links in one place:
 
 * [ROSbot Safety Instructions](https://files.husarion.com/docs2/ROSbot_safety_instructions_1.0.pdf "ROSbot Safety Instructions") - important!
 * [Charging manual for ROSbot](https://files.husarion.com/docs2/Charging%20manual%20for%20ROSbot.pdf)
-* [ROS tutorials for ROSbot](https://husarion.com/tutorials/ros-tutorials/1-ros-introduction/)
+* [ROS tutorials for ROSbot](../tutorials/ros-tutorials/1-ros-introduction)
 * [ROSbot on ROS webpage](https://robots.ros.org/rosbot-2.0/)
 * [ROSbot on ROS Wiki](http://wiki.ros.org/Robots/ROSbot-2.0)
 * [URDF model of ROSbot - for Gazebo integrated with ROS](https://github.com/husarion/rosbot_description)

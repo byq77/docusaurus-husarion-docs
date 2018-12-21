@@ -42,7 +42,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'tutorials/index', label: 'Tutorials'},
     {doc: 'manuals/index', label: 'Manuals'},
-    {doc: 'doc4', label: 'Software'},
+    {doc: 'software/hframework', label: 'Software'},
     {href: 'https://husarion.com/downloads/', label: 'Downloads', external: true},
     {href: 'https://community.husarion.com/', label: 'Community', external: true},
   {href: 'https://cloud.husarion.com/', label: 'Log In', external: true}

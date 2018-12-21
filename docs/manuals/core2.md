@@ -1,31 +1,22 @@
 ---
-title: 'Hardware'
+title: CORE2 manual
 id: core2
 ---
-<p class="imglist">
-  <a href="https://source.unsplash.com/IvfoDk30JnI/1500x1000" data-fancybox data-caption="&lt;b&gt;Single photo&lt;/b&gt;&lt;br /&gt;Caption can contain &lt;em&gt;any&lt;/em&gt; HTML elements">
-    <img src="https://source.unsplash.com/IvfoDk30JnI/240x160" />
-  </a>
 
-  <a href="https://source.unsplash.com/0JYgd2QuMfw/1500x1000" data-fancybox data-caption="This image has a simple caption">
-    <img src="https://source.unsplash.com/0JYgd2QuMfw/240x160" />
-  </a>
-
-  <a href="https://source.unsplash.com/xAgvgQpYsf4/1500x1000" data-fancybox>
-    <img src="https://source.unsplash.com/xAgvgQpYsf4/240x160" />
-  </a>
-</p>
 <div class="clearfix">
 <div class="img-container">
-    <img src="../assets/img/core2-hardware/core2_top_small.jpg" alt="Appearance"/>
+    <a href="../assets/img/core2-hardware/core2_top_small.jpg" data-fancybox="gallery" data-caption="CORE2 board">
+    <img src="../assets/img/core2-hardware/core2_top_small.jpg" alt="CORE2 board" class="hover-shadow"/>
+    </a>
 </div>
 <div class="img-container">
-    <img src="../assets/img/core2-hardware/cheatsheet_small.jpg" alt="Pinout cheatsheet" class="hover-shadow"/>
-    <span>Pinout cheatsheet</span>
+    <a href="../assets/img/core2-hardware/cheatsheet_small.jpg" data-fancybox="gallery" data-caption="CORE2 pinout">
+    <img src="../assets/img/core2-hardware/cheatsheet_small.jpg" alt="CORE2 pinout" class="hover-shadow"/>
+    </a>
 </div> 
 </div>
 
-# Electrical specification #
+## Electrical specification
 
 <table class="text_table">
     <tr>
@@ -86,9 +77,9 @@ id: core2
 </table>
 
 
-# Ports description #
+## Ports description #
 
-## hSensor ##
+### hSensor 
 
 CORE2 is equipped with six hSensor ports (Shrouded Box Header: 2×3-Pin, 0.1" (2.54 mm) Male).
 
@@ -183,7 +174,7 @@ while (true) {
 	sys.delay(50);
 ```
 
-## hExt ##
+### hExt ###
 
 CORE2 is equipped with one hExt port (Shrouded Box Header: 2×10-Pin, 0.1" (2.54 mm) Male).
 
@@ -205,7 +196,7 @@ All interfaces are compatible with 3.3V CMOS logic. The A/D converter range is 0
 
 </div>
 
-### Pin functions ###
+##### Pin functions #####
 
 <table class="text_table">
   <tbody>
@@ -363,7 +354,7 @@ All interfaces are compatible with 3.3V CMOS logic. The A/D converter range is 0
 [comment]: <> (***Advice: use <mark>ctrl + SPACE</mark> after typing "software_name." to see methods in the web IDE.***)
 
 
-### Communication interfaces ###
+#### Communication interfaces ####
 
 <table class="text_table">
 <tbody>
@@ -391,7 +382,7 @@ All interfaces are compatible with 3.3V CMOS logic. The A/D converter range is 0
 </table>
 
 
-## hServo ##
+### hServo ###
 
 You can connect up to 6 servo motors directly to CORE2. Power supply is onboard thanks to integrated DC/DC converter with selectable voltage output (remeber that there is one power supply voltage for all servos).
 
@@ -438,7 +429,7 @@ while (1) {
 }
 ```
 
-## hMotor ##
+### hMotor ###
 CORE2 is equipped with four hMotor ports.
 
 The hMotor is intended to be used with a DC motor with encoder, but you don’t have to use the encoder interface if you have a standard DC motor. The hMotor interface is fully-compatible with LEGO® MINDSTORMS® sets (remeber that you have to use special adapter to use these sets).
@@ -554,7 +545,7 @@ Connecting a bipolar stepper motor is also possible. In this case, you need two 
 
 
 
-## hCAN ##
+### hCAN ###
 **Basics**
 
 The CAN (Controller Area Network) is the best way to expand your device with more than one CORE2 or with other modules with a CAN interface. When two or more COREs are connected with hCAN they are able to send commands via a real-time network. One CORE2 is not enough for your application? No problem! Use as many CORE2's as you need for your projects and connect one of them to the Internet - every command will be executed very quickly. One CORE2 can be connected to the Internet while the others take care of all the sensors and motors.<br>
@@ -603,7 +594,7 @@ If you need to connect more than two CORE2s, you can attach jumpers in only one 
 </tbody>
 </table>
 
-## DBG ##
+### DBG ###
 
 <div class="image center h300">
 
@@ -616,9 +607,10 @@ allows you not only to upload the code to the CORE2, but it is also a debugging 
 
 To use the DBG interface, you need an additional hardware programmer/debugger: ST-LINK/V2. You can find the original one here: [ST-LINK/V2](http://www.st.com/web/catalog/tools/FM146/CL1984/SC724/SS1677/PF251168)
 
-You also need to configure the offline development environment. You will find the instructions here: [Husarion SDK](https://wiki.husarion.com/howto:installation)
+You also need to configure the offline development environment. You will find the instructions here: [Husarion SDK](../software/hframework)
 
-## hSerial ##
+### hSerial ###
+
 The hSerial port is an USB device port with a standard micro B USB connector, but it's called "hSerial" because this port is connected to the serial port of the microcontroller. It is not the native USB port - it uses the FTDI® chip to connect the internal serial port to your computer or other USB host.
 
 The hSerial port can be used to:
@@ -627,7 +619,7 @@ The hSerial port can be used to:
 * other communication with any USB host device (FTDI driver is needed).
 
 CORE2 cannot be powered via the USB hSerial port!
-## USB host ##
+### USB host ###
 
 The USB host connector has two functions:
 * a full-speed, native USB 2.0 host port, that works with STM32F4 microcontroller (default),
@@ -654,8 +646,9 @@ supported by our libraries.
 The second function of this port is provided for more advanced users, because it
 needs soldering the twisted-pair wire from Raspberry Pi Zero board to the CORE2
 board. Thanks to that function, you are able to connect e.g. Wi-Fi dongle to the Raspberry
-Pi Zero without using the additional USB-OTG adapter. For more information see the
- chapter [Raspberry Pi configuration](#raspberry-pi-configuration).
+Pi Zero without using the additional USB-OTG adapter.
+<!-- For more information see the
+chapter [Raspberry Pi configuration](#raspberry-pi-configuration). -->
 
 The table below explains the jumpers functions.
 
@@ -719,14 +712,14 @@ The second table explains in easy way which configuration is for you:
 </tbody>
 </table>
 
-## hSD ##
+### hSD ###
 Just a connector for a standard microSD card. It uses one of the SPI interfaces available in the microcontroller. The rest is software.
 
-## LEDs and buttons ##
+### LEDs and buttons ###
 
 <div class="thumb w270 right">
 
-<img  width="80%" src="../assets/img/core2-hardware/leds.svg" alt="LEDs" />
+<img  width="50%" src="../assets/img/core2-hardware/leds.svg" alt="LEDs" />
 
 </div>
 
@@ -789,7 +782,7 @@ The CORE2 power supply input has overvoltage (>16V), reverse-polarity and overcu
 <tbody>
     <tr>
         <th>Voltage line name</th>
-        <th align="center">I max/th>
+        <th align="center">I max</th>
         <th>Available on port:</th>
         <th>Info</th>
     </tr>
@@ -973,9 +966,9 @@ Although the connector's name comes from Raspberry Pi, it is designed to be used
 and Raspberry. CORE2 comes without any connector soldered because the connector
 type depends on module for Internet connection you are going to use in your project.
 
-If your ESP32 or Raspberry Pi is not installed to CORE2 yet, see the instruction here:
+<!--If your ESP32 or Raspberry Pi is not installed to CORE2 yet, see the instruction here:
 [Assembling the ESP32 adapter](howtostart#preparing-hardware). This page also serves as the
-guide for connecting CORE2 with our cloud.
+guide for connecting CORE2 with our cloud. -->
 
 <div style="float: center;">
 <table class="text_table">
@@ -1065,7 +1058,7 @@ In this section you will find instructions on how to update CORE2 bootloader whe
 
 ## Updating CORE2 bootloader ##
 
-You need to have Visual Studio Code installed with Husarion extension. Please follow this guide if you haven't done this before: [VSCode installation](https://husarion.com/core2/tutorials/howtostart/offline-development-tools/#offline-development-tools-installation-guide) 
+You need to have Visual Studio Code installed with Husarion extension. Please follow this guide if you haven't done this before: [VSCode installation](../tutorials/other-tutorials/offline-development-tools#offline-development-tools-installation-guide) 
 1. Locate core2-flasher utility (YOUR_HOME_PATH/.vscode/extensions/husarion.husarion-VERSION/sdk/tools/YOUR_ARCH/core2-flasher).
 2. Download the bootloader [HEX file](https://files.husarion.com/bootloader/bootloader_1_0_0_core2.hex) to the folder with core2-flasher
 3. Connect CORE2 to PC via USB.
@@ -1110,7 +1103,7 @@ That's all, your ESP32 firmware is up-to-date.
 
 ### Updating OS ###
 
-1. [Login to your CORE2-ROS](https://husarion.com/core2/tutorials/ros-tutorials/1-ros-introduction/#1-ros-introduction-ros-and-core2-work-flow).
+1. [Login to your CORE2-ROS](../tutorials/ros-tutorials/1-ros-introduction#1-ros-introduction-ros-and-core2-work-flow).
 2. Execute in terminal: `apt-get update; apt-get dist-upgrade -y`
 
 ***
