@@ -1,0 +1,626 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>CORE2mini manual · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div class=&quot;clearfix&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="CORE2mini manual · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;div class=&quot;clearfix&quot;&gt;"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><h2 class="headerTitle">Husarion Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class="siteNavGroupActive"><a href="/docusaurus-husarion-docs/docs/manuals/" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/software/hframework" target="_self">Software</a></li><li class=""><a href="https://husarion.com/downloads/" target="_blank">Downloads</a></li><li class=""><a href="https://community.husarion.com/" target="_blank">Community</a></li><li class=""><a href="https://cloud.husarion.com/" target="_blank">Log In</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Manuals</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Manuals</h3><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/">About manuals</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/core2">CORE2 manual</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/core2mini">CORE2mini manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/telepresence">Telepresence robot kit manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/rosbot-manual">ROSbot manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/husarion-add-ons">Husarion add-ons</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">CORE2mini manual</h1></header><article><div><span><div class="clearfix">
+<div class="img-container">
+    <a href="../assets/img/core2mini/coremini.jpg" data-fancybox="gallery" data-caption="CORE2mini board">
+    <img src="../assets/img/core2mini/coremini.jpg" alt="CORE2mini board" class="hover-shadow"/>
+    </a>
+</div>
+<div class="img-container">
+    <a href="../assets/img/core2mini/scheme.jpg" data-fancybox="gallery" data-caption="CORE2mini pinout">
+    <img src="../assets/img/core2mini/scheme.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+</div> 
+</div>
+<h2><a class="anchor" aria-hidden="true" id="electrical-specification"></a><a href="#electrical-specification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Electrical specification</h2>
+<table class="text_table">
+    <tr>
+       <th>Interface</th>
+       <th>Description</th>
+       <th>Parameters</th>
+    </tr>
+    <tr>
+        <td>Power input</td>
+        <td>6.8-16V</td>
+        <td>70...2500mA current consumption, depends on external modules<br>standard 5.5/2.1 mm DC plug (centre-positive)</td>
+    </tr>
+    <tr>
+        <td>I/O ports</td>
+        <td>20</td>
+        <td>3.3V/5V tolerant GPIOs<br>series resistance is 330 ohms</td>
+    </tr>
+    <tr>
+        <td>ADC</td>
+        <td>3 channels</td>
+        <td>12-bit resolution</td>
+    </tr>
+    <tr>
+        <td>PWM</td>
+        <td>6 channels:<br/>
+        - 4x 3.3V<br/>
+        - 2x H-bridge output
+        </td>
+        <td>Frequency range for H-bridge: 1Hz...21khz (in 16 steps)<br/>
+            Period range for 3.3V outputs: 1...65535 us
+        </td>
+    </tr>
+    <tr>
+        <td>UART</td>
+        <td>2 channels</td>
+        <td>baudrate: 4800, 9600, 14400, 19200, 38400, 57600, 115200, 128000, 256000, 1000000, 2000000, 4000000</td>
+    </tr>
+    <tr>
+        <td>I2C</td>
+        <td>1 channel</td>
+        <td>up to 400kHz</td>
+    </tr>
+    <tr>
+        <td>External Interrupts</td>
+        <td>up to 3 channels</td>
+        <td>triggered by an edge or voltage level</td>
+    </tr>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="ports-description"></a><a href="#ports-description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ports description</h2>
+<h3><a class="anchor" aria-hidden="true" id="hsensor"></a><a href="#hsensor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>hSensor</h3>
+<p>CORE2mini is equipped with three hSensor ports (Shrouded Box Header: 2×3-Pin, 0.1&quot; (2.54 mm) Male).</p>
+<p>The hSensor is intended to be used with many different sensors, such as spatial orientation sensors (like MPU9250), light sensors, sound sensors, limit switches and many others.</p>
+<p><strong>Each hSensor port contains three basic elements:</strong></p>
+<ol>
+<li><p>An <strong>Analog to Digital Converter (ADC)</strong> channel. The full range is 0 – 3.3V. The alternative function is interrupt input.</p></li>
+<li><p>An <strong>auxiliary 5V supply output</strong> dedicated to supplying the sensor circuit. The maximum current is not limited for each port, but due to the 5 V line total current limit, we recommend keeping the current below 50mA. If you are sure that the total 5V current will not exceed 1.5A, you can go higher, up to 500mA. See &quot;Power supply&quot; section for more details.</p></li>
+<li><p><strong>4 digital inputs/outputs.</strong> Additionally, some hSensor ports have a hardware UART interface assigned to these IO’s, and some have a hardware I2C interface. If you want UART or I2C, please check the software documentation which physical ports to use.</p></li>
+</ol>
+<div class="image center h300">
+<p><img src="../assets/img/core2-hardware/hsensor.svg" alt=""></p>
+</div>
+<table class="text_table">
+<tbody>
+    <tr>
+        <th>hSensor pin</th>
+        <th>Software name</th>
+        <th>Default function</th>
+        <th colspan="2">Alternate function</th>
+    </tr>
+    <tr>
+        <td align="center">1</td>
+        <td>hSensX.pin1</td>
+        <td>GPIO</td>
+        <td>external interrupt input</td>
+        <td>ADC converter</td>
+    </tr>
+    <tr>
+        <td align="center">2</td>
+        <td>hSensX.pin2</td>
+        <td>GPIO</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td align="center">3</td>
+        <td>hSensX.pin3</td>
+        <td>GPIO</td>
+        <td>I2C_SCL (in hSens 1) <br>
+            UART_TX (in hSens 2) <br>
+        no alt. function (in hSens 3)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td align="center">4</td>
+        <td>hSensX.pin4</td>
+        <td>GPIO</td>
+        <td>I2C_SDA (in hSens 1)<br>
+        UART_RX (in hSens 2) <br>
+    no alt. function (in hSens 3)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td align="center">5</td>
+        <td>-</td>
+        <td>+5V power supply output</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td align="center">6</td>
+        <td>-</td>
+        <td>GND (0V)</td>
+        <td></td>
+        <td></td>
+    </tr>
+</tbody>
+</table>
+<p>Using ADC</p>
+<pre><code class="hljs">hSens1.pin1.enable<span class="hljs-constructor">ADC()</span>;
+<span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-comment">// read analog value (voltage 0.0 - 3.3V)</span>
+    <span class="hljs-built_in">float</span> v_analog = hSens1.pin1.analog<span class="hljs-constructor">ReadVoltage()</span>;
+
+    <span class="hljs-comment">// read raw value (voltage 0x0000 - 0x0fff)</span>
+    uint16_t v_int = hSens1.pin1.analog<span class="hljs-constructor">ReadRaw()</span>;
+
+    printf(<span class="hljs-string">"%f | %d\r\n"</span>, v_analog, v_int);
+    sys.delay(<span class="hljs-number">50</span>);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="communication-interfaces"></a><a href="#communication-interfaces" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Communication interfaces</h3>
+<table class="text_table">
+<tbody>
+    <tr>
+        <th align="left">hExt communication interface</th>
+        <th align="left">Software name</th>
+        <th align="left">Parameters</th>
+    </tr>
+    <tr>
+        <td>USART</td>
+        <td>hExt.serial</td>
+        <td>baudrate: 4800, 9600, 14400, 19200, 38400, 57600, 115200, 128000, 256000, 1000000, 2000000, 4000000</td>
+    </tr>
+    <tr>
+        <td>SPI</td>
+        <td>hExt.spi</td>
+        <td>up to 1 Mbps</td>
+    </tr>
+    <tr>
+        <td>I2C</td>
+        <td>hExt.i2c</td>
+        <td>up to 400kHz</td>
+    </tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="hservo"></a><a href="#hservo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>hServo</h3>
+<p>You can connect up to 4 servo motors directly to CORE2mini. Power supply is onboard thanks to integrated DC/DC converter with selectable voltage output (remeber that there is one power supply voltage for all servos).</p>
+<div class="image center h300">
+<p><img src="../assets/img/core2-hardware/hservo.svg" alt=""></p>
+</div>
+<table class="text_table">
+<tbody>
+    <tr>
+        <th>hServo pin</th>
+        <th>Description</th>
+        <th>Parameters</th>
+    </tr>
+    <tr>
+        <td align="center">1</td>
+        <td align="left">PWM output</td>
+        <td>3.3V standard, pulse width: 1 - 65535 us, pulse period: 1 - 65535 us (can not be higher than pulse width)</td>
+    </tr>
+    <tr>
+        <td align="center">2</td>
+        <td align="left">Servo power supply output</td>
+        <td>selectable voltage level: 5V / 6V / 7.4V / 8.6V (tolerance +/- 0.2V) <br>
+        Maximum current comsuption for all servos: 2A (continous) , 3.5A (peak)</td>
+    </tr>
+    <tr>
+        <td align="center">3</td>
+        <td align="left">GND (0V)</td>
+        <td>-</td>
+    </tr>
+</tbody>
+</table>
+<pre><code class="hljs">hServoModule.enablePower();
+hServoModule.s1.setPeriod(<span class="hljs-number">20000</span>); <span class="hljs-comment">//PWM period 20ms</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+    hServoModule.s1.setWidth(<span class="hljs-number">1000</span>); <span class="hljs-comment">//set pulse width: 1000us</span>
+    sys.delay(<span class="hljs-number">1000</span>);
+    hServoModule.s1.setWidth(<span class="hljs-number">2000</span>);
+    sys.delay(<span class="hljs-number">1000</span>);
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="hmotor"></a><a href="#hmotor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>hMotor</h3>
+<p>CORE2mini is equipped with two hMotor ports.</p>
+<p>The hMotor is intended to be used with a DC motor with encoder, but you don’t have to use the encoder interface if you have a standard DC motor. The hMotor interface is fully-compatible with LEGO® MINDSTORMS® sets (remeber that you have to use special adapter to use these sets).</p>
+<p><strong>Each hMot port contains three basic elements:</strong></p>
+<p>An <strong>H - bridge</strong> for driving the DC motor (with or without encoder) or a stepper motor. It can also be used for driving other devices, but don’t forget about a PWM signal on the output and its limitations. The maximum average output current for each hMot is 1A, and the maximum peak current is 2A. The H-bridge is supplied from the CORE2mini power supply voltage Vin (6 - 16V) and you can expect the same at the H-bridge output.</p>
+<p>An <strong>auxiliary 5V supply</strong> output dedicated to supplying the encoder circuit. The maximum current is not limited for each port, but due to the 5 V line total current limit, it is recommended keeping the current below 50mA. If you are sure that the total 5 V current will not exceed 1.5A, you can go higher, up to 1A. See &quot;Power supply&quot; section for more details.</p>
+<p>A <strong>quadrature encoder interface</strong> is used to control position or speed of the electric motor shaft, so you know whether your control algorithm works as you expected. Husarion CORE2mini uses hardware quadrature encoder interface provided by STM32F4 microcontroller (functionality built into some timer peripheral interfaces of STM32F4). For this reason you don't waste processing power of CPU to detect each slope on encoder output signal. Everything is done by special hardware interface, so you don't have to worry about missing any change of your motor shaft.
+Wikipedia provides an accessible explanation how encoders work: <a href="https://en.wikipedia.org/wiki/Rotary_encoder">incremental rotary encoder</a>.</p>
+<p>The encoder interface is compatible with the majority of popular optical and magnetic encoders integrated with motors or sold separately.</p>
+<div class="image center h300">
+<p><img src="../assets/img/core2-hardware/hmot.svg" alt=""></p>
+</div>
+<table class="text_table">
+<tbody>
+    <tr>
+        <th align="center">hMot pin</th>
+        <th align="left">Default function</th>
+        <th align="left">Description</th>
+    </tr>
+    <tr>
+        <td align="center">1</td>
+        <td>Output A</td>
+        <td>Output voltage: 0 - Vin (6-16V) <br>
+            Output current: 1A (continuous), 2A (peak) with built-in overcurrent protection</td>
+    </tr>
+    <tr>
+        <td align="center">2</td>
+        <td>Output B</td>
+        <td>Output voltage: 0 - Vin (6-16V) <br>
+        Output current: 1A (continuous), 2A (peak) with built-in overcurrent protection
+        </td>
+    </tr>
+    <tr>
+        <td align="center">3</td>
+        <td>GND</td>
+        <td>Ground terminal</td>
+    </tr>
+    <tr>
+        <td align="center">4</td>
+        <td>+5V output</td>
+        <td>Voltage supply for encoder circuit. Keep the maximum current below 50mA for each hMot port.</td>
+    </tr>
+    <tr>
+        <td align="center">5</td>
+        <td>Encoder input A</td>
+        <td>5V standard digital input for encoder interface (channel A)</td>
+    </tr>
+    <tr>
+        <td align="center">6</td>
+        <td>Encoder input B</td>
+        <td>5V standard digital input for encoder interface (channel B)</td>
+    </tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="supported-motor-types"></a><a href="#supported-motor-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supported motor types</h3>
+<p><strong>DC motor with encoder</strong></p>
+<div class="thumb w180 right">
+<p><img src="../assets/img/core2-hardware/motors_encoders.jpg" alt=""></p>
+</div>
+<p>This motor type is suitable for more professional applications. It can be identified by 6 wires coming out of the encoder board. DC motor with quadrature encoder interface allows you to create own sophisticated control algorithm optimized for your application in contrast to RC servos that can't give any feedback to your algorithms.</p>
+<p>Remember not to power your motors using higher voltage than recommended in their specification.</p>
+<p><strong>DC motor without encoder</strong></p>
+<div class="thumb w180 right">
+<p><img src="../assets/img/core2-hardware/dc_motor.jpg" alt=""></p>
+</div>
+<p>Of course, in many cases you don't need the encoder - e.g. if you need to drive wheels without sensing their position. In that case you can use a simple DC motor with gearbox. It can be identified by 2 wires coming out of the motor.</p>
+<p>Despite the lack of the encoder, you still can recognize the extreme positions of your mechanism using the limit switches.</p>
+<p><strong>LEGO® motor</strong></p>
+<div class="thumb w180 right">
+<p><img src="../assets/img/core2-hardware/lego_motors.jpg" alt=""></p>
+</div>
+<p>CORE2mini is fully compatible with servomotors from LEGO® Mindstorms® when used with connector adapter. There are 3 types of LEGO® servomotors: motor from NXT/NXT2.0 kit and two types from EV3 kit. In fact, they are all motors with quadrature encoder. \
+Remember that LEGO® motors have 9V nominal voltage and when you supply CORE2mini with higher voltage, you should limit the PWM duty cycle.</p>
+<p><strong>Stepper motor</strong></p>
+<div class="thumb w180 right">
+<p><img src="../assets/img/core2-hardware/hstep.png" alt=""></p>
+</div>
+<p>Connecting a bipolar stepper motor is also possible. In this case, you need two hMotor ports to drive one stepper motor. If your motor windings have 4 or 6 terminals, it can work in the bipolar configuration (the 6-terminal motors can work in both unipolar and bipolar configuration). In the picture you can see how to connect the bipolar motor with two H-bridge outputs.</p>
+<h3><a class="anchor" aria-hidden="true" id="dbg"></a><a href="#dbg" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DBG</h3>
+<div class="image center h300">
+<p><img src="../assets/img/core2-hardware/dbg.svg" alt=""></p>
+</div>
+<p>If you are an advanced code developer you will probably appreciate it! The DBG connector
+allows you not only to upload the code to the CORE2mini, but it is also a debugging interface for the STM32F4 microcontroller.</p>
+<p>To use the DBG interface, you need an additional hardware programmer/debugger: ST-LINK/V2. You can find the original one here: <a href="http://www.st.com/web/catalog/tools/FM146/CL1984/SC724/SS1677/PF251168">ST-LINK/V2</a></p>
+<p>You also need to configure the offline development environment. You will find the instructions here: <a href="https://wiki.husarion.com/howto:installation">Husarion SDK</a></p>
+<h3><a class="anchor" aria-hidden="true" id="hserial"></a><a href="#hserial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>hSerial</h3>
+<p>The hSerial port is an USB device port with a standard micro B USB connector, but it's called &quot;hSerial&quot; because this port is connected to the serial port of the microcontroller. It is not the native USB port - it uses the FTDI® chip to connect the internal serial port to your computer or other USB host.</p>
+<p>The hSerial port can be used to:</p>
+<ul>
+<li>read logs from the CORE2mini device on your computer,</li>
+<li>upload new software to the CORE2mini microcontroller (if the wireless connection is not available),</li>
+<li>other communication with any USB host device (FTDI driver is needed).</li>
+</ul>
+<p>CORE2mini cannot be powered via the USB hSerial port!</p>
+<h3><a class="anchor" aria-hidden="true" id="hsd"></a><a href="#hsd" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>hSD</h3>
+<p>Just a connector for a standard microSD card. It uses one of the SPI interfaces available in the microcontroller. The rest is software.</p>
+<h2><a class="anchor" aria-hidden="true" id="leds"></a><a href="#leds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LEDs</h2>
+<div class="thumb w270 right">
+<p><img src="../assets/img/core2-hardware/leds.svg" width=50% alt="User&apos;s leds" title="User&apos;s leds" /></p>
+</div>
+<p>There are 3 green LEDs to be controlled by user on CORE2mini: LED1, LED2 and LED3. They are described <strong>L1</strong>, <strong>L2</strong>, <strong>L3</strong> on the PCB.</p>
+<p>The <strong>PWR</strong> LED is indicating that CORE2mini board is powered and switched on.</p>
+<p>The <strong>LR1</strong>, <strong>LR2</strong> LEDs are used by modules connected to RPI connector.</p>
+<pre><code class="hljs"><span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">LED1</span>.</span></span>off<span class="hljs-literal">()</span>; <span class="hljs-comment">// initially off</span>
+<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">LED2</span>.</span></span>on<span class="hljs-literal">()</span>; <span class="hljs-comment">// LED2 will stay on</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">LED1</span>.</span></span>toggle<span class="hljs-literal">()</span>; <span class="hljs-comment">// toggle LED1</span>
+    sys.delay(<span class="hljs-number">500</span>); <span class="hljs-comment">// wait for 500 ms</span>
+}
+</code></pre>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="power-supply"></a><a href="#power-supply" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Power supply</h2>
+<p>Before powering the CORE2mini you should know something about its power supply input.</p>
+<p>The <strong>CORE2mini</strong> input voltage (Vin) must be in the range 6 - 16V. The recommended input voltage range is 7 - 15V. The power connector is a standard DC 5.5/2.1 (centre-positive) type. The minimum power supply output current to run CORE2 itself is about 150mA@12V and 200mA@9V.</p>
+<p>The CORE2mini power supply input has overvoltage (&gt;16V), reverse-polarity and overcurrent (~3A) protections. The long-term overvoltage  or reverse-polarity state shall be avoided!</p>
+<h3><a class="anchor" aria-hidden="true" id="block-diagram"></a><a href="#block-diagram" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Block diagram</h3>
+<div class="thumb center">
+<p><img src="../assets/img/core2-hardware/powersupply.svg" alt=""></p>
+</div>
+<table class="text_table">
+<tbody>
+    <tr>
+        <th>Voltage line name</th>
+        <th align="center">I max/th>
+        <th>Available on port:</th>
+        <th>Info</th>
+    </tr>
+    <tr>
+        <td>Vin</td>
+        <td align="center">-</td>
+        <td>-</td>
+        <td>main power input</td>
+    </tr>
+    <tr>
+        <td>+5V</td>
+        <td align="center">1.5A</td>
+        <td>hMot, hRPI, USB host</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>+5V(sw)</td>
+        <td align="center">1A</td>
+        <td>hSensor</td>
+        <td>drawn from +5V, switched by software</td>
+    </tr>
+    <tr>
+        <td>+3.3V</td>
+        <td align="center">0.5A</td>
+        <td>-</td>
+        <td>only for internal circuits</td>
+    </tr>
+    <tr>
+        <td>Vservo</td>
+        <td align="center">3A</td>
+        <td>hServoModule</td>
+        <td>programmable voltage: 5/6/7.4/8.2V</td>
+    </tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="controlling-servo-power-supply"></a><a href="#controlling-servo-power-supply" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Controlling servo power supply</h2>
+<pre><code class="hljs"><span class="hljs-selector-tag">hServoModule</span><span class="hljs-selector-class">.enablePower</span>(); <span class="hljs-comment">//turn servo DC/DC power converter on</span>
+<span class="hljs-selector-tag">hServoModule</span><span class="hljs-selector-class">.setPowerMedium</span>(); <span class="hljs-comment">//set 6V on DC/DC power converter output</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="how-to-power-core2mini"></a><a href="#how-to-power-core2mini" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to power CORE2mini?</h2>
+<p>You can supply the CORE2mini with:</p>
+<ul>
+<li>5 - 10 AA/AAA cells;</li>
+<li>6 - 11 NiCd/NiMH cells;</li>
+<li>2 or 3 Li-Ion/Li-Poly cells (e.g. 18650 batteries);</li>
+<li>an AC-to-DC wall adapter;</li>
+<li>a 12 V lead-acid battery.</li>
+</ul>
+<p><strong>CORE2mini cannot be supplied from the USB port of your laptop.</strong> Why? This is a controller designed for automation &amp; robotics applications and has motor drivers on its board. Motors cannot be supplied from USB due to the current and voltage requirements. To avoid the risk of damaging the USB port we decided to supply CORE2mini separately. CORE2mini is designed to be programmed wirelessly and the USB connection is not the basic way to program or supply the controller (however, programming is possible through hSerial).</p>
+<p>How much current does it need? It strongly depends on the robot configuration. A CORE2mini without any devices connected needs up to 80mA. When you connect certain motors, current peaks can reach several amperes. The average current should not exceed 3.5A, otherwise the overcurrent protection will be triggered and unexpected resets will occur. Remember this when you are designing your device.</p>
+<p>CORE2mini has two internal voltage regulators. The input voltage (behind protection circuit) Vin(p) is converted to 5V by a switching regulator, and then to 3.3V by a linear voltage regulator. Be aware of the current limits – the total current must not exceed 1.5A through the 5V line. We will also remind you about power limitations in the description of individual interfaces.</p>
+<p>The supply voltage +5V(sw) for hSens connectors can be switched on and off. It is enabled by default but can be switched off in the software.</br></p>
+<p><strong>Power supply alternatives</strong></p>
+<p>If you are not willing to use AA or similar alkaline batteries, the first alternative is to use NiCd or NiMH rechargeable batteries - but they have much lower nominal voltage. The better alternative are Li-Ion or Li-Poly batteries. Fortunately, these are available in the same shape as AA batteries and they are called “14500”. The name comes from their dimensions: 14x50mm.</p>
+<p>Some examples:
+<a href="http://www.aliexpress.com/wholesale?catId=0&amp;initiative_id=SB_20160428221617&amp;SearchText=14500+rechargeable">14500 reachargeable battery on AliExpress</a></p>
+<p>Of course, you will also need a charger.</p>
+<p>Remebmer that Li-Ion and Li-Poly batteries have higher nominal voltage and you have to use 3 cells instead of 6 cells. To do that, you can:</p>
+<ul>
+<li>use only one 3*AA battery holder with 3 Li-Ion/Poly batteries,</li>
+<li>use 6*AA battery holder with 3 “dummy” batteries and 3 Li-Ion/Poly batteries.
+The “dummy” (placeholder) batteries examples:
+<a href="http://www.aliexpress.com/wholesale?catId=0&amp;initiative_id=AS_20160428223009&amp;SearchText=AA+placeholder">AA placeholder on AliExpress</a>
+They cannot be charged - they are only the “link” to omit 3 unnecessary places in the battery holder.</li>
+</ul>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="internet-access"></a><a href="#internet-access" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Internet access</h1>
+<p>To use CORE2mini hardware from the cloud, you need to provide the Internet connection for CORE2mini.</p>
+<p>This can be done thanks to cheap Wi-Fi module, such as ESP32, as well as a Linux computer (e.g. RaspberryPi). All depends on your application. In most cases ESP32 is sufficient, but in some cases more computing power and andvanced onboard libraries (e.g. ROS - Robotic Operating System) are necessary. This section will help you to choose the configuration you need.</p>
+<p>By now you know 2 basic ways to connect CORE2mini to the Internet, ESP32 adapter or a Raspberry Pi computer. In the future other options will be available.</p>
+<h2><a class="anchor" aria-hidden="true" id="connecting-core2mini-to-the-cloud"></a><a href="#connecting-core2mini-to-the-cloud" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connecting CORE2mini to the cloud</h2>
+<p>Use hConfig app (to be found on AppStore or Google Play) where wizard will guide you through all the steps required to connect your CORE2mini to the Husarion cloud.</p>
+<h3><a class="anchor" aria-hidden="true" id="status-leds"></a><a href="#status-leds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Status LEDs</h3>
+<p>There are 2 status LEDs - LR1 and LR2 - controlled directly from the ESP32/RPi device. These LEDs can't be controlled from STM32 microcontroller. The following table shows their behavior under different conditions:</p>
+<table class="text_table">
+<tbody>
+    <tr>
+        <th>Mode</th>
+        <th>LR1 (yellow)</th>
+        <th>LR2 (blue)</th>
+    <th>Period</th>
+    <th>Behavior</th>
+    </tr>
+    <tr>
+        <td>Config mode</td>
+        <td colspan="2">blinking alternately</td>
+    <td>600 ms</td>
+    <td><img src="../assets/img/core2-hardware/lr12_gif/LR12_config.gif"/></td>
+    </tr>
+    <tr>
+        <td>Connecting</td>
+        <td>OFF</td>
+        <td>blinking</td>
+    <td>300 ms</td>
+    <td><img src="../assets/img/core2-hardware/lr12_gif/LR12_connecting.gif"/></td>
+    </tr>
+    <tr>
+        <td>Connected</td>
+        <td>OFF</td>
+        <td>ON</td>
+    <td>-</td>
+    <td><img src="../assets/img/core2-hardware/lr12_gif/LR12_connected.gif"/></td>
+    </tr>
+    <tr>
+        <td>Not configured</td>
+        <td>blinking</td>
+        <td>OFF</td>
+    <td>100/1000 ms</td>
+    <td><img src="../assets/img/core2-hardware/lr12_gif/LR12_not_conf.gif"/></td>
+    </tr>
+    <tr>
+        <td>Invalid auth.</td>
+        <td>blinking</td>
+        <td>OFF</td>
+    <td>100 ms</td>
+    <td><img src="../assets/img/core2-hardware/lr12_gif/LR12_invalid_auth.gif"/></td>
+    </tr>
+    <tr>
+        <td>No Internet</td>
+        <td>blinking</td>
+        <td>ON</td>
+    <td>100 ms</td>
+    <td><img src="../assets/img/core2-hardware/lr12_gif/LR12_no_internet.gif"/></td>
+    </tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="hrpi-connector"></a><a href="#hrpi-connector" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>hRPI connector</h2>
+<div class="thumb right w180">
+<p><img src="../assets/img/core2-hardware/rpi_connector.png" alt="" title="hRPI connector"></p>
+</div>
+<p>Although the connector's name comes from Raspberry Pi, it is designed to be used with both ESP
+and Raspberry. CORE2mini comes without any connector soldered because the connector
+type depends on module for Internet connection you are going to use in your project.</p>
+<!-- If your ESP32 or Raspberry Pi is not installed to CORE2mini yet, see the instruction here:
+[Assembling the ESP32 adapter](howtostart#preparing-hardware). This page also serves as the
+guide for connecting CORE2mini with our cloud. -->
+<table class="text_table">
+<tbody>
+    <tr>
+        <th>hRPI pin</th>
+        <th>Signal name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td align="center">1</td>
+        <td>---</td>
+        <td>Not connected</td>
+    </tr>
+    <tr>
+        <td align="center">2</td>
+        <td>+5V</td>
+        <td>Supply voltage (max. 1A)</td>
+    </tr>
+    <tr>
+        <td align="center">3</td>
+        <td>LR2</td>
+        <td>LED LR2 (cathode)</td>
+    </tr>
+    <tr>
+        <td align="center">4</td>
+        <td>+5V</td>
+        <td>Supply voltage (max. 1A)</td>
+    </tr>
+    <tr>
+        <td align="center">5</td>
+        <td>GPIO</td>
+        <td>GPIO (STM34F4)</td>
+    </tr>
+    <tr>
+        <td align="center">6</td>
+        <td>GND</td>
+        <td>Ground (0V)</td>
+    </tr>
+    <tr>
+        <td align="center">7</td>
+        <td>GPIO</td>
+        <td>GPIO (STM34F4)</td>
+    </tr>
+    <tr>
+        <td align="center">8</td>
+        <td>UART RX</td>
+        <td>UART RX (STM32F4)</td>
+    </tr>
+    <tr>
+        <td align="center">9</td>
+        <td>GND</td>
+        <td>Ground (0V)</td>
+    </tr>
+    <tr>
+        <td align="center">10</td>
+        <td>UART TX</td>
+        <td>UART TX (STM32F4)</td></tr>
+    <tr>
+        <td align="center">11</td>
+        <td>LR1 / BOOT0</td>
+        <td>LED LR1 (anode) / BOOT0 pin (STM32F4)</td>
+    </tr>
+    <tr>
+        <td align="center">12</td>
+        <td>RST</td>
+        <td>RST active-high (STM32F4)</td>
+    </tr>
+    <tr>
+        <td align="center">13</td>
+        <td>hCFG</td>
+        <td>hCFG button</td>
+    </tr>
+    <tr>
+        <td align="center">14</td>
+        <td>GND</td>
+        <td>Ground (0V)</td>
+    </tr>
+</tbody>
+</table>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="updating-firmware"></a><a href="#updating-firmware" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating firmware</h1>
+<p>In this section you will find instructions on how to update CORE2mini bootloader when a newer version is available. You can also find information on how to install the newest image for external modules, that provide Internet access for CORE2mini.</p>
+<h2><a class="anchor" aria-hidden="true" id="updating-core2mini-bootloader"></a><a href="#updating-core2mini-bootloader" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating CORE2mini bootloader</h2>
+<p>You need to have Visual Studio Code installed with Husarion extension. Please follow this guide if you haven't done this before: <a href="../tutorials/other-tutorials/offline-development-tools/#offline-development-tools-installation-guide">VSCode installation</a></p>
+<ol>
+<li>Locate core2-flasher utility (YOUR_HOME_PATH/.vscode/extensions/husarion.husarion-VERSION/sdk/tools/YOUR_ARCH/core2-flasher).</li>
+<li>Download the bootloader <a href="https://files.husarion.com/bootloader/bootloader_1_0_0_core2.hex">HEX file</a> to the folder with core2-flasher</li>
+<li>Connect CORE2mini to PC via USB.</li>
+<li>Install drivers (Windows only)</li>
+</ol>
+<ul>
+<li>Download Zadig <a href="http://zadig.akeo.ie/">Usb driver installator - Zadig</a></li>
+<li>Run Zadig</li>
+<li>Select FT231X USB UART in Zadig window</li>
+<li>Choose WinUSB driver and click <strong>Replace Driver</strong></li>
+</ul>
+<ol start="5">
+<li>Open command line prompt.</li>
+<li>Flash bootloader with commands:</li>
+</ol>
+<p>on Linux in the terminal:</p>
+<pre><code class="hljs"><span class="hljs-string">./core2-flasher</span> <span class="hljs-params">--unprotect</span>
+<span class="hljs-string">./core2-flasher</span> bootloader_1_0_0_core2.hex
+<span class="hljs-string">./core2-flasher</span> <span class="hljs-params">--protect</span>
+</code></pre>
+<p>on Windows in the terminal:</p>
+<pre><code class="hljs">core2-flasher<span class="hljs-selector-class">.exe</span> --unprotect
+core2-flasher<span class="hljs-selector-class">.exe</span> bootloader_1_0_0_core2<span class="hljs-selector-class">.hex</span>
+core2-flasher<span class="hljs-selector-class">.exe</span> --protect
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="updating-esp32-firmware"></a><a href="#updating-esp32-firmware" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating ESP32 firmware</h2>
+<p>Make sure that your CORE2mini is connected with your cloud account. <a href="../tutorials/howtostart/run-your-first-program#run-your-first-program-connecting-to-the-cloud">This is a guide</a> that explains how to do it.</p>
+<ol>
+<li>Turn CORE2mini on and login to the cloud account. The device should be visible as &quot;online&quot;.</li>
+<li>Click &quot;+&quot; and &quot;More&quot;.</li>
+<li>Click OTA upgrade. Process should start immediately and inform you about progress. Do not turn off power supply!</li>
+<li>When finished, you shall see the message: &quot;OTA progress: success: upgrade completed&quot;.</li>
+</ol>
+<p>That's all, your ESP32 firmware is up-to-date.</p>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="docs-for-download"></a><a href="#docs-for-download" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docs for download</h1>
+<p>All downloadable documents in one place:</p>
+<ul>
+<li><a href="https://files.husarion.com/docs2/CORE2mini_safety_instructions_1.0.pdf" title="CORE2mini Safety Instructions">CORE2mini Safety Instructions</a> - important!</li>
+<li><a href="http://files.husarion.com/doc_files/CORE2mini_board.pdf" title="CORE2mini board mechanical drawing">CORE2mini board mechanical drawing</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus-husarion-docs/docs/manuals/core2"><span class="arrow-prev">← </span><span>CORE2 manual</span></a><a class="docs-next button" href="/docusaurus-husarion-docs/docs/manuals/telepresence"><span>Telepresence robot kit manual</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#electrical-specification">Electrical specification</a></li><li><a href="#ports-description">Ports description</a><ul class="toc-headings"><li><a href="#hsensor">hSensor</a></li><li><a href="#communication-interfaces">Communication interfaces</a></li><li><a href="#hservo">hServo</a></li><li><a href="#hmotor">hMotor</a></li><li><a href="#supported-motor-types">Supported motor types</a></li><li><a href="#dbg">DBG</a></li><li><a href="#hserial">hSerial</a></li><li><a href="#hsd">hSD</a></li></ul></li><li><a href="#leds">LEDs</a></li><li><a href="#power-supply">Power supply</a><ul class="toc-headings"><li><a href="#block-diagram">Block diagram</a></li></ul></li><li><a href="#controlling-servo-power-supply">Controlling servo power supply</a></li><li><a href="#how-to-power-core2mini">How to power CORE2mini?</a></li><li><a href="#connecting-core2mini-to-the-cloud">Connecting CORE2mini to the cloud</a><ul class="toc-headings"><li><a href="#status-leds">Status LEDs</a></li></ul></li><li><a href="#hrpi-connector">hRPI connector</a></li><li><a href="#updating-core2mini-bootloader">Updating CORE2mini bootloader</a></li><li><a href="#updating-esp32-firmware">Updating ESP32 firmware</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Documentation</h5><a href="/docusaurus-husarion-docs/docs/tutorials">Tutorials</a><a href="/docusaurus-husarion-docs/docs/manuals">Manuals</a><a href="https://husarion.com/core2/api_reference/classes.html" target="_blank" rel="noreferrer noopener">hFramework API Reference</a></div><div><h5>Community</h5><a href="https://community.husarion.com/" target="_blank" rel="noreferrer noopener">Community forum</a><a href="https://twitter.com/husarion" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="https://husarion.com/" target="_blank" rel="noreferrer noopener">Home page</a><a href="https://medium.com/husarion-blog" target="_blank" rel="noreferrer noopener">Blog</a><a href="https://github.com/husarion" target="_blank" rel="noreferrer noopener">GitHub</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div></body></html>

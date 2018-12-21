@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Telepresence robot kit manual · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div class=&quot;clearfix&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Telepresence robot kit manual · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;div class=&quot;clearfix&quot;&gt;"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><h2 class="headerTitle">Husarion Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class="siteNavGroupActive"><a href="/docusaurus-husarion-docs/docs/manuals/" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/software/hframework" target="_self">Software</a></li><li class=""><a href="https://husarion.com/downloads/" target="_blank">Downloads</a></li><li class=""><a href="https://community.husarion.com/" target="_blank">Community</a></li><li class=""><a href="https://cloud.husarion.com/" target="_blank">Log In</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Manuals</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Manuals</h3><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/">About manuals</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/core2">CORE2 manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/core2mini">CORE2mini manual</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/telepresence">Telepresence robot kit manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/rosbot-manual">ROSbot manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/husarion-add-ons">Husarion add-ons</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Telepresence robot kit manual</h1></header><article><div><span><div class="clearfix">
+<div class="img-container">
+    <a href="../assets/img/telepresence_robot_kit/ralph_alu_izo_hd.jpg" data-fancybox="gallery" data-caption="CORE2mini board">
+    <img src="../assets/img/telepresence_robot_kit/ralph_alu_izo_hd.jpg" alt="CORE2mini board" class="hover-shadow"/>
+    </a>
+    <span>Front</span>
+</div>
+<div class="img-container">
+    <a href="../assets/img/telepresence_robot_kit/ralph_alu_right_hd.jpg" data-fancybox="gallery" data-caption="CORE2mini pinout">
+    <img src="../assets/img/telepresence_robot_kit/ralph_alu_right_hd.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Rear</span>
+</div> 
+</div>
+<h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<div align="center">
+<iframe width="800" height="388" src="https://www.youtube.com/embed/JkIj5ssHpKw" frameborder="0" gesture="media" allowfullscreen></iframe>
+</div>
+<p>Telepresence robot kit is a development kit based on Husarion CORE2 controller. It integrates:</p>
+<ul>
+<li>2-wheels solid frame containing DC motors with encoders and an alluminium bumpers</li>
+<li>IMU inertial sensor (accelerometer + gyro)</li>
+<li>3 x Li-Ion batteries 18650</li>
+<li>Li-Ion charger</li>
+<li>Screwdriver</li>
+</ul>
+<p>If you don't have one, you can purchase the complete kit <a href="https://store.husarion.com/">here</a>.</p>
+<h1><a class="anchor" aria-hidden="true" id="hardware-guide"></a><a href="#hardware-guide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hardware guide</h1>
+<h2><a class="anchor" aria-hidden="true" id="specification"></a><a href="#specification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Specification</h2>
+<table class="text_table">
+    <tr>
+       <th>Attribute</th>
+       <th>Description</th>
+    </tr>
+    <tr>
+        <td>Dimensions with camera and LiDAR</td>
+        <td>100 x 232 x 260mm / 3.94 x 9.13 x 10.24in [L x W x H]</td>
+    </tr>
+    <tr>
+        <td>Weight</td>
+        <td>0.95kg / 33.5oz (without tablet)</td>
+    </tr>
+    <tr>
+        <td>Wheel diameter / Clearance</td>
+        <td>85mm / 9mm</td>
+    </tr>
+    <tr>
+        <td>Chassis material</td>
+        <td>Powder-coated aluminum plate, 2mm thick</td>
+    </tr>
+    <tr>
+        <td>Maximum speed</td>
+        <td>0.5 m/s</td>
+    </tr>
+    <tr>
+        <td>Battery life</td>
+        <td>3h - 6h</td>
+    </tr>
+    <tr>
+        <td>Maximum tablet dimensions</td>
+        <td>202 x 136 x 9mm / 7.95 x 5.35 x 0.35in (iPad mini 7,9")</td>
+    </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="components-description"></a><a href="#components-description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components description</h2>
+<table class="text_table">
+    <tr>
+       <th>Component</th>
+       <th>Quantity</th>
+       <th>Description</th>
+    </tr>
+    <tr>
+        <td>CORE2</td>
+        <td>1</td>
+        <td>CORE2 is real-time controller, based on STM32F407 microcontroller</td>
+    </tr>
+    <tr>
+        <td>DC motor</td>
+        <td>2</td>
+        <td>Xinhe Motor XH-25D
+        Motor used: RF-370, 6VDC nominal, 5000rpm
+        No load speed at the output shaft: 165 rpm
+        Stall torque: 2.9 kg*cm
+        Stall current: 2.2A
+        Gear ratio: ~34 (exact ratio is 30613/900)
+        Encoder: magnetic, 48ppr, 12 poles</td>
+    </tr>
+    <tr>
+        <td>IMU sensor</td>
+        <td>1</td>
+        <td>Powerful 9-Axis Accel/Gyro/Magnetometer sensor with MPU-9250</td>
+    </tr>
+    <tr>
+        <td>Batteries</td>
+        <td>3</td>
+        <td>Li-Ion 18650 protected, rechargeable batteries, 2600mAh capacity, 3.7V nominal voltage <br>
+        Note: Device may be shipped interchangeably with similar batteries.</td>
+    </tr>
+    <tr>
+        <td>Servo</td>
+        <td>1</td>
+        <td>Tower Pro MG90S micro servo to move the foot. <a href="http://www.towerpro.com.tw/product/mg90s-3/">More details here</a>.</td>
+    </tr>   
+</table>
+<h2><a class="anchor" aria-hidden="true" id="assembly"></a><a href="#assembly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assembly</h2>
+<p>To make your robot work properly, you need to complete few following steps written below. Start with mechanical assembly:</p>
+<ul>
+<li>Put each wheel on the coupler and screw it on with M4 screw.</li>
+<li>Put CORE2 on the designated place and fix it with four M3 screws.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="cables"></a><a href="#cables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cables</h2>
+<p>Connect the peripherals:</p>
+<ul>
+<li>Left motor to hMotD</li>
+<li>Right motor to hMotC</li>
+<li>Servo to servo1</li>
+<li>IMU to hSens2</li>
+<li>Insert three Li-ion 18650 batteries into the battery holder</li>
+<li>Plug in DC power cable.</li>
+</ul>
+<p><strong><em><font color="red">very important: DC motors with encoders and servo should be connected to proper ports like this:</font></em></strong>
+<a data-fancybox href="../assets/img/howToStart/cables_ralph.png"  data-caption="CORE2mini board">
+<img src="../assets/img/howToStart/cables_ralph.png" height="50%" width="50%" />
+</a></p>
+<p><a data-fancybox href="../assets/img/telepresence_robot_kit/ralph_alu_back_hd.jpg"  data-caption="CORE2mini board">
+<img src="../assets/img/telepresence_robot_kit/ralph_alu_back_hd.jpg">
+</a></p>
+<div style="text-align: center"><i>Properly assembled CORE2 telepresence robot</i></div>
+<h2><a class="anchor" aria-hidden="true" id="charging"></a><a href="#charging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Charging</h2>
+<p>Telepresence robot gets power from 3 Li-Ion cells. As with all reachargeable batteries they should be treated in an appropriate way. The basic rules are:</p>
+<ul>
+<li>Use the charger included in the kit. If you don't have one, use a charger for Li-Ion or Li-Poly batteries with at most 1A charging current and balancing feature.</li>
+<li>Don't discharge the batteries below 3.5V per cell (10.5V for all cells). Further discharge can trigger the overdischarge protection, built into each cell. In such case some of chargers would not allow to charge batteries because of too low voltage - the protection simply cut-offs on of terminals. The charger can interpret this as damaged battery and will not charge it. The workaround for that is to connect the battery to the other current-limited voltage source for a few seconds - it will turn off the protection and the battery would charge again with normal charger as before (if it is not damaged).</li>
+<li>Use robot UI or LED controls to monitor the battery state. The best option is when the firmware disables the motors in case of low battery state. Such feature will help you to avoid discharging batteries too much.</li>
+<li>If you don't use robot for a long time, leave the batteries partially charged (about 11.4V for all cells). It's a recommended charge level for a long-term storage.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="software"></a><a href="#software" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Software</h2>
+<h3><a class="anchor" aria-hidden="true" id="programming-and-interface"></a><a href="#programming-and-interface" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Programming and interface</h3>
+<ul>
+<li>Place your robot with CORE2 facing up and turn it on.</li>
+<li>Open WebIDE (cloud.husarion.com) and create a new project using template 'self-balancing telepresence' and upload it to your CORE2.</li>
+</ul>
+<div><center><img src="https://raw.githubusercontent.com/husarion/static_docs/master/src//assets/img/howToStart/create_new_project_ralph.png"
+/></center></div>
+* When robot is programmed, open its user interface and click 'Turn off motors'.
+<div><center><img src="https://raw.githubusercontent.com/husarion/static_docs/master/src/assets/img/telepresence_robot_kit/interface.jpg"
+/></center></div>
+* Pinch upper part of your robot and by pushing it back and forward set it to balanced vertical orientation.
+* When you find proper position (when you are using the less force to hold it stable) click on 'Calibrate' button in Web UI.
+* Now after clicking 'turn on motors' your robot will start balancing correctly.
+<p>To steer your robot use WSAD keys or arrows. Use G key to switch leg position and 1, 2, 3 keys to change gears.</p>
+<h2><a class="anchor" aria-hidden="true" id="docs-and-links"></a><a href="#docs-and-links" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docs and links</h2>
+<p>All helpful documents and links in one place:</p>
+<ul>
+<li><a href="../tutorials/howtostart/telepresence-robot-kit---quick-start/" title="Telepresence robot kit Tutorial">Telepresence robot kit Tutorial</a></li>
+<li><a href="https://files.husarion.com/docs2/CORE2_telepresence_safety_instructions_1.0.pdf" title="Telepresence robot kit Safety Instructions">Telepresence robot kit Safety Instructions</a> - important!</li>
+<li><a href="https://store.husarion.com/products/telepresence-robot-kit">Buy telepresence robot kit</a> in Husarion store</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus-husarion-docs/docs/manuals/core2mini"><span class="arrow-prev">← </span><span>CORE2mini manual</span></a><a class="docs-next button" href="/docusaurus-husarion-docs/docs/manuals/rosbot-manual"><span>ROSbot manual</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#specification">Specification</a></li><li><a href="#components-description">Components description</a></li><li><a href="#assembly">Assembly</a></li><li><a href="#cables">Cables</a></li><li><a href="#charging">Charging</a></li><li><a href="#software">Software</a><ul class="toc-headings"><li><a href="#programming-and-interface">Programming and interface</a></li></ul></li><li><a href="#docs-and-links">Docs and links</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Documentation</h5><a href="/docusaurus-husarion-docs/docs/tutorials">Tutorials</a><a href="/docusaurus-husarion-docs/docs/manuals">Manuals</a><a href="https://husarion.com/core2/api_reference/classes.html" target="_blank" rel="noreferrer noopener">hFramework API Reference</a></div><div><h5>Community</h5><a href="https://community.husarion.com/" target="_blank" rel="noreferrer noopener">Community forum</a><a href="https://twitter.com/husarion" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="https://husarion.com/" target="_blank" rel="noreferrer noopener">Home page</a><a href="https://medium.com/husarion-blog" target="_blank" rel="noreferrer noopener">Blog</a><a href="https://github.com/husarion" target="_blank" rel="noreferrer noopener">GitHub</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div></body></html>

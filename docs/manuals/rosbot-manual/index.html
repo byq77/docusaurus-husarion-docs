@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>ROSbot manual · Husarion Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;overview&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#overview&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Overview&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="ROSbot manual · Husarion Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://byq77.github.io/docusaurus-husarion-docs/index.html"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;overview&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#overview&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Overview&lt;/h2&gt;
+"/><meta property="og:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://byq77.github.io/docusaurus-husarion-docs/img/favicon.ico"/><link rel="shortcut icon" href="/docusaurus-husarion-docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js"></script><script type="text/javascript" src="https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":56,"cornerOffset":20,"backgroundColor":"#d0112b","textColor":"#fff"}
+          )
+        });
+        </script><link rel="stylesheet" href="/docusaurus-husarion-docs/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-husarion-docs/"><h2 class="headerTitle">Husarion Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docusaurus-husarion-docs/docs/tutorials/" target="_self">Tutorials</a></li><li class="siteNavGroupActive"><a href="/docusaurus-husarion-docs/docs/manuals/" target="_self">Manuals</a></li><li class=""><a href="/docusaurus-husarion-docs/docs/software/hframework" target="_self">Software</a></li><li class=""><a href="https://husarion.com/downloads/" target="_blank">Downloads</a></li><li class=""><a href="https://community.husarion.com/" target="_blank">Community</a></li><li class=""><a href="https://cloud.husarion.com/" target="_blank">Log In</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Manuals</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Manuals</h3><ul><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/">About manuals</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/core2">CORE2 manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/core2mini">CORE2mini manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/telepresence">Telepresence robot kit manual</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/rosbot-manual">ROSbot manual</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-husarion-docs/docs/manuals/husarion-add-ons">Husarion add-ons</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">ROSbot manual</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p>ROSbot is an autonomous robot platform based on Husarion CORE2-ROS robot controller available in two version: 2.0 and 2.0 PRO.</p>
+<div align="center">
+<iframe width="784" height="441" src="https://www.youtube.com/embed/QHJFNMX4Us8" frameborder="0" gesture="media" allowfullscreen></iframe>
+</div>
+<p>ROSbot is an affordable robot platform for rapid development of autonomous robots. It can be a base for custom service robots, inspection robots and robots working in swarms. Both version integrates:</p>
+<ul>
+<li>4-wheels mobile platform containing DC motors with encoders and an aluminum frame</li>
+<li>Orbbec Astra RGBD camera</li>
+<li>MPU 9250 inertial sensor (accelerometer + gyro)</li>
+<li>rear panel providing interfaces for additional modules</li>
+</ul>
+<p>In ROSbot 2.0:</p>
+<ul>
+<li>CORE2-ROS controller with <a href="https://www.asus.com/pl/Single-Board-Computer/Tinker-Board/">Asus Tinker Board</a></li>
+<li>RPLIDAR A2 laser scanner</li>
+</ul>
+<div class="clearfix">
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/colour_front.jpg" data-fancybox="gallery" data-caption="Front">
+    <img src="../assets/img/ROSbot_manual/colour_front_thumb.jpg" alt="CORE2mini board" class="hover-shadow"/>
+    </a>
+    <span>Front</span>
+</div>
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/colour_back.jpg" data-fancybox="gallery" data-caption="Back">
+    <img src="../assets/img/ROSbot_manual/colour_back_thumb.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Back</span>
+</div> 
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/colour_perspective.jpg" data-fancybox="gallery" data-caption="Perspective">
+    <img src="../assets/img/ROSbot_manual/colour_perspective_thumb.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Perspective</span>
+</div> 
+</div>
+<p>In ROSbot 2.0 PRO:</p>
+<ul>
+<li>CORE2-ROS controller with <a href="http://www.up-board.org/up/">UpBoard UP</a></li>
+<li>RPLIDAR A3 laser scanner</li>
+</ul>
+<div class="clearfix">
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/pro_colour_front.jpg" data-fancybox="gallery" data-caption="Front">
+    <img src="../assets/img/ROSbot_manual/pro_colour_front_thumb.jpg" alt="CORE2mini board" class="hover-shadow"/>
+    </a>
+    <span>Front</span>
+</div>
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/pro_colour_back.jpg" data-fancybox="gallery" data-caption="Back">
+    <img src="../assets/img/ROSbot_manual/pro_colour_back_thumb.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Back</span>
+</div> 
+<div class="img-container w3">
+    <a href="../assets/img/ROSbot_manual/pro_colour_perspective.jpg" data-fancybox="gallery" data-caption="Perspective">
+    <img src="../assets/img/ROSbot_manual/pro_colour_perspective_thumb.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Perspective</span>
+</div> 
+</div>
+<p>You can use your ROSbot offline however we recommend connecting to Husarion Cloud as it gives you access to a lot of additional functionalities like remote management and firmware updates.</p>
+<p>If you do not own ROSbot yet, you can purchase it <a href="https://store.husarion.com/">here</a>.</p>
+<p>You can also test the performance of ROSbot using our simulation model in Gazebo environment. It is available here, at our <a href="https://github.com/husarion/rosbot_description">GitHub page</a>.</p>
+<p><img src="../assets/img/ROSbot_manual/rosbot_gazebo.png" alt="ROSbot gazebo" title="ROSbot gazebo"></p>
+<p>You can find free <b>ROS tutorials</b> dedicated for ROSbot under this <a href="https://husarion.com/tutorials/ros-tutorials/1-ros-introduction/">link</a>. They will guide you through different aspects of programming autonomous vehicles in ROS</p>
+<h1><a class="anchor" aria-hidden="true" id="hardware-guide"></a><a href="#hardware-guide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hardware guide</h1>
+<h2><a class="anchor" aria-hidden="true" id="specification"></a><a href="#specification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Specification</h2>
+<table class="text_table">
+    <tr>
+       <th>Attribute</th>
+       <th>Description</th>
+    </tr>
+    <tr>
+        <td>Dimensions with camera and LiDAR</td>
+        <td>200 x 235 x 220mm / 7.87 x 9.25 x 8.66in [L x W x H]</td>
+    </tr>
+    <tr>
+        <td>Dimensions without LiDAR</td>
+        <td>200 x 235 x 146mm / 7.87 x 9.25 x 5.74in [L x W x H]</td>
+    </tr>
+    <tr>
+        <td>Dimensions without camera and LiDAR</td>
+        <td>200 x 235 x 106mm / 7.87 x 9.25 x 4.17in [L x W x H]</td>
+    </tr>
+    <tr>
+        <td>Weight</td>
+        <td>2,84kg / 100oz (with camera and LiDAR), 2,45kg / 86oz (without camera and LiDAR)</td>
+    </tr>
+    <tr>
+        <td>Wheel diameter / Clearance / Wheelbase</td>
+        <td>85mm / 22mm / 105mm</td>
+    </tr>
+    <tr>
+        <td>Chassis material</td>
+        <td>Powder-coated aluminum plate, 1.5mm thick</td>
+    </tr>
+    <tr>
+        <td>Maximum translational velocity</td>
+        <td>1.25 m/s</td>
+    </tr>
+    <tr>
+        <td>Maximum rotational velocity</td>
+        <td>420 deg/s (7.33 rad/s)</td>
+    </tr>
+    <tr>
+        <td>Maximum load capacity</td>
+        <td>10kg / 352oz</td>
+    </tr>
+    <tr>
+        <td>Battery life</td>
+        <td>1.5h - 5h</td>
+    </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="components"></a><a href="#components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components</h2>
+<p><img src="../assets/img/ROSbot_manual/scheme_side.png" alt="Side scheme" title="Side scheme"></p>
+<p><img src="../assets/img/ROSbot_manual/colour_back.jpg" alt="Back" title="Scheme back"></p>
+<h3><a class="anchor" aria-hidden="true" id="components-description"></a><a href="#components-description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components description</h3>
+<table class="text_table">
+    <tr>
+       <th>Component</th>
+       <th>Quantity</th>
+       <th>Description</th>
+    </tr>
+    <tr>
+    <tr>
+        <td>Infrared distance sensor</td>
+        <td>4</td>
+        <td>VL53L0X Time-of-Flight distance sensor with up to 200 cm range, <a href="https://www.pololu.com/file/0J1187/VL53L0X.pdf"> more details</a>.</td>
+    </tr>
+    <tr>
+        <td>DC motor</td>
+        <td>4</td>
+        <td>Xinhe Motor XH-25D
+        Motor used: RF-370, 6VDC nominal, 5000rpm
+        No load speed at the output shaft: 165 rpm
+        Stall torque: 2.9 kg*cm
+        Stall current: 2.2A
+        Gear ratio: ~34 (exact ratio is 30613/900)
+        Encoder: magnetic, 48ppr, 12 poles</td>
+    </tr>
+    <tr>
+        <td>IMU sensor</td>
+        <td>1</td>
+        <td>Powerful 9-Axis Accel/Gyro/Magnetometer sensor with MPU-9250, <a href="https://www.invensense.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf"> more details</a>.</td>
+    </tr>
+    <tr>
+        <td>RGBD camera</td>
+        <td>1</td>
+        <td>Orbbec Astra with RGB image size 1280x960 and depth image size 640x480.</td> 
+    </tr>
+    <tr>
+        <td>Batteries</td>
+        <td>3</td>
+        <td>Li-Ion 18650 protected, rechargeable batteries, 3500mAh capacity, 3.7V nominal voltage <br>
+        Note: Device may be shipped interchangeably with similar batteries.</td>
+    </tr>
+    <tr>
+        <td>Antenna</td>
+        <td>1</td>
+        <td>Connected directly to the ASUS Tinker Board Wi-Fi module. Uses an RP-SMA(m) <-> I-PEX MHF4 cable to connect the antenna with SBC.</td>
+    </tr>   
+</table>
+<p><strong>In ROSbot 2.0:</strong></p>
+<table class="text_table">
+    <tr>
+       <th>Component</th>
+       <th>Quantity</th>
+       <th>Description</th>
+    </tr>
+    <tr>
+        <td>CORE2-ROS</td>
+        <td>1</td>
+        <td>Advanced version of CORE2 with an ASUS Tinker board computer. CORE2 real-time controller is based on STM32F407 microcontroller. The SBC runs on Ubuntu-based OS, customized to use ROS.</td>
+    </tr>
+    <tr>
+        <td>LIDAR</td>
+        <td>1</td>
+        <td>RpLidar A2, 360 degree and up to 8m range, <a href="https://www.slamtec.com/en/Lidar/A2"> more details</a>.</td>
+    </tr>
+</table>
+<p><strong>In ROSbot 2.0 PRO:</strong></p>
+<table class="text_table">
+    <tr>
+       <th>Component</th>
+       <th>Quantity</th>
+       <th>Description</th>
+    </tr>
+    <tr>
+        <td>CORE2-ROS</td>
+        <td>1</td>
+        <td>Advanced version of CORE2 with an Up Board computer. CORE2 real-time controller is based on STM32F407 microcontroller. The SBC runs on Ubuntu-based OS, customized to use ROS.</td>
+    </tr>
+    <tr>
+        <td>LIDAR</td>
+        <td>1</td>
+        <td>RpLidar A3, 360 degree and up to 25m range, <a href="https://www.slamtec.com/en/Lidar/A3"> more details</a>.</td>
+    </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="rear-panel-description"></a><a href="#rear-panel-description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rear panel description</h2>
+<p><img src="../assets/img/ROSbot_manual/ROSbot2_rear_panel_v1.1.png" alt="Rear panel description" title="Rear panel description"></p>
+<table class="text_table">
+    <tr>
+       <th>Component</th>
+       <th>Quantity</th>
+       <th>Description</th>
+    </tr>
+    <tr>
+        <td>Antenna connector</td>
+        <td>1</td>
+        <td>Wi-Fi antenna RP-SMA socket. Required for Wi-Fi connectivity.</td>
+    </tr>
+    <tr>
+        <td>USB</td>
+        <td>2</td>
+        <td>USB 2.0 host ports from SBC.</td>
+    </tr>
+    <tr>
+        <td>HDMI</td>
+        <td>1</td>
+        <td>HDMI output from SBC.</td>
+    </tr>
+    <tr>
+        <td>Power switch</td>
+        <td>1</td>
+        <td>Turns ROSbot completely ON or OFF.</td>
+    </tr>
+    <tr>
+        <td>LEDs</td>
+        <td>6</td>
+        <td>LR1(yellow), LR2(blue), L1(red), L2(green), L3(green), PWR(red), more details <a href="core2#leds-and-buttons">here</a>.</td>
+    </tr>
+    <tr>
+        <td>reset button</td>
+        <td>1</td>
+        <td>Button used for reset CORE2.</td>
+    </tr>
+    <tr>
+        <td>hCfg button</td>
+        <td>1</td>
+        <td>Button used for connecting ROSbot to [Husarion Cloud](https://cloud.husarion.com/).</td>
+    </tr>
+    <tr>
+        <td>hBtn</td>
+        <td>2</td>
+        <td>hBtn1, hBtn2 - programmable buttons.</td>
+    </tr>   
+    <tr>
+        <td>Outputs for servo</td>
+        <td>6</td>
+        <td>Servo output with PWM, more details <a href="core2#hservo">here</a>.</td>
+    </tr>
+    <tr>
+        <td>USB serial</td>
+        <td>1</td>
+        <td>USB serial port used for debugging the firmware on CORE2-ROS controller.</td>
+    </tr>
+    <tr>
+        <td>Charging connector</td>
+        <td>1</td>
+        <td>6-pin connector for charging internal Li-Ion batteries.</td>
+    </tr>
+    <tr>
+        <td>DC power input</td>
+        <td>1</td>
+        <td>DC for working with external 12V power supply. Use the power supply included with charger or any 12V, min. 5A power supply with 5.5/2.5mm plug (center-positive).</td>
+    </tr>
+    <tr>
+        <td>Time-of-Flight distance sensor</td>
+        <td>2</td>
+        <td>VL53L0X Time-of-Flight distance sensor with up to 200 cm range, more details <a href="https://www.pololu.com/file/0J1187/VL53L0X.pdf">here</a>.</td>.
+    <tr>
+        <td>hExt</td>
+        <td>1</td>
+        <td>12xGPIO, 7x ADC, SPI, I2C, UART, more details <a href="core2#hext">here</a>.     </td>
+    </tr>
+    <tr>
+        <td>hSens</td>
+        <td>1</td>
+        <td>4 xGPIO, ADC, UART, more details <a href="core2#hsensor">here</a>.</td>
+    </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="power-supply"></a><a href="#power-supply" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Power supply</h2>
+<p>ROSbot is powered from an internal, rechargeable Li-Ion battery pack that contains 3 Li-Ion cells, connected in series. This type of connection is called “3S”. The schematic below explains how the cells are wired together and with the charging connector (on ROSbot side).</p>
+<p><img width=50% src="../assets/img/ROSbot_manual/batt_connection.png" alt="Battery connections" /></p>
+<p>The BAT+ and BAT- are the power connections and the “bal Bxx” wires are used to monitor the voltage on each cell. It is strongly recommended to keep equal voltages on each cell during the charging process. The charger included with ROSbot can charge batteries in the described way and, thanks to that, the long life of the battery set is possible.</p>
+<p>The nominal voltage of each cell is 3.7V but the useful range is 3.2V to 4.2V.</p>
+<p><strong>Important - discharge indicator</strong>
+If only the right firmware is preloaded to the internal controller (CORE2), the LED1 is programmed to indicate the power status:</p>
+<ul>
+<li>the LED1 is on when the robot is turned on</li>
+<li>the LED1 is blinking when battery is low – please charge immediately!</li>
+</ul>
+<p>Please make sure that the user firmware always contains the function that monitors the supply voltage level. Deep discharging of batteries may decrease their lifecycle. Discharging to the voltage lower than 3.0V/cell can also trigger the over discharge protection. If the voltage is too low, turn ROSbot off and charge batteries as soon as possible.</p>
+<h2><a class="anchor" aria-hidden="true" id="charging-rosbot"></a><a href="#charging-rosbot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Charging ROSbot</h2>
+<p><a href="../assets/img/ROSbot_manual/charger+cables+PSU.jpg" data-fancybox data-caption="Charging kit">
+<img src="../assets/img/ROSbot_manual/charger+cables+PSU.jpg" alt="Charging kit" width="50%" />
+</a>
+The ROSbot kit contains the Redox Beta charger. It is an universal charger, suitable for charging NiCd, NiMH, Li-Po, Li-Fe, Li-Ion and Pb (AGM, VRLA) batteries. ROSbot shall be charged using an included charger and cable.</p>
+<p>Charger kit includes:</p>
+<ul>
+<li>Redox Beta charger</li>
+<li>AC/DC power adapter 100...240V to 12V 5A with 5.5/2.5mm plug on the 12V side</li>
+<li>a cable to connect charger with ROSbot charging port</li>
+</ul>
+<p><strong>Quick charging guide:</strong></p>
+<ol>
+<li>Connect the power adapter to the charger and the output cable between charger and ROSbot (2 connectors on charger side, 1 black connector to ROSbot charging port).</li>
+<li>Use red and blue buttons to select “LiPo BATT” mode and press [Start].</li>
+<li>Use arrows to select “LiPo CHARGE” mode.</li>
+<li>Press [Start] - the current value should start blinking. Use arrows to set the current to 1.5A.</li>
+<li>Press [Start] again - the voltage value should start blinking. Select “11.1V(3S)” using arrows. The picture below shows the desired result.</li>
+<li>Press and hold [Start] for 2 seconds. The charger should now ask for confirmation. Press [Start] again. The charging process should begin now.</li>
+<li>When the charging will be finished (after about 3 hours), the charger will generate a loud “beep” sound and will finish charging at the same time.</li>
+</ol>
+<p><img src="../assets/img/ROSbot_manual/charge-config.png" alt="Charge config" title="Charge config"></p>
+<p>If you need more information about charging, please read the <a href="https://files.husarion.com/docs2/Charging%20manual%20for%20ROSbot.pdf">Charging manual for ROSbot</a> in PDF format.</p>
+<p><strong>Notes</strong></p>
+<ul>
+<li>You can change charging current to maximum 3A. Please note that a regular charging with the maximum current can shorten the battery life.</li>
+<li>If you are going to use ROSbot stationary for a long time, you can use ROSbot with charger connected (and charging) all the time. It will increase the batteries lifetime. Align the charging current to keep the voltage at about 11.1V-12V.</li>
+<li>In case you need to replace batteries, use only 18650 Li-Ion batteries, with the capacity in a range of 1800...3500mAh and with a protection circuit! Using unprotected batteries may result in serious injuries or fire.</li>
+<li>Unplug charging connectors carefully. You shall not unplug the charger connectors holding the wires. The balancer connection on ROSbot side has a latching tab (see photo below) that must be pressed before unplugging. On the charger side there is no latching tab but you should also unplug this connector holding the white plug.</li>
+</ul>
+<p><img src="../assets/img/ROSbot_manual/charger-connector.jpg" alt="Latched connector" title="Latched connector"></p>
+<h2><a class="anchor" aria-hidden="true" id="software"></a><a href="#software" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Software</h2>
+<p>Software for ROSbot can be divided into 2 parts:</p>
+<ul>
+<li>A firmware that works on the real-time controller (CORE2) and can be developed and uploaded from <a href="https://cloud.husarion.com/">Husarion Cloud</a> with WebIDE. It can also be developed offline using <a href="../tutorials/other-tutorials/offline-development-tools">Visual Studio Code IDE</a>.</li>
+<li>OS based on Ubuntu 16.04, which runs on the SBC (ASUS Tinker Board) and contains all components needed to start working with ROS immediately. The microSD card with OS is included with each ROSbot. The OS has been modified to make the file system insensitive to sudden power cuts.</li>
+</ul>
+<p>In some cases you will need to flash the OS image to the microSD card once again:</p>
+<ul>
+<li>in case of accidential damage of the system,</li>
+<li>to update the OS (it can be udpated remotely, but flashing the microSD card can be easier sometimes),</li>
+<li>to clear all user changes and restore factory settings.
+To do that, you have to disassembly the top cover, unscrew the 4 screws on the CORE2 corners and carefully carry up CORE2 with SBC. Then you can change the microSD card and flash the OS. You can find the image and flash manual <a href="core2#os-image-for-raspberrypi-tinkerboard">here</a>. If you want to replace the included card, remember that you need to use at least 16 GB capacity and 10 speed class micro SD card.</li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="first-steps"></a><a href="#first-steps" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First steps</h1>
+<h2><a class="anchor" aria-hidden="true" id="connection-to-husarion-cloud"></a><a href="#connection-to-husarion-cloud" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connection to Husarion Cloud</h2>
+<ul>
+<li>Things you need: the ROSbot, any Android device with Wi-Fi connectivity and with hConfig app installed (available on <a href="https://play.google.com/store/apps/details?id=com.husarion.configtool2">Google Play</a> and <a href="https://itunes.apple.com/us/app/hconfig/id1283536270?app=itunes&platform=iphone&preserveScrollPosition=true">App Store</a>), any PC computer to work with ROSbot, the Wi-Fi network.</li>
+<li>Login or register on cloud.husarion.com.</li>
+<li>Register your ROSbot on your cloud account by clicking “Add new device”.</li>
+<li>Launch the hConfig application and follow the instructions.
+Note: The app will ask you to hold hCfg button on CORE2 and to watch LR1, LR2 LEDs – they are all available on the rear panel.</li>
+<li>Now you should see your ROSbot online and you can start with ROSbot tutorial.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="ros-tutorials"></a><a href="#ros-tutorials" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ROS tutorials</h2>
+<p>ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more. It's very powerful and
+functional tool dedicated to design robots. We created the set of <a href="../tutorials/ros-tutorials/1-ros-introduction/" title="ROS tutorials dedicated for this platform">ROS tutorials dedicated for this platform</a> to make it easier to familiarize yourself with these frameworks.</p>
+<h2><a class="anchor" aria-hidden="true" id="configuring-rosbot-to-work-with-5ghz-wifi"></a><a href="#configuring-rosbot-to-work-with-5ghz-wifi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring ROSbot to work with 5GHz WiFi.</h2>
+<p>By default ROSbot supports WiFi in 2.4GHz band, this is sufficent for most cases.
+If you encounter problems with data transfers e.g. due to processing large amounts of data or noise from other networks you can try to use connection in 5GHz band.</p>
+<p>To do this, you will need a USB 5GHz WiFi card (any device based on rtl8812au should be fine, tested models are TP-Link Archer T4U and D-Link DWA-172)</p>
+<p>If you have recent image version you can skip update and kernel instal, otherwise do:</p>
+<pre><code class="hljs">sudo apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">update</span>
+</code></pre>
+<p>This will update packages list.</p>
+<p>Then do:</p>
+<pre><code class="hljs">sudo apt-<span class="hljs-builtin-name">get</span> install tinkerboard-kernel
+</code></pre>
+<p>This will install the newest available kernel version, that supports 5GHz WiFi.</p>
+<p>Load kernel module:</p>
+<pre><code class="hljs"><span class="hljs-attribute">modprobe</span> rtl8812au
+</code></pre>
+<p>Type <code>ifconfig</code> to list network interfaces.
+You should see now new interface named <code>wlan1</code></p>
+<p>Now, You can list all available newtworks:</p>
+<pre><code class="hljs">sudo iwlist wlan1 scanning <span class="hljs-string">| grep ESSID</span>
+</code></pre>
+<p>You can connect to your WiFi with:</p>
+<pre><code class="hljs">nmcli d wifi connect <span class="hljs-tag">&lt;<span class="hljs-name">ESSID</span>&gt;</span> password <span class="hljs-tag">&lt;<span class="hljs-name">pass</span>&gt;</span> iface wlan1
+</code></pre>
+<p>Remember to replace <code>ESSID</code> and <code>pass</code> with name and passowrd of chosen network.</p>
+<p>ROSbot will try to connect to this network each time it boots.</p>
+<h1><a class="anchor" aria-hidden="true" id="docs-and-links"></a><a href="#docs-and-links" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docs and links</h1>
+<p>All helpful documents and links in one place:</p>
+<ul>
+<li><a href="https://files.husarion.com/docs2/ROSbot_safety_instructions_1.0.pdf" title="ROSbot Safety Instructions">ROSbot Safety Instructions</a> - important!</li>
+<li><a href="https://files.husarion.com/docs2/Charging%20manual%20for%20ROSbot.pdf">Charging manual for ROSbot</a></li>
+<li><a href="../tutorials/ros-tutorials/1-ros-introduction">ROS tutorials for ROSbot</a></li>
+<li><a href="https://robots.ros.org/rosbot-2.0/">ROSbot on ROS webpage</a></li>
+<li><a href="http://wiki.ros.org/Robots/ROSbot-2.0">ROSbot on ROS Wiki</a></li>
+<li><a href="https://github.com/husarion/rosbot_description">URDF model of ROSbot - for Gazebo integrated with ROS</a></li>
+<li><a href="https://hackaday.io/project/21885-rosbot-autonomous-robot-platform" title="ROSbot project on hackaday.io">ROSbot project on hackaday.io</a></li>
+<li><a href="http://www.instructables.com/id/ROSbot-Autonomous-Robot-With-LiDAR/" title="ROSbot project on instructables.com">ROSbot project on instructables.com</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus-husarion-docs/docs/manuals/telepresence"><span class="arrow-prev">← </span><span>Telepresence robot kit manual</span></a><a class="docs-next button" href="/docusaurus-husarion-docs/docs/manuals/husarion-add-ons"><span>Husarion add-ons</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#specification">Specification</a></li><li><a href="#components">Components</a><ul class="toc-headings"><li><a href="#components-description">Components description</a></li></ul></li><li><a href="#rear-panel-description">Rear panel description</a></li><li><a href="#power-supply">Power supply</a></li><li><a href="#charging-rosbot">Charging ROSbot</a></li><li><a href="#software">Software</a></li><li><a href="#connection-to-husarion-cloud">Connection to Husarion Cloud</a></li><li><a href="#ros-tutorials">ROS tutorials</a></li><li><a href="#configuring-rosbot-to-work-with-5ghz-wifi">Configuring ROSbot to work with 5GHz WiFi.</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-husarion-docs/" class="nav-home"><img src="/docusaurus-husarion-docs/img/husarion_logo_white.svg" alt="Husarion Docs" width="66" height="58"/></a><div><h5>Documentation</h5><a href="/docusaurus-husarion-docs/docs/tutorials">Tutorials</a><a href="/docusaurus-husarion-docs/docs/manuals">Manuals</a><a href="https://husarion.com/core2/api_reference/classes.html" target="_blank" rel="noreferrer noopener">hFramework API Reference</a></div><div><h5>Community</h5><a href="https://community.husarion.com/" target="_blank" rel="noreferrer noopener">Community forum</a><a href="https://twitter.com/husarion" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="https://husarion.com/" target="_blank" rel="noreferrer noopener">Home page</a><a href="https://medium.com/husarion-blog" target="_blank" rel="noreferrer noopener">Blog</a><a href="https://github.com/husarion" target="_blank" rel="noreferrer noopener">GitHub</a></div></section><section class="copyright">Copyright © 2018 Husarion</section></footer></div></body></html>
