@@ -42,7 +42,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'tutorials/index', label: 'Tutorials'},
     {doc: 'manuals/index', label: 'Manuals'},
-    {doc: 'doc4', label: 'Software'},
+    {doc: 'software/hframework', label: 'Software'},
     {href: 'https://husarion.com/downloads/', label: 'Downloads', external: true},
     {href: 'https://community.husarion.com/', label: 'Community', external: true},
   {href: 'https://cloud.husarion.com/', label: 'Log In', external: true}
@@ -53,7 +53,7 @@ const siteConfig = {
   users,
   /* path to images for header/footer */
   headerIcon: '',
-  footerIcon: 'img/husarion_logo_white.svg',
+  footerIcon: '',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
@@ -83,7 +83,7 @@ const siteConfig = {
   // },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Husarion`,
+  copyright: `Copyright © ${new Date().getFullYear()} Husarion sp. z o.o.`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

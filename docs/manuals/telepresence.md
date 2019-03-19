@@ -1,21 +1,24 @@
 ---
-title: 'Telepresence robot kit manual'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-order: 4
-page: 'Manuals'
-onepager: true
+title: Telepresence robot kit manual
+id: telepresence
 ---
 
-<div class="gallery h300">
-
-![Front](/assets/img/telepresence_robot_kit/ralph_alu_izo_hd.jpg "Front")
-![Right](/assets/img/telepresence_robot_kit/ralph_alu_right_hd.jpg "Right")
-
+<div class="clearfix">
+<div class="img-container">
+    <a href="../assets/img/telepresence_robot_kit/ralph_alu_izo_hd.jpg" data-fancybox="gallery" data-caption="CORE2mini board">
+    <img src="../assets/img/telepresence_robot_kit/ralph_alu_izo_hd.jpg" alt="CORE2mini board" class="hover-shadow"/>
+    </a>
+    <span>Front</span>
+</div>
+<div class="img-container">
+    <a href="../assets/img/telepresence_robot_kit/ralph_alu_right_hd.jpg" data-fancybox="gallery" data-caption="CORE2mini pinout">
+    <img src="../assets/img/telepresence_robot_kit/ralph_alu_right_hd.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+    <span>Rear</span>
+</div> 
 </div>
 
-# Overview #
+## Overview ##
 
 <div align="center">
 <iframe width="800" height="388" src="https://www.youtube.com/embed/JkIj5ssHpKw" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -36,7 +39,7 @@ If you don't have one, you can purchase the complete kit <a href="https://store.
 
 ## Specification ##
 
-<table>
+<table class="text_table">
     <tr>
        <th>Attribute</th>
        <th>Description</th>
@@ -73,7 +76,7 @@ If you don't have one, you can purchase the complete kit <a href="https://store.
 
 ## Components description ##
 
-<table>
+<table class="text_table">
     <tr>
        <th>Component</th>
        <th>Quantity</th>
@@ -82,7 +85,7 @@ If you don't have one, you can purchase the complete kit <a href="https://store.
     <tr>
         <td>CORE2</td>
         <td>1</td>
-        <td>CORE2 is real-time controller, based on STM32F407 microcontroller.<a href="https://husarion.com/core2/">More details here</a>.</td>
+        <td>CORE2 is real-time controller, based on STM32F407 microcontroller</td>
     </tr>
     <tr>
         <td>DC motor</td>
@@ -98,7 +101,7 @@ If you don't have one, you can purchase the complete kit <a href="https://store.
     <tr>
         <td>IMU sensor</td>
         <td>1</td>
-        <td>Powerful 9-Axis Accel/Gyro/Magnetometer sensor with MPU-9250, <a href="https://husarion.com/core2/manuals/core2/#hardware-mpu9250-inertial-mesurement-unit"> more details</a>.</td>
+        <td>Powerful 9-Axis Accel/Gyro/Magnetometer sensor with MPU-9250</td>
     </tr>
     <tr>
         <td>Batteries</td>
@@ -132,9 +135,13 @@ Connect the peripherals:
 * Plug in DC power cable.
 
 ***<font color="red">very important: DC motors with encoders and servo should be connected to proper ports like this:</font>***
-<div><center><img src="https://raw.githubusercontent.com/husarion/static_docs/master/src//assets/img/howToStart/cables_ralph.png" height="50%" width="50%"></center></div>
+<a data-fancybox href="../assets/img/howToStart/cables_ralph.png"  data-caption="CORE2mini board">
+    <img src="../assets/img/howToStart/cables_ralph.png" height="50%" width="50%" />
+</a>
 
-<div><center><img src="https://raw.githubusercontent.com/husarion/static_docs/master/src//assets/img/telepresence_robot_kit/ralph_alu_back_hd.jpg"></center></div>
+<a data-fancybox href="../assets/img/telepresence_robot_kit/ralph_alu_back_hd.jpg"  data-caption="CORE2mini board">
+    <img src="../assets/img/telepresence_robot_kit/ralph_alu_back_hd.jpg">
+</a>
 <div style="text-align: center"><i>Properly assembled CORE2 telepresence robot</i></div>
 
 ## Charging ##
@@ -145,9 +152,9 @@ Telepresence robot gets power from 3 Li-Ion cells. As with all reachargeable bat
 * Use robot UI or LED controls to monitor the battery state. The best option is when the firmware disables the motors in case of low battery state. Such feature will help you to avoid discharging batteries too much.
 * If you don't use robot for a long time, leave the batteries partially charged (about 11.4V for all cells). It's a recommended charge level for a long-term storage.
 
-# Software #
+## Software ##
 
-## Programming and interface ##
+### Programming and interface ###
 
 * Place your robot with CORE2 facing up and turn it on.
 * Open WebIDE (cloud.husarion.com) and create a new project using template 'self-balancing telepresence' and upload it to your CORE2.
@@ -164,10 +171,10 @@ Telepresence robot gets power from 3 Li-Ion cells. As with all reachargeable bat
 
 To steer your robot use WSAD keys or arrows. Use G key to switch leg position and 1, 2, 3 keys to change gears.
 
-# Docs and links #
+## Docs and links ##
 All helpful documents and links in one place:
 
-* [Telepresence robot kit Tutorial](https://husarion.com/core2/tutorials/howtostart/telepresence-robot-kit---quick-start/ "Telepresence robot kit Tutorial")
+* [Telepresence robot kit Tutorial](../tutorials/howtostart/telepresence-robot-kit---quick-start/ "Telepresence robot kit Tutorial")
 * [Telepresence robot kit Safety Instructions](https://files.husarion.com/docs2/CORE2_telepresence_safety_instructions_1.0.pdf "Telepresence robot kit Safety Instructions") - important!
 * [Buy telepresence robot kit](https://store.husarion.com/products/telepresence-robot-kit) in Husarion store
 

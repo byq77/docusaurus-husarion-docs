@@ -148,7 +148,7 @@ class Index extends React.Component {
       <Block layout="threeColumn">
         {[
           {
-            content: 'Learning how to incorporate Robot Operating System into your projects.',
+            content: 'Learn how to incorporate Robot Operating System into your projects.',
             image: `${baseUrl}img/feature_ros.png`,
             imageAlign: 'top',
             imageLink: `${baseUrl}docs/tutorials/ros-tutorials/1-ros-introduction`,

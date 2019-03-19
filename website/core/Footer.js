@@ -36,22 +36,46 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Documentation</h5>
-            <a href={this.docUrl('tutorials')}>
-              Tutorials
-            </a>
-            <a href={this.docUrl('manuals')}>
-              Manuals
-            </a>
+            <h5>Company</h5>
             <a 
-            href="https://husarion.com/core2/api_reference/classes.html"
+            href="https://husarion.com/about.html"
             target="_blank"
             rel="noreferrer noopener">
-              hFramework API Reference
+              About Us
+            </a>
+            <a 
+            href="https://husarion.com/contact.html"
+            target="_blank"
+            rel="noreferrer noopener">
+              Contact
+            </a>
+            <a 
+              href="https://medium.com/husarion-blog"              
+              target="_blank"
+              rel="noreferrer noopener">
+              Blog
+            </a>
+            <a 
+              href="https://cloud.husarion.com/tos"              
+              target="_blank"
+              rel="noreferrer noopener">
+              Terms of service
             </a>
           </div>
           <div>
-            <h5>Community</h5>
+            <h5>Developers</h5>
+            <a
+              href="#"
+              target="_blank"
+              rel="noreferrer noopener">
+              Documentation
+            </a>
+            <a
+              href="https://cloud.husarion.com/"
+              target="_blank"
+              rel="noreferrer noopener">
+              Husarion Cloud
+            </a>
             <a
               href="https://community.husarion.com/"
               target="_blank"
@@ -59,25 +83,31 @@ class Footer extends React.Component {
               Community forum
             </a>
             <a
-              href="https://twitter.com/husarion"
+              href="https://husarion.com/downloads/"
               target="_blank"
               rel="noreferrer noopener">
-              Twitter
+              Downloads
+            </a>
+            <a
+              href="https://husarion.com"
+              target="_blank"
+              rel="noreferrer noopener">
+              Home Page
             </a>
           </div>
           <div>
-            <h5>More</h5>
+            <h5>Social</h5>
             <a 
-              href="https://husarion.com/"              
+              href="https://www.facebook.com/husarionTechnology/"              
               target="_blank"
               rel="noreferrer noopener">
-              Home page
+              Facebook
               </a>
             <a 
-              href="https://medium.com/husarion-blog"              
+              href="https://twitter.com/husarion"              
               target="_blank"
               rel="noreferrer noopener">
-              Blog
+              Twitter
               </a>
             <a 
               href="https://github.com/husarion"              

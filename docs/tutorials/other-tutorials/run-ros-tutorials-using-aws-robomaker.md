@@ -3,7 +3,6 @@ title: Run ROS tutorials using AWS RoboMaker
 sidebar_label: 4. Run ROS tutorials using AWS RoboMaker
 id: run-ros-tutorials-using-aws-robomaker
 ---
-# Run ROS tutorials using AWS RoboMaker
 
 ## Introduction
 

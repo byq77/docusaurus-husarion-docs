@@ -1,23 +1,24 @@
 ---
-title: 'CORE2mini manual'
-platform: 'CORE2'
-autotoc: true
-layout: layout.hbs
-order: 2
-page: 'Manuals'
-onepager: true
+title: CORE2mini manual
+id: core2mini
 ---
 
-<div class="gallery h300">
-
-![Appearance](/assets/img/core2mini/coremini.jpg "Appearance")
-![Pinout cheatsheet](/assets/img/core2mini/scheme.jpg "Pinout cheatsheet")
-
+<div class="clearfix">
+<div class="img-container">
+    <a href="../assets/img/core2mini/coremini.jpg" data-fancybox="gallery" data-caption="CORE2mini board">
+    <img src="../assets/img/core2mini/coremini.jpg" alt="CORE2mini board" class="hover-shadow"/>
+    </a>
+</div>
+<div class="img-container">
+    <a href="../assets/img/core2mini/scheme.jpg" data-fancybox="gallery" data-caption="CORE2mini pinout">
+    <img src="../assets/img/core2mini/scheme.jpg" alt="CORE2mini pinout" class="hover-shadow"/>
+    </a>
+</div> 
 </div>
 
-# Electrical specification #
+## Electrical specification ##
 
-<table>
+<table class="text_table">
     <tr>
        <th>Interface</th>
        <th>Description</th>
@@ -67,9 +68,9 @@ onepager: true
 
 ***
 
-# Ports description #
+## Ports description ##
 
-## hSensor ##
+### hSensor ###
 
 CORE2mini is equipped with three hSensor ports (Shrouded Box Header: 2×3-Pin, 0.1" (2.54 mm) Male).
 
@@ -85,7 +86,7 @@ The hSensor is intended to be used with many different sensors, such as spatial 
 
 <div class="image center h300">
 
-![](/assets/img/core2-hardware/hsensor.svg)
+![](../assets/img/core2-hardware/hsensor.svg)
 
 </div>
 
@@ -190,13 +191,13 @@ while (true) {
 </table>
 
 
-## hServo ##
+### hServo ###
 
 You can connect up to 4 servo motors directly to CORE2mini. Power supply is onboard thanks to integrated DC/DC converter with selectable voltage output (remeber that there is one power supply voltage for all servos).
 
 <div class="image center h300">
 
-![](/assets/img/core2-hardware/hservo.svg)
+![](../assets/img/core2-hardware/hservo.svg)
 
 </div>
 
@@ -237,7 +238,7 @@ while (1) {
 }
 ```
 
-## hMotor ##
+### hMotor ###
 CORE2mini is equipped with two hMotor ports.
 
 The hMotor is intended to be used with a DC motor with encoder, but you don’t have to use the encoder interface if you have a standard DC motor. The hMotor interface is fully-compatible with LEGO® MINDSTORMS® sets (remeber that you have to use special adapter to use these sets).
@@ -255,7 +256,7 @@ The encoder interface is compatible with the majority of popular optical and mag
 
 <div class="image center h300">
 
-![](/assets/img/core2-hardware/hmot.svg)
+![](../assets/img/core2-hardware/hmot.svg)
 
 </div>
 
@@ -308,7 +309,7 @@ The encoder interface is compatible with the majority of popular optical and mag
 
 <div class="thumb w180 right">
 
-![](/assets/img/core2-hardware/motors_encoders.jpg)
+![](../assets/img/core2-hardware/motors_encoders.jpg)
 
 </div>
 
@@ -321,7 +322,7 @@ Remember not to power your motors using higher voltage than recommended in their
 
 <div class="thumb w180 right">
 
-![](/assets/img/core2-hardware/dc_motor.jpg)
+![](../assets/img/core2-hardware/dc_motor.jpg)
 
 </div>
 
@@ -333,7 +334,7 @@ Despite the lack of the encoder, you still can recognize the extreme positions o
 
 <div class="thumb w180 right">
 
-![](/assets/img/core2-hardware/lego_motors.jpg)
+![](../assets/img/core2-hardware/lego_motors.jpg)
 
 </div>
 
@@ -345,17 +346,17 @@ Remember that LEGO® motors have 9V nominal voltage and when you supply CORE2min
 
 <div class="thumb w180 right">
 
-![](/assets/img/core2-hardware/hstep.png)
+![](../assets/img/core2-hardware/hstep.png)
 
 </div>
 
 Connecting a bipolar stepper motor is also possible. In this case, you need two hMotor ports to drive one stepper motor. If your motor windings have 4 or 6 terminals, it can work in the bipolar configuration (the 6-terminal motors can work in both unipolar and bipolar configuration). In the picture you can see how to connect the bipolar motor with two H-bridge outputs.
 
-## DBG ##
+### DBG ###
 
 <div class="image center h300">
 
-![](/assets/img/core2-hardware/dbg.svg)
+![](../assets/img/core2-hardware/dbg.svg)
 
 </div>
 
@@ -366,7 +367,7 @@ To use the DBG interface, you need an additional hardware programmer/debugger: S
 
 You also need to configure the offline development environment. You will find the instructions here: [Husarion SDK](https://wiki.husarion.com/howto:installation)
 
-## hSerial ##
+### hSerial ###
 The hSerial port is an USB device port with a standard micro B USB connector, but it's called "hSerial" because this port is connected to the serial port of the microcontroller. It is not the native USB port - it uses the FTDI® chip to connect the internal serial port to your computer or other USB host.
 
 The hSerial port can be used to:
@@ -376,14 +377,14 @@ The hSerial port can be used to:
 
 CORE2mini cannot be powered via the USB hSerial port!
 
-## hSD ##
+### hSD ###
 Just a connector for a standard microSD card. It uses one of the SPI interfaces available in the microcontroller. The rest is software.
 
 ## LEDs ##
 
 <div class="thumb w270 right">
 
-![User&apos;s leds](/assets/img/core2-hardware/leds.svg "User&apos;s leds")
+<img src="../assets/img/core2-hardware/leds.svg" width=50% alt="User&apos;s leds" title="User&apos;s leds" />
 
 </div>
 
@@ -405,18 +406,18 @@ while (true) {
 
 ***
 
-# Power supply #
+## Power supply ##
 Before powering the CORE2mini you should know something about its power supply input.
 
 The **CORE2mini** input voltage (Vin) must be in the range 6 - 16V. The recommended input voltage range is 7 - 15V. The power connector is a standard DC 5.5/2.1 (centre-positive) type. The minimum power supply output current to run CORE2 itself is about 150mA@12V and 200mA@9V.
 
 The CORE2mini power supply input has overvoltage (>16V), reverse-polarity and overcurrent (~3A) protections. The long-term overvoltage  or reverse-polarity state shall be avoided!
 
-## Block diagram ##
+### Block diagram ###
 
 <div class="thumb center">
 
-![](/assets/img/core2-hardware/powersupply.svg)
+![](../assets/img/core2-hardware/powersupply.svg)
 
 </div>
 
@@ -532,42 +533,42 @@ There are 2 status LEDs - LR1 and LR2 - controlled directly from the ESP32/RPi d
         <td>Config mode</td>
         <td colspan="2">blinking alternately</td>
 	<td>600 ms</td>
-	<td>![](/assets/img/core2-hardware/lr12_gif/LR12_config.gif)</td>
+	<td><img src="../assets/img/core2-hardware/lr12_gif/LR12_config.gif"/></td>
     </tr>
     <tr>
         <td>Connecting</td>
         <td>OFF</td>
         <td>blinking</td>
 	<td>300 ms</td>
-	<td>![](/assets/img/core2-hardware/lr12_gif/LR12_connecting.gif)</td>
+	<td><img src="../assets/img/core2-hardware/lr12_gif/LR12_connecting.gif"/></td>
     </tr>
     <tr>
         <td>Connected</td>
         <td>OFF</td>
         <td>ON</td>
 	<td>-</td>
-	<td>![](/assets/img/core2-hardware/lr12_gif/LR12_connected.gif)</td>
+	<td><img src="../assets/img/core2-hardware/lr12_gif/LR12_connected.gif"/></td>
     </tr>
     <tr>
         <td>Not configured</td>
         <td>blinking</td>
         <td>OFF</td>
 	<td>100/1000 ms</td>
-	<td>![](/assets/img/core2-hardware/lr12_gif/LR12_not_conf.gif)</td>
+	<td><img src="../assets/img/core2-hardware/lr12_gif/LR12_not_conf.gif"/></td>
     </tr>
     <tr>
         <td>Invalid auth.</td>
         <td>blinking</td>
         <td>OFF</td>
 	<td>100 ms</td>
-	<td>![](/assets/img/core2-hardware/lr12_gif/LR12_invalid_auth.gif)</td>
+	<td><img src="../assets/img/core2-hardware/lr12_gif/LR12_invalid_auth.gif"/></td>
     </tr>
     <tr>
         <td>No Internet</td>
         <td>blinking</td>
         <td>ON</td>
 	<td>100 ms</td>
-	<td>![](/assets/img/core2-hardware/lr12_gif/LR12_no_internet.gif)</td>
+	<td><img src="../assets/img/core2-hardware/lr12_gif/LR12_no_internet.gif"/></td>
     </tr>
 </tbody>
 </table>
@@ -576,7 +577,7 @@ There are 2 status LEDs - LR1 and LR2 - controlled directly from the ESP32/RPi d
 
 <div class="thumb right w180">
 
-![](/assets/img/core2-hardware/rpi_connector.png "hRPI connector")
+![](../assets/img/core2-hardware/rpi_connector.png "hRPI connector")
 
 </div>
 
@@ -584,9 +585,9 @@ Although the connector's name comes from Raspberry Pi, it is designed to be used
 and Raspberry. CORE2mini comes without any connector soldered because the connector
 type depends on module for Internet connection you are going to use in your project.
 
-If your ESP32 or Raspberry Pi is not installed to CORE2mini yet, see the instruction here:
+<!-- If your ESP32 or Raspberry Pi is not installed to CORE2mini yet, see the instruction here:
 [Assembling the ESP32 adapter](howtostart#preparing-hardware). This page also serves as the
-guide for connecting CORE2mini with our cloud.
+guide for connecting CORE2mini with our cloud. -->
 
 <table class="text_table">
 <tbody>
@@ -674,7 +675,7 @@ In this section you will find instructions on how to update CORE2mini bootloader
 
 ## Updating CORE2mini bootloader ##
 
-You need to have Visual Studio Code installed with Husarion extension. Please follow this guide if you haven't done this before: [VSCode installation](https://husarion.com/core2/tutorials/howtostart/offline-development-tools/#offline-development-tools-installation-guide) 
+You need to have Visual Studio Code installed with Husarion extension. Please follow this guide if you haven't done this before: [VSCode installation](../tutorials/other-tutorials/offline-development-tools/#offline-development-tools-installation-guide) 
 1. Locate core2-flasher utility (YOUR_HOME_PATH/.vscode/extensions/husarion.husarion-VERSION/sdk/tools/YOUR_ARCH/core2-flasher).
 2. Download the bootloader [HEX file](https://files.husarion.com/bootloader/bootloader_1_0_0_core2.hex) to the folder with core2-flasher
 3. Connect CORE2mini to PC via USB.
@@ -701,7 +702,7 @@ You need to have Visual Studio Code installed with Husarion extension. Please fo
 
 ## Updating ESP32 firmware ##
 
-Make sure that your CORE2mini is connected with your cloud account. [This is a guide](https://husarion.com/core2/tutorials/howtostart/run-your-first-program/#run-your-first-program-connecting-to-the-cloud) that explains how to do it.
+Make sure that your CORE2mini is connected with your cloud account. [This is a guide](../tutorials/howtostart/run-your-first-program#run-your-first-program-connecting-to-the-cloud) that explains how to do it.
 
 1. Turn CORE2mini on and login to the cloud account. The device should be visible as "online".
 2. Click "+" and "More".
