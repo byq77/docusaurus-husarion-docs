@@ -52,7 +52,7 @@ const siteConfig = {
   // If you have users set above, you add it here:
   users,
   /* path to images for header/footer */
-  headerIcon: 'img/hus_docs_logo.png',
+  headerIcon: 'img/hus_docs_logo_2.png',
   footerIcon: '',
   favicon: 'img/favicon.ico',
 
@@ -104,7 +104,7 @@ const siteConfig = {
 
   stylesheets: [
     'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css',
-    'https://byq77.github.io/docusaurus-husarion-docs/css/code-block-buttons.css'
+    '/css/code-block-buttons.css'
   ],
 
   scrollToTop: true,
