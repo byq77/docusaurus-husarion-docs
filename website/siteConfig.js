@@ -28,7 +28,7 @@ const siteConfig = {
   // For github.io type URLs, you would set the url and baseUrl like:
   url: 'https://byq77.github.io',
   baseUrl: '/docusaurus-husarion-docs/',
-  // disableHeaderTitle: true,
+  disableHeaderTitle: true,
   disableTitleTagline: true,
   // docsUrl: '', // remove /docs/ from URL'
   // Used for publishing and more
@@ -52,7 +52,7 @@ const siteConfig = {
   // If you have users set above, you add it here:
   users,
   /* path to images for header/footer */
-  headerIcon: '',
+  headerIcon: 'img/hus_docs_logo.png',
   footerIcon: '',
   favicon: 'img/favicon.ico',
 
@@ -96,12 +96,15 @@ const siteConfig = {
     'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js',
     'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js',
     'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     'https://byq77.github.io/docusaurus-husarion-docs/js/scrollspy.js',
     'https://byq77.github.io/docusaurus-husarion-docs/js/sidebarScroll.js',
+    'https://byq77.github.io/docusaurus-husarion-docs/js/code-block-buttons.js',
   ],
 
   stylesheets: [
-    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css'
+    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css',
+    'https://byq77.github.io/docusaurus-husarion-docs/css/code-block-buttons.css'
   ],
 
   scrollToTop: true,
@@ -119,7 +122,7 @@ const siteConfig = {
   // Open Graph and Twitter card images.
   ogImage: 'img/favicon.ico',
   twitterImage: 'img/favicon.ico',
-
+  docsSideNavCollapsible: true,
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
 
